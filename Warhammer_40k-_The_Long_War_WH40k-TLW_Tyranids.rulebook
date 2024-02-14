@@ -142,7 +142,7 @@
           },
           "Points": {
             "group": "Cost",
-            "groupOrder": 1,
+            "groupOrder": -1,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -493,6 +493,22 @@
         },
         "text": "Adrenal Glands: A unit with this Adaptation gains the Sprint (1) special rule. Units that already have the Sprint (x) special rule increase the value of (x) by 1.\n\nToxin Sacs: All units with this Adaptation gain the Poison (5+) special rule on all weapons they are equipped with. If a model with this Adaptation already has the Poison (x) special rule, increase the value of (x) by 1 for that unit.\n\nCaustic Blood: When a unit with this wargear is slain and the last model in the unit is removed from play, before that model is removed, all enemy units within 6” take D3+(x) automatic hits where (x) is the models Wounds (W) characteristic. The Strength of the hit is equal to the removed units Toughness (T) characteristic. The AP is resolved at AP5."
       },
+      "Special Rules§Brood Telepathy": {
+        "keywords": {
+          "Keywords": [
+            "Unit Rules"
+          ]
+        },
+        "text": "This unit can only join units of Genestealer Broods."
+      },
+      "Special Rules§Bulky (2)": {
+        "keywords": {
+          "Keywords": [
+            "Unit Rules"
+          ]
+        },
+        "text": "Each model in a unit with this special rule counts as a number of models equal to the value of X for transport capacity in Transports."
+      },
       "Special Rules§Deep Strike": {
         "keywords": {
           "Keywords": [
@@ -509,6 +525,14 @@
         },
         "text": "A unit with this special rule may attack in the shooting phase with a number of different weapons equal to the value of (x)."
       },
+      "Special Rules§Fleet": {
+        "keywords": {
+          "Keywords": [
+            "Unit Rules"
+          ]
+        },
+        "text": "A unit with this special rule can Advance and still declare a charge in the charge phase. (see 6.3)."
+      },
       "Special Rules§Hammer of Wrath (1)": {
         "keywords": {
           "Keywords": [
@@ -516,6 +540,14 @@
           ]
         },
         "text": "At the start of the Initiative step 10 during the Fight sequence (see 13.1), every model in the unit in melee range may makes a number of attacks equal to the value of X at Strength User attack with AP6 so long as the unit completed a charge that turn.\n\nIf the unit with this special rule is a vehicle or monster, the attack has AP2. Hammer of Wrath attacks are only ever made in the first round of a combat. These attacks hit automatically."
+      },
+      "Special Rules§Lightning-Fast Reaction": {
+        "keywords": {
+          "Keywords": [
+            "Unit Rules"
+          ]
+        },
+        "text": "This unit has a 5+ Invulnerable save."
       },
       "Special Rules§Limit: 1 Per Detachment": {
         "keywords": {
@@ -658,6 +690,79 @@
           ]
         }
       },
+      "Units§Broodlord": {
+        "allowed": {
+          "classifications": [
+            "Special Rules"
+          ],
+          "items": [
+            "Melee Weapons§Monstrous Rending Claws",
+            "Ranged Weapons§Smite",
+            "Melee Weapons§Close Combat Weapon"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Special Rules§Synapse",
+            "Special Rules§Shadow in the Warp",
+            "Special Rules§The Swarm Descends",
+            "Special Rules§Adaptive Physiology",
+            "Special Rules§Move Through Cover",
+            "Special Rules§Bulky (2)",
+            "Special Rules§Psyker (1)",
+            "Melee Weapons§Monstrous Rending Claws",
+            "Ranged Weapons§Smite",
+            "Melee Weapons§Close Combat Weapon"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "HQ"
+          ],
+          "Tags": [
+            "HQ"
+          ],
+          "Special Rules": [
+            "HQ"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballstic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 5
+          },
+          "Leadership (Ld)": {
+            "value": 9
+          },
+          "Move (M)": {
+            "value": 6
+          },
+          "Points": {
+            "groupOrder": -1,
+            "value": 95
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 6
+          },
+          "Wounds (W)": {
+            "value": 3
+          }
+        }
+      },
       "Units§Hive Tyrant": {
         "allowed": {
           "classifications": [
@@ -699,9 +804,12 @@
             "HQ"
           ],
           "Special Rules": [
-            "Unit Rules"
+            "HQ"
           ],
-          "Unit Keywords": []
+          "Unit Keywords": [],
+          "Tags": [
+            "HQ"
+          ]
         },
         "removed": {
           "allowed": {
