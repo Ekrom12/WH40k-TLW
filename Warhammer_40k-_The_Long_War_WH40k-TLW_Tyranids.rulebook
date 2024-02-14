@@ -436,6 +436,27 @@
           }
         }
       },
+      "Ranged Weapons§Stinger Salvo": {
+        "keywords": {
+          "Keywords": [
+            "Bio-Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Piercing (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": "24"
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
       "Ranged Weapons§Stranglethorn Cannon": {
         "assets": {
           "traits": [
@@ -492,6 +513,14 @@
           ]
         },
         "text": "Adrenal Glands: A unit with this Adaptation gains the Sprint (1) special rule. Units that already have the Sprint (x) special rule increase the value of (x) by 1.\n\nToxin Sacs: All units with this Adaptation gain the Poison (5+) special rule on all weapons they are equipped with. If a model with this Adaptation already has the Poison (x) special rule, increase the value of (x) by 1 for that unit.\n\nCaustic Blood: When a unit with this wargear is slain and the last model in the unit is removed from play, before that model is removed, all enemy units within 6” take D3+(x) automatic hits where (x) is the models Wounds (W) characteristic. The Strength of the hit is equal to the removed units Toughness (T) characteristic. The AP is resolved at AP5."
+      },
+      "Special Rules§Brood Progenitor": {
+        "keywords": {
+          "Keywords": [
+            "Unit Rules"
+          ]
+        },
+        "text": "This unit may join units of Termagants even though it does not have the Infantry type."
       },
       "Special Rules§Brood Telepathy": {
         "keywords": {
@@ -595,6 +624,14 @@
           ]
         },
         "text": "Tyranid units with this rule gain the benefits of the Deny the Witch and Adamantium Will special rules."
+      },
+      "Special Rules§Spawn Termagants": {
+        "keywords": {
+          "Keywords": [
+            "Unit Keyword"
+          ]
+        },
+        "text": "Instead of setting to Overwatch, the Tervigon may set to spawn instead. At the end of your opponent’s next charge phase, you may select 1 Termagant unit within 12” or attached to this unit. The target unit regains D3+3 Termagant models."
       },
       "Special Rules§Synapse": {
         "keywords": {
@@ -1032,6 +1069,78 @@
           }
         },
         "text": ""
+      },
+      "Units§Tervigon": {
+        "allowed": {
+          "classifications": [
+            "Special Rules"
+          ],
+          "items": [
+            "Melee Weapons§Monstrous Scything Talons",
+            "Ranged Weapons§Smite",
+            "Ranged Weapons§Stinger Salvo"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Special Rules§Synapse",
+            "Special Rules§Shadow in the Warp",
+            "Special Rules§The Swarm Descends",
+            "Special Rules§Adaptive Physiology",
+            "Special Rules§Hammer of Wrath (1)",
+            "Special Rules§Move Through Cover",
+            "Special Rules§Regeneration",
+            "Special Rules§Psyker (1)",
+            "Special Rules§Brood Progenitor",
+            "Special Rules§The Swarm Descends"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "HQ"
+          ],
+          "Keywords": [
+            "HQ"
+          ],
+          "Special Rules": [
+            "HQ"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballstic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 3
+          },
+          "Leadership (Ld)": {
+            "value": 9
+          },
+          "Move (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 120
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 7
+          },
+          "Toughness (T)": {
+            "value": 8
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 5
+          }
+        }
       },
       "Weapon Rules§Large Blast": {
         "text": "Instead of rolling to hit normally with a weapon with this trait during step 1 of the shooting attack sequence (see 9.5), Choose the place on the battlefield being targeted by the blast weapon. Use a marker or select a model. If a model is selected it will be assumed the marker is at the centre of the model. The marker or centre of the chosen model must be within range of the weapon. Roll to hit using BS as normal.\n\nIf a hit is scored, models within 3\" of the markers take one hit each, rolling for wounds and saves as normal.\n\nIf a miss was scored, the opposing player may move the marker/change the target point D6+2\" in any direction of their choosing. After moving the marker, all models within 3\", take one hit each from the weapon, rolling for wounds and saves as normal.\n\nMeasurements for determining what is hit are to a model's base unless it doesn’t have one.\n\nFor determining cover and AV facings, draw line of sight from the attackers direction and not the blast marker."
