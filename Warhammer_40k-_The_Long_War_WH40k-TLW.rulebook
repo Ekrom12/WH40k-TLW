@@ -170,7 +170,8 @@
             "value": null,
             "visibility": "hidden"
           }
-        }
+        },
+        "templateClass": "Template"
       },
       "Unit": {
         "aspects": {
@@ -253,7 +254,7 @@
             "value": null,
             "visibility": "normal"
           },
-          "Strenght (S)": {
+          "Strength (S)": {
             "group": "Stats",
             "groupOrder": 1,
             "statOrder": 3,
@@ -348,7 +349,7 @@
             "value": null,
             "visibility": "normal"
           },
-          "Strenght": {
+          "Strength": {
             "group": "Stats",
             "statOrder": 2,
             "statType": "term",
@@ -369,13 +370,34 @@
       "Melee Weapon§Close Combat Weapons": {
         "stats": {
           "Armor Penetration (AP)": {
-            "value": 0
+            "value": "-"
           },
-          "Strenght": {
-            "value": "User"
+          "Strength": {
+            "value": "user"
           },
           "Type": {
             "value": "Melee"
+          }
+        }
+      },
+      "Ranged Weapon§Smite": {
+        "assets": {
+          "traits": [
+            "Special Rule§Psychic Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 3"
           }
         }
       },
@@ -420,6 +442,14 @@
         },
         "text": "When a unit with this special rule is targeted for an attack by a weapon with the Psychic Weapon special rule. The attack from the Psychic Weapon is resolved at -1 to hit and -1 to wound."
       },
+      "Special Rule§Ammo": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A Weapon with this special rule can only be used a\nnumber of times in a game equal to X."
+      },
       "Special Rule§Arcing": {
         "keywords": {
           "Keywords": [
@@ -428,12 +458,181 @@
         },
         "text": "Each to hit roll inflicts 2 hits with this weapon instead of 1 if the to Hit roll was equal to or greater than the value of the ability. Resolve each hit separately."
       },
+      "Special Rule§Assault Vehicle": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Models Embarked in a transport with this special rule\nare subject to the following:\n● Embarked models can shoot and Fight in the\nshooting Phase and Combat Phase while\nembarked as normal.\n● All measurement and line of sight is\nmeasured from the Vehicles hull.\n● Units embarked can only ever make 1 attack\nin the combat phase.\n● Unless the embarked unit disembarks during\nthe turn, the embarked unit is considered to\nhave made the same type of movement as\nthe transport for the purposes of determining\nmodifiers and eligibility to shoot.\n● When a transport is slain, destroyed,\nwrecked or explodes with this special rule.\nModels that disembark are slain on a roll of a\n1 or a 2 instead of a 1.\n● If a Transport with this special rule is Pinned,\nthe embarked models count as being Pinned\nas well."
+      },
+      "Special Rule§Bane": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A unit hit by a weapon with this special rule that has the\n(x) keyword or unit type may not make Invulnerable\nsaves against wounds caused by a weapon with this\nspecial rule. If no type or keyword is indicated by an\n(x), the unit ignores all Invulnerable saves with the\nweapon regardless of type or keyword of the target\nenemy unit."
+      },
+      "Special Rule§Barrage": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "When determining the number of models hit by a Blast\nor large Blast weapon, a weapon with this special rule\nscores an additional number of hits equal to the value\nof X. Barrage weapons always hit the Side Armour of\nVehicle type targets."
+      },
       "Special Rule§Blast": {
         "keywords": {
           "Keywords": [
             "Weapon Special Rule"
           ]
-        }
+        },
+        "text": "Instead of rolling to hit normally with a weapon with this\ntrait during step 1 of the shooting attack sequence (see\n9.5), Choose the place on the battlefield being targeted\nby the blast weapon. Use a marker or select a model.\nIf a model is selected it will be assumed the marker is\nat the centre of the model. The marker or centre of the\nchosen model must be within range of the weapon. Roll\nto hit using BS as normal.\nIf a hit is scored, models within 2\" of the markers take\none hit each, rolling for wounds and saves as normal.\nIf a miss was scored, the opposing player may move\nthe marker/change the target point D6\" in any direction\nof their choosing. After moving the marker, all models\nwithin 2\", take one hit each from the weapon, rolling for\nwounds and saves as normal.\nMeasurements for determining what is hit are to a\nmodel's base unless it doesn’t have one.\nFor determining Cover and AV facings, draw line of\nsight from the attackers direction and not the blast\nmarker.\nThe Blast Special rule targets a location and thus is\nnot subject to any modifiers to the units Ballistic\nSkill (BS) characteristic. The only modifiers that\napply are those from the Indirect Fire special rule.\nWeapons with Blast may not make Snap Shots."
+      },
+      "Special Rule§Blind": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A unit hit by a weapon with this special rule may not\nmake Reactions. i.e. Overwatch, Counter Charge, etc.\nand is Ballistic Skill (BS) and Weapon Skill (WS) 1\nuntil the end of the turn."
+      },
+      "Special Rule§Bombing Run": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "In the shooting phase, this weapon can be used to\nmake an attack against one enemy unit that the\nequipped model passed over in the previous\nmovement phase (see 7.4.1)."
+      },
+      "Special Rule§Bulky": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Each model in a unit with this special rule counts as a\nnumber of models equal to the value of X for transport\ncapacity in Transports."
+      },
+      "Special Rule§Concussive": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "When a weapon with this special rule resolves a hit\nagainst an enemy unit, regardless of if the hit causes a\nwound, the target unit hit by this weapon's attack has\nits Initiative (I) characteristic immediately lowered to 1\nuntil the end of the following combat phase (see 13.1)."
+      },
+      "Special Rule§Counter Attack": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "When a unit with this special rule is charged, it gains\n+1 to its Attacks (A) characteristic."
+      },
+      "Special Rule§Crushing": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with the Crushing special rule inflicts 2\nwounds instead of 1 if the to Wound roll was equal to\nor greater than the roll represented by (x). Make a save\nroll for each wound inflicted separately."
+      },
+      "Special Rule§Cumbersome": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A melee weapon with this rule can only ever make a\nsingle attack in the combat phase, regardless of its\nAttacks (A) characteristics or bonuses from charging\nor from extra close combat weapons."
+      },
+      "Special Rule§Deep Strike": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule can be placed off the board\nin reserves during deployment (see 3.1). At the start of\nyour movement phase, starting in the second battle\nround, place the unit placed in reserves with this\nspecial rule on the battlefield anywhere more than 3”\naway from any enemy models and roll a D6.\n· 1-2: Mishap!: The unit is removed from play\nand the battlefield and placed back into reserve\ninstead of being deployed.\n· 3-4: Minimal Deviation: The opponent scatters\nthe unit within 5\" of where it was placed on the\nbattlefield.\n· 5-6: Perfect landing: The unit arrives where its\nplaced, on target and does not scatter.\nIf a rule states that units arriving does not scatter when\narriving from Deep Strike, the Roll is treated as having\nbeen a 5+. Units that arrive Via Deep Strike may not\nMove in the Movement Phase they arrive. Units that\narrive via Deep Strike may charge in the Charge Phase\non the turn they arrive. Units that arrive count as having\nmoved during the turn they arrive. Units that arrive\nwithin 1” of an enemy unit or in terrain must take a\nDangerous Terrain test for each of its models."
+      },
+      "Special Rule§Deny the Witch": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Enemy Psyker units within 24” and Line of sight of a\nmodel from a unit with this special rule suffer -1 to their\nLeadership (LD) characteristic when attempting to\ncast a Psychic power in the Psychic Phase (see 8.3)."
+      },
+      "Special Rule§Fade & Fire": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A model with this special rule may perform a Retreat\nmove in the Movement Phase and still Shoot in the\nShooting Phase at full Ballistic Skill (BS)."
+      },
+      "Special Rule§Fear": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Enemy units within 3” of a model from a unit with this\nspecial rule suffer a negative modifier equal to the\nvalue of (x) to their Leadership (LD) Characteristic."
+      },
+      "Special Rule§Feel no Pain": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "When a model in a unit with the Feel no Pain Special\nrule is allocated a wound, you may roll a dice. If the roll\nis equal to or higher then (X) next to the Special rules\nname, the wound is ignored (see 10.3)\nE.g: For Feel no Pain (5+), a roll of 5 or higher is\nrequired to ignore the wound when allocating it."
+      },
+      "Special Rule§Firing Protocols": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule may attack in the shooting\nphase with a number of different weapons equal to the\nvalue of (x)."
+      },
+      "Special Rule§Fleet": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule can Advance and still\ndeclare a charge in the charge phase. (see 6.3)."
+      },
+      "Special Rule§Force": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule always Wounds or\nPenetrates on a roll of X as represented next to the\nrule.\nE.g. a weapon with Force (4+) always wounds on a roll\nequal to or higher than 4+ regardless of the target's\ntoughness or Armour facing.\nIf when comparing the weapons Strength characteristic\nagainst the targets Toughness or Armour Value\ncharacteristic, the wound roll required is lower than the"
+      },
+      "Special Rule§Frenzy": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "If a unit with this special rule has had any wounds\nallocated to it that are not ignored or models from the\nunit have been slain, then for the rest of the game, it\ngains +1 Attacks (A) Characteristic but must always\nattempt to charge if it is within 12” of an enemy unit and\ndid not Advance or Retreat in the previous Movement\nphase (see 12.0)."
+      },
+      "Special Rule§Furious Charge": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Furious Charge special rule gains 1\nadditional attack on the charge equal to the value of X.\nThis is in addition to the normal +1 attack bonus on the\ncharge.\nYou cannot benefit from the Rage (x) special rule in the\nsame turn as you benefit from Furious Charge (x)."
+      },
+      "Special Rule§Gets Hot!": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "When a weapon with the Gets Hot special rule rolls a 1\nto hit, the model firing the model takes 1 automatic\nwound. They may take an armour save as normal\nagainst that wound (see 9.5). If a Vehicle suffers Gets\nHot! The vehicle must make a pinning test, as if it were\nhit by a Pinning weapon (see 16.0)."
       },
       "Special Rule§Hammer of Wrath": {
         "keywords": {
@@ -443,6 +642,14 @@
         },
         "text": "At the start of the Initiative step 10 during the Fight sequence (see 13.1), every model in the unit in melee range may makes a number of attacks equal to the value of X at Strength User attack with AP6 so long as the unit completed a charge that turn.\n\nIf the unit with this special rule is a vehicle or monster, the attack has AP2. Hammer of Wrath attacks are only ever made in the first round of a combat. These attacks hit automatically."
       },
+      "Special Rule§Hatred": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A model from a unit with this special rule can re-roll hit\nrolls of 1 against enemy units. Where the (x) following\nthe special rule has a unit type (see 18.0) or Keyword,\nthe unit can only re-roll hit of 1 against units with that\nspecific type or Keyword. If no type or keyword is\nindicated by an (x), the unit re-rolls all hit rolls of 1\nregardless of type or keyword of the target enemy unit."
+      },
       "Special Rule§Haywire": {
         "keywords": {
           "Keywords": [
@@ -450,19 +657,61 @@
           ]
         }
       },
+      "Special Rule§Hit & Run": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "At initiative step 0 before step 8 of the Fight Sequence\n(see 13.1), a unit with this rule can opt to hit and run.\nThe unit must take an Initiative test. Roll a D6. If it's\nlower than or equal to the unit's Initiative (I)\ncharacteristic, the test is passed the unit may\nimmediately make a normal move as if it were the\nmovement phase (see 6.1) and the attack sequence\nends. If it fails, proceed to step 8 of the Fight Sequence\n(see 13.1)."
+      },
+      "Special Rule§Hover": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "An Aircraft with this Special rule must declare at the\nstart of its movement phase if it will Hover or Fly. If the\nunit Hovers, it gains +1 to its Ballistic Skill (BS)\ncharacteristic and its Movement (M) characteristic\nbecomes 12”. Hovering Aircraft units can be charged\nby units without the Fly keyword, measuring distances\nto the Aircraft’s base. An Aircraft unit that is Hovering\ndoes not automatically explode when immobilised. A\nunit Hovering is no longer hit on 6+ by enemy shooting\nattacks. An Aircraft is treated as a Vehicle type while\nthe unit is Hovering."
+      },
       "Special Rule§Ignores Cover": {
         "keywords": {
           "Keywords": [
             "Weapon Special Rule"
           ]
-        }
+        },
+        "text": "Cover saves cannot be taken against a weapon with\nthis special rule (see 9.5.2)."
       },
       "Special Rule§Indirect Fire": {
         "keywords": {
           "Keywords": [
             "Weapon Special Rule"
           ]
-        }
+        },
+        "text": "A weapon with this trait does not need Line of Sight\nVisibility when picking targets for attacks in the\nshooting phase (see 9.2). The model or unit suffers -1\nmodifier to hit rolls against targets it cannot see. For\nresolving casualties and allocating wounds, Indirect\nFire weapons ignore the requirements on visibility\nwhen allocating wounds (see 9.1). Indirect Fire\nweapons ignore cover saves."
+      },
+      "Special Rule§Infiltrate": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "At the start of the deployment step after determining\ndeployment zones but before either side deploys any\nunits, units with this special rule may be placed\nanywhere on the board, instead of in your deployment\nzone but may not be placed within the enemy\ndeployment zone. If both players have units that can\ninfiltrate, players take turns alternating between\ndeploying infiltrating units, starting with the player that\nis the Attacker in the Scenario. Infiltrating units cannot\ndeploy within 3” of another Infiltrating unit."
+      },
+      "Special Rule§Large Blast": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "Instead of rolling to hit normally with a weapon with this\ntrait during step 1 of the shooting attack sequence (see\n9.5), Choose the place on the battlefield being targeted\nby the blast weapon. Use a marker or select a model.\nIf a model is selected it will be assumed the marker is\nat the centre of the model. The marker or centre of the\nchosen model must be within range of the weapon. Roll\nto hit using BS as normal.\nIf a hit is scored, models within 3\" of the markers take\none hit each, rolling for wounds and saves as normal.\nIf a miss was scored, the opposing player may move\nthe marker/change the target point D6+2\" in any\ndirection of their choosing. After moving the marker, all\nmodels within 3\", take one hit each from the weapon,\nrolling for wounds and saves as normal.\nMeasurements for determining what is hit are to a\nmodel's base unless it doesn’t have one.\nFor determining cover and AV facings, draw line of\nsight from the attackers direction and not the blast\nmarker.\nThe Blast Special rule targets a location and thus is\nnot subject to any modifiers to the units Ballistic\nSkill (BS) characteristic. The only modifiers that\napply are those from the Indirect Fire special rule.\nWeapons with Blast may not make Snap Shots."
+      },
+      "Special Rule§Last Stand": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Models in a unit with this special rule may still fight in\nthe Combat phase even if they would be slain before\nthey are eligible to fight. If a model with this special rule\nis slain before it gets to fight, it may fight at Initiative 1.\nDo not remove the slain model until after it has fought."
       },
       "Special Rule§Linked": {
         "keywords": {
@@ -472,6 +721,30 @@
         },
         "text": "A weapon with this special rule may re-roll all hit rolls. A Linked weapon with the Spray special rule can score a max 10 hits instead 5"
       },
+      "Special Rule§Master-Crafted": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule may re-roll 1 hit roll per\nphase. Spray weapons with this special rule may re-roll\n1 wound roll per phase instead."
+      },
+      "Special Rule§Melta": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with the Melta special rule has +2 to its\nStrength characteristic when within half range or melee\n(see 9.5.6)."
+      },
+      "Special Rule§Monster Hunter": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Models in a unit with this special rule may re-roll wound\nrolls against units with the Monster type."
+      },
       "Special Rule§Move Through Cover": {
         "keywords": {
           "Keywords": [
@@ -480,12 +753,102 @@
         },
         "text": "Models in a unit with this special rule ignore the effects of Difficult terrain and Dangerous Terrain."
       },
+      "Special Rule§Night Vision": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule ignores the Night Fighting\nrules in Battle plans where it is active."
+      },
+      "Special Rule§Ordinance": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule always resolves it's\nattacks against a Vehicles Side Armor (SA)\ncharacteristic when making shooting attacks (see\n9.5.6). A weapon with the Ordnance special rule must\nremain stationary to shoot in the shooting phase."
+      },
+      "Special Rule§Outflank": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule can be placed off the board\nin reserves during deployment (see 3.1). At the start of\nyour movement phase, starting in the second battle\nround, you can roll a D6 for each unit in reserves. On a\nroll of a 3+, you can place a unit with this special rule\non the board anywhere within 6” of any board edge and\nmore than 9” away from any enemy models. The unit\nmay not make any moves the turn it arrived but may\ndeclare charges in the charge phase."
+      },
       "Special Rule§Pinning": {
         "keywords": {
           "Keywords": [
             "Weapon Special Rule"
           ]
-        }
+        },
+        "text": "A unit that is hit by a weapon with this special rule must\nmake a Pinning test in step 5 of the shooting attack\nsequence in addition to a panic test:\nTo make the Pinning test, Roll 2D6. If the roll is equal\nto or lower than the target units Leadership\nCharacteristic, the test is passed and the attack\nsequence ends. If the test is failed, place a Pinned\nmarker on the unit. A pinned unit:\n● halves its Movement (M) characteristic.\n● has -1 to hit rolls with all Shooting attacks.\n● may not make Reactions in the Charge\nphase.\nRemove the Pinned Marker from a unit at the end of\nthe next turn. Regardless of the number of tests failed,\na unit can only ever have 1 Pinned marker. A unit only\never makes 1 Pinning test per unit shooting attack in\nstep 5 of the attack sequence.\n(Example: A unit with 5 Heavy Bolters targets a\nGuardsman squad. The Guard make 1 Pinning test\nafter all Heavy Bolter shots have been resolved. In the\nsame phase, the next unit targets the same\nGuardsman squad with 2 pinning weapons. After all\nshooing attacks are resolved, the guard squad makes\n1 Pinning test.)"
+      },
+      "Special Rule§Poison": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule always wounds on a roll\nof X as represented next to the rule. Poison weapons\nuse their normal Strength against Vehicles, Aircraft,\nDrones, Knights, Titans, Automata & Walkers\nhowever.\nIf when comparing the weapons Strength characteristic\nagainst the targets Toughness or Armour Value\ncharacteristic, the wound roll required is lower than the\nPoison roll indicated in the brackets or vice-versa, use\nthe lowest required to Wound or Penetrate roll for\ndetermining if the weapon inflicts a wound on the\ntarget."
+      },
+      "Special Rule§Precision Strikes": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "When allocating attacks, if the attacking model causes\na wound with a weapon that has this special rule, the\nplayer controlling the attacking unit may dictate which\nmodels in the target unit must have the wounds\nallocated to them. (see 10.1)."
+      },
+      "Special Rule§Preferred Enemy": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A model from a unit with this special rule can re-roll\nwound rolls of 1 against enemy units. Where the (x)\nfollowing the special rule has a unit type (see 18.0) or\nKeyword, the unit can only re-roll hit of 1 against units\nwith that specific type or Keyword. If no type or keyword\nis indicated by an (x), the unit re-rolls all wound rolls of\n1 regardless of type or keyword of the target enemy\nunit."
+      },
+      "Special Rule§Priest": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Priest (x) special rule can perform a\nnumber of Prayers each player turn equal to the value\nof (x). A Priest knows Prayers from the relevant\nLitanies listed in their codex."
+      },
+      "Special Rule§Psychic": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Psyker (x) special rule can cast a\nnumber of Psychic Powers each player turn equal to\nthe value of (x). All Psykers know the Smite Power\n(see 8.4). A Psyker knows spells from the relevant\ndiscipline indicated in their codex."
+      },
+      "Special Rule§Psychic Weapon": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "This weapon counts as a Psychic Power for any rules\nthat would affect Psychic Powers. Weapons with this\nspecial rule have the Gets Hot! Special rule. However,\nyou may only take Invulnerable saves against Gets\nHot! Rolls caused by a Psychic Weapon."
+      },
+      "Special Rule§Rage": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "At the start of the Combat Phase, a unit with this\nspecial rule can choose to increase every model in the\nunit's Attack (A) characteristic by the value of (x) but\nall models in the unit suffer -1 to their Weapon Skill\n(WS) characteristic until the end of the Phase.\nYou cannot benefit from the Furious Charge (x) special\nrule in the same turn as you benefit from Rage (x)."
+      },
+      "Special Rule§Reach": {
+        "keywords": {
+          "Tags": [],
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A model with this weapon has a melee range of 2”\ninstead of 1”."
       },
       "Special Rule§Regeneration": {
         "keywords": {
@@ -495,6 +858,62 @@
         },
         "text": "Once per game, at the start of the movement phase, 1 model in a unit with this special rule may heal 1 wound."
       },
+      "Special Rule§Relentless": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Models in a unit with this special rule can move and fire\nHeavy Weapons at their full Ballistic Skill (BS) (see\n9.4.1). In addition, units with this special rule may\ndeclare a charge move in the Charge Phase, even if\nthey made a shooting attack with a Heavy or Rapid Fire\nweapon."
+      },
+      "Special Rule§Rending": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "When a weapon with this special rule rolls an\nunmodified roll equal to (x) to wound, that wound is\nresolved at AP2 instead of its normal AP value (see\n9.5.1).\nIf rolling to Penetrate against an Armour Value, the\nweapons attack against the target is resolved with +2\nto the weapons Strength characteristic for determining\nif the weapon caused a Penetrating hit."
+      },
+      "Special Rule§Scout": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A Unit with this special rule can, after deployment but\nbefore the first battle round begins, make a normal\nmove as if it were the movement phase (see 6.1). A\nunit that used the Infiltrate special rule to deploy may\nnot make a Scout move."
+      },
+      "Special Rule§Shred": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with Shred can re-roll all wound rolls (see\n9.5)."
+      },
+      "Special Rule§Siege Attackers": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "The unit with this special rule can re-roll all rolls to\npenetrate against units with the Fortification type (see\n9.5.6)."
+      },
+      "Special Rule§Skilled Rider": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule always counts as having a\nLight Cover save. If the unit with this special rule\nadvanced during their previous movement phase, they\nhave a Heavy Cover save."
+      },
+      "Special Rule§Skyfire": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule can fire at Aircraft with\nits full Ballistic Skill (see 9.2.4). A unit that set to\nOverwatch may fire this weapon at Aircraft units with\nits full range instead of 12”."
+      },
       "Special Rule§Slow & Purposeful": {
         "keywords": {
           "Keywords": [
@@ -502,6 +921,118 @@
           ]
         },
         "text": "A unit with this special rule may not make Reactions except for setting to Smoke (see 12.2) and may not Advance (see 6.3) or Sweeping Advance (see 13.1)."
+      },
+      "Special Rule§Specialist Weapon": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A model equipped with a weapon with this special rule\ndoes not gain the extra +1 attack benefit of equipped\nwith more than 1 melee weapon unless all melee\nweapons they are equipped with have this special rule.\nIf all melee weapons a model is equipped with are\nspecialist weapons, the equipped model gains +2 to\ntheir Attacks (A) characteristic."
+      },
+      "Special Rule§Spray": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "Instead of rolling to hit normally with a weapon with this\ntrait during step 1 of the shooting attack sequence (see\n9.5), a weapon with this special rule chooses the unit\nbeing targeted by the Spray weapon. The weapon hits\nonce for each model in the unit that is within range of\nthe spray weapon up to a max of 5 automatic hits per\nweapon. Roll to wound and Saves as normal. Spray\nweapons ignore cover saves. When performing\nOverwatch, a Spray weapon automatically inflicts its\nmax 5 number of hits instead of measuring number of\ntargets instead."
+      },
+      "Special Rule§Sprint": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Sprint Special rule adds the value of (x)\nto all Advance moves (see 6.3) and Charge moves they\nmake (see 12.1)."
+      },
+      "Special Rule§Stubborn": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A Unit that has this special rule never suffers any\nnegative modifiers to their Leadership (LD)\nCharacteristic."
+      },
+      "Special Rule§Sudden Strike": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Sudden Strike special rule adds the\nvalue of (x) to its Initiative (I) characteristic in the\ncombat phase after it has completed a charge move\n(see 12.1). If the character has Initiative 1 from an\nUnwieldy weapon in the Combat Phase, their Initiative\nis still increased by the value of (X). (Initiative 1\nbecomes Initiative 2)."
+      },
+      "Special Rule§Sunder": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A Weapon with the Sunder special rule re-rolls\nPenetration rolls."
+      },
+      "Special Rule§Super Heavy": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A Vehicle/Aircraft with the Super Heavy (X) special\nrule gains the following benefits:\n● The Vehicle/Aircraft has a number of\nStructure points equal to the value of X. Each\ntime the Vehicle/Aircraft suffers a Critical\nresult on the Vehicle damage chart that would\ncause it to be wrecked or explode, it instead\nloses 1 Structure Point. If the\nVehicle/Aircraft has no more Structure\npoints when it suffers a Critical damage result\non the Vehicle damage chart, the Critical\nresult is resolved as normal instead.\n● When a Vehicle/Aircraft with this special rule\nwould suffer a Critical result on the Vehicle\nDamage chart that would cause it to explode,\nit instead explodes 10”, hitting all models\nwithin range with 1 Strength 6, AP4 hit.\n● When a Walker with this special rule would\nbe reduced to 0 wounds, it explodes 10”,\nhitting all models within range with 1 Strength\n6, AP4 hit.\n● A model with this special rule may move and\nstill fire weapons with the Ordnance Special\nrule."
+      },
+      "Special Rule§Sweeping": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A model attacking with a weapon with this special rule\nmakes an additional number of attacks equal to the\nvalue of (x) with this weapon if the target unit has 3 or\nmore models in the target unit."
+      },
+      "Special Rule§Swift Strike": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule always strikes at\ninitiative step 6 in the Fight Sequence unless the\nequipped model's Initiative (I) characteristic is higher\n(see 13.1)."
+      },
+      "Special Rule§Tank Hunters": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "The unit with this special rule can roll 2D6 on the\nVehicle damage chart when resolving penetrating hits\nand pick which result will be applied (see 10.1)."
+      },
+      "Special Rule§Tech-Priest": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Tech-Priest (x) special rule can perform\na number of Machine Rites per player turn equal to the\nvalue of (x). All Tech-Priests know Machine Rites from\nthe relevant Rites listed in their respective Codex."
+      },
+      "Special Rule§Two-Handed": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A model attacking with a weapon with this special rule\ndoes not gain the benefit of the extra +1 attack of being\nequipped with more than 1 melee weapon or a pistol."
+      },
+      "Special Rule§Unwieldy": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule always strikes at\ninitiative step 1 in the Fight Sequence regardless of\nequipped model’s Initiative (I) characteristic (see\n13.1)."
+      },
+      "Special Rule§Zealot": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Zealot special rule adds the value of (x)\nto its Strength (S) Characteristic in the combat phase\nafter it has completed a charge move (see 12.1)"
       }
     },
     "gameModes": {},
