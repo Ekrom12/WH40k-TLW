@@ -1,0 +1,510 @@
+{
+  "name": "WH40k:TLW",
+  "revision": "0.0.1",
+  "game": "Warhammer 40k: The Long War",
+  "genre": "sci-fi",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "rulebook": {
+    "assetTaxonomy": {
+      "Melee Weapon": {
+        "removed": {
+          "stats": {
+            "Range": {}
+          }
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          }
+        },
+        "templateClass": "Weapon"
+      },
+      "Model": {
+        "aspects": {
+          "Group Traits": true
+        },
+        "stats": {
+          "Attacks (A)": {
+            "group": "Stats",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Ballistic Skill (BS)": {
+            "group": "Stats",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Initiative (I)": {
+            "group": "Stats",
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Leadership (Ld)": {
+            "group": "Stats",
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Movement (M)": {
+            "format": "{v}\"",
+            "group": "Stats",
+            "statOrder": 0,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Points": {
+            "format": "{v}",
+            "group": "Cost",
+            "groupOrder": -1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": null,
+            "visibility": "always"
+          },
+          "Save (Sv)": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Strenght (S)": {
+            "group": "Stats",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Toughness (T)": {
+            "group": "Stats",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Weapon Skill (WS)": {
+            "group": "Stats",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Wounds (W)": {
+            "group": "Stats",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Ranged Weapon": {
+        "templateClass": "Weapon"
+      },
+      "Rite of War": {},
+      "Special Rule": {
+        "aspects": {
+          "Visibility": "active"
+        },
+        "rules": {
+          "putXInName": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "x",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "x",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          }
+        },
+        "stats": {
+          "abilityName": {
+            "statType": "term",
+            "value": null,
+            "visibility": "hidden"
+          },
+          "x": {
+            "statType": "term",
+            "value": null,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit": {
+        "aspects": {
+          "Group Includes": true,
+          "Group Traits": true,
+          "Lock Qty": true,
+          "Rename": true
+        },
+        "keywords": {
+          "Tags": [
+            "unit"
+          ],
+          "Role": [],
+          "Faction": [],
+          "Unit Type": []
+        },
+        "stats": {
+          "Attacks (A)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Ballistic Skill (BS)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Initiative (I)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Leadership (Ld)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "modelCost": {
+            "statType": "numeric",
+            "value": null,
+            "visibility": "hidden"
+          },
+          "Movement (M)": {
+            "format": "{v}\"",
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 0,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Points": {
+            "format": "{v}",
+            "group": "Cost",
+            "groupOrder": -1,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": null,
+            "visibility": "normal"
+          },
+          "Save (Sv)": {
+            "format": "{v}+",
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Strenght (S)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Toughness (T)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Weapon Skill (WS)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Wounds (W)": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Vehicle": {
+        "removed": {
+          "stats": {
+            "Toughness (T)": {},
+            "Wounds (W)": {}
+          }
+        },
+        "stats": {
+          "Front Armor": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statOrder": 0,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Rear Armor": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Side Armor": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 4,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          }
+        },
+        "templateClass": "Unit"
+      },
+      "Wargear": {},
+      "Weapon": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "group": "Stats",
+            "statOrder": 3,
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Range": {
+            "format": "{v}\"",
+            "group": "Stats",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Strenght": {
+            "group": "Stats",
+            "statOrder": 2,
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Type": {
+            "group": "Stats",
+            "statOrder": 0,
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      }
+    },
+    "assetCatalog": {
+      "Melee Weapon§Close Combat Weapons": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": 0
+          },
+          "Strenght": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Roster§Roster": {
+        "allowed": {
+          "classifications": [
+            "Unit"
+          ]
+        },
+        "aspects": {
+          "Collapse": true,
+          "Group Includes": true
+        },
+        "stats": {
+          "Faction": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "always"
+          },
+          "Points": {
+            "group": "Cost",
+            "groupOrder": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Special Rule§Adamantium Will": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "When a unit with this special rule is targeted for an attack by a weapon with the Psychic Weapon special rule. The attack from the Psychic Weapon is resolved at -1 to hit and -1 to wound."
+      },
+      "Special Rule§Arcing": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "Each to hit roll inflicts 2 hits with this weapon instead of 1 if the to Hit roll was equal to or greater than the value of the ability. Resolve each hit separately."
+      },
+      "Special Rule§Blast": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Hammer of Wrath": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "At the start of the Initiative step 10 during the Fight sequence (see 13.1), every model in the unit in melee range may makes a number of attacks equal to the value of X at Strength User attack with AP6 so long as the unit completed a charge that turn.\n\nIf the unit with this special rule is a vehicle or monster, the attack has AP2. Hammer of Wrath attacks are only ever made in the first round of a combat. These attacks hit automatically."
+      },
+      "Special Rule§Haywire": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Ignores Cover": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Indirect Fire": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Linked": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule may re-roll all hit rolls. A Linked weapon with the Spray special rule can score a max 10 hits instead 5"
+      },
+      "Special Rule§Move Through Cover": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Models in a unit with this special rule ignore the effects of Difficult terrain and Dangerous Terrain."
+      },
+      "Special Rule§Pinning": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Regeneration": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "Once per game, at the start of the movement phase, 1 model in a unit with this special rule may heal 1 wound."
+      },
+      "Special Rule§Slow & Purposeful": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule may not make Reactions except for setting to Smoke (see 12.2) and may not Advance (see 6.3) or Sweeping Advance (see 13.1)."
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}

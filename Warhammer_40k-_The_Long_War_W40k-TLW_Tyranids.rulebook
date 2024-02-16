@@ -1,0 +1,429 @@
+{
+  "name": "W40k:TLW Tyranids",
+  "revision": "0.0.1",
+  "game": "Warhammer 40k: The Long War",
+  "genre": "sci-fi",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "dependencies": [
+    {
+      "slug": "EE8Q8W",
+      "name": "WH40k:TLW",
+      "game": "Warhammer 40k: The Long War",
+      "source": ""
+    }
+  ],
+  "rulebook": {
+    "assetTaxonomy": {
+      "Adaptive Physiology": {},
+      "Bio-Morph": {
+        "stats": {
+          "Points": {
+            "group": "Cost",
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      }
+    },
+    "assetCatalog": {
+      "Adaptive Physiology§Adrenal Glands": {
+        "keywords": {
+          "Keywords": [
+            "Adaptive Physiology"
+          ]
+        },
+        "text": "A unit with this Adaptation gains theSprint (1) special rule. Units that already have the Sprint (x) special rule increase the value of (x) by 1"
+      },
+      "Bio-Morph§Dessicator Larvae": {
+        "text": "Fleshborers or Fleshborer Hives of the equipped unit gain the **Monster Hunter** Special rule."
+      },
+      "Bio-Morph§Electro Shock Grubs": {
+        "text": "Fleshborer’s of the equipped unit gain the **Haywire (6+)** special rule. \nFleshborer Hives gain the **Haywire (5+)** special rule."
+      },
+      "Bio-Morph§Scorch Bugs": {
+        "text": "Fleshborer’s of the equipped unit gain the **Rending (6+)** special rule. \nFleshborer Hives gain the **Rending (5+)** special rule."
+      },
+      "Bio-Morph§Wings": {},
+      "Melee Weapon§Powerful limbs": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": 5
+          },
+          "Strenght": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Model§Termagant": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Bio-Morph": {
+            "group": "Bio-Morph",
+            "groupOrder": 5,
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "label": "Loadout",
+            "ranks": {
+              "Fleshborer": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fleshborer"
+                  }
+                ]
+              },
+              "Devourer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Devourer"
+                  }
+                ]
+              },
+              "Spinefist": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spinefist"
+                  }
+                ]
+              },
+              "Spike Rifle": {
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spike Rifle"
+                  }
+                ]
+              },
+              "Strangleweb": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Strangleweb"
+                  }
+                ]
+              },
+              "Shardlauncher": {
+                "order": 5,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Shardlauncher"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Fleshborer",
+            "visibility": "active"
+          },
+          "Movement (M)": {
+            "groupOrder": 1,
+            "value": 6
+          },
+          "Points": {
+            "value": 7
+          },
+          "Save (Sv)": {
+            "value": 6
+          },
+          "Strenght (S)": {
+            "value": 3
+          },
+          "Toughness (T)": {
+            "value": 3
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Bio-Plasmic Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": 2
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strenght": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Devourer": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strenght": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Fleshborer": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strenght": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Shardlauncher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Indirect Fire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strenght": {
+            "value": "3"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Spike Rifle": {},
+      "Ranged Weapon§Spinefist": {},
+      "Ranged Weapon§Strangleweb": {},
+      "Rite of War§Vanguard Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Roster§Roster": {
+        "stats": {
+          "Faction": {
+            "dynamic": false,
+            "ranks": {
+              "Tyranids": {
+                "order": 1
+              }
+            },
+            "value": "Tyranids"
+          }
+        }
+      },
+      "Special Rule§Adaptive Physiology": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit benefits from the chosen Adaptive Physiology."
+      },
+      "Special Rule§Shadow in the Warp": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "**Tyranid** units with this rule gain the benefits of the Deny the Witch and Adamantium Will special rules."
+      },
+      "Special Rule§Symbiotic Targeting": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "If this unit remained stationary in the previous movement phase, improve its Ballistic Skill (BS) characteristic by 1 (to 4) in the following shooting phase."
+      },
+      "Special Rule§Synapse": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This special rule confers the following effects:\n\n-Friendly Tyranid units wholly within 18” of a Tyranid unit with this special rule have the Stubborn special rule and change their Leadership (LD) Characteristic to 10.\n\n-Friendly Tyranid Units within Synapse range also automatically Rally at the start of their movement phase.\n\n-Tyranid Units that are not within Synapse range of a model with this special rule have the Frenzy Special Rule instead and use their base Leadership (LD) Characteristic.\n\n-The unit with this special rule gains the Synapse keyword."
+      },
+      "Special Rule§The Swarm Descends": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "Units instead of setting to Overwatch, may set to Counter charge. At the end of your opponent’s Charge Phase, after all charges have been declared and resolved. Any unit that set to Counter charge may attempt to charge as if it were your charge phase but with -2 to the Charge roll."
+      },
+      "Unit§Exocrine": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Symbiotic Targeting",
+            "Ranged Weapon§Bio-Plasmic Cannon",
+            "Melee Weapon§Powerful limbs",
+            "Wargear§Bonded Exoskeleton"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Exocrine",
+            "Tyranids"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 95,
+            "visibility": "always"
+          },
+          "Strenght (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 5
+          }
+        }
+      },
+      "Unit§Termagant Brood": {
+        "allowed": {
+          "items": [
+            "Model§Termagant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Termagant",
+              "quantity": 10
+            }
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Troops"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Assault",
+            "Expendable",
+            "M41",
+            "Termagants",
+            "Tyranids"
+          ]
+        }
+      },
+      "Wargear§Bonded Exoskeleton": {
+        "keywords": {
+          "Keywords": [
+            "Armor"
+          ]
+        },
+        "text": "The bone plates and chitin have fused with the bones of the creature to form a virtually impenetrable sheath. It confers a 3+ save."
+      },
+      "Wargear§Chitin": {
+        "keywords": {
+          "Keywords": [
+            "Armor"
+          ]
+        },
+        "text": "Even the most basic Tyranid organisms have tough leathery hides and thin Armoured bone plates that afford them some protection against small arms fire. This confers a 6+ save."
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
