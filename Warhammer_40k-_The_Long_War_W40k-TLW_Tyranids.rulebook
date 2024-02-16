@@ -846,6 +846,157 @@
           }
         }
       },
+      "Ranged Weapon§Acid Spray": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            "Special Rule§Shred"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Barbed Strangler": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Barblauncher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            "Special Rule§Indirect Fire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Bio Acid Spray": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Bio Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Bio Electric Pulse": {
+        "assets": {
+          "traits": [
+            "Special Rule§Arcing"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 6"
+          }
+        }
+      },
+      "Ranged Weapon§Bio Plasma": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
       "Ranged Weapon§Bio-Plasmic Cannon": {
         "assets": {
           "traits": [
@@ -859,14 +1010,77 @@
           "Range": {
             "value": 36
           },
-          "Strenght": {
-            "value": "7"
-          },
           "Strength": {
             "value": "7"
           },
           "Type": {
             "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Choking Spores": {
+        "assets": {
+          "traits": [
+            "Special Rule§Poison",
+            "Special Rule§Blast",
+            "Special Rule§Shred"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "3"
+          },
+          "Type": {
+            "value": "assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Deathspitter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Deathspitter with Slimer Maggots": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            "Special Rule§Rending"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 3"
           }
         }
       },
@@ -878,11 +1092,91 @@
           "Range": {
             "value": 12
           },
-          "Strenght": {
+          "Strength": {
             "value": "4"
           },
           "Type": {
             "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Devourers with Brainleech Worms": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            "Special Rule§Shred"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 6"
+          }
+        }
+      },
+      "Ranged Weapon§Drool Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Flamespurt": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Flesh Hooks": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "Pistol 2"
           }
         }
       },
@@ -902,6 +1196,87 @@
           },
           "Type": {
             "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Fleshborer Hive": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 5"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Venom Cannon": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Impaler Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Indirect Fire",
+            "Special Rule§Ignores Cover"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Rupture Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 2"
           }
         }
       },
@@ -929,8 +1304,49 @@
           }
         }
       },
-      "Ranged Weapon§Spike Rifle": {},
+      "Ranged Weapon§Shock Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Haywire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Spike Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
       "Ranged Weapon§Spinefist": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spine Launcher"
+          ]
+        },
         "stats": {
           "Armor Penetration (AP)": {
             "value": "6"
@@ -945,7 +1361,30 @@
             "value": "pistol x"
           }
         },
-        "text": "X = attacks characteristic of wielder"
+        "text": ""
+      },
+      "Ranged Weapon§Spore Mine Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Indirect Fire",
+            "Special Rule§Blast",
+            "Special Rule§Ignores Cover"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
       },
       "Ranged Weapon§Stinger Salvo": {
         "stats": {
@@ -959,11 +1398,112 @@
             "value": "5"
           },
           "Type": {
-            "value": "Heavy 4"
+            "value": "Heavy 3"
           }
         }
       },
-      "Ranged Weapon§Strangleweb": {},
+      "Ranged Weapon§Stranglethorn Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Strangleweb": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "2"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Tentaclids": {
+        "assets": {
+          "included": [
+            "Special Rule§Skyfire",
+            "Special Rule§Haywire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 4"
+          }
+        }
+      },
+      "Ranged Weapon§Toxic Lashes (shooting)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Poison"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "Pistol 6"
+          }
+        }
+      },
+      "Ranged Weapon§Venom Cannon": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
       "Rite of War§Vanguard Wave": {
         "keywords": {
           "Keywords": [
@@ -1023,6 +1563,14 @@
           ]
         },
         "text": "Instead of setting to Overwatch, the Tervigon may set to spawn instead. At the end of your\nopponent’s next charge phase, you may select 1 Termagant unit within 12” or attached to this unit. The target unit\nregains D3+3 Termagant models."
+      },
+      "Special Rule§Spine Launcher": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "the number of attacks this weapon has under X is equal to the Attack (A) characteristic of the\nequipped model."
       },
       "Special Rule§Symbiotic Targeting": {
         "keywords": {
