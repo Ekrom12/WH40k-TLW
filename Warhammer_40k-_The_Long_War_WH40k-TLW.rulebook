@@ -171,7 +171,7 @@
             "visibility": "hidden"
           }
         },
-        "templateClass": "Template"
+        "templateClass": ""
       },
       "Unit": {
         "aspects": {
@@ -472,6 +472,54 @@
             "Weapon Special Rule"
           ]
         },
+        "rules": {
+          "putKeywordInName": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "keyword",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "keyword",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 99
+          }
+        },
+        "stats": {
+          "keyword": {
+            "statType": "term",
+            "value": null,
+            "visibility": "hidden"
+          }
+        },
         "text": "A unit hit by a weapon with this special rule that has the\n(x) keyword or unit type may not make Invulnerable\nsaves against wounds caused by a weapon with this\nspecial rule. If no type or keyword is indicated by an\n(x), the unit ignores all Invulnerable saves with the\nweapon regardless of type or keyword of the target\nenemy unit."
       },
       "Special Rule§Barrage": {
@@ -535,6 +583,11 @@
           "Keywords": [
             "Weapon Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "format": "({v}+)"
+          }
         },
         "text": "A weapon with the Crushing special rule inflicts 2\nwounds instead of 1 if the to Wound roll was equal to\nor greater than the roll represented by (x). Make a save\nroll for each wound inflicted separately."
       },
@@ -647,6 +700,55 @@
           "Keywords": [
             "Universal Special Rule"
           ]
+        },
+        "rules": {
+          "putKeywordInName": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "keyword",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "keyword",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 99
+          }
+        },
+        "stats": {
+          "keyword": {
+            "format": " {v}",
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
         },
         "text": "A model from a unit with this special rule can re-roll hit\nrolls of 1 against enemy units. Where the (x) following\nthe special rule has a unit type (see 18.0) or Keyword,\nthe unit can only re-roll hit of 1 against units with that\nspecific type or Keyword. If no type or keyword is\nindicated by an (x), the unit re-rolls all hit rolls of 1\nregardless of type or keyword of the target enemy unit."
       },
