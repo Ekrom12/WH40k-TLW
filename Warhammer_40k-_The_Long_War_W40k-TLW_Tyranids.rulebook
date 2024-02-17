@@ -12,7 +12,7 @@
       "slug": "4Q2YFB",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
-      "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
+      "source": ""
     }
   ],
   "rulebook": {
@@ -27,7 +27,8 @@
             "visibility": "normal"
           }
         }
-      }
+      },
+      "Unit": {}
     },
     "assetCatalog": {
       "Adaptive Physiology§Adrenal Glands": {
@@ -803,9 +804,6 @@
           "Save (Sv)": {
             "value": 5
           },
-          "Strenght (S)": {
-            "value": 4
-          },
           "Toughness (T)": {
             "value": 4
           },
@@ -845,7 +843,7 @@
           "Save (Sv)": {
             "value": 6
           },
-          "Strenght (S)": {
+          "Strength (S)": {
             "value": 3
           },
           "Toughness (T)": {
@@ -2047,6 +2045,84 @@
           }
         }
       },
+      "Unit§Hormagaunt Brood": {
+        "allowed": {
+          "items": [
+            "Model§Hormagaunt"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Hormagaunt",
+              "quantity": 10
+            }
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Tyranids"
+          ],
+          "Role": [
+            "Troops"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Assault",
+            "Expendable",
+            "Hormagaunts",
+            "M41",
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 0
+          }
+        }
+      },
+      "Unit§Ripper Swarm": {
+        "allowed": {
+          "items": [
+            "Model§Ripper Swarm"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Ripper Swarm",
+              "quantity": 3
+            }
+          ]
+        },
+        "stats": {
+          "Loadout": {
+            "dynamic": true,
+            "ranks": {
+              "n/a": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Spinemaws": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spinemaw"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "n/a",
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Termagant Brood": {
         "allowed": {
           "items": [
@@ -2086,7 +2162,11 @@
         }
       },
       "Unit§Tervigon": {
+        "allowed": {
+          "items": []
+        },
         "assets": {
+          "included": [],
           "traits": [
             "Special Rule§Synapse",
             "Special Rule§The Swarm Descends",
@@ -2098,8 +2178,6 @@
                 }
               }
             },
-            "Ranged Weapon§Stinger Salvo",
-            "Ranged Weapon§Smite",
             {
               "item": "Special Rule§Hammer of Wrath",
               "stats": {
@@ -2110,24 +2188,37 @@
             },
             "Special Rule§Brood Progenitor",
             "Special Rule§Spawn Termagants",
-            "Wargear§Hardened Carapace",
             "Special Rule§Shadow in the Warp",
             "Special Rule§Move Through Cover",
             "Special Rule§Adaptive Physiology",
-            "Special Rule§Regeneration"
+            "Special Rule§Regeneration",
+            "Ranged Weapon§Stinger Salvo",
+            "Ranged Weapon§Smite",
+            "Wargear§Bonded Exoskeleton"
           ]
         },
         "keywords": {
           "Tags": [],
           "Keywords": [
-            "Assault"
+            "Character",
+            "Command",
+            "M41",
+            "Psyker",
+            "Synapse",
+            "Tervigon"
           ],
           "Unit Type": [
             "Monster"
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Role": [
+            "HQ"
           ]
+        },
+        "removed": {
+          "stats": {}
         },
         "stats": {
           "Attacks (A)": {
@@ -2143,6 +2234,7 @@
             "value": 9
           },
           "Loadout": {
+            "dynamic": true,
             "ranks": {
               "Monstrous Scything Talons": {
                 "order": 0,
@@ -2191,6 +2283,237 @@
           },
           "Wounds (W)": {
             "value": 5
+          }
+        }
+      },
+      "Unit§Tyranid Prime": {
+        "assets": {
+          "traits": [
+            "Wargear§Bonded Exoskeleton",
+            "Special Rule§Synapse",
+            "Ranged Weapon§Smite",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Psychic",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Keywords": [
+            "Character",
+            "Command",
+            "M41",
+            "Psyker",
+            "Synapse",
+            "Tyranid Prime",
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 5
+          },
+          "Leadership (Ld)": {
+            "value": 9
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 50
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "ranks": {
+              "Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Scything Talons"
+                  }
+                ]
+              },
+              "Rending Claws": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Rending Claws"
+                  }
+                ]
+              },
+              "Boneswords": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Lash Whip and Bonesword": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  },
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Scything Talons",
+            "visibility": "normal"
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "ranks": {
+              "Devourer": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Devourer"
+                  }
+                ]
+              },
+              "Spinefist": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spinefist"
+                  }
+                ]
+              },
+              "Deathspitter": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  }
+                ]
+              },
+              "Boneswords": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Lash Whip and Bonesword": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  },
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Rending Claws": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Rending Claws"
+                  }
+                ]
+              },
+              "Scything Talons": {
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Scything Talons"
+                  }
+                ]
+              },
+              "Barbed Strangler": {
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  }
+                ]
+              },
+              "Venom Cannon": {
+                "order": 8,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Spinefist",
+            "visibility": "normal"
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 5
+          },
+          "Wounds (W)": {
+            "value": 3
           }
         }
       },
