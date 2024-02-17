@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "XDQJ4A",
+      "slug": "4Q2YFB",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": ""
@@ -63,7 +63,9 @@
       "Bio-Morph§Scorch Bugs": {
         "text": "Fleshborer’s of the equipped unit gain the **Rending (6+)** special rule. \nFleshborer Hives gain the **Rending (5+)** special rule."
       },
-      "Bio-Morph§Wings": {},
+      "Bio-Morph§Wings": {
+        "text": "A Tyranid Infantry or Monster unit with this Bio-Morph\nincreases their Movement (M) characteristic to 12”. It\ngains the Hammer of Wrath (1) and Deep strike special\nrules. The equipped model gains the Fly keyword."
+      },
       "Melee Weapon§Acid Maw": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -80,7 +82,14 @@
       "Melee Weapon§Bio Static Rattle": {
         "assets": {
           "traits": [
-            "Special Rule§Arcing"
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": "6"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -98,7 +107,14 @@
       "Melee Weapon§Bone Mace": {
         "assets": {
           "traits": [
-            "Special Rule§Crushing"
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -149,7 +165,17 @@
       "Melee Weapon§Crushing Claws": {
         "assets": {
           "traits": [
-            "Special Rule§Crushing",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": "6"
+                },
+                "abilityName": {
+                  "value": "Crushing 6"
+                }
+              }
+            },
             "Special Rule§Unwieldy",
             "Special Rule§Specialist Weapon"
           ]
@@ -162,7 +188,7 @@
             "value": "x2"
           },
           "Type": {
-            "value": "elee"
+            "value": "melee"
           }
         }
       },
@@ -187,7 +213,14 @@
       "Melee Weapon§Grasping Tail": {
         "assets": {
           "traits": [
-            "Special Rule§Poison",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
             "Special Rule§Shred"
           ]
         },
@@ -207,7 +240,14 @@
         "assets": {
           "traits": [
             "Special Rule§Precision Strikes",
-            "Special Rule§Rending"
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -258,6 +298,56 @@
           }
         }
       },
+      "Melee Weapon§Impaling Tendrils": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": "6"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Melee Weapon§Injector Tail": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Bane",
+              "stats": {
+                "keyword": {
+                  "value": "Infantry"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
       "Melee Weapon§Lash Whip": {
         "assets": {
           "traits": [
@@ -271,6 +361,42 @@
           },
           "Strength": {
             "value": "user"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
+      "Melee Weapon§Living Explosive (large)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Suicidal Explosive"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
+      "Melee Weapon§Living Explosive (small)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Suicidal Explosive"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "4"
           },
           "Type": {
             "value": "melee"
@@ -306,7 +432,14 @@
       "Melee Weapon§Monstrous Crushing Claws": {
         "assets": {
           "traits": [
-            "Special Rule§Crushing",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            },
             "Special Rule§Specialist Weapon",
             "Special Rule§Unwieldy"
           ]
@@ -327,7 +460,14 @@
         "assets": {
           "traits": [
             "Special Rule§Shred",
-            "Special Rule§Rending"
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -409,8 +549,26 @@
       "Melee Weapon§Rending Claws": {
         "assets": {
           "traits": [
-            "Special Rule§Rending"
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            }
           ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "melee"
+          }
         }
       },
       "Melee Weapon§Scything Talons": {
@@ -448,7 +606,14 @@
         "assets": {
           "traits": [
             "Special Rule§Unwieldy",
-            "Special Rule§Sweeping"
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -466,7 +631,14 @@
       "Melee Weapon§Thresher Scythe": {
         "assets": {
           "traits": [
-            "Special Rule§Sweeping"
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -484,7 +656,14 @@
       "Melee Weapon§Toxic Lashes (melee)": {
         "assets": {
           "traits": [
-            "Special Rule§Poison",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            },
             "Special Rule§Specialist Weapon"
           ]
         },
@@ -503,7 +682,14 @@
       "Melee Weapon§Toxin Spike": {
         "assets": {
           "traits": [
-            "Special Rule§Poison"
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -531,10 +717,42 @@
           }
         }
       },
+      "Melee Weapon§Wrecker Claws & Bio Flail": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "x2"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
       "Model§Genestealer": {
         "assets": {
           "traits": [
-            "Melee Weapon§Rending Claws",
             "Melee Weapon§Rending Claws"
           ]
         },
@@ -550,6 +768,31 @@
           },
           "Leadership (Ld)": {
             "value": 8
+          },
+          "Loadout": {
+            "ranks": {
+              "Rending Claws": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Rending Claws"
+                  }
+                ]
+              },
+              "Scything Talons": {
+                "order": 1,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Scything Talons"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Rending Claws",
+            "visibility": "normal"
           },
           "Movement (M)": {
             "value": 6
@@ -958,7 +1201,14 @@
       "Ranged Weapon§Bio Electric Pulse": {
         "assets": {
           "traits": [
-            "Special Rule§Arcing"
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -1018,10 +1268,46 @@
           }
         }
       },
+      "Ranged Weapon§Blinding Venom": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            },
+            "Special Rule§Blind"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Strength": {
+            "value": "1"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
       "Ranged Weapon§Choking Spores": {
         "assets": {
           "traits": [
-            "Special Rule§Poison",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            },
             "Special Rule§Blast",
             "Special Rule§Shred"
           ]
@@ -1066,7 +1352,14 @@
         "assets": {
           "traits": [
             "Special Rule§Pinning",
-            "Special Rule§Rending"
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -1307,7 +1600,14 @@
       "Ranged Weapon§Shock Cannon": {
         "assets": {
           "traits": [
-            "Special Rule§Haywire"
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -1362,6 +1662,22 @@
           }
         },
         "text": ""
+      },
+      "Ranged Weapon§Spinemaw": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Strength": {
+            "value": "2"
+          },
+          "Type": {
+            "value": "Pistol 4"
+          }
+        }
       },
       "Ranged Weapon§Spore Mine Launcher": {
         "assets": {
@@ -1447,9 +1763,17 @@
       },
       "Ranged Weapon§Tentaclids": {
         "assets": {
-          "included": [
+          "included": [],
+          "traits": [
             "Special Rule§Skyfire",
-            "Special Rule§Haywire"
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -1470,7 +1794,14 @@
       "Ranged Weapon§Toxic Lashes (shooting)": {
         "assets": {
           "traits": [
-            "Special Rule§Poison"
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -1488,6 +1819,44 @@
           }
         }
       },
+      "Ranged Weapon§Toxinjector Harpoon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": "4"
+                }
+              }
+            },
+            "Special Rule§Pinning",
+            "Special Rule§Concussive",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Pistol 2"
+          }
+        }
+      },
       "Ranged Weapon§Venom Cannon": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -1501,6 +1870,27 @@
           },
           "Type": {
             "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Warp Blast": {
+        "assets": {
+          "traits": [
+            "Special Rule§Psychic Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Assault 1"
           }
         }
       },
@@ -1571,6 +1961,14 @@
           ]
         },
         "text": "the number of attacks this weapon has under X is equal to the Attack (A) characteristic of the\nequipped model."
+      },
+      "Special Rule§Suicidal Explosive": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "When you attack with this weapon, place a Blast marker over this attacking model. The attack\nautomatically scores a hit for each model within 3\" of this model. After resolving the attack, remove the equipped model.\nIt is slain."
       },
       "Special Rule§Symbiotic Targeting": {
         "keywords": {
@@ -1692,10 +2090,43 @@
           "traits": [
             "Special Rule§Synapse",
             "Special Rule§The Swarm Descends",
-            "Special Rule§Psychic",
-            "Melee Weapon§Monstrous Scything Talons",
+            {
+              "item": "Special Rule§Psychic",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
             "Ranged Weapon§Stinger Salvo",
-            "Ranged Weapon§Smite"
+            "Ranged Weapon§Smite",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Brood Progenitor",
+            "Special Rule§Spawn Termagants",
+            "Wargear§Hardened Carapace",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Regeneration"
+          ]
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": [
+            "Assault"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Faction": [
+            "Tyranids"
           ]
         },
         "stats": {
@@ -1710,6 +2141,32 @@
           },
           "Leadership (Ld)": {
             "value": 9
+          },
+          "Loadout": {
+            "ranks": {
+              "Monstrous Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Scything Talons"
+                  }
+                ]
+              },
+              "Monstrous Crushing Claws": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Crushing Claws"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Monstrous Scything Talons",
+            "visibility": "normal"
           },
           "modelCost": {
             "value": 120
