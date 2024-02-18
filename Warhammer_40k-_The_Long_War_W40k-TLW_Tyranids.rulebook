@@ -9,8 +9,8 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "4Q2YFB",
-      "name": "WH40k:TLW",
+      "slug": "SMHB4M",
+      "name": "WH40k:TLW (outdated)",
       "game": "Warhammer 40k: The Long War",
       "source": ""
     }
@@ -1466,6 +1466,43 @@
           }
         }
       },
+      "Model§Von Ryan's Leaper": {
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 7
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 24
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
+          "Strenght (S)": {
+            "value": 4
+          },
+          "Toughness (T)": {
+            "value": 4
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 2
+          }
+        }
+      },
       "Model§Zoanthrope": {
         "assets": {
           "traits": [
@@ -2333,6 +2370,13 @@
         }
       },
       "Roster§Roster": {
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Rite of War"
+            ]
+          }
+        },
         "stats": {
           "Faction": {
             "dynamic": false,
@@ -2342,6 +2386,18 @@
               }
             },
             "value": "Tyranids"
+          },
+          "Rite of War": {
+            "ranks": {
+              "Vanguard Wave": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Vanguard Wave"
+                  }
+                ]
+              }
+            }
           }
         }
       },
@@ -2558,6 +2614,57 @@
             "Troops"
           ]
         },
+        "rules": {
+          "detectROWVanWave": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Genestealer": {
             "max": 20,
@@ -2569,6 +2676,11 @@
           },
           "Points": {
             "value": 30
+          },
+          "Rite of War": {
+            "statType": "term",
+            "value": null,
+            "visibility": "always"
           }
         }
       },
@@ -3242,6 +3354,110 @@
         },
         "stats": {
           "Tyranid Warrior": {
+            "max": 9,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Von Ryan's Leapers": {
+        "allowed": {
+          "items": [
+            "Model§Von Ryan's Leaper"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Von Ryan's Leaper",
+              "quantity": 3
+            }
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Bulky",
+            "Special Rule§Sprint",
+            "Special Rule§Infiltrate"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Keywords": [
+            "M41",
+            "Tyranids",
+            "Vanguard",
+            "Von Ryan's Leapers"
+          ]
+        },
+        "rules": {
+          "detectROWVanWaveLeapers": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Points": {
+            "value": 18
+          },
+          "Von Ryan's Leaper": {
             "max": 9,
             "min": 3,
             "statType": "numeric",
