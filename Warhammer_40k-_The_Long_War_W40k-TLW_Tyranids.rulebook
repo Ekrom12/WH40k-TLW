@@ -106,7 +106,7 @@
         },
         "text": "All units with this Adaptation gain the\nPoison (5+) special rule on all\nweapons they are equipped with. If a\nmodel with this Adaptation already has\nthe Poison (x) special rule, increase\nthe value of (x) by 1 for that unit."
       },
-      "Bio-Morph§Dessicator Larvae": {
+      "Bio-Morph§Desiccator Larvae": {
         "text": "Fleshborers or Fleshborer Hives of the equipped unit gain the **Monster Hunter** Special rule."
       },
       "Bio-Morph§Electro Shock Grubs": {
@@ -890,6 +890,101 @@
           }
         }
       },
+      "Model§Dimachaeron": {
+        "allowed": {
+          "items": []
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Grasping Talons",
+            "Melee Weapon§Monstrous Rending Claws",
+            "Melee Weapon§Prehensile Tail",
+            "Wargear§Bonded Exoskeleton",
+            "Wargear§Spine Maw"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 7
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 125
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Gargoyle": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Fleshborer",
+            "Ranged Weapon§Blinding Venom",
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Chitin",
+            "Bio-Morph§Wings"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Movement (M)": {
+            "value": 12
+          },
+          "Points": {
+            "value": 10
+          },
+          "Save (Sv)": {
+            "value": 6
+          },
+          "Strength (S)": {
+            "value": 3
+          },
+          "Toughness (T)": {
+            "value": 3
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 1
+          }
+        }
+      },
       "Model§Genestealer": {
         "assets": {
           "traits": [
@@ -1150,6 +1245,33 @@
           "Movement (M)": {
             "value": 6
           },
+          "Neurolictor": {
+            "ranks": {
+              "No": {
+                "order": 0
+              },
+              "Yes": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Synapse"
+                  },
+                  {
+                    "trait": "Special Rule§Psychic"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Smite"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "No",
+            "visibility": "normal"
+          },
           "Points": {
             "value": 70
           },
@@ -1210,6 +1332,123 @@
           },
           "Wounds (W)": {
             "value": 3
+          }
+        }
+      },
+      "Model§Mawloc": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Monstrous Scything Talons",
+            {
+              "item": "Melee Weapon§Scything Talons",
+              "quantity": 2
+            },
+            "Melee Weapon§Distensible Jaw",
+            "Wargear§Bonded Exoskeleton"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 95
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Tail Weapon": {
+            "dynamic": true,
+            "ranks": {
+              "Prehensile Tail": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Prehensile Tail"
+                  }
+                ]
+              },
+              "Toxin spike": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Toxin Spike"
+                  }
+                ]
+              },
+              "Bio static Rattle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bio Static Rattle"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Prehensile Tail",
+            "visibility": "normal"
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Mucolid Spore": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Living Explosive (large)",
+            "Wargear§Chitin"
+          ]
+        },
+        "stats": {
+          "Leadership (Ld)": {
+            "value": 10
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 6
+          },
+          "Save (Sv)": {
+            "value": 6
+          },
+          "Strength (S)": {
+            "value": 1
+          },
+          "Toughness (T)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 2
           }
         }
       },
@@ -1483,6 +1722,33 @@
           }
         }
       },
+      "Model§Spore Mine": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Living Explosive (small)"
+          ]
+        },
+        "stats": {
+          "Leadership (Ld)": {
+            "value": 10
+          },
+          "Movement (M)": {
+            "value": 3
+          },
+          "Points": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 1
+          },
+          "Toughness (T)": {
+            "value": 1
+          },
+          "Wounds (W)": {
+            "value": 1
+          }
+        }
+      },
       "Model§Termagant": {
         "assets": {
           "traits": [
@@ -1598,6 +1864,121 @@
           },
           "Wounds (W)": {
             "value": 1
+          }
+        }
+      },
+      "Model§Trygon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Melee Weapon§Scything Talons",
+              "quantity": 2
+            },
+            "Melee Weapon§Monstrous Scything Talons",
+            "Ranged Weapon§Bio Electric Pulse",
+            "Wargear§Bonded Exoskeleton"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 85
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Tail Weapon": {
+            "dynamic": true,
+            "ranks": {
+              "Toxin spike": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Toxin Spike"
+                  }
+                ]
+              },
+              "Prehensile Tail": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Prehensile Tail"
+                  }
+                ]
+              },
+              "Bio static Rattle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bio Static Rattle"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Toxin spike",
+            "visibility": "normal"
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Trygon Prime": {
+            "ranks": {
+              "No": {
+                "order": 0
+              },
+              "Yes": {
+                "order": 1,
+                "tracking": {
+                  "Attacks (A)": 1,
+                  "Points": 35,
+                  "Trygon Prime": 1,
+                  "Weapon Skill (WS)": 1,
+                  "Wounds (W)": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Static Generation"
+                  },
+                  {
+                    "trait": "Special Rule§Biostatic Field"
+                  },
+                  {
+                    "trait": "Special Rule§Synapse"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "No",
+            "visibility": "normal"
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 4
           }
         }
       },
@@ -3029,6 +3410,14 @@
         },
         "text": "This unit benefits from the chosen Adaptive Physiology."
       },
+      "Special Rule§Biostatic Field": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "A model with this special rule has a 6+ Invulnerable save. If the model with this special rule\nAdvances in the movement phase, it gains a 5+ Invulnerable save until the start of its next movement phase."
+      },
       "Special Rule§Blind Rampage": {
         "keywords": {
           "Keywords": [
@@ -3076,6 +3465,14 @@
           ]
         },
         "text": "This unit has a 5+ Invulnerable save."
+      },
+      "Special Rule§Living Ammunition": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit cannot contest objectives or count for scoring VP. Models in his unit have a 3” Movement\n(M) characteristic."
       },
       "Special Rule§Parry": {
         "keywords": {
@@ -3141,6 +3538,14 @@
         },
         "text": "If this unit slays an enemy model with the Smite psychic power, select a single friendly Tyranid\nmodel within 18” to heal 1 wound."
       },
+      "Special Rule§Static Generation": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "A model with this special rule doubles the number of attacks it makes with its Bio Electric pulse\nweapon. If a model with this special rule Advances in the Movement Phase, it gains +1 Strength on its Bio Electric\nPulse until the start of its next Movement Phase."
+      },
       "Special Rule§Suicidal Explosive": {
         "keywords": {
           "Keywords": [
@@ -3173,6 +3578,14 @@
         },
         "text": "This special rule confers the following effects:\n\n-Friendly Tyranid units wholly within 18” of a Tyranid unit with this special rule have the Stubborn special rule and change their Leadership (LD) Characteristic to 10.\n\n-Friendly Tyranid Units within Synapse range also automatically Rally at the start of their movement phase.\n\n-Tyranid Units that are not within Synapse range of a model with this special rule have the Frenzy Special Rule instead and use their base Leadership (LD) Characteristic.\n\n-The unit with this special rule gains the Synapse keyword."
       },
+      "Special Rule§Terror from the Deep": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit does not Scatter when arriving via Deep Strike."
+      },
       "Special Rule§The Swarm Descends": {
         "keywords": {
           "Keywords": [
@@ -3188,6 +3601,14 @@
           ]
         },
         "text": "This unit and any attached unit gain the Poison (4+) special rule on their melee weapons. If they already\nhave the Poison (x) special rule, improve the value of (x) to a max of 3+"
+      },
+      "Special Rule§Tunnelling Horror": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "At the end of your movement phase, if this unit is on the board, you may remove it from play and\nplace it in Deep Strike Reserves. The unit may not leave the battlefield the same turn it arrives."
       },
       "Special Rule§Venom Cluster": {
         "keywords": {
@@ -3256,6 +3677,11 @@
         "assets": {
           "included": [
             "Model§Biovore"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology"
           ]
         },
         "keywords": {
@@ -3286,6 +3712,76 @@
           },
           "Points": {
             "value": 2
+          }
+        }
+      },
+      "Unit§Dimachaeron": {
+        "allowed": {
+          "items": [
+            "Model§Dimachaeron"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Dimachaeron"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Sprint",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Scout",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Preferred Enemy",
+              "stats": {
+                "x": {
+                  "value": "Characters"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Tyranids"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Dimachaeron": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -3339,6 +3835,108 @@
           },
           "Wounds (W)": {
             "value": 5
+          }
+        }
+      },
+      "Unit§Gargoyle Brood": {
+        "allowed": {
+          "items": [
+            "Model§Gargoyle"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Gargoyle",
+              "quantity": 10
+            }
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Deep Strike",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Expendable",
+            "Fly",
+            "Gargoyles",
+            "M41",
+            "Tyranids",
+            "Vanguard"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Bio Morph": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Scorch Bugs": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Scorch Bugs"
+                  }
+                ]
+              },
+              "Desiccator Larvae": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Desiccator Larvae"
+                  }
+                ]
+              },
+              "Electroshock Grubs": {
+                "order": 3,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Electro Shock Grubs"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Gargoyle": {
+            "max": 30,
+            "min": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -3509,6 +4107,12 @@
               "item": "Model§Hormagaunt",
               "quantity": 10
             }
+          ],
+          "traits": [
+            "Special Rule§Fleet",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Shadow in the Warp"
           ]
         },
         "keywords": {
@@ -3650,6 +4254,103 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Mawloc": {
+        "allowed": {
+          "items": [
+            "Model§Mawloc"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Mawloc"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Deep Strike",
+            "Special Rule§Terror from the Deep",
+            "Special Rule§Tunnelling Horror"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "M41",
+            "Mawloc",
+            "Tyranids",
+            "Vanguard"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Mawloc": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Mucolid Spores": {
+        "allowed": {
+          "items": [
+            "Model§Mucolid Spore"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Mucolid Spore"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            "Special Rule§Living Ammunition",
+            "Special Rule§Slow & Purposeful"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Expendable",
+            "Fly",
+            "M41",
+            "Mucolid Spore",
+            "Tyranids",
+            "Vanguard"
+          ]
+        },
+        "stats": {
+          "Mucolid Spore": {
+            "max": 20,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 4
           }
         }
       },
@@ -3913,6 +4614,55 @@
           }
         }
       },
+      "Unit§Spore Mines": {
+        "allowed": {
+          "items": [
+            "Model§Spore Mine"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Spore Mine",
+              "quantity": 3
+            }
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            "Special Rule§Slow & Purposeful",
+            "Special Rule§Living Ammunition"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Expendable",
+            "Fly",
+            "M41",
+            "Spore Mine",
+            "Tyranids",
+            "Vanguard"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Faction": [
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 1
+          },
+          "Spore Mine": {
+            "max": 20,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Termagant Brood": {
         "allowed": {
           "items": [
@@ -4083,6 +4833,63 @@
           },
           "Wounds (W)": {
             "value": 5
+          }
+        }
+      },
+      "Unit§Trygon": {
+        "allowed": {
+          "items": [
+            "Model§Trygon"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Trygon"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Deep Strike",
+            "Special Rule§Terror from the Deep",
+            "Special Rule§Tunnelling Horror",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Fast Attack"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Keywords": [
+            "M41",
+            "Trygon",
+            "Tyranids",
+            "Vanguard"
+          ]
+        },
+        "stats": {
+          "Trygon": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -4738,6 +5545,14 @@
           ]
         },
         "text": "The plates of creatures with this kind of flesh exude a\nconstant resin-like substance that hardens quickly\ncreating a hardened layer of ablative Armour. This\nconfers a 5+ save."
+      },
+      "Wargear§Spine Maw": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "At the end of the Combat Phase, select a single enemy infantry type model within 1” of this model. The chosen\nunit must make a Strength test. To make a Strength test, roll a D6 and compare the result to the models Strength (S)\ncharacteristic. If the result is lower than the models Strength (S) characteristic, the test is passed, and the model resists\nbeing placed in the maw. If the result tis higher than the models Strength (S) characteristic, the target model is slain (this\ncounts as an Instant death attack)."
       }
     },
     "gameModes": {},
