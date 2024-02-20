@@ -28,7 +28,58 @@
           }
         }
       },
-      "Unit": {}
+      "Unit": {
+        "rules": {
+          "DetectROWAssaultWaveMonsters": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Outflank"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Monster"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      }
     },
     "assetCatalog": {
       "Adaptive Physiology§Adrenal Glands": {
@@ -2925,9 +2976,48 @@
                     "trait": "Rite of War§Vanguard Wave"
                   }
                 ]
+              },
+              "Assault Wave": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Assault Wave"
+                  }
+                ]
+              },
+              "Feeder Wave": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Feeder Wave"
+                  }
+                ]
+              },
+              "Chitinous Armoured Spearhead": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Chitinous Armoured Spearhead"
+                  }
+                ]
+              },
+              "Subterranean Attack Wave": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Subterranean Attack Wave"
+                  }
+                ]
+              },
+              "Sky Swarm Assault": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Sky Swarm Assault"
+                  }
+                ]
               }
-            },
-            "value": "-"
+            }
           }
         }
       },
