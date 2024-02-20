@@ -1,5 +1,5 @@
 {
-  "name": "W40k:TLW Tyranids",
+  "name": "W40k:TLW Tyranids (outdated)",
   "revision": "0.0.1",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
@@ -9,10 +9,10 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "4Q2YFB",
+      "slug": "8GU2DM",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
-      "source": ""
+      "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/WIP-ROW-Implementation/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
     }
   ],
   "rulebook": {
@@ -2856,6 +2856,41 @@
           }
         }
       },
+      "Rite of War§Assault Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Chitinous Armoured Spearhead": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Feeder Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Sky Swarm Assault": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Subterranean Attack Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
       "Rite of War§Vanguard Wave": {
         "keywords": {
           "Keywords": [
@@ -2892,7 +2927,7 @@
                 ]
               }
             },
-            "value": "Vanguard Wave"
+            "value": "-"
           }
         }
       },
@@ -3258,33 +3293,19 @@
           ]
         },
         "rules": {
-          "detectROWVanWave": {
+          "detectROWVanWaveGenestealers": {
             "actions": [
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "keywords",
-                    "Role"
-                  ]
-                ],
-                "prepend": "",
-                "value": "Elites"
-              },
               {
                 "actionType": "add",
                 "iterations": 1,
                 "paths": [
                   [
                     "{self}",
-                    "keywords",
-                    "Role"
+                    "traits"
                   ]
                 ],
                 "prepend": "",
-                "value": "Troops"
+                "value": "Special Rule§Deep Strike"
               }
             ],
             "evals": [
