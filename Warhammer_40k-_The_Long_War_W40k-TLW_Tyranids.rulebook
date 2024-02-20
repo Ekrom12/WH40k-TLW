@@ -751,6 +751,94 @@
           }
         }
       },
+      "Model§Barbgaunt": {
+        "assets": {
+          "traits": [
+            "Wargear§Chitin",
+            "Ranged Weapon§Barblauncher",
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 14
+          },
+          "Save (Sv)": {
+            "value": 6
+          },
+          "Strength (S)": {
+            "value": 4
+          },
+          "Toughness (T)": {
+            "value": 4
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 1
+          }
+        }
+      },
+      "Model§Biovore": {
+        "assets": {
+          "traits": [
+            "Wargear§Bonded Exoskeleton",
+            "Ranged Weapon§Spore Mine Launcher",
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 33
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 2
+          }
+        }
+      },
       "Model§Genestealer": {
         "assets": {
           "traits": [
@@ -873,6 +961,76 @@
           }
         }
       },
+      "Model§Hive Guard": {
+        "allowed": {
+          "items": [
+            "Wargear§Bonded Exoskeleton",
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 2
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Loadout": {
+            "dynamic": true,
+            "ranks": {
+              "Impaler Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Impaler Cannon"
+                  }
+                ]
+              },
+              "Shock Cannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Shock Cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 34
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 2
+          }
+        }
+      },
       "Model§Hormagaunt": {
         "assets": {
           "traits": [
@@ -913,6 +1071,183 @@
           },
           "Wounds (W)": {
             "value": 1
+          }
+        }
+      },
+      "Model§Lictor": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Rending Claws",
+            "Melee Weapon§Grasping Talons",
+            "Wargear§Reinforced Chitin",
+            "Ranged Weapon§Flesh Hooks"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 6
+          },
+          "Leadership (Ld)": {
+            "value": 8
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 70
+          },
+          "Save (Sv)": {
+            "value": 5
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 5
+          },
+          "Wounds (W)": {
+            "value": 3
+          }
+        }
+      },
+      "Model§Malanthrope": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Grasping Tail",
+            "Wargear§Reinforced Chitin"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 3
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 50
+          },
+          "Save (Sv)": {
+            "value": 5
+          },
+          "Strength (S)": {
+            "value": 4
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 3
+          }
+        }
+      },
+      "Model§Psychophage": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Ravenous Maw",
+            "Melee Weapon§Scything Talons",
+            "Wargear§Bonded Exoskeleton",
+            "Wargear§Psychoclastic Torrent"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 75
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 6
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Pyrovore": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Acid Maw",
+            "Ranged Weapon§Flamespurt",
+            "Wargear§Bonded Exoskeleton"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 28
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 2
           }
         }
       },
@@ -1466,6 +1801,174 @@
           }
         }
       },
+      "Model§Tyrant Guard": {
+        "assets": {
+          "traits": [
+            "Wargear§Armoured Shell",
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 2
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Loadout": {
+            "dynamic": true,
+            "ranks": {
+              "Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Scything Talons"
+                  }
+                ]
+              },
+              "Lash Whip and Bonesword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  },
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Crushing Claws": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Crushing Claws"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Scything Talons",
+            "visibility": "normal"
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 35
+          },
+          "Save (Sv)": {
+            "value": 2
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 2
+          }
+        }
+      },
+      "Model§Venomthrope": {
+        "allowed": {
+          "items": []
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Toxic Lashes (shooting)",
+            "Melee Weapon§Toxic Lashes (melee)",
+            "Wargear§Reinforced Chitin"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 2
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 3
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 40
+          },
+          "Save (Sv)": {
+            "value": 5
+          },
+          "Strength (S)": {
+            "value": 4
+          },
+          "Toughness (T)": {
+            "value": 4
+          },
+          "Weapon Skill (WS)": {
+            "value": 3
+          },
+          "Wounds (W)": {
+            "value": 2
+          }
+        }
+      },
+      "Model§Von Ryan's Leaper": {
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 7
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 24
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
+          "Strenght (S)": {
+            "value": 4
+          },
+          "Toughness (T)": {
+            "value": 4
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 2
+          }
+        }
+      },
       "Model§Zoanthrope": {
         "assets": {
           "traits": [
@@ -1499,6 +2002,34 @@
           },
           "Movement (M)": {
             "value": 6
+          },
+          "Neurothrope Adaptation": {
+            "dynamic": true,
+            "ranks": {
+              "Yes": {
+                "order": 0
+              },
+              "No": {
+                "order": 1,
+                "tracking": {
+                  "Ballistic Skill (BS)": 1,
+                  "Neurothrope Adaptation": 1,
+                  "Points": 30,
+                  "Wounds (W)": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Warp Siphon"
+                  },
+                  {
+                    "trait": "Special Rule§Spirit Leech"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Yes",
+            "visibility": "normal"
           },
           "Points": {
             "value": 40
@@ -2333,6 +2864,13 @@
         }
       },
       "Roster§Roster": {
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Rite of War"
+            ]
+          }
+        },
         "stats": {
           "Faction": {
             "dynamic": false,
@@ -2341,7 +2879,20 @@
                 "order": 1
               }
             },
-            "value": "Tyranids"
+            "value": "-"
+          },
+          "Rite of War": {
+            "ranks": {
+              "Vanguard Wave": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Rite of War§Vanguard Wave"
+                  }
+                ]
+              }
+            },
+            "value": "Vanguard Wave"
           }
         }
       },
@@ -2353,6 +2904,14 @@
         },
         "text": "This unit benefits from the chosen Adaptive Physiology."
       },
+      "Special Rule§Blind Rampage": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "If a friendly Hive Tyrant in your army is slain, this unit must attempt to always charge the nearest target\nfor the rest of the game. In addition, this unit gains the Rage (2) special rule."
+      },
       "Special Rule§Brood Progenitor": {
         "keywords": {
           "Keywords": [
@@ -2360,6 +2919,14 @@
           ]
         },
         "text": "This unit may join units of Termagants even though it does not have the Infantry type."
+      },
+      "Special Rule§Chameleonic": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit always gains the benefits of Light Cover even if it normally would not. If this unit is already\nbenefiting from Light Cover, it benefits from Heavy Cover instead."
       },
       "Special Rule§Extended Carapace": {
         "keywords": {
@@ -2393,6 +2960,14 @@
         },
         "text": "A model equipped with a weapon with this special rule that is allocated a wound in the Combat Phase, may, after\narmour saves, roll a D6. On the roll of a 6+, that wound is ignored. If the model equipped with this wargear has the Feel no Pain\n(x) special rule, they instead may re-roll results of 1 on for the Feel no Pain Roll."
       },
+      "Special Rule§Pheromone Trail": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "While this unit is on the board, any Tyranid units placed in reserves via Outflank have +1 to the roll to\ndetermine if a unit will arrive."
+      },
       "Special Rule§Psychic Barrier": {
         "keywords": {
           "Keywords": [
@@ -2409,6 +2984,14 @@
         },
         "text": "**Tyranid** units with this rule gain the benefits of the Deny the Witch and Adamantium Will special rules."
       },
+      "Special Rule§Shrouding Spores": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit and any attached unit always gain the benefits of Light Cover. If this unit and any attached\nunit are already gaining the benefit of Light Cover, they gain the benefit of Heavy Cover instead."
+      },
       "Special Rule§Spawn Termagants": {
         "keywords": {
           "Keywords": [
@@ -2424,6 +3007,14 @@
           ]
         },
         "text": "the number of attacks this weapon has under X is equal to the Attack (A) characteristic of the\nequipped model."
+      },
+      "Special Rule§Spirit Leech": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "If this unit slays an enemy model with the Smite psychic power, select a single friendly Tyranid\nmodel within 18” to heal 1 wound."
       },
       "Special Rule§Suicidal Explosive": {
         "keywords": {
@@ -2464,6 +3055,114 @@
           ]
         },
         "text": "Units instead of setting to Overwatch, may set to Counter charge. At the end of your opponent’s Charge Phase, after all charges have been declared and resolved. Any unit that set to Counter charge may attempt to charge as if it were your charge phase but with -2 to the Charge roll."
+      },
+      "Special Rule§Toxic Miasma": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit and any attached unit gain the Poison (4+) special rule on their melee weapons. If they already\nhave the Poison (x) special rule, improve the value of (x) to a max of 3+"
+      },
+      "Special Rule§Venom Cluster": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "During deployment, Venomthrope models in a unit consisting of 2 or more models are deployed\nseparately as individual units of 1. Each model is considered its own unit for the rest of the game."
+      },
+      "Special Rule§Warp Siphon": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "While this unit is attached to a unit with the Psyker (x) special rule, the Neurothrope can re-roll\nLeadership tests when attempting to cast Psychic powers."
+      },
+      "Unit§Barbgaunt Brood": {
+        "allowed": {
+          "items": [
+            "Model§Barbgaunt"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Barbgaunt",
+              "quantity": 5
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Barbgaunts",
+            "M41",
+            "Tyranids"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Barbgaunt": {
+            "max": 10,
+            "min": 5,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Biovore": {
+        "allowed": {
+          "items": [
+            "Model§Biovore"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Biovore"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Biovores",
+            "M41",
+            "Tyranids"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Biovore": {
+            "max": 3,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 2
+          }
+        }
       },
       "Unit§Exocrine": {
         "assets": {
@@ -2558,6 +3257,57 @@
             "Troops"
           ]
         },
+        "rules": {
+          "detectROWVanWave": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Genestealer": {
             "max": 20,
@@ -2569,6 +3319,70 @@
           },
           "Points": {
             "value": 30
+          },
+          "Rite of War": {
+            "statType": "term",
+            "value": null,
+            "visibility": "always"
+          }
+        }
+      },
+      "Unit§Hive Guard": {
+        "allowed": {
+          "items": [
+            "Model§Hive Guard"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Hive Guard",
+              "quantity": 3
+            }
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Elites"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Feeder",
+            "Hive Guard",
+            "M41",
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Hive Guard": {
+            "max": 9,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": -2
           }
         }
       },
@@ -2615,6 +3429,225 @@
           },
           "Points": {
             "value": 0
+          }
+        }
+      },
+      "Unit§Lictor": {
+        "allowed": {
+          "items": [
+            "Model§Lictor"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Lictor"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Infiltrate",
+            "Special Rule§Outflank",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Fear",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Special Rule§Pheromone Trail",
+            "Special Rule§Chameleonic"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Lictor",
+            "M41",
+            "Tyranids",
+            "Vanguard"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Lictor": {
+            "max": 1,
+            "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Malanthrope": {
+        "allowed": {
+          "items": [
+            "Model§Malanthrope"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Malanthrope"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Preferred Enemy",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Special Rule§Shrouding Spores",
+            "Special Rule§Toxic Miasma"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Feeder"
+          ]
+        },
+        "stats": {
+          "Malanthrope": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Psychophage": {
+        "allowed": {
+          "items": [
+            "Model§Psychophage"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Psychophage"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Preferred Enemy",
+              "stats": {
+                "x": {
+                  "value": "Psykers"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Feeder",
+            "M41",
+            "Psychophage",
+            "Tyranids"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Psychophage": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Pyrovore": {
+        "allowed": {
+          "items": [
+            "Model§Pyrovore"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Pyrovore"
+          ],
+          "traits": [
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Tyranids"
+          ],
+          "Keywords": [
+            "Assault",
+            "M41",
+            "Pyrovores",
+            "Tyranids"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 2
+          },
+          "Pyrovore": {
+            "max": 3,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -3251,6 +4284,227 @@
           }
         }
       },
+      "Unit§Tyrant Guard": {
+        "allowed": {
+          "items": [
+            "Model§Tyrant Guard"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Tyrant Guard",
+              "quantity": 3
+            }
+          ],
+          "traits": [
+            "Special Rule§Blind Rampage",
+            "Special Rule§Slow & Purposeful",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Assault",
+            "M41",
+            "Tyranids",
+            "Tyrant Guard"
+          ]
+        },
+        "stats": {
+          "Tyrant Guard": {
+            "max": 9,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Venomthropes": {
+        "allowed": {
+          "items": [
+            "Model§Venomthrope"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Venomthrope"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Special Rule§Shrouding Spores",
+            "Special Rule§Toxic Miasma",
+            "Special Rule§Venom Cluster"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Character",
+            "Fly",
+            "M41",
+            "Tyranids",
+            "Venomthropes"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          },
+          "Venomthrope": {
+            "max": 7,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Von Ryan's Leapers": {
+        "allowed": {
+          "items": [
+            "Model§Von Ryan's Leaper"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Von Ryan's Leaper",
+              "quantity": 3
+            }
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Bulky",
+            "Special Rule§Sprint",
+            "Special Rule§Infiltrate"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Keywords": [
+            "M41",
+            "Tyranids",
+            "Vanguard",
+            "Von Ryan's Leapers"
+          ]
+        },
+        "rules": {
+          "detectROWVanWaveLeapers": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "prepend": "",
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Points": {
+            "value": 18
+          },
+          "Von Ryan's Leaper": {
+            "max": 9,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Zoanthrope": {
         "allowed": {
           "items": [
@@ -3310,6 +4564,14 @@
           ]
         },
         "stats": {
+          "Neurothrope Adaptation": {
+            "max": 1,
+            "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
           "Points": {
             "value": 30
           },
@@ -3354,6 +4616,9 @@
           ]
         },
         "text": "The creature's Carapace is made of a thicker hardened\nchitin that is resistant to impacts and is far denser. It\nconfers a 4+ save."
+      },
+      "Wargear§Psychoclastic Torrent": {
+        "text": "A model with this wargear and any friendly Tyranid unit within 6” may not be targeted by enemy\nPsychic Powers or Psychic Weapons. This unit always gains the benefit of Light Cover. If it would already benefit from\nLight Cover, it gains the benefit of Heavy Cover instead."
       },
       "Wargear§Reinforced Chitin": {
         "keywords": {

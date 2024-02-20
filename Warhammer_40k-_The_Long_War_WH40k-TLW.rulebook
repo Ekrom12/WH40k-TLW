@@ -404,7 +404,8 @@
       "Roster§Roster": {
         "allowed": {
           "classifications": [
-            "Unit"
+            "Unit",
+            "Rite of War"
           ]
         },
         "aspects": {
@@ -431,6 +432,18 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Rite of War": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "always"
           }
         }
       },
