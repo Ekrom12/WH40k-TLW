@@ -914,6 +914,26 @@
           ]
         },
         "rules": {
+          "Lower Limb Weapon cannot be Empty": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lower Limbs Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
           "Only one pair of Crushing Claws is allowed": {
             "evals": [
               {
@@ -924,7 +944,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Upper Limb Weapons",
+                    "Upper Limbs Weapons",
                     "value"
                   ],
                   [
@@ -939,6 +959,42 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "SetWreckerClawsAsSingleWeapon": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lower Limbs Weapons",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Upper Limbs Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "Wrecker Claws & Bio Flail"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
@@ -1107,6 +1163,15 @@
                     "trait": "Ranged Weapon§Heavy Venom Cannon"
                   }
                 ]
+              },
+              "-": {
+                "order": 6,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Venom Cannon"
+                  }
+                ]
               }
             },
             "statOrder": 2,
@@ -1233,6 +1298,17 @@
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Heavy Venom Cannon"
+                  }
+                ]
+              },
+              "Wrecker Claws & Bio Flail": {
+                "order": 6,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Wrecker Claws & Bio Flail"
                   }
                 ]
               }
@@ -4440,7 +4516,8 @@
         "assets": {
           "included": [
             "Model§Carnifex"
-          ]
+          ],
+          "traits": []
         },
         "keywords": {
           "Keywords": [
