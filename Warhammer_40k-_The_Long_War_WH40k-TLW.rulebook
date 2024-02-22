@@ -9,6 +9,7 @@
   "wip": true,
   "rulebook": {
     "assetTaxonomy": {
+      "Character": {},
       "Melee Weapon": {
         "removed": {
           "stats": {
@@ -113,6 +114,7 @@
       "Ranged Weapon": {
         "templateClass": "Weapon"
       },
+      "Relics": {},
       "Rite of War": {},
       "Special Rule": {
         "aspects": {
@@ -332,6 +334,7 @@
         "templateClass": "Unit"
       },
       "Wargear": {},
+      "Warlord Traits": {},
       "Weapon": {
         "stats": {
           "Armor Penetration (AP)": {
