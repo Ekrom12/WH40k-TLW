@@ -9,6 +9,7 @@
   "wip": true,
   "dependencies": [
     {
+
       "slug": "8GU2DM",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
@@ -28,6 +29,7 @@
           }
         }
       },
+
       "Unit": {
         "rules": {
           "DetectROWAssaultWaveMonsters": {
@@ -79,6 +81,7 @@
             "failState": "pass"
           }
         }
+
       }
     },
     "assetCatalog": {
@@ -2477,6 +2480,8 @@
           }
         }
       },
+
+
       "Model§Toxicrene": {
         "assets": {
           "traits": [
@@ -2484,6 +2489,7 @@
             "Melee Weapon§Toxic Lashes (melee)",
             "Melee Weapon§Powerful limbs",
             "Wargear§Bonded Exoskeleton"
+
           ]
         },
         "stats": {
@@ -2494,6 +2500,8 @@
             "value": 3
           },
           "Initiative (I)": {
+
+
             "value": 4
           },
           "Leadership (Ld)": {
@@ -2503,16 +2511,20 @@
             "value": 8
           },
           "Points": {
+
             "value": 85
+
           },
           "Save (Sv)": {
             "value": 3
           },
+
           "Strenght (S)": {
             "value": 6
           },
           "Toughness (T)": {
             "value": 7
+
           },
           "Weapon Skill (WS)": {
             "value": 3
@@ -4069,39 +4081,136 @@
           }
         }
       },
-      "Rite of War§Assault Wave": {
+      
+      "Relic§Norn Crown": {
+        "assets": {
+          "traits": [
+            "Special Rule§Synapse"
+          ]
+        },
         "keywords": {
           "Keywords": [
-            "Tyranid Rite of War"
+            "Relic"
           ]
+        },
+        "text": "A model with this Bio Artifact gains Synapse. If they already have Synapse, the range is increased by 6\"."
+      },
+      "Relic§Resonance Barb": {
+        "assets": {
+          "traits": [
+            "Special Rule§Psyker"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Relic"
+          ]
+        },
+        "text": "A model equipped with this Bio Artifact increases its Warp Mastery level by 1 and can roll 3 Dice when attempting to cast a Psychic power,\ntaking the best result."
+      },
+      "Relic§Scythes of Tyran": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": "5"
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Bane",
+              "stats": {
+                "x": {
+                  "value": "Adeptus Mechanicus"
+                }
+              }
+            },
+            "Special Rule§Master-Crafted"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Relic"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "group": "Stats",
+            "groupOrder": 0,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 3,
+            "visibility": "normal"
+          },
+          "Strength": {
+            "group": "Stats",
+            "groupOrder": 0,
+            "statOrder": 2,
+            "statType": "term",
+            "value": "+2",
+            "visibility": "normal"
+          },
+          "Type": {
+            "group": "Stats",
+            "groupOrder": 0,
+            "statType": "term",
+            "value": "Melee",
+            "visibility": "normal"
+          }
         }
       },
-      "Rite of War§Chitinous Armoured Spearhead": {
+      "Relic§Venomthorn Parasite": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Special Rule§Blast"
+          ]
+        },
         "keywords": {
           "Keywords": [
-            "Tyranid Rite of War"
+            "Relic"
           ]
-        }
-      },
-      "Rite of War§Feeder Wave": {
-        "keywords": {
-          "Keywords": [
-            "Tyranid Rite of War"
-          ]
-        }
-      },
-      "Rite of War§Sky Swarm Assault": {
-        "keywords": {
-          "Keywords": [
-            "Tyranid Rite of War"
-          ]
-        }
-      },
-      "Rite of War§Subterranean Attack Wave": {
-        "keywords": {
-          "Keywords": [
-            "Tyranid Rite of War"
-          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "group": "Stats",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 2,
+            "visibility": "normal"
+          },
+          "Range": {
+            "group": "Stats",
+            "statOrder": 2,
+            "statType": "term",
+            "value": "36\"",
+            "visibility": "normal"
+          },
+          "Strength": {
+            "group": "Stats",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 9,
+            "visibility": "normal"
+          },
+          "Type": {
+            "group": "Stats",
+            "statOrder": 1,
+            "statType": "term",
+            "value": "Assault 1",
+            "visibility": "normal"
+          }
+
+      
         }
       },
       "Rite of War§Vanguard Wave": {
@@ -4112,6 +4221,9 @@
         }
       },
       "Roster§Roster": {
+        "allowed": {
+          "classifications": []
+        },
         "removed": {
           "allowed": {
             "classifications": [
@@ -5704,14 +5816,6 @@
             "Special Rule§Synapse",
             "Special Rule§The Swarm Descends",
             {
-              "item": "Special Rule§Psychic",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            {
               "item": "Special Rule§Hammer of Wrath",
               "stats": {
                 "x": {
@@ -5727,7 +5831,15 @@
             "Special Rule§Regeneration",
             "Ranged Weapon§Stinger Salvo",
             "Ranged Weapon§Smite",
-            "Wargear§Bonded Exoskeleton"
+            "Wargear§Bonded Exoskeleton",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -5942,7 +6054,7 @@
             "Special Rule§The Swarm Descends",
             "Special Rule§Adaptive Physiology",
             {
-              "item": "Special Rule§Psychic",
+              "item": "Special Rule§Psyker",
               "stats": {
                 "x": {
                   "value": "1"
@@ -6146,7 +6258,7 @@
               }
             },
             "statType": "rank",
-            "value": "Spinefist",
+            "value": "Devourer",
             "visibility": "normal"
           },
           "Strength (S)": {
@@ -6541,17 +6653,17 @@
                 }
               }
             },
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Hyper Warp Field",
+            "Special Rule§Adaptive Physiology",
             {
-              "item": "Special Rule§Psychic",
+              "item": "Special Rule§Psyker",
               "stats": {
                 "x": {
                   "value": "1"
                 }
               }
-            },
-            "Special Rule§The Swarm Descends",
-            "Special Rule§Hyper Warp Field",
-            "Special Rule§Adaptive Physiology"
+            }
           ]
         },
         "keywords": {
