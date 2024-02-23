@@ -28,7 +28,13 @@
           }
         }
       },
-      "Unit": {}
+      "Character": {},
+      "Relic": {},
+      "Unit": {},
+      "Warlord Trait": {},
+      "Warlord Traits": {
+        "inheritance": "removed"
+      }
     },
     "assetCatalog": {
       "Adaptive Physiology§Adrenal Glands": {
@@ -3309,7 +3315,7 @@
           }
         }
       },
-      "Relics§Norn Crown": {
+      "Relic§Norn Crown": {
         "assets": {
           "traits": [
             "Special Rule§Synapse"
@@ -3322,24 +3328,10 @@
         },
         "text": "A model with this Bio Artifact gains Synapse. If they already have Synapse, the range is increased by 6\"."
       },
-      "Relics§Resonance Barb": {
+      "Relic§Resonance Barb": {
         "assets": {
           "traits": [
-            {
-              "item": "Special Rule§Psychic",
-              "assets": {
-                "traits": [
-                  {
-                    "item": "Special Rule§Psychic",
-                    "stats": {
-                      "x": {
-                        "value": "+1"
-                      }
-                    }
-                  }
-                ]
-              }
-            }
+            "Special Rule§Psyker"
           ]
         },
         "keywords": {
@@ -3349,7 +3341,7 @@
         },
         "text": "A model equipped with this Bio Artifact increases its Warp Mastery level by 1 and can roll 3 Dice when attempting to cast a Psychic power,\ntaking the best result."
       },
-      "Relics§Scythes of Tyran": {
+      "Relic§Scythes of Tyran": {
         "assets": {
           "traits": [
             {
@@ -3369,6 +3361,11 @@
               }
             },
             "Special Rule§Master-Crafted"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Relic"
           ]
         },
         "stats": {
@@ -3397,7 +3394,7 @@
           }
         }
       },
-      "Relics§Venomthorn Parasite": {
+      "Relic§Venomthorn Parasite": {
         "assets": {
           "traits": [
             {
@@ -3455,6 +3452,9 @@
         }
       },
       "Roster§Roster": {
+        "allowed": {
+          "classifications": []
+        },
         "removed": {
           "allowed": {
             "classifications": [
@@ -4820,14 +4820,6 @@
             "Special Rule§Synapse",
             "Special Rule§The Swarm Descends",
             {
-              "item": "Special Rule§Psychic",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            {
               "item": "Special Rule§Hammer of Wrath",
               "stats": {
                 "x": {
@@ -4843,7 +4835,15 @@
             "Special Rule§Regeneration",
             "Ranged Weapon§Stinger Salvo",
             "Ranged Weapon§Smite",
-            "Wargear§Bonded Exoskeleton"
+            "Wargear§Bonded Exoskeleton",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -5002,7 +5002,7 @@
             "Special Rule§The Swarm Descends",
             "Special Rule§Adaptive Physiology",
             {
-              "item": "Special Rule§Psychic",
+              "item": "Special Rule§Psyker",
               "stats": {
                 "x": {
                   "value": "1"
@@ -5206,7 +5206,7 @@
               }
             },
             "statType": "rank",
-            "value": "Spinefist",
+            "value": "Devourer",
             "visibility": "normal"
           },
           "Strength (S)": {
@@ -5546,17 +5546,17 @@
                 }
               }
             },
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Hyper Warp Field",
+            "Special Rule§Adaptive Physiology",
             {
-              "item": "Special Rule§Psychic",
+              "item": "Special Rule§Psyker",
               "stats": {
                 "x": {
                   "value": "1"
                 }
               }
-            },
-            "Special Rule§The Swarm Descends",
-            "Special Rule§Hyper Warp Field",
-            "Special Rule§Adaptive Physiology"
+            }
           ]
         },
         "keywords": {
