@@ -9,8 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-
-      "slug": "8GU2DM",
+      "slug": "SVX54X",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/WIP-ROW-Implementation/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -29,7 +28,6 @@
           }
         }
       },
-
       "Unit": {
         "rules": {
           "DetectROWAssaultWaveMonsters": {
@@ -81,7 +79,6 @@
             "failState": "pass"
           }
         }
-
       }
     },
     "assetCatalog": {
@@ -2480,8 +2477,6 @@
           }
         }
       },
-
-
       "Model§Toxicrene": {
         "assets": {
           "traits": [
@@ -2489,7 +2484,6 @@
             "Melee Weapon§Toxic Lashes (melee)",
             "Melee Weapon§Powerful limbs",
             "Wargear§Bonded Exoskeleton"
-
           ]
         },
         "stats": {
@@ -2500,8 +2494,6 @@
             "value": 3
           },
           "Initiative (I)": {
-
-
             "value": 4
           },
           "Leadership (Ld)": {
@@ -2511,20 +2503,16 @@
             "value": 8
           },
           "Points": {
-
             "value": 85
-
           },
           "Save (Sv)": {
             "value": 3
           },
-
           "Strenght (S)": {
             "value": 6
           },
           "Toughness (T)": {
             "value": 7
-
           },
           "Weapon Skill (WS)": {
             "value": 3
@@ -4081,7 +4069,6 @@
           }
         }
       },
-      
       "Relic§Norn Crown": {
         "assets": {
           "traits": [
@@ -4209,8 +4196,41 @@
             "value": "Assault 1",
             "visibility": "normal"
           }
-
-      
+        }
+      },
+      "Rite of War§Assault Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Chitinous Armoured Spearhead": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Feeder Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Sky Swarm Assault": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
+        }
+      },
+      "Rite of War§Subterranean Attack Wave": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Rite of War"
+          ]
         }
       },
       "Rite of War§Vanguard Wave": {
