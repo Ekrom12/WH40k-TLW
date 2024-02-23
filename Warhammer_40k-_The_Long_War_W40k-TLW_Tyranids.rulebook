@@ -28,6 +28,7 @@
           }
         }
       },
+      "Relic": {},
       "Unit": {},
       "Warlord Trait": {},
       "Warlord Traits": {
@@ -3313,7 +3314,7 @@
           }
         }
       },
-      "Relics§Norn Crown": {
+      "Relic§Norn Crown": {
         "assets": {
           "traits": [
             "Special Rule§Synapse"
@@ -3326,24 +3327,10 @@
         },
         "text": "A model with this Bio Artifact gains Synapse. If they already have Synapse, the range is increased by 6\"."
       },
-      "Relics§Resonance Barb": {
+      "Relic§Resonance Barb": {
         "assets": {
           "traits": [
-            {
-              "item": "Special Rule§Psychic",
-              "assets": {
-                "traits": [
-                  {
-                    "item": "Special Rule§Psychic",
-                    "stats": {
-                      "x": {
-                        "value": "+1"
-                      }
-                    }
-                  }
-                ]
-              }
-            }
+            "Special Rule§Psyker"
           ]
         },
         "keywords": {
@@ -3353,7 +3340,7 @@
         },
         "text": "A model equipped with this Bio Artifact increases its Warp Mastery level by 1 and can roll 3 Dice when attempting to cast a Psychic power,\ntaking the best result."
       },
-      "Relics§Scythes of Tyran": {
+      "Relic§Scythes of Tyran": {
         "assets": {
           "traits": [
             {
@@ -3406,7 +3393,7 @@
           }
         }
       },
-      "Relics§Venomthorn Parasite": {
+      "Relic§Venomthorn Parasite": {
         "assets": {
           "traits": [
             {
