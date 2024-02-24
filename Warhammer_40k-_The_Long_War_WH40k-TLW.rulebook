@@ -9,6 +9,39 @@
   "wip": true,
   "rulebook": {
     "assetTaxonomy": {
+      "Character": {
+        "stats": {
+          "Relic": {
+            "statType": "term",
+            "value": "n/a",
+            "visibility": "normal"
+          },
+          "Warlord": {
+            "ranks": {
+              "No": {
+                "order": 0
+              },
+              "Yes": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "No",
+            "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "statType": "term",
+            "value": "n/a",
+            "visibility": "normal"
+          },
+          "Warlord Trait 2": {
+            "statType": "term",
+            "value": "n/a",
+            "visibility": "normal"
+          }
+        },
+        "templateClass": "Unit"
+      },
       "Melee Weapon": {
         "removed": {
           "stats": {
@@ -80,7 +113,7 @@
             "value": 0,
             "visibility": "normal"
           },
-          "Strenght (S)": {
+          "Strength (S)": {
             "group": "Stats",
             "statOrder": 3,
             "statType": "numeric",
@@ -113,6 +146,7 @@
       "Ranged Weapon": {
         "templateClass": "Weapon"
       },
+      "Relic": {},
       "Rite of War": {},
       "Special Rule": {
         "aspects": {
@@ -332,6 +366,7 @@
         "templateClass": "Unit"
       },
       "Wargear": {},
+      "Warlord Trait": {},
       "Weapon": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -405,7 +440,8 @@
         "allowed": {
           "classifications": [
             "Unit",
-            "Rite of War"
+            "Rite of War",
+            "Character"
           ]
         },
         "aspects": {
@@ -932,14 +968,6 @@
         },
         "text": "A unit with the Priest (x) special rule can perform a\nnumber of Prayers each player turn equal to the value\nof (x). A Priest knows Prayers from the relevant\nLitanies listed in their codex."
       },
-      "Special Rule§Psychic": {
-        "keywords": {
-          "Keywords": [
-            "Universal Special Rule"
-          ]
-        },
-        "text": "A unit with the Psyker (x) special rule can cast a\nnumber of Psychic Powers each player turn equal to\nthe value of (x). All Psykers know the Smite Power\n(see 8.4). A Psyker knows spells from the relevant\ndiscipline indicated in their codex."
-      },
       "Special Rule§Psychic Weapon": {
         "keywords": {
           "Keywords": [
@@ -947,6 +975,14 @@
           ]
         },
         "text": "This weapon counts as a Psychic Power for any rules\nthat would affect Psychic Powers. Weapons with this\nspecial rule have the Gets Hot! Special rule. However,\nyou may only take Invulnerable saves against Gets\nHot! Rolls caused by a Psychic Weapon."
+      },
+      "Special Rule§Psyker": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        },
+        "text": "A unit with the Psyker (x) special rule can cast a\nnumber of Psychic Powers each player turn equal to\nthe value of (x). All Psykers know the Smite Power\n(see 8.4). A Psyker knows spells from the relevant\ndiscipline indicated in their codex."
       },
       "Special Rule§Rage": {
         "keywords": {
