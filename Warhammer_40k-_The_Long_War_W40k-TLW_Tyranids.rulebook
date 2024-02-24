@@ -9,10 +9,10 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "SVX54X",
+      "slug": "C8HYTC",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
-      "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/WIP-ROW-Implementation/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
+      "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
     }
   ],
   "rulebook": {
@@ -127,6 +127,199 @@
       },
       "Bio-Morph§Wings": {
         "text": "A Tyranid Infantry or Monster unit with this Bio-Morph\nincreases their Movement (M) characteristic to 12”. It\ngains the Hammer of Wrath (1) and Deep strike special\nrules. The equipped model gains the Fly keyword."
+      },
+      "Character§Norn Assimilator": {
+        "allowed": {
+          "items": [
+            "Model§Norn Assimilator"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Norn Assimilator"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Psychic Barrier",
+            "Special Rule§Fleet",
+            "Special Rule§Relentless",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Sudden Strike",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Singular Purpose",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Will of the Hive Mind"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Command",
+            "M41",
+            "Norn Assimilator",
+            "Synapse",
+            "Tyranids"
+          ],
+          "Role": [
+            "Lord of War"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Norn Assimilator": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Character§Norn Emissary": {
+        "allowed": {
+          "items": [
+            "Model§Norn Emissary"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Norn Emissary"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Psychic Barrier",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Special Rule§Singular Purpose",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Will of the Hive Mind"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Command",
+            "M41",
+            "Norn Emissary",
+            "Synapse",
+            "Tyranids"
+          ],
+          "Role": [
+            "Lord of War"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Norn Emissary": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Character§Swarmlord": {
+        "allowed": {
+          "items": [
+            "Model§Swarmlord"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Swarmlord"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Move Through Cover",
+            "Special Rule§Regeneration",
+            "Special Rule§Psychic Barrier",
+            "Special Rule§Will of the Hive Mind",
+            "Special Rule§Hive Commander",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Swarmlord": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
       },
       "Character§Tervigon": {
         "allowed": {
@@ -263,6 +456,61 @@
             "statType": "rank",
             "tracked": true,
             "value": "-"
+          }
+        }
+      },
+      "Character§Tyranid Prime": {
+        "allowed": {
+          "items": [
+            "Model§Tyranid Prime"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Tyranid Prime"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp"
+          ]
+        },
+        "keywords": {
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Keywords": [
+            "Command",
+            "M41",
+            "Psyker",
+            "Synapse",
+            "Tyranid Prime",
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Tyranid Prime": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -1732,6 +1980,54 @@
           }
         }
       },
+      "Model§Harridan": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Bio Cannon",
+              "quantity": 2
+            },
+            "Melee Weapon§Monstrous Scything Talons",
+            "Wargear§Bonded Exoskeleton",
+            "Bio-Morph§Wings"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Movement (M)": {
+            "value": 12
+          },
+          "Points": {
+            "value": 230
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 9
+          },
+          "Toughness (T)": {
+            "value": 9
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 12
+          }
+        }
+      },
       "Model§Haruspex": {
         "assets": {
           "traits": [
@@ -1774,6 +2070,123 @@
           },
           "Wounds (W)": {
             "value": 5
+          }
+        }
+      },
+      "Model§Hierodule": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Hierodule Scything Talons",
+            "Wargear§Armoured Shell"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Loadout": {
+            "group": "Loadout",
+            "groupOrder": 3,
+            "ranks": {
+              "Bio Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bio Cannon"
+                  }
+                ]
+              },
+              "Bio Acid Spray": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bio Acid Spray"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bio Cannon",
+            "visibility": "active"
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 130
+          },
+          "Save (Sv)": {
+            "value": 2
+          },
+          "Strength (S)": {
+            "value": 8
+          },
+          "Toughness (T)": {
+            "value": 8
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 6
+          }
+        }
+      },
+      "Model§Hierophant Bio Titan": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Bio Cannon",
+              "quantity": 2
+            },
+            "Melee Weapon§Monstrous Scything Talons",
+            "Ranged Weapon§Acid Spray",
+            "Wargear§Armoured Shell",
+            "Melee Weapon§Impaling Tendrils"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 6
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 300
+          },
+          "Save (Sv)": {
+            "value": 2
+          },
+          "Strength (S)": {
+            "value": 9
+          },
+          "Toughness (T)": {
+            "value": 9
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
+          },
+          "Wounds (W)": {
+            "value": 12
           }
         }
       },
@@ -2159,6 +2572,98 @@
           }
         }
       },
+      "Model§Norn Assimilator": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Toxinjector Harpoon",
+            "Melee Weapon§Monstrous Scything Talons",
+            "Ranged Weapon§Flesh Hooks",
+            "Melee Weapon§Prehensile Tail",
+            "Wargear§Armoured Shell"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 6
+          },
+          "Ballistic Skill (BS)": {
+            "value": 6
+          },
+          "Initiative (I)": {
+            "value": 6
+          },
+          "Leadership (Ld)": {
+            "value": 8
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 200
+          },
+          "Save (Sv)": {
+            "value": 2
+          },
+          "Strength (S)": {
+            "value": 7
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 6
+          },
+          "Wounds (W)": {
+            "value": 6
+          }
+        }
+      },
+      "Model§Norn Emissary": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Monstrous Rending Claws",
+            "Melee Weapon§Monstrous Scything Talons",
+            "Melee Weapon§Prehensile Tail",
+            "Wargear§Bonded Exoskeleton",
+            "Ranged Weapon§Smite"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 6
+          },
+          "Ballistic Skill (BS)": {
+            "value": 6
+          },
+          "Initiative (I)": {
+            "value": 6
+          },
+          "Leadership (Ld)": {
+            "value": 8
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 210
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 7
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 6
+          },
+          "Wounds (W)": {
+            "value": 6
+          }
+        }
+      },
       "Model§Psychophage": {
         "assets": {
           "traits": [
@@ -2500,6 +3005,54 @@
           },
           "Wounds (W)": {
             "value": 1
+          }
+        }
+      },
+      "Model§Swarmlord": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Melee Weapon§Bone Sabres",
+              "quantity": 2
+            },
+            "Melee Weapon§Prehensile Tail",
+            "Wargear§Bonded Exoskeleton",
+            "Ranged Weapon§Smite"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 5
+          },
+          "Ballistic Skill (BS)": {
+            "value": 6
+          },
+          "Initiative (I)": {
+            "value": 6
+          },
+          "Leadership (Ld)": {
+            "value": 10
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 225
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 7
+          },
+          "Wounds (W)": {
+            "value": 5
           }
         }
       },
@@ -2851,6 +3404,258 @@
           }
         }
       },
+      "Model§Tyranid Prime": {
+        "assets": {
+          "traits": [
+            "Wargear§Bonded Exoskeleton",
+            "Ranged Weapon§Smite"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Bio Morph": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Wings": {
+                "order": 1,
+                "tracking": {
+                  "Hammer of Wrath": 1,
+                  "Movement (M)": 6,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Wings"
+                  },
+                  {
+                    "trait": "Special Rule§Deep Strike"
+                  },
+                  {
+                    "trait": "Special Rule§Hammer of Wrath"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Initiative (I)": {
+            "value": 5
+          },
+          "Leadership (Ld)": {
+            "value": 9
+          },
+          "Lower Limbs Weapons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "Devourer": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Devourer"
+                  }
+                ]
+              },
+              "Spinefists": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Spine Banks"
+                  }
+                ]
+              },
+              "Deathspitter": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  }
+                ]
+              },
+              "Boneswords": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Lash Whip and Bonesword": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  },
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Rending Claws": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Rending Claws"
+                  }
+                ]
+              },
+              "Barbed Strangler": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  }
+                ]
+              },
+              "Venom Cannon": {
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Devourer",
+            "visibility": "normal"
+          },
+          "Movement (M)": {
+            "tracked": true,
+            "value": 6
+          },
+          "Points": {
+            "value": 55
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Torso Weapons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Flesh Hooks": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flesh Hooks"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Upper Limbs Weapons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "4": {
+                "order": 4
+              },
+              "Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Scything Talons"
+                  }
+                ]
+              },
+              "Boneswords": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Lash Whip and Bonesword": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  },
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  }
+                ]
+              },
+              "Rending Claws": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Rending Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Scything Talons",
+            "visibility": "normal"
+          },
+          "Weapon Skill (WS)": {
+            "value": 5
+          },
+          "Wounds (W)": {
+            "value": 3
+          }
+        }
+      },
       "Model§Tyranid Warrior": {
         "assets": {
           "traits": [
@@ -2864,76 +3669,46 @@
           "Ballistic Skill (BS)": {
             "value": 4
           },
+          "Bio Morph": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Wings": {
+                "order": 1,
+                "tracking": {
+                  "Movement (M)": 6,
+                  "Points": 3
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Wings"
+                  },
+                  {
+                    "trait": "Special Rule§Hammer of Wrath"
+                  },
+                  {
+                    "trait": "Special Rule§Deep Strike"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
           "Initiative (I)": {
             "value": 4
           },
           "Leadership (Ld)": {
             "value": 7
           },
-          "Movement (M)": {
-            "tracked": true,
-            "value": 6
-          },
-          "Points": {
-            "value": 25
-          },
-          "Primary Weapon": {
+          "Lower Limbs Weapons": {
             "dynamic": true,
-            "ranks": {
-              "Scything Talons": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Scything Talons"
-                  }
-                ]
-              },
-              "Rending Claws": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Rending Claws"
-                  }
-                ]
-              },
-              "Boneswords": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Bonesword"
-                  }
-                ]
-              },
-              "Lash Whip and Bonesword": {
-                "order": 3,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Lash Whip"
-                  },
-                  {
-                    "trait": "Melee Weapon§Bonesword"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Scything Talons",
-            "visibility": "normal"
-          },
-          "Save (Sv)": {
-            "value": 4
-          },
-          "Secondary Weapon": {
-            "dynamic": true,
+            "group": "Loadout",
             "ranks": {
               "Devourer": {
                 "order": 0,
@@ -3036,13 +3811,24 @@
             "value": "Devourer",
             "visibility": "normal"
           },
+          "Movement (M)": {
+            "tracked": true,
+            "value": 6
+          },
+          "Points": {
+            "value": 25
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
           "Strength (S)": {
             "value": 4
           },
           "Torso Weapons": {
             "dynamic": true,
+            "group": "Loadout",
             "ranks": {
-              "n/a": {
+              "-": {
                 "order": 0
               },
               "Flesh Hooks": {
@@ -3058,44 +3844,67 @@
               }
             },
             "statType": "rank",
-            "value": "n/a",
+            "value": "-",
             "visibility": "normal"
           },
           "Toughness (T)": {
             "value": 4
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wings": {
+          "Upper Limbs Weapons": {
             "dynamic": true,
+            "group": "Loadout",
             "ranks": {
-              "No": {
-                "order": 0
+              "Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Scything Talons"
+                  }
+                ]
               },
-              "Yes": {
+              "Rending Claws": {
                 "order": 1,
                 "tracking": {
-                  "Movement (M)": 6,
-                  "Points": 3
+                  "Points": 5
                 },
                 "traits": [
                   {
-                    "trait": "Bio-Morph§Wings"
+                    "trait": "Melee Weapon§Rending Claws"
+                  }
+                ]
+              },
+              "Boneswords": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bonesword"
+                  }
+                ]
+              },
+              "Lash Whip and Bonesword": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
                   },
                   {
-                    "trait": "Special Rule§Hammer of Wrath"
-                  },
-                  {
-                    "trait": "Special Rule§Deep Strike"
+                    "trait": "Melee Weapon§Bonesword"
                   }
                 ]
               }
             },
             "statType": "rank",
-            "tracked": true,
-            "value": "No",
+            "value": "Scything Talons",
             "visibility": "normal"
+          },
+          "Weapon Skill (WS)": {
+            "value": 4
           },
           "Wounds (W)": {
             "value": 2
@@ -4585,7 +5394,28 @@
         },
         "text": "A model with extended Carapace has a 4+ Armour save."
       },
+      "Special Rule§Hierodule Cluster": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "Hierodule Brood units consisting of 2 or more models, after deployment, each model treated as a separate unit."
+      },
+      "Special Rule§Hive Commander": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit may join any other Tyranid unit with more than 2 models. This unit and any attached unit\ngain the Zealot (1) Special rule."
+      },
       "Special Rule§Hyper Toxic Miasma": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
         "text": "At the end of each Charge Phase, Each enemy unit within 12” of this unit takes D6 automatic hits.\nThose hits are resolved at strength 1, AP ‘-‘ with the Poison (4+) special rule. Armour saves may be made as normal but\nInvulnerable saves and Cover saves may not be taken against these hits."
       },
       "Special Rule§Hyper Warp Field": {
@@ -4651,6 +5481,22 @@
           ]
         },
         "text": "This unit and any attached unit always gain the benefits of Light Cover. If this unit and any attached\nunit are already gaining the benefit of Light Cover, they gain the benefit of Heavy Cover instead."
+      },
+      "Special Rule§Singular Purpose": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit may re-roll failed hit rolls of 1 against the enemy Warlord. If the Enemy Warlord is slain by this unit, you gain 1 Victory Point. If this unit is slain, you lose 1 Victory Point."
+      },
+      "Special Rule§Soft Underbelly": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "If a unit directly under the Bio Titan makes an attack either in shooting or being declared an engaged target per the Titanic Strides special rule, so long as the attacking model is directly under the Bio Titan, any attacks against the Bio Titan are resolved as if the Bio Titan had an armour save of ‘–‘."
       },
       "Special Rule§Spawn Termagants": {
         "keywords": {
@@ -4732,6 +5578,14 @@
         },
         "text": "Units instead of setting to Overwatch, may set to Counter charge. At the end of your opponent’s Charge Phase, after all charges have been declared and resolved. Any unit that set to Counter charge may attempt to charge as if it were your charge phase but with -2 to the Charge roll."
       },
+      "Special Rule§Titanic Strides": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "The unit may Retreat in the Movement Phase and still shoot and charge in the Shooting and Charge Phases at full Ballistic Skill (BS). This unit counts as being engaged if enemy units are within 3” of any of its legs. Units directly under it do not count as being engaged unless the controlling player of this unit wishes them to be. This unit may move over enemy units during the Movement Phase."
+      },
       "Special Rule§Toxic Miasma": {
         "keywords": {
           "Keywords": [
@@ -4763,6 +5617,14 @@
           ]
         },
         "text": "While this unit is attached to a unit with the Psyker (x) special rule, the Neurothrope can re-roll\nLeadership tests when attempting to cast Psychic powers."
+      },
+      "Special Rule§Will of the Hive Mind": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit has a Synapse range of wholly within 24”. Each time this unit suffers an Instant Death\nWound, it instead suffers D3 wounds. Friendly Tyranid units that can draw visibility to this unit can re-roll failed Pinning\nand Panic tests."
       },
       "Unit§Barbgaunt Brood": {
         "allowed": {
@@ -5200,6 +6062,88 @@
           }
         }
       },
+      "Unit§Harridan": {
+        "allowed": {
+          "items": [
+            "Model§Harridan"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Harridan"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Special Rule§Deep Strike",
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Feel no Pain",
+              "stats": {
+                "x": {
+                  "value": "6"
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Fly",
+            "Harridan",
+            "M41",
+            "Transport",
+            "Tyranids",
+            "Vanguard"
+          ],
+          "Role": [
+            "Lord of War"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Harridan": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Transport Capacity": {
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 10,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Haruspex": {
         "allowed": {
           "items": [
@@ -5245,6 +6189,135 @@
         },
         "stats": {
           "Haruspex": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Hierodule Brood": {
+        "allowed": {
+          "items": [
+            "Model§Hierodule"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Hierodule"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Hierodule",
+            "M41",
+            "Tyranids"
+          ],
+          "Role": [
+            "Lord of War"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Faction": [
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Hierodule": {
+            "max": 3,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Hierophant Bio Titan": {
+        "allowed": {
+          "items": [
+            "Model§Hierophant Bio Titan"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Hierophant Bio Titan"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Feel no Pain",
+              "stats": {
+                "x": {
+                  "value": "6"
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Special Rule§Shrouding Spores",
+            "Special Rule§Psychic Barrier",
+            "Special Rule§Hyper Toxic Miasma",
+            "Special Rule§Soft Underbelly"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Assault",
+            "Hierophant Bio Titan",
+            "M41",
+            "Tyranids"
+          ],
+          "Role": [
+            "Lord of War"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "stats": {
+          "Hierophant Bio Titan": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -6174,259 +7247,6 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
-          }
-        }
-      },
-      "Unit§Tyranid Prime": {
-        "assets": {
-          "traits": [
-            "Wargear§Bonded Exoskeleton",
-            "Special Rule§Synapse",
-            "Ranged Weapon§Smite",
-            "Special Rule§Shadow in the Warp",
-            "Special Rule§The Swarm Descends",
-            "Special Rule§Adaptive Physiology",
-            {
-              "item": "Special Rule§Psyker",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "keywords": {
-          "Role": [
-            "HQ"
-          ],
-          "Faction": [
-            "Tyranids"
-          ],
-          "Keywords": [
-            "Character",
-            "Command",
-            "M41",
-            "Psyker",
-            "Synapse",
-            "Tyranid Prime",
-            "Tyranids"
-          ],
-          "Unit Type": [
-            "Infantry"
-          ]
-        },
-        "stats": {
-          "Attacks (A)": {
-            "value": 3
-          },
-          "Ballistic Skill (BS)": {
-            "value": 4
-          },
-          "Initiative (I)": {
-            "value": 5
-          },
-          "Leadership (Ld)": {
-            "value": 9
-          },
-          "Movement (M)": {
-            "value": 6
-          },
-          "Points": {
-            "value": 50
-          },
-          "Primary Weapon": {
-            "dynamic": true,
-            "ranks": {
-              "Scything Talons": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Scything Talons"
-                  }
-                ]
-              },
-              "Rending Claws": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Rending Claws"
-                  }
-                ]
-              },
-              "Boneswords": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Bonesword"
-                  }
-                ]
-              },
-              "Lash Whip and Bonesword": {
-                "order": 3,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Lash Whip"
-                  },
-                  {
-                    "trait": "Melee Weapon§Bonesword"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Scything Talons",
-            "visibility": "normal"
-          },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Secondary Weapon": {
-            "dynamic": true,
-            "ranks": {
-              "Devourer": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Devourer"
-                  }
-                ]
-              },
-              "Spinefist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Spinefist"
-                  }
-                ]
-              },
-              "Deathspitter": {
-                "order": 2,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathspitter"
-                  }
-                ]
-              },
-              "Boneswords": {
-                "order": 3,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Bonesword"
-                  }
-                ]
-              },
-              "Lash Whip and Bonesword": {
-                "order": 4,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Lash Whip"
-                  },
-                  {
-                    "trait": "Melee Weapon§Bonesword"
-                  }
-                ]
-              },
-              "Rending Claws": {
-                "order": 5,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Rending Claws"
-                  }
-                ]
-              },
-              "Scything Talons": {
-                "order": 6,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Scything Talons"
-                  }
-                ]
-              },
-              "Barbed Strangler": {
-                "order": 7,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Barbed Strangler"
-                  }
-                ]
-              },
-              "Venom Cannon": {
-                "order": 8,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venom Cannon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Devourer",
-            "visibility": "normal"
-          },
-          "Strength (S)": {
-            "value": 5
-          },
-          "Torso Weapons": {
-            "dynamic": true,
-            "ranks": {
-              "n/a": {
-                "order": 0
-              },
-              "Flesh Hooks": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Flesh Hooks"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "n/a",
-            "visibility": "normal"
-          },
-          "Toughness (T)": {
-            "value": 5
-          },
-          "Weapon Skill (WS)": {
-            "value": 5
-          },
-          "Wounds (W)": {
-            "value": 3
           }
         }
       },
