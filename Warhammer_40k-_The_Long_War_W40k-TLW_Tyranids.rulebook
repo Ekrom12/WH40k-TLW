@@ -128,6 +128,116 @@
       "Bio-Morph§Wings": {
         "text": "A Tyranid Infantry or Monster unit with this Bio-Morph\nincreases their Movement (M) characteristic to 12”. It\ngains the Hammer of Wrath (1) and Deep strike special\nrules. The equipped model gains the Fly keyword."
       },
+      "Character§Broodlord": {
+        "allowed": {
+          "items": [
+            "Model§Broodlord"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Broodlord"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Special Rule§Lightning-Fast Reaction",
+            "Special Rule§Fleet",
+            "Special Rule§Brood Telepathy",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Keywords": [
+            "Broodlord",
+            "Character",
+            "Command",
+            "M35",
+            "Psyker",
+            "Synapse",
+            "Tyranids"
+          ]
+        },
+        "stats": {
+          "Broodlord": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Relic": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Norn Crown": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Relic§Norn Crown"
+                  }
+                ]
+              },
+              "Resonance Barb": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Relic§Resonance Barb"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-"
+          },
+          "Warlord": {
+            "dynamic": true
+          },
+          "Warlord Trait": {
+            "dynamic": true
+          },
+          "Warlord Trait 2": {
+            "dynamic": true
+          }
+        }
+      },
       "Character§Norn Assimilator": {
         "allowed": {
           "items": [
@@ -379,6 +489,24 @@
           ]
         },
         "stats": {
+          "Relic": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Scythes of Tyran": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-"
+          },
           "Tervigon": {
             "max": 1,
             "min": 1,
@@ -386,6 +514,9 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Warlord": {
+            "dynamic": true
           },
           "Warlord Trait": {
             "dynamic": true,
@@ -1286,6 +1417,52 @@
           }
         }
       },
+      "Model§Broodlord": {
+        "assets": {
+          "included": [],
+          "traits": [
+            "Melee Weapon§Monstrous Rending Claws",
+            "Wargear§Hardened Carapace",
+            "Ranged Weapon§Smite",
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 4
+          },
+          "Initiative (I)": {
+            "value": 5
+          },
+          "Leadership (Ld)": {
+            "value": 9
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 95
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 6
+          },
+          "Wounds (W)": {
+            "value": 3
+          }
+        }
+      },
       "Model§Carnifex": {
         "assets": {
           "traits": [
@@ -1580,9 +1757,6 @@
           },
           "Save (Sv)": {
             "value": 3
-          },
-          "Strenght (S)": {
-            "value": 6
           },
           "Tail Bio-morph": {
             "dynamic": true,
@@ -5369,6 +5543,14 @@
           ]
         },
         "text": "This unit may join units of Termagants even though it does not have the Infantry type."
+      },
+      "Special Rule§Brood Telepathy": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "This unit can only join units of Genestealer Broods."
       },
       "Special Rule§Carnifex Cluster": {
         "keywords": {
