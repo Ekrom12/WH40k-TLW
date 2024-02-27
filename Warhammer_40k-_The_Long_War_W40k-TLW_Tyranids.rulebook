@@ -375,6 +375,23 @@
               "quantity": 2
             },
             "Model§Neurotyrant"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Synapse Conduit",
+            "Special Rule§Synapse Nodes",
+            "Special Rule§Hyper Warp Field"
           ]
         },
         "keywords": {
@@ -553,6 +570,63 @@
             "value": 0,
             "visibility": "normal"
           }
+        }
+      },
+      "Character§Old One Eye": {
+        "allowed": {
+          "items": [
+            "Model§Old One Eye"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Old One Eye"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Hatred",
+              "stats": {
+                "keyword": {
+                  "value": "Ultramarines"
+                }
+              }
+            },
+            "Special Rule§Alpha Creature"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Keywords": [
+            "Assault",
+            "Behemoth",
+            "Carnifex",
+            "Character",
+            "M41",
+            "Old One Eye",
+            "Tyranids",
+            "Unique"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ]
         }
       },
       "Character§Swarmlord": {
@@ -3118,6 +3192,51 @@
           }
         }
       },
+      "Model§Old One Eye": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Monstrous Scything Talons",
+            "Melee Weapon§Monstrous Crushing Claws",
+            "Melee Weapon§Thresher Scythe",
+            "Wargear§Armoured Shell"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 5
+          },
+          "Ballistic Skill (BS)": {
+            "value": 3
+          },
+          "Initiative (I)": {
+            "value": 4
+          },
+          "Leadership (Ld)": {
+            "value": 8
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 110
+          },
+          "Save (Sv)": {
+            "value": 2
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Weapon Skill (WS)": {
+            "value": 5
+          },
+          "Wounds (W)": {
+            "value": 5
+          }
+        }
+      },
       "Model§Psychophage": {
         "assets": {
           "traits": [
@@ -4141,10 +4260,17 @@
                     "trait": "Bio-Morph§Wings"
                   },
                   {
-                    "trait": "Special Rule§Hammer of Wrath"
+                    "trait": "Special Rule§Deep Strike"
                   },
                   {
-                    "trait": "Special Rule§Deep Strike"
+                    "trait": {
+                      "item": "Special Rule§Hammer of Wrath",
+                      "stats": {
+                        "x": {
+                          "value": 1
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -5842,6 +5968,14 @@
         },
         "text": "This unit benefits from the chosen Adaptive Physiology."
       },
+      "Special Rule§Alpha Creature": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "Even if this unit is not your Warlord, it may take 1 Warlord trait from the Warlord traits section."
+      },
       "Special Rule§Biostatic Field": {
         "keywords": {
           "Keywords": [
@@ -6065,6 +6199,22 @@
           ]
         },
         "text": "This special rule confers the following effects:\n\n-Friendly Tyranid units wholly within 18” of a Tyranid unit with this special rule have the Stubborn special rule and change their Leadership (LD) Characteristic to 10.\n\n-Friendly Tyranid Units within Synapse range also automatically Rally at the start of their movement phase.\n\n-Tyranid Units that are not within Synapse range of a model with this special rule have the Frenzy Special Rule instead and use their base Leadership (LD) Characteristic.\n\n-The unit with this special rule gains the Synapse keyword."
+      },
+      "Special Rule§Synapse Conduit": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "When this unit would attempt to cast the Dominion Psychic Power, they automatically succeed with\nno roll required."
+      },
+      "Special Rule§Synapse Nodes": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "Each time this unit suffers a Perils of the Warp, you may remove a Neuroloid model from this unit\ninstead. Neuroloids cannot cast Psychic Powers."
       },
       "Special Rule§Terror from the Deep": {
         "keywords": {
