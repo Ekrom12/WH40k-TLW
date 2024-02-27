@@ -627,6 +627,16 @@
           "Unit Type": [
             "Monster"
           ]
+        },
+        "stats": {
+          "Old One Eye": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
         }
       },
       "Character§Swarmlord": {
@@ -670,6 +680,22 @@
         "keywords": {
           "Unit Type": [
             "Monster"
+          ],
+          "Keywords": [
+            "Character",
+            "Command",
+            "M41",
+            "Psyker",
+            "Swarmlord",
+            "Synapse",
+            "Tyranids",
+            "Unique"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Tyranids"
           ]
         },
         "stats": {
@@ -680,6 +706,36 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "dynamic": false,
+            "ranks": {
+              "Synaptic Linchpin": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Synaptic Linchpin"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Synaptic Linchpin"
+          },
+          "Warlord Trait 2": {
+            "dynamic": false,
+            "ranks": {
+              "Alien Cunning": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Alien Cunning"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Alien Cunning"
           }
         }
       },
@@ -4001,7 +4057,6 @@
               "Wings": {
                 "order": 1,
                 "tracking": {
-                  "Hammer of Wrath": 1,
                   "Movement (M)": 6,
                   "Points": 5
                 },
@@ -4013,7 +4068,14 @@
                     "trait": "Special Rule§Deep Strike"
                   },
                   {
-                    "trait": "Special Rule§Hammer of Wrath"
+                    "trait": {
+                      "item": "Special Rule§Hammer of Wrath",
+                      "stats": {
+                        "x": {
+                          "value": 1
+                        }
+                      }
+                    }
                   }
                 ]
               }
