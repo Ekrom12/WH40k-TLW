@@ -12,11 +12,13 @@
       "Character": {
         "stats": {
           "Relic": {
+            "dynamic": true,
             "statType": "term",
             "value": "n/a",
             "visibility": "normal"
           },
           "Warlord": {
+            "dynamic": true,
             "ranks": {
               "No": {
                 "order": 0
@@ -30,11 +32,13 @@
             "visibility": "normal"
           },
           "Warlord Trait": {
+            "dynamic": true,
             "statType": "term",
             "value": "n/a",
             "visibility": "normal"
           },
           "Warlord Trait 2": {
+            "dynamic": true,
             "statType": "term",
             "value": "n/a",
             "visibility": "normal"
@@ -497,6 +501,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "A Weapon with this special rule can only be used a\nnumber of times in a game equal to X."
       },
       "Special Rule§Arcing": {
@@ -504,6 +513,12 @@
           "Keywords": [
             "Weapon Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "format": "{v}+",
+            "statType": "numeric"
+          }
         },
         "text": "Each to hit roll inflicts 2 hits with this weapon instead of 1 if the to Hit roll was equal to or greater than the value of the ability. Resolve each hit separately."
       },
@@ -577,6 +592,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "When determining the number of models hit by a Blast\nor large Blast weapon, a weapon with this special rule\nscores an additional number of hits equal to the value\nof X. Barrage weapons always hit the Side Armour of\nVehicle type targets."
       },
       "Special Rule§Blast": {
@@ -609,6 +629,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "Each model in a unit with this special rule counts as a\nnumber of models equal to the value of X for transport\ncapacity in Transports."
       },
       "Special Rule§Concussive": {
@@ -635,7 +660,8 @@
         },
         "stats": {
           "x": {
-            "format": "({v}+)"
+            "format": "({v}+)",
+            "statType": "numeric"
           }
         },
         "text": "A weapon with the Crushing special rule inflicts 2\nwounds instead of 1 if the to Wound roll was equal to\nor greater than the roll represented by (x). Make a save\nroll for each wound inflicted separately."
@@ -678,6 +704,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "Enemy units within 3” of a model from a unit with this\nspecial rule suffer a negative modifier equal to the\nvalue of (x) to their Leadership (LD) Characteristic."
       },
       "Special Rule§Feel no Pain": {
@@ -685,6 +716,12 @@
           "Keywords": [
             "Universal Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "format": "{v}+",
+            "statType": "numeric"
+          }
         },
         "text": "When a model in a unit with the Feel no Pain Special\nrule is allocated a wound, you may roll a dice. If the roll\nis equal to or higher then (X) next to the Special rules\nname, the wound is ignored (see 10.3)\nE.g: For Feel no Pain (5+), a roll of 5 or higher is\nrequired to ignore the wound when allocating it."
       },
@@ -710,6 +747,12 @@
             "Weapon Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "format": "{v}+",
+            "statType": "numeric"
+          }
+        },
         "text": "A weapon with this special rule always Wounds or\nPenetrates on a roll of X as represented next to the\nrule.\nE.g. a weapon with Force (4+) always wounds on a roll\nequal to or higher than 4+ regardless of the target's\ntoughness or Armour facing.\nIf when comparing the weapons Strength characteristic\nagainst the targets Toughness or Armour Value\ncharacteristic, the wound roll required is lower than the"
       },
       "Special Rule§Frenzy": {
@@ -726,6 +769,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "A unit with the Furious Charge special rule gains 1\nadditional attack on the charge equal to the value of X.\nThis is in addition to the normal +1 attack bonus on the\ncharge.\nYou cannot benefit from the Rage (x) special rule in the\nsame turn as you benefit from Furious Charge (x)."
       },
       "Special Rule§Gets Hot!": {
@@ -741,6 +789,11 @@
           "Keywords": [
             "Universal Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
         },
         "text": "At the start of the Initiative step 10 during the Fight sequence (see 13.1), every model in the unit in melee range may makes a number of attacks equal to the value of X at Strength User attack with AP6 so long as the unit completed a charge that turn.\n\nIf the unit with this special rule is a vehicle or monster, the attack has AP2. Hammer of Wrath attacks are only ever made in the first round of a combat. These attacks hit automatically."
       },
@@ -806,6 +859,12 @@
           "Keywords": [
             "Weapon Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "format": "{v}+",
+            "statType": "numeric"
+          }
         }
       },
       "Special Rule§Hit & Run": {
@@ -942,6 +1001,12 @@
             "Weapon Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "format": "{v}+",
+            "statType": "numeric"
+          }
+        },
         "text": "A weapon with this special rule always wounds on a roll\nof X as represented next to the rule. Poison weapons\nuse their normal Strength against Vehicles, Aircraft,\nDrones, Knights, Titans, Automata & Walkers\nhowever.\nIf when comparing the weapons Strength characteristic\nagainst the targets Toughness or Armour Value\ncharacteristic, the wound roll required is lower than the\nPoison roll indicated in the brackets or vice-versa, use\nthe lowest required to Wound or Penetrate roll for\ndetermining if the weapon inflicts a wound on the\ntarget."
       },
       "Special Rule§Precision Strikes": {
@@ -966,6 +1031,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "A unit with the Priest (x) special rule can perform a\nnumber of Prayers each player turn equal to the value\nof (x). A Priest knows Prayers from the relevant\nLitanies listed in their codex."
       },
       "Special Rule§Psychic Weapon": {
@@ -982,6 +1052,12 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "format": " {v}",
+            "statType": "numeric"
+          }
+        },
         "text": "A unit with the Psyker (x) special rule can cast a\nnumber of Psychic Powers each player turn equal to\nthe value of (x). All Psykers know the Smite Power\n(see 8.4). A Psyker knows spells from the relevant\ndiscipline indicated in their codex."
       },
       "Special Rule§Rage": {
@@ -989,6 +1065,11 @@
           "Keywords": [
             "Universal Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
         },
         "text": "At the start of the Combat Phase, a unit with this\nspecial rule can choose to increase every model in the\nunit's Attack (A) characteristic by the value of (x) but\nall models in the unit suffer -1 to their Weapon Skill\n(WS) characteristic until the end of the Phase.\nYou cannot benefit from the Furious Charge (x) special\nrule in the same turn as you benefit from Rage (x)."
       },
@@ -1022,6 +1103,12 @@
           "Keywords": [
             "Weapon Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "format": "{v}+",
+            "statType": "numeric"
+          }
         },
         "text": "When a weapon with this special rule rolls an\nunmodified roll equal to (x) to wound, that wound is\nresolved at AP2 instead of its normal AP value (see\n9.5.1).\nIf rolling to Penetrate against an Armour Value, the\nweapons attack against the target is resolved with +2\nto the weapons Strength characteristic for determining\nif the weapon caused a Penetrating hit."
       },
@@ -1095,6 +1182,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "A unit with the Sprint Special rule adds the value of (x)\nto all Advance moves (see 6.3) and Charge moves they\nmake (see 12.1)."
       },
       "Special Rule§Stubborn": {
@@ -1127,6 +1219,12 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "format": " {v}",
+            "statType": "numeric"
+          }
+        },
         "text": "A Vehicle/Aircraft with the Super Heavy (X) special\nrule gains the following benefits:\n● The Vehicle/Aircraft has a number of\nStructure points equal to the value of X. Each\ntime the Vehicle/Aircraft suffers a Critical\nresult on the Vehicle damage chart that would\ncause it to be wrecked or explode, it instead\nloses 1 Structure Point. If the\nVehicle/Aircraft has no more Structure\npoints when it suffers a Critical damage result\non the Vehicle damage chart, the Critical\nresult is resolved as normal instead.\n● When a Vehicle/Aircraft with this special rule\nwould suffer a Critical result on the Vehicle\nDamage chart that would cause it to explode,\nit instead explodes 10”, hitting all models\nwithin range with 1 Strength 6, AP4 hit.\n● When a Walker with this special rule would\nbe reduced to 0 wounds, it explodes 10”,\nhitting all models within range with 1 Strength\n6, AP4 hit.\n● A model with this special rule may move and\nstill fire weapons with the Ordnance Special\nrule."
       },
       "Special Rule§Sweeping": {
@@ -1134,6 +1232,11 @@
           "Keywords": [
             "Weapon Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
         },
         "text": "A model attacking with a weapon with this special rule\nmakes an additional number of attacks equal to the\nvalue of (x) with this weapon if the target unit has 3 or\nmore models in the target unit."
       },
@@ -1159,6 +1262,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
+        },
         "text": "A unit with the Tech-Priest (x) special rule can perform\na number of Machine Rites per player turn equal to the\nvalue of (x). All Tech-Priests know Machine Rites from\nthe relevant Rites listed in their respective Codex."
       },
       "Special Rule§Two-Handed": {
@@ -1182,6 +1290,11 @@
           "Keywords": [
             "Universal Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "statType": "numeric"
+          }
         },
         "text": "A unit with the Zealot special rule adds the value of (x)\nto its Strength (S) Characteristic in the combat phase\nafter it has completed a charge move (see 12.1)"
       }
