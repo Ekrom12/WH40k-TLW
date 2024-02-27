@@ -639,6 +639,98 @@
           }
         }
       },
+      "Character§Parasite of Mortrex": {
+        "allowed": {
+          "items": [
+            "Model§Parasite of Mortrex"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Parasite of Mortrex"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Fear",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Deep Strike",
+            "Special Rule§Hammer of Wrath",
+            {
+              "item": "Special Rule§Sprint",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Fleet",
+            "Special Rule§The Parasite"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Character",
+            "Fly",
+            "Kraken",
+            "M41",
+            "Parasite of Mortrex",
+            "Tyranids",
+            "Unique",
+            "Vanguard"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Warlord Trait 2": {},
+            "Relic": {}
+          }
+        },
+        "stats": {
+          "Parasite of Mortrex": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heightened Senses": {
+                "order": 1,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Heightened Senses"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-"
+          }
+        }
+      },
       "Character§Swarmlord": {
         "allowed": {
           "items": [
@@ -3290,6 +3382,52 @@
           },
           "Wounds (W)": {
             "value": 5
+          }
+        }
+      },
+      "Model§Parasite of Mortrex": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Scything Talons",
+            "Melee Weapon§Injector Tail",
+            "Wargear§Hardened Carapace",
+            "Bio-Morph§Wings",
+            "Ranged Weapon§Fleshborer"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 3
+          },
+          "Ballistic Skill (BS)": {
+            "value": 5
+          },
+          "Initiative (I)": {
+            "value": 5
+          },
+          "Leadership (Ld)": {
+            "value": 8
+          },
+          "Movement (M)": {
+            "value": 12
+          },
+          "Points": {
+            "value": 95
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
+          "Strength (S)": {
+            "value": 4
+          },
+          "Toughness (T)": {
+            "value": 4
+          },
+          "Weapon Skill (WS)": {
+            "value": 5
+          },
+          "Wounds (W)": {
+            "value": 3
           }
         }
       },
@@ -6285,6 +6423,14 @@
           ]
         },
         "text": "This unit does not Scatter when arriving via Deep Strike."
+      },
+      "Special Rule§The Parasite": {
+        "keywords": {
+          "Keywords": [
+            "Tyranid Special Rule"
+          ]
+        },
+        "text": "Each time this unit attacks in the combat phase, after resolving all of this unit's attacks, if it inflicted at least\n1 wound, you may summon 1 unit of Ripper Swarms within 3” of this unit. At the start of your movement phase, this unit\nmay summon 1 unit of Ripper Swarms per game within 3” of it and more than 3” away from any enemy models."
       },
       "Special Rule§The Swarm Descends": {
         "keywords": {
