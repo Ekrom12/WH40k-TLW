@@ -10,6 +10,40 @@
   "rulebook": {
     "assetTaxonomy": {
       "Character": {
+        "rules": {
+          "No more than one warlord is allowed": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        },
         "stats": {
           "Relic": {
             "dynamic": true,
@@ -20,15 +54,17 @@
           "Warlord": {
             "dynamic": true,
             "ranks": {
-              "No": {
+              "-": {
                 "order": 0
               },
-              "Yes": {
+              "✓": {
+                "number": 1,
                 "order": 1
               }
             },
             "statType": "rank",
-            "value": "No",
+            "tracked": true,
+            "value": "-",
             "visibility": "normal"
           },
           "Warlord Trait": {
@@ -41,7 +77,7 @@
             "dynamic": true,
             "statType": "term",
             "value": "n/a",
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         },
         "templateClass": "Unit"
@@ -219,9 +255,7 @@
           "Rename": true
         },
         "keywords": {
-          "Tags": [
-            "unit"
-          ],
+          "Tags": [],
           "Role": [],
           "Faction": [],
           "Unit Type": []
