@@ -98,7 +98,10 @@
                   [
                     "{self}",
                     "stats",
-                    "Warlord Trait",
+                    [
+                      "Warlord Trait",
+                      "Additional Warlord Trait"
+                    ],
                     "visibility"
                   ]
                 ],

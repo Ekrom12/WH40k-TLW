@@ -44,64 +44,6 @@
             ]
           }
         },
-        "rules": {
-          "allowWarlordTraits": {
-            "actions": [
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Warlord Trait§Alien Cunning"
-              },
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Warlord Trait§Heightened Senses"
-              },
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Warlord Trait§Synaptic Linchpin"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Warlord",
-                    "value"
-                  ]
-                ],
-                "value": "✓"
-              }
-            ]
-          }
-        },
         "stats": {
           "Additional Warlord Trait": {
             "ranks": {
