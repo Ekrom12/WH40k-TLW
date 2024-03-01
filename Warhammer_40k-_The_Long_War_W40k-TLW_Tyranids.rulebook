@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "C8HYTC",
+      "slug": "YA9RJN",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -25,6 +25,148 @@
             "statType": "numeric",
             "value": 0,
             "visibility": "normal"
+          }
+        }
+      },
+      "Character": {
+        "disallowed": {
+          "classifications": [],
+          "items": [
+            "Warlord Trait§Synaptic Linchpin",
+            "Warlord Trait§Heightened Senses",
+            "Warlord Trait§Alien Cunning"
+          ]
+        },
+        "removed": {
+          "disallowed": {
+            "classifications": [
+              "Warlord Trait"
+            ]
+          }
+        },
+        "rules": {
+          "allowWarlordTraits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Warlord Trait§Alien Cunning"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Warlord Trait§Heightened Senses"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Warlord Trait§Synaptic Linchpin"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Alien Cunning": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Alien Cunning"
+                  }
+                ]
+              },
+              "Synaptic Linchpin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Synaptic Linchpin"
+                  }
+                ]
+              },
+              "Heightened Senses": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Heightened Senses"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-"
+          },
+          "Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Alien Cunning": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Alien Cunning"
+                  }
+                ]
+              },
+              "Synaptic Linchpin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Synaptic Linchpin"
+                  }
+                ]
+              },
+              "Heightened Senses": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Heightened Senses"
+                  }
+                ]
+              }
+            },
+            "value": "-"
           }
         }
       },
@@ -88,6 +230,9 @@
         }
       },
       "Warlord Trait": {
+        "disallowed": {
+          "items": []
+        },
         "text": ""
       }
     },
@@ -186,6 +331,9 @@
           ]
         },
         "stats": {
+          "Additional Warlord Trait": {
+            "statOrder": 2
+          },
           "Broodlord": {
             "max": 1,
             "min": 1,
@@ -228,12 +376,6 @@
             "value": "-"
           },
           "Warlord": {
-            "dynamic": true
-          },
-          "Warlord Trait": {
-            "dynamic": true
-          },
-          "Warlord Trait 2": {
             "dynamic": true
           }
         }
