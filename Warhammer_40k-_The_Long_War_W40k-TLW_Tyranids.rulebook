@@ -29,20 +29,20 @@
         }
       },
       "Character": {
+        "allowed": {
+          "classifications": []
+        },
         "disallowed": {
           "classifications": [],
-          "items": [
-            "Warlord Trait§Synaptic Linchpin",
-            "Warlord Trait§Heightened Senses",
-            "Warlord Trait§Alien Cunning"
-          ]
+          "items": []
         },
         "removed": {
           "disallowed": {
             "classifications": [
               "Warlord Trait"
             ]
-          }
+          },
+          "rules": {}
         },
         "stats": {
           "Additional Warlord Trait": {
@@ -75,6 +75,7 @@
                 ]
               }
             },
+            "statOrder": 5,
             "statType": "rank",
             "value": "-"
           },
@@ -108,8 +109,14 @@
                 ]
               }
             },
+            "statOrder": 4,
             "value": "-"
           }
+        }
+      },
+      "Relic": {
+        "aspects": {
+          "Unique": true
         }
       },
       "Unit": {
@@ -172,6 +179,9 @@
         }
       },
       "Warlord Trait": {
+        "aspects": {
+          "Unique": true
+        },
         "disallowed": {
           "items": []
         },
@@ -283,42 +293,6 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
-          },
-          "Relic": {
-            "dynamic": true,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Norn Crown": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Relic§Norn Crown"
-                  }
-                ]
-              },
-              "Resonance Barb": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Relic§Resonance Barb"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "tracked": true,
-            "value": "-"
-          },
-          "Warlord": {
-            "dynamic": true
           }
         }
       },
@@ -781,10 +755,7 @@
           ]
         },
         "removed": {
-          "stats": {
-            "Warlord Trait 2": {},
-            "Relic": {}
-          }
+          "stats": {}
         },
         "stats": {
           "Parasite of Mortrex": {
@@ -882,36 +853,6 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
-          },
-          "Warlord Trait": {
-            "dynamic": false,
-            "ranks": {
-              "Synaptic Linchpin": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Synaptic Linchpin"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Synaptic Linchpin"
-          },
-          "Warlord Trait 2": {
-            "dynamic": false,
-            "ranks": {
-              "Alien Cunning": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Alien Cunning"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Alien Cunning"
           }
         }
       },
@@ -973,24 +914,6 @@
           ]
         },
         "stats": {
-          "Relic": {
-            "dynamic": true,
-            "ranks": {
-              "-": {
-                "order": 0,
-                "tracking": {}
-              },
-              "Scythes of Tyran": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                }
-              }
-            },
-            "statType": "rank",
-            "tracked": true,
-            "value": "-"
-          },
           "Tervigon": {
             "max": 1,
             "min": 1,
@@ -998,79 +921,6 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
-          },
-          "Warlord": {
-            "dynamic": true
-          },
-          "Warlord Trait": {
-            "dynamic": true,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Alien Cunning": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Alien Cunning"
-                  }
-                ]
-              },
-              "Synaptic Linchpin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Synaptic Linchpin"
-                  }
-                ]
-              },
-              "Heightened Senses": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Heightened Senses"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "tracked": true,
-            "value": "-"
-          },
-          "Warlord Trait 2": {
-            "dynamic": true,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Alien Cunning": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Alien Cunning"
-                  }
-                ]
-              },
-              "Synaptic Linchpin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Synaptic Linchpin"
-                  }
-                ]
-              },
-              "Heightened Senses": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Heightened Senses"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "tracked": true,
-            "value": "-"
           }
         }
       },
@@ -5967,6 +5817,11 @@
             "Relic"
           ]
         },
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        },
         "text": "A model with this Bio Artifact gains Synapse. If they already have Synapse, the range is increased by 6\"."
       },
       "Relic§Resonance Barb": {
@@ -5979,6 +5834,11 @@
           "Keywords": [
             "Relic"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 5
+          }
         },
         "text": "A model equipped with this Bio Artifact increases its Warp Mastery level by 1 and can roll 3 Dice when attempting to cast a Psychic power,\ntaking the best result."
       },
@@ -6017,6 +5877,9 @@
             "statType": "numeric",
             "value": 3,
             "visibility": "normal"
+          },
+          "Points": {
+            "value": 5
           },
           "Strength": {
             "group": "Stats",
@@ -6061,6 +5924,9 @@
             "statType": "numeric",
             "value": 2,
             "visibility": "normal"
+          },
+          "Points": {
+            "value": 5
           },
           "Range": {
             "group": "Stats",
