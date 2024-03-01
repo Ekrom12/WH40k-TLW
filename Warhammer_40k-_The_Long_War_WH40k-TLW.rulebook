@@ -10,7 +10,133 @@
   "rulebook": {
     "assetTaxonomy": {
       "Character": {
+        "disallowed": {
+          "classifications": [
+            "Warlord Trait"
+          ]
+        },
+        "rules": {
+          "No more than one warlord is allowed": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 100
+          },
+          "resetWarlordTrait": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Warlord Trait",
+                      "Additional Warlord Trait"
+                    ],
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "showWarlordTraitStat": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Warlord Trait",
+                      "Additional Warlord Trait"
+                    ],
+                    "visibility"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 99
+          }
+        },
         "stats": {
+          "Additional Warlord Trait": {
+            "dynamic": true,
+            "statType": "term",
+            "value": "n/a",
+            "visibility": "hidden"
+          },
           "Relic": {
             "dynamic": true,
             "statType": "term",
@@ -20,28 +146,24 @@
           "Warlord": {
             "dynamic": true,
             "ranks": {
-              "No": {
+              "-": {
                 "order": 0
               },
-              "Yes": {
+              "✓": {
+                "number": 1,
                 "order": 1
               }
             },
             "statType": "rank",
-            "value": "No",
+            "tracked": true,
+            "value": "-",
             "visibility": "normal"
           },
           "Warlord Trait": {
             "dynamic": true,
-            "statType": "term",
-            "value": "n/a",
-            "visibility": "normal"
-          },
-          "Warlord Trait 2": {
-            "dynamic": true,
-            "statType": "term",
-            "value": "n/a",
-            "visibility": "normal"
+            "statType": "rank",
+            "value": null,
+            "visibility": "hidden"
           }
         },
         "templateClass": "Unit"
@@ -219,9 +341,7 @@
           "Rename": true
         },
         "keywords": {
-          "Tags": [
-            "unit"
-          ],
+          "Tags": [],
           "Role": [],
           "Faction": [],
           "Unit Type": []
