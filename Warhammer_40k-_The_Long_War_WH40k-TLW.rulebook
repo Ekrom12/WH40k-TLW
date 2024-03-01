@@ -139,8 +139,13 @@
           },
           "Relic": {
             "dynamic": true,
-            "statType": "term",
-            "value": "n/a",
+            "ranks": {
+              "-": {
+                "order": 0
+              }
+            },
+            "statType": "rank",
+            "value": "-",
             "visibility": "normal"
           },
           "Warlord": {
