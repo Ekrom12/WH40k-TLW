@@ -307,6 +307,104 @@
           }
         }
       },
+      "Character§Hive Tyrant": {
+        "allowed": {
+          "items": [
+            "Model§Hive Tyrant"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Hive Tyrant"
+          ],
+          "traits": [
+            "Special Rule§Synapse",
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Move Through Cover",
+            "Special Rule§Regeneration",
+            "Special Rule§Psychic Barrier",
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Brood Guard"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Command",
+            "Hive Tyrant",
+            "M41",
+            "Psyker",
+            "Synapse",
+            "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Role": [
+            "HQ"
+          ]
+        },
+        "stats": {
+          "Hive Tyrant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Wings": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Hammer of Wrath": 1,
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Deep Strike"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
       "Character§Lictor": {
         "allowed": {
           "items": [
@@ -857,6 +955,10 @@
           ]
         },
         "stats": {
+          "Additional Warlord Trait": {
+            "dynamic": false,
+            "value": "Synaptic Linchpin"
+          },
           "Swarmlord": {
             "max": 1,
             "min": 1,
@@ -864,6 +966,9 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "value": "Alien Cunning"
           }
         }
       },
@@ -987,6 +1092,11 @@
             "HQ"
           ]
         },
+        "removed": {
+          "stats": {
+            "Additional Warlord Trait": {}
+          }
+        },
         "stats": {
           "The Doom of Malan'tai": {
             "max": 1,
@@ -995,6 +1105,9 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "value": "Synaptic Linchpin"
           }
         }
       },
@@ -1059,6 +1172,11 @@
             "Unique"
           ]
         },
+        "removed": {
+          "stats": {
+            "Additional Warlord Trait": {}
+          }
+        },
         "stats": {
           "The Nephilim King": {
             "max": 1,
@@ -1067,6 +1185,9 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "value": "Alien Cunning"
           }
         }
       },
@@ -1121,6 +1242,37 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
+            "visibility": "normal"
+          },
+          "Wings": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Special Rule§Hammer of Wrath",
+                      "stats": {
+                        "x": {
+                          "value": 1
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": "Special Rule§Deep Strike"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
             "visibility": "normal"
           }
         }
@@ -2914,6 +3066,214 @@
           }
         }
       },
+      "Model§Hive Tyrant": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Prehensile Tail",
+            "Wargear§Bonded Exoskeleton",
+            "Ranged Weapon§Smite"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 4
+          },
+          "Ballistic Skill (BS)": {
+            "value": 6
+          },
+          "Initiative (I)": {
+            "value": 6
+          },
+          "Invulnerable Save (Inv)": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Leadership (Ld)": {
+            "value": 10
+          },
+          "Lower Limbs Weapons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "Monstrous Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Scything Talons"
+                  }
+                ]
+              },
+              "Monstrous Boneswords": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Bonesword"
+                  }
+                ]
+              },
+              "Monstrous Rending Claws": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Rending Claws"
+                  }
+                ]
+              },
+              "Lash Whip and Monstrous Bonesword": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  },
+                  {
+                    "trait": "Melee Weapon§Monstrous Bonesword"
+                  }
+                ]
+              },
+              "2 Devourers with Brain leech Worms": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Devourers with Brainleech Worms",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Death Spitters with Slimer Maggots": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Deathspitter with Slimer Maggots",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Stranglethorn Cannon": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Stranglethorn Cannon"
+                  }
+                ]
+              },
+              "Heavy Venom Cannon": {
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Venom Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Monstrous Scything Talons",
+            "visibility": "normal"
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 125
+          },
+          "Save (Sv)": {
+            "value": 3
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 7
+          },
+          "Upper Limbs Weapons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "Monstrous Scything Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Scything Talons"
+                  }
+                ]
+              },
+              "Monstrous Rending Claws": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Rending Claws"
+                  }
+                ]
+              },
+              "Monstrous Boneswords": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Bonesword"
+                  }
+                ]
+              },
+              "Lash Whip and Monstrous Bonesword": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Monstrous Bonesword"
+                  },
+                  {
+                    "trait": "Melee Weapon§Lash Whip"
+                  }
+                ]
+              },
+              "2 Death Spitters with Slimer Maggots": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Deathspitter with Slimer Maggots",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Devourers with Brain leech Worms": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Devourers with Brainleech Worms"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Monstrous Scything Talons",
+            "visibility": "normal"
+          },
+          "Weapon Skill (WS)": {
+            "value": 6
+          },
+          "Wounds (W)": {
+            "value": 4
+          }
+        }
+      },
       "Model§Hormagaunt": {
         "assets": {
           "traits": [
@@ -4370,44 +4730,6 @@
           },
           "Ballistic Skill (BS)": {
             "value": 4
-          },
-          "Bio Morph": {
-            "dynamic": true,
-            "group": "Loadout",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Wings": {
-                "order": 1,
-                "tracking": {
-                  "Movement (M)": 6,
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Bio-Morph§Wings"
-                  },
-                  {
-                    "trait": "Special Rule§Deep Strike"
-                  },
-                  {
-                    "trait": {
-                      "item": "Special Rule§Hammer of Wrath",
-                      "stats": {
-                        "x": {
-                          "value": 1
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            },
-            "statOrder": 4,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
           },
           "Initiative (I)": {
             "value": 5
