@@ -10,10 +10,13 @@
   "rulebook": {
     "assetTaxonomy": {
       "Character": {
-        "disallowed": {
+        "allowed": {
           "classifications": [
-            "Warlord Trait"
+            "Relic"
           ]
+        },
+        "disallowed": {
+          "classifications": []
         },
         "rules": {
           "No more than one warlord is allowed": {
@@ -136,12 +139,6 @@
             "statType": "term",
             "value": "n/a",
             "visibility": "hidden"
-          },
-          "Relic": {
-            "dynamic": true,
-            "statType": "term",
-            "value": "n/a",
-            "visibility": "normal"
           },
           "Warlord": {
             "dynamic": true,
@@ -272,7 +269,68 @@
       "Ranged Weapon": {
         "templateClass": "Weapon"
       },
-      "Relic": {},
+      "Relic": {
+        "rules": {
+          "More than 1 of this unique relic": {
+            "evals": [
+              {
+                "actionable": false,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "max": 1,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "{0string}"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Unique"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
       "Rite of War": {},
       "Special Rule": {
         "aspects": {
@@ -592,6 +650,13 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Relic": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           },
           "Rite of War": {
             "dynamic": true,
