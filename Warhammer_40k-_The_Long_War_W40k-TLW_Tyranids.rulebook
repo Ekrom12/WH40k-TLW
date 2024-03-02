@@ -8048,6 +8048,49 @@
             "Tyranids"
           ]
         },
+        "rules": {
+          "addWingsCost": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": [
+                  "{self}",
+                  "stats",
+                  "Tyranid Warrior",
+                  "value"
+                ],
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ],
+                "value": 3
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wings",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          }
+        },
         "stats": {
           "Tyranid Warrior": {
             "max": 9,
@@ -8055,6 +8098,20 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
+            "visibility": "normal"
+          },
+          "Wings": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "-",
             "visibility": "normal"
           }
         }
