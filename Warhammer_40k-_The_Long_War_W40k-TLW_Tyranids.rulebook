@@ -9,7 +9,11 @@
   "wip": true,
   "dependencies": [
     {
+<<<<<<< Updated upstream
       "slug": "52TXVX",
+=======
+      "slug": "UZSFDW",
+>>>>>>> Stashed changes
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -6442,6 +6446,30 @@
           "Keywords": [
             "Relic"
           ]
+        },
+        "rules": {
+          "needScythingTalons": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "tally",
+                    [
+                      "Scything Talons",
+                      "Monstrous Scything Talons"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         },
         "stats": {
           "Armor Penetration (AP)": {
