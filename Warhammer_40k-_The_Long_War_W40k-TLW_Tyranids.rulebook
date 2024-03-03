@@ -5559,6 +5559,122 @@
           }
         }
       },
+      "Model§Tyrannocyte": {
+        "assets": {
+          "traits": [
+            "Wargear§Hardened Carapace",
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 1
+          },
+          "Ballistic Skill (BS)": {
+            "value": 2
+          },
+          "Initiative (I)": {
+            "value": 3
+          },
+          "Leadership (Ld)": {
+            "value": 5
+          },
+          "Loadout": {
+            "ranks": {
+              "5 Deathspitters": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Deathspitter"
+                  }
+                ]
+              },
+              "5 Venom Cannons": {
+                "order": 1,
+                "tracking": {
+                  "Points": 50
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Venom Cannon"
+                  }
+                ]
+              },
+              "5 Barbed Stranglers": {
+                "order": 2,
+                "tracking": {
+                  "Points": 25
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Barbed Strangler"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "5 Deathspitters",
+            "visibility": "normal"
+          },
+          "Movement (M)": {
+            "value": 8
+          },
+          "Points": {
+            "value": 105
+          },
+          "Save (Sv)": {
+            "value": 4
+          },
+          "Strength (S)": {
+            "value": 5
+          },
+          "Toughness (T)": {
+            "value": 6
+          },
+          "Weapon Skill (WS)": {
+            "value": 2
+          },
+          "Wounds (W)": {
+            "value": 6
+          }
+        }
+      },
       "Model§Tyrannofex": {
         "assets": {
           "traits": [
