@@ -9,7 +9,11 @@
   "wip": true,
   "dependencies": [
     {
+<<<<<<< Updated upstream
       "slug": "52TXVX",
+=======
+      "slug": "NGSTC3",
+>>>>>>> Stashed changes
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -6582,7 +6586,7 @@
           }
         },
         "rules": {
-          "NoVanguardKeywordInFeederWave": {
+          "FeederWaveNoVanguardKeyword": {
             "actions": [
               {
                 "actionType": "add",
@@ -6618,6 +6622,39 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          },
+          "Vanguard Wave: 2 units of Genestealers minimum": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Genestealer Brood"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "warning"
           }
         },
         "stats": {
