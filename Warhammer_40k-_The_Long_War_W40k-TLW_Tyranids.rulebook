@@ -186,7 +186,6 @@
             "value": "-"
           },
           "Warlord Trait": {
-            "dynamic": false,
             "ranks": {
               "-": {
                 "order": 0
@@ -7472,6 +7471,25 @@
             "failState": "pass",
             "order": 1
           },
+          "Select your Warlord": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "Vanguard Wave: 2 units of Genestealers minimum": {
             "evals": [
               {
@@ -7503,7 +7521,53 @@
               }
             ],
             "evaluate": "OR",
-            "failState": "warning"
+            "failState": "error"
+          },
+          "Vanguard Wave: Need to have more \"Vanguard\" keyword units than \"Assault\" or \"Feeder\" keyword units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Vanguard"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Feeder"
+                  ],
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
