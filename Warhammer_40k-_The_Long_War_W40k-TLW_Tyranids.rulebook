@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "0.0.1",
+  "revision": "0.0.2",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -9,7 +9,8 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "9JPFQH",
+
+      "slug": "NGSTC3",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -54,6 +55,102 @@
           },
           "rules": {}
         },
+        "rules": {
+          "AssaultWaveDetectMonsters": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Outflank"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Monster"
+              }
+            ]
+          },
+          "Vanguard Wave: Your warlord must be a Broodlord": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Broodlord"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        },
         "stats": {
           "Additional Warlord Trait": {
             "ranks": {
@@ -90,7 +187,6 @@
             "value": "-"
           },
           "Warlord Trait": {
-            "dynamic": false,
             "ranks": {
               "-": {
                 "order": 0
@@ -957,7 +1053,9 @@
           ]
         },
         "removed": {
-          "stats": {}
+          "stats": {
+            "Additional Warlord Trait": {}
+          }
         },
         "stats": {
           "Parasite of Mortrex": {
@@ -984,7 +1082,7 @@
               }
             },
             "statType": "rank",
-            "value": "-"
+            "value": "Heightened Senses"
           }
         }
       },
@@ -6942,6 +7040,30 @@
             "Relic"
           ]
         },
+        "rules": {
+          "This relic requires Scything Talons or Monstruous Scything Talons": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "tally",
+                    [
+                      "Scything Talons",
+                      "Monstrous Scything Talons"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
         "stats": {
           "Armor Penetration (AP)": {
             "group": "Stats",
@@ -6989,6 +7111,30 @@
           "Keywords": [
             "Relic"
           ]
+        },
+        "rules": {
+          "This Relic requires a Venom Cannon or a Heavy Venom Cannon": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "tally",
+                    [
+                      "Venom Cannon",
+                      "Heavy Venom Cannon"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         },
         "stats": {
           "Armor Penetration (AP)": {
@@ -7081,7 +7227,7 @@
           }
         },
         "rules": {
-          "NoVanguardKeywordInFeederWave": {
+          "FeederWaveNoVanguardKeyword": {
             "actions": [
               {
                 "actionType": "add",
@@ -7117,6 +7263,104 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          },
+          "Select your Warlord": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Vanguard Wave: 2 units of Genestealers minimum": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Genestealer Brood"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Vanguard Wave: Need to have more \"Vanguard\" keyword units than \"Assault\" or \"Feeder\" keyword units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Wave"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Vanguard"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Feeder"
+                  ],
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
