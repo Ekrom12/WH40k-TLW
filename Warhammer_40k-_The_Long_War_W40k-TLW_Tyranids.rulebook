@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "0.0.2",
+  "revision": "0.0.3",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -704,6 +704,42 @@
           "Unit Type": [
             "Infantry"
           ]
+        },
+        "rules": {
+          "FeederWaveMalanthropeHQ": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "HQ"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Feeder Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
         },
         "stats": {
           "Malanthrope": {
@@ -6098,12 +6134,63 @@
             "Ranged Weapon§Smite"
           ]
         },
+        "rules": {
+          "NeurothropeUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "Neurothrope"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Neurothrope"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Neurothrope",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Attacks (A)": {
             "value": 1
           },
           "Ballistic Skill (BS)": {
-            "value": 4
+            "tracked": true,
+            "value": 4,
+            "visibility": "active"
           },
           "Initiative (I)": {
             "value": 3
@@ -6123,13 +6210,14 @@
           "Movement (M)": {
             "value": 6
           },
-          "Neurothrope Adaptation": {
+          "Neurothrope": {
             "dynamic": true,
+            "group": "Upgrades",
             "ranks": {
-              "Yes": {
+              "-": {
                 "order": 0
               },
-              "No": {
+              "✓": {
                 "order": 1,
                 "tracking": {
                   "Ballistic Skill (BS)": 1,
@@ -6148,8 +6236,8 @@
               }
             },
             "statType": "rank",
-            "value": "Yes",
-            "visibility": "normal"
+            "value": "-",
+            "visibility": "active"
           },
           "Points": {
             "value": 40
@@ -6167,7 +6255,9 @@
             "value": 1
           },
           "Wounds (W)": {
-            "value": 2
+            "tracked": true,
+            "value": 2,
+            "visibility": "active"
           }
         }
       },
@@ -7441,7 +7531,114 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "FeederWaveNoVanguardKeyword": {
+          "Feeder Wave: Need to have at least 1 Zoanthropes unit with a Neurothrope upgrade": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Feeder Wave"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Neurothrope Adaptation"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Feeder Wave: Need to have more \"Feeder\" keyword units than \"Assault\" keyword units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Feeder Wave"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Feeder"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Feeder Wave: No \"Vanguard\" keyword units allowed": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Vanguard"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Feeder Wave"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "FeederWaveRemoveVanguardKeywordUnits": {
             "actions": [
               {
                 "actionType": "add",
@@ -8942,6 +9139,42 @@
             "Tyranids"
           ]
         },
+        "rules": {
+          "FeederWaveHiveGuardTroops": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Feeder Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Hive Guard": {
             "max": 9,
@@ -10251,7 +10484,7 @@
           }
         }
       },
-      "Unit§Zoanthrope": {
+      "Unit§Zoanthropes": {
         "allowed": {
           "items": [
             "Model§Zoanthrope"
@@ -10316,7 +10549,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 30

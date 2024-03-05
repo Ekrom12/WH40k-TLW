@@ -180,7 +180,8 @@
       },
       "Model": {
         "aspects": {
-          "Group Traits": true
+          "Group Traits": true,
+          "Rename": true
         },
         "stats": {
           "Attacks (A)": {
