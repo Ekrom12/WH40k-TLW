@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "QJW87W",
+      "slug": "9JPFQH",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -304,6 +304,99 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          }
+        }
+      },
+      "Character§Deathleaper": {
+        "allowed": {
+          "items": [
+            "Model§Deathleaper"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Deathleaper"
+          ],
+          "traits": [
+            "Special Rule§Shadow in the Warp",
+            "Special Rule§The Swarm Descends",
+            "Special Rule§Adaptive Physiology",
+            "Special Rule§Infiltrate",
+            "Special Rule§Outflank",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Fear",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Hatred",
+              "stats": {
+                "keyword": {
+                  "value": "Characters"
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Preferred Enemy",
+              "stats": {
+                "x": {
+                  "value": "Characters"
+                }
+              }
+            },
+            "Special Rule§Pheromone Trail",
+            "Special Rule§Chameleonic",
+            "Special Rule§Invisible Stalker"
+          ]
+        },
+        "keywords": {
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Keywords": [
+            "Character",
+            "Deathleaper",
+            "Infantry",
+            "Leviathan",
+            "M41",
+            "Unique",
+            "Vanguard"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Additional Warlord Trait": {}
+          }
+        },
+        "stats": {
+          "Deathleaper": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Warlord Trait": {
+            "value": "Alien Cunning"
           }
         }
       },
@@ -2519,6 +2612,52 @@
           },
           "Weapon Skill (WS)": {
             "value": 3
+          },
+          "Wounds (W)": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Deathleaper": {
+        "assets": {
+          "included": [],
+          "traits": [
+            "Melee Weapon§Rending Claws",
+            "Melee Weapon§Grasping Talons",
+            "Ranged Weapon§Flesh Hooks",
+            "Wargear§Reinforced Chitin"
+          ]
+        },
+        "stats": {
+          "Attacks (A)": {
+            "value": 4
+          },
+          "Ballistic Skill (BS)": {
+            "value": 5
+          },
+          "Initiative (I)": {
+            "value": 6
+          },
+          "Leadership (Ld)": {
+            "value": 9
+          },
+          "Movement (M)": {
+            "value": 6
+          },
+          "Points": {
+            "value": 125
+          },
+          "Save (Sv)": {
+            "value": 5
+          },
+          "Strength (S)": {
+            "value": 6
+          },
+          "Toughness (T)": {
+            "value": 5
+          },
+          "Weapon Skill (WS)": {
+            "value": 6
           },
           "Wounds (W)": {
             "value": 4
@@ -7195,6 +7334,9 @@
           ]
         },
         "text": "This unit has a 3+ Invulnerable save."
+      },
+      "Special Rule§Invisible Stalker": {
+        "text": "Enemy units may not target a model with this special rule unless it is the closest enemy unit. In\naddition, all attacks made against the Deathleaper are made at Ballistic Skill (BS) and Weapon Skill (WS) 1"
       },
       "Special Rule§Lightning-Fast Reaction": {
         "keywords": {
