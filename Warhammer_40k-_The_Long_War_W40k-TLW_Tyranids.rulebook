@@ -9,7 +9,6 @@
   "wip": true,
   "dependencies": [
     {
-
       "slug": "NGSTC3",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
@@ -7301,6 +7300,147 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points (Large Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Large (2000 pts)"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "min": 6,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points (Medium Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Medium (1500 pts)"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "min": 6,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points (Small Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Small (1000 pts)"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "min": 3,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "FeederWaveNoVanguardKeyword": {
             "actions": [
               {
@@ -7446,6 +7586,23 @@
               }
             },
             "value": "-"
+          },
+          "Game Size": {
+            "dynamic": true,
+            "ranks": {
+              "Small (1000 pts)": {
+                "order": 0
+              },
+              "Medium (1500 pts)": {
+                "order": 1
+              },
+              "Large (2000 pts)": {
+                "order": 2
+              }
+            },
+            "statType": "rank",
+            "value": "Small (1000 pts)",
+            "visibility": "normal"
           },
           "Rite of War": {
             "ranks": {
