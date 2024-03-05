@@ -7227,6 +7227,80 @@
           }
         },
         "rules": {
+          "Assault Wave; Need to have more \"Assault\" keyword units than \"Feeder\" keyword units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Assault"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Feeder"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Assault Wave: Need to have at least 1 \"Command\" keyword unit": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Wave"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Command"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "FeederWaveNoVanguardKeyword": {
             "actions": [
               {
@@ -7425,7 +7499,8 @@
               }
             }
           }
-        }
+        },
+        "text": ""
       },
       "Special Rule§Adaptive Physiology": {
         "keywords": {
