@@ -644,6 +644,23 @@
             "value": "-",
             "visibility": "always"
           },
+          "Game Size": {
+            "dynamic": true,
+            "ranks": {
+              "Small (1000 pts)": {
+                "order": 0
+              },
+              "Medium (1500 pts)": {
+                "order": 1
+              },
+              "Large (2000 pts)": {
+                "order": 2
+              }
+            },
+            "statType": "rank",
+            "value": "Small (1000 pts)",
+            "visibility": "normal"
+          },
           "Points": {
             "group": "Cost",
             "groupOrder": 0,
