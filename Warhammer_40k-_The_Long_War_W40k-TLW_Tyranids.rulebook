@@ -6180,7 +6180,8 @@
               }
             ],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 1
           }
         },
         "stats": {
@@ -7535,7 +7536,7 @@
             "evals": [
               {
                 "actionable": true,
-                "not": false,
+                "not": true,
                 "operator": "AND",
                 "paths": [
                   [
@@ -7555,13 +7556,13 @@
                 "paths": [
                   [
                     "{self}",
-                    "tracked",
-                    "Neurothrope Adaptation"
+                    "tally",
+                    "Neurothrope"
                   ]
                 ]
               }
             ],
-            "evaluate": "AND",
+            "evaluate": "OR",
             "failState": "error"
           },
           "Feeder Wave: Need to have more \"Feeder\" keyword units than \"Assault\" keyword units": {
@@ -10419,17 +10420,17 @@
           "detectROWVanWaveLeapers": {
             "actions": [
               {
-                "actionType": "add",
+                "actionType": "set",
                 "iterations": 1,
                 "paths": [
                   [
                     "{self}",
-                    "keywords",
-                    "Role"
+                    "stats",
+                    "Add as Troop",
+                    "visibility"
                   ]
                 ],
-                "prepend": "",
-                "value": "Troops"
+                "value": "active"
               }
             ],
             "evals": [
@@ -10454,6 +10455,21 @@
           }
         },
         "stats": {
+          "Add as Troop": {
+            "group": "Role",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Points": {
             "value": 18
           },

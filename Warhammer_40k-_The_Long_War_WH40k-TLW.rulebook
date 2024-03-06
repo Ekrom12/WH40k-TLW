@@ -632,6 +632,11 @@
           "Group Includes": true
         },
         "stats": {
+          "Elite unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Faction": {
             "dynamic": true,
             "ranks": {
@@ -644,8 +649,24 @@
             "value": "-",
             "visibility": "always"
           },
+          "Fast Attack unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Flyer unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Fortification unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Game Size": {
             "dynamic": true,
+            "group": "Rooster",
             "ranks": {
               "Small (1000 pts)": {
                 "order": 0
@@ -658,8 +679,24 @@
               }
             },
             "statType": "rank",
+            "tracked": true,
             "value": "Small (1000 pts)",
             "visibility": "normal"
+          },
+          "Heavy Support unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "HQ unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Lords of War unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
           },
           "Points": {
             "group": "Cost",
@@ -678,6 +715,7 @@
           },
           "Rite of War": {
             "dynamic": true,
+            "group": "Rooster",
             "ranks": {
               "-": {
                 "order": 0
@@ -687,6 +725,11 @@
             "tracked": true,
             "value": "-",
             "visibility": "always"
+          },
+          "Troop unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
