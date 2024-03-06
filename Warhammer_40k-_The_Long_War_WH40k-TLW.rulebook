@@ -394,6 +394,7 @@
       },
       "Unit": {
         "aspects": {
+          "Group By": "Role",
           "Group Includes": true,
           "Group Traits": true,
           "Lock Qty": true,
@@ -682,6 +683,56 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "HeavySupportUnitTotalCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Support unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Heavy Support"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "HQUnitTotalCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "HQ unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "HQ"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "TroopTotalUnitCount": {
             "actions": [
               {
@@ -712,6 +763,7 @@
           "Elite unit count": {
             "max": 4,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
@@ -730,18 +782,21 @@
           "Fast Attack unit count": {
             "max": 3,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Flyer unit count": {
             "max": 1,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Fortification unit count": {
             "max": 1,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
@@ -767,6 +822,7 @@
           "Heavy Support unit count": {
             "max": 3,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
@@ -774,12 +830,14 @@
             "max": 3,
             "min": 1,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Lords of War unit count": {
             "max": 1,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
@@ -815,6 +873,7 @@
             "max": 6,
             "min": 2,
             "statType": "numeric",
+            "tracked": true,
             "value": 0,
             "visibility": "hidden"
           }
