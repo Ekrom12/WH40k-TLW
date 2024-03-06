@@ -709,6 +709,18 @@
           "FeederWaveMalanthropeHQ": {
             "actions": [
               {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
                 "actionType": "add",
                 "iterations": 1,
                 "paths": [
@@ -728,6 +740,43 @@
                 "operator": "AND",
                 "paths": [
                   [
+                    "{self}",
+                    "stats",
+                    "Add as HQ",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "FeederWaveSetChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as HQ",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
                     "{roster}",
                     "stats",
                     "Rite of War",
@@ -738,10 +787,25 @@
               }
             ],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 2
           }
         },
         "stats": {
+          "Add as HQ": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": null,
+            "visibility": "hidden"
+          },
           "Malanthrope": {
             "max": 1,
             "min": 1,
@@ -10417,7 +10481,54 @@
           ]
         },
         "rules": {
-          "detectROWVanWaveLeapers": {
+          "VanguardWaveLeapersAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troop",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "VanguardWaveSetRoleChoiceVisibility": {
             "actions": [
               {
                 "actionType": "set",
@@ -10451,11 +10562,13 @@
               }
             ],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 2
           }
         },
         "stats": {
           "Add as Troop": {
+            "dynamic": true,
             "group": "Role",
             "groupOrder": 5,
             "ranks": {
