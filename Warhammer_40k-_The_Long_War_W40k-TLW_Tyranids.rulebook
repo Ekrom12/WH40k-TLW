@@ -10001,6 +10001,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Unit Type": [
+            "Monster"
           ]
         },
         "stats": {
