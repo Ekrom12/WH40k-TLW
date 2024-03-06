@@ -706,7 +706,44 @@
           ]
         },
         "rules": {
-          "FeederWaveMalanthropeHQ": {
+          "FeederWaveHQChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as HQ",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Feeder Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "FeederWaveMalanthropeAsHQ": {
             "actions": [
               {
                 "actionType": "remove",
@@ -752,43 +789,6 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
-          },
-          "FeederWaveSetChoiceVisibility": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Add as HQ",
-                    "visibility"
-                  ]
-                ],
-                "value": "active"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Feeder Wave"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 2
           }
         },
         "stats": {
@@ -803,7 +803,7 @@
               }
             },
             "statType": "rank",
-            "value": null,
+            "value": "-",
             "visibility": "hidden"
           },
           "Malanthrope": {
@@ -9191,6 +9191,18 @@
           "FeederWaveHiveGuardTroops": {
             "actions": [
               {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
                 "actionType": "add",
                 "iterations": 1,
                 "paths": [
@@ -9210,6 +9222,43 @@
                 "operator": "AND",
                 "paths": [
                   [
+                    "{self}",
+                    "stats",
+                    "Add as Troop",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "FeederWaveTroopChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troop",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
                     "{roster}",
                     "stats",
                     "Rite of War",
@@ -9220,10 +9269,25 @@
               }
             ],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 2
           }
         },
         "stats": {
+          "Add as Troop": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
           "Hive Guard": {
             "max": 9,
             "min": 3,
