@@ -631,8 +631,86 @@
           "Collapse": true,
           "Group Includes": true
         },
+        "rules": {
+          "EliteUnitTotalCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Elite unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Elites"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "FastAttackUnitTotalCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Fast Attack unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Fast Attack"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "TroopTotalUnitCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Troop unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Troops"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Elite unit count": {
+            "max": 4,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
@@ -650,16 +728,19 @@
             "visibility": "always"
           },
           "Fast Attack unit count": {
+            "max": 3,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
           },
           "Flyer unit count": {
+            "max": 1,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
           },
           "Fortification unit count": {
+            "max": 1,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
@@ -684,16 +765,20 @@
             "visibility": "normal"
           },
           "Heavy Support unit count": {
+            "max": 3,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
           },
           "HQ unit count": {
+            "max": 3,
+            "min": 1,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
           },
           "Lords of War unit count": {
+            "max": 1,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
@@ -727,6 +812,8 @@
             "visibility": "always"
           },
           "Troop unit count": {
+            "max": 6,
+            "min": 2,
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
