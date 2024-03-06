@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "NGSTC3",
+      "slug": "CYDH2B",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -9128,6 +9128,24 @@
             "Special Rule§Crone Cluster"
           ]
         },
+        "keywords": {
+          "Unit Type": [
+            "Monster"
+          ],
+          "Faction": [
+            "Tyranids"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Keywords": [
+            "Assault",
+            "Fly",
+            "Hive Crone",
+            "M41",
+            "Tyranids"
+          ]
+        },
         "stats": {
           "Hive Crone": {
             "max": 3,
@@ -9976,6 +9994,12 @@
             "M41",
             "Sporocyst",
             "Synapse",
+            "Tyranids"
+          ],
+          "Role": [
+            "Fortification"
+          ],
+          "Faction": [
             "Tyranids"
           ]
         },
