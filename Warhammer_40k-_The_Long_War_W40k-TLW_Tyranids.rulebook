@@ -7903,6 +7903,39 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "Chitinous Armored Spearhead: Need to have at least 1 Mawloc unit": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Chitinous Armoured Spearhead"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Mawloc"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "Chitinous Armored Spearhead: Need to have at least 2 Monster type units with the \"Assault\" keyword units for every 1000 points (Large Game Size)": {
             "evals": [
               {
@@ -8046,6 +8079,31 @@
             "evaluate": "OR",
             "failState": "error",
             "order": 1
+          },
+          "Count trygon primes": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Trygon prime amount",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Trygon Prime"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
           },
           "Feeder Wave: Need to have at least 1 Zoanthropes unit with a Neurothrope upgrade": {
             "evals": [
@@ -8208,7 +8266,8 @@
               }
             ],
             "evaluate": "OR",
-            "failState": "error"
+            "failState": "error",
+            "order": 5
           },
           "Subterranean Attack Wave: Need to have at least 1 Trygon with the Trygon Prime upgrade": {
             "evals": [
@@ -8228,6 +8287,7 @@
               },
               {
                 "actionable": true,
+                "min": 1,
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -8240,7 +8300,8 @@
               }
             ],
             "evaluate": "OR",
-            "failState": "error"
+            "failState": "error",
+            "order": 10
           },
           "Subterranean Attack Wave: Need to have at least 2 units of Raveners": {
             "evals": [
@@ -8437,6 +8498,10 @@
           },
           "Troop unit count": {
             "visibility": "always"
+          },
+          "Trygon prime amount": {
+            "statType": "numeric",
+            "value": 0
           }
         },
         "text": ""
