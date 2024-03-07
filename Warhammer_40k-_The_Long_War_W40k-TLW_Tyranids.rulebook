@@ -5294,6 +5294,9 @@
         }
       },
       "Model§Trygon": {
+        "allowed": {
+          "items": []
+        },
         "assets": {
           "traits": [
             {
@@ -5305,9 +5308,161 @@
             "Wargear§Bonded Exoskeleton"
           ]
         },
+        "rules": {
+          "SubterraneanAssaultWaveTrygonPrimeHQ": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "HQ"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Subterranean Attack Wave"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Trygon Prime",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "TrygonPrimeUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "Trygon Prime"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "Trygon Prime"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Trygon Prime"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Synapse"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Add as Elites",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Trygon Prime",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          }
+        },
         "stats": {
           "Attacks (A)": {
-            "value": 3
+            "tracked": true,
+            "value": 3,
+            "visibility": "active"
           },
           "Ballistic Skill (BS)": {
             "value": 3
@@ -5332,6 +5487,8 @@
           },
           "Tail Weapon": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 3,
             "ranks": {
               "Toxin spike": {
                 "order": 0,
@@ -5369,16 +5526,18 @@
             "value": 7
           },
           "Trygon Prime": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 4,
             "ranks": {
-              "No": {
+              "-": {
                 "order": 0
               },
-              "Yes": {
+              "✓": {
                 "order": 1,
                 "tracking": {
                   "Attacks (A)": 1,
                   "Points": 35,
-                  "Trygon Prime": 1,
                   "Weapon Skill (WS)": 1,
                   "Wounds (W)": 1
                 },
@@ -5397,14 +5556,18 @@
             },
             "statType": "rank",
             "tracked": true,
-            "value": "No",
+            "value": "-",
             "visibility": "normal"
           },
           "Weapon Skill (WS)": {
-            "value": 3
+            "tracked": true,
+            "value": 3,
+            "visibility": "active"
           },
           "Wounds (W)": {
-            "value": 4
+            "tracked": true,
+            "value": 4,
+            "visibility": "active"
           }
         }
       },
@@ -8047,7 +8210,72 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "Vanguard Wave: 2 units of Genestealers minimum": {
+          "Subterranean Attack Wave: Need to have at least 1 Trygon with the Trygon Prime upgrade": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Subterranean Attack Wave"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Trygon Prime"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Subterranean Attack Wave: Need to have at least 2 units of Raveners": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Subterranean Attack Wave"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Raveners"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Vanguard Wave: Need to have at least 2 units of Genestealers": {
             "evals": [
               {
                 "actionable": true,
@@ -8132,7 +8360,10 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "always"
+            "visibility": "hidden"
+          },
+          "Elite unit count": {
+            "visibility": "normal"
           },
           "Faction": {
             "dynamic": false,
@@ -8142,6 +8373,15 @@
               }
             },
             "value": "-"
+          },
+          "Fast Attack unit count": {
+            "visibility": "normal"
+          },
+          "Heavy Support unit count": {
+            "visibility": "always"
+          },
+          "HQ unit count": {
+            "visibility": "normal"
           },
           "Rite of War": {
             "ranks": {
@@ -8194,6 +8434,9 @@
                 ]
               }
             }
+          },
+          "Troop unit count": {
+            "visibility": "always"
           }
         },
         "text": ""
@@ -8797,7 +9040,6 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -8814,6 +9056,43 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 2
+          },
+          "NonChitinousArmoredSpearheadDisableTroopsRole": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troop",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Chitinous Armoured Spearhead"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
           }
         },
         "stats": {
@@ -8831,7 +9110,7 @@
             },
             "statType": "rank",
             "value": "-",
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Carnifex": {
             "max": 3,
@@ -10871,7 +11150,123 @@
             "Vanguard"
           ]
         },
+        "rules": {
+          "SubterraneanAssaultWaveSetRoleChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Elites",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Subterranean Attack Wave"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "SubterraneanAssaultWaveTrygonAsElites": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Subterranean Attack Wave"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Elites",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
         "stats": {
+          "Add as Elites": {
+            "dynamic": true,
+            "group": "Role",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Trygon": {
             "max": 1,
             "min": 1,
