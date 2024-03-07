@@ -385,6 +385,41 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "SkySwarmAssaultSelfReportNonFlyer": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Non flyer units tally"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Fly"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
           }
         }
       },
@@ -671,6 +706,43 @@
             "HQ"
           ]
         },
+        "rules": {
+          "HiveTyrantWingsUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Fly"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wings",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
         "stats": {
           "Hive Tyrant": {
             "max": 1,
@@ -680,7 +752,16 @@
             "value": 0,
             "visibility": "normal"
           },
+          "Hive Tyrant With Wings": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Wings": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
             "ranks": {
               "-": {
                 "order": 0
@@ -689,6 +770,7 @@
                 "order": 1,
                 "tracking": {
                   "Hammer of Wrath": 1,
+                  "Hive Tyrant With Wings": 1,
                   "Points": 15
                 },
                 "traits": [
@@ -962,6 +1044,7 @@
         },
         "keywords": {
           "Keywords": [
+            "Character",
             "Command",
             "Fly",
             "M41",
@@ -1635,6 +1718,11 @@
             "Tyranid Prime",
             "Tyranids"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Warlord": {}
+          }
         },
         "stats": {
           "Tyranid Prime": {
@@ -5797,6 +5885,44 @@
             "Wargear§Hardened Carapace"
           ]
         },
+        "rules": {
+          "WingsUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Movement (M)",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": 12
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Wings",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Attacks (A)": {
             "value": 2
@@ -7907,7 +8033,7 @@
             "evals": [
               {
                 "actionable": true,
-                "not": false,
+                "not": true,
                 "operator": "AND",
                 "paths": [
                   [
@@ -8269,6 +8395,148 @@
             "failState": "error",
             "order": 5
           },
+          "Sky Swarm Assault: Must include at least 1 Hive Tyrant unit with Wings": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Hive Tyrant With Wings"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Sky Swarm Assault: Must include at least 1 Tyranid Warrior unit with Wings": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Tyranid Warriors with Wings"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Sky Swarm Assault: Must include at least 2 Gargoyle Brood units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Gargoyle Brood"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Sky Swarm Assault: Must include at more units with the \"Fly\" keyword than units without": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Fly"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Non flyer units tally",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 101
+          },
           "Subterranean Attack Wave: Need to have at least 1 Trygon with the Trygon Prime upgrade": {
             "evals": [
               {
@@ -8423,9 +8691,7 @@
             "value": 0,
             "visibility": "hidden"
           },
-          "Elite unit count": {
-            "visibility": "normal"
-          },
+          "Elite unit count": {},
           "Faction": {
             "dynamic": false,
             "ranks": {
@@ -8435,14 +8701,14 @@
             },
             "value": "-"
           },
-          "Fast Attack unit count": {
-            "visibility": "normal"
-          },
-          "Heavy Support unit count": {
-            "visibility": "always"
-          },
-          "HQ unit count": {
-            "visibility": "normal"
+          "Fast Attack unit count": {},
+          "Heavy Support unit count": {},
+          "HQ unit count": {},
+          "Non flyer units tally": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           },
           "Rite of War": {
             "ranks": {
@@ -8501,7 +8767,8 @@
           },
           "Trygon prime amount": {
             "statType": "numeric",
-            "value": 0
+            "value": 0,
+            "visibility": "hidden"
           }
         },
         "text": ""
@@ -9345,7 +9612,109 @@
             "Infantry"
           ]
         },
+        "rules": {
+          "SkySwarmAssaultGargoylesAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troop",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "SkySwarmAssaultTroopChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troop",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          }
+        },
         "stats": {
+          "Add as Troop": {
+            "dynamic": true,
+            "group": "Role",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Bio Morph": {
             "dynamic": true,
             "ranks": {
@@ -9553,7 +9922,109 @@
             "Monster"
           ]
         },
+        "rules": {
+          "SkySwarmAssaultHarpyAsHeavySupport": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Flyer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Heavy Support"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Heavy Support",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "SkySwarmAttackHarpyHeavySupportChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Heavy Support",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          }
+        },
         "stats": {
+          "Add as Heavy Support": {
+            "dynamic": true,
+            "group": "Role",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Harpy": {
             "max": 3,
             "min": 1,
@@ -9990,7 +10461,109 @@
             "Tyranids"
           ]
         },
+        "rules": {
+          "SkySwarAssaultHiveCroneFastAttackChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Fast Attack",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Sky Swarm Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "SkySwarmAssaultHiveCroneAsFastAttack": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Flyer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Fast Attack",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          }
+        },
         "stats": {
+          "Add as Fast Attack": {
+            "dynamic": true,
+            "group": "Role",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Hive Crone": {
             "max": 3,
             "min": 1,
@@ -11388,7 +11961,7 @@
           ]
         },
         "rules": {
-          "addWingsCost": {
+          "addWingsCostPerModel": {
             "actions": [
               {
                 "actionType": "modify",
@@ -11428,6 +12001,41 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 0
+          },
+          "TyranidWarriorsWingsUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Fly"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wings",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
           }
         },
         "stats": {
@@ -11439,17 +12047,29 @@
             "value": 0,
             "visibility": "normal"
           },
+          "Tyranid Warriors with Wings": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Wings": {
             "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 4,
             "ranks": {
               "-": {
                 "order": 0
               },
               "✓": {
-                "order": 1
+                "order": 1,
+                "tracking": {
+                  "Tyranid Warriors with Wings": 1
+                }
               }
             },
             "statType": "rank",
+            "tracked": true,
             "value": "-",
             "visibility": "normal"
           }
