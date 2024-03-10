@@ -184,35 +184,35 @@
           "Rename": true
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "group": "Stats",
             "statOrder": 6,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "group": "Stats",
             "statOrder": 2,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "I": {
             "group": "Stats",
             "statOrder": 7,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "group": "Stats",
             "statOrder": 8,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "format": "{v}\"",
             "group": "Stats",
             "statOrder": 0,
@@ -229,38 +229,38 @@
             "value": null,
             "visibility": "always"
           },
-          "Save (Sv)": {
-            "format": "{v}+",
-            "group": "Stats",
-            "statOrder": 9,
-            "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
-          },
-          "Strength (S)": {
+          "S": {
             "group": "Stats",
             "statOrder": 3,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Toughness (T)": {
+          "Sv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "T": {
             "group": "Stats",
             "statOrder": 4,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Weapon Skill (WS)": {
+          "W": {
             "group": "Stats",
-            "statOrder": 1,
+            "statOrder": 5,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Wounds (W)": {
+          "WS": {
             "group": "Stats",
-            "statOrder": 5,
+            "statOrder": 1,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
@@ -407,7 +407,7 @@
           "Unit Type": []
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "group": "Stats",
             "groupOrder": 1,
             "statOrder": 6,
@@ -415,7 +415,7 @@
             "value": null,
             "visibility": "normal"
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "group": "Stats",
             "groupOrder": 1,
             "statOrder": 2,
@@ -423,7 +423,7 @@
             "value": null,
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "I": {
             "group": "Stats",
             "groupOrder": 1,
             "statOrder": 7,
@@ -431,10 +431,19 @@
             "value": null,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "group": "Stats",
             "groupOrder": 1,
             "statOrder": 8,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "M": {
+            "format": "{v}\"",
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 0,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
@@ -443,15 +452,6 @@
             "statType": "numeric",
             "value": null,
             "visibility": "hidden"
-          },
-          "Movement (M)": {
-            "format": "{v}\"",
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 0,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
           },
           "Points": {
             "format": "{v}",
@@ -463,7 +463,15 @@
             "value": null,
             "visibility": "normal"
           },
-          "Save (Sv)": {
+          "S": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Sv": {
             "format": "{v}+",
             "group": "Stats",
             "groupOrder": 1,
@@ -472,15 +480,7 @@
             "value": null,
             "visibility": "normal"
           },
-          "Strength (S)": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 3,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "Toughness (T)": {
+          "T": {
             "group": "Stats",
             "groupOrder": 1,
             "statOrder": 4,
@@ -488,18 +488,18 @@
             "value": null,
             "visibility": "normal"
           },
-          "Weapon Skill (WS)": {
+          "W": {
             "group": "Stats",
             "groupOrder": 1,
-            "statOrder": 1,
+            "statOrder": 5,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           },
-          "Wounds (W)": {
+          "WS": {
             "group": "Stats",
             "groupOrder": 1,
-            "statOrder": 5,
+            "statOrder": 1,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"

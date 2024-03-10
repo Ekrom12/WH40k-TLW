@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "CYDH2B",
+      "slug": "73NEEM",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -214,6 +214,8 @@
         },
         "stats": {
           "Additional Warlord Trait": {
+            "group": "Warlord",
+            "groupOrder": 4,
             "ranks": {
               "-": {
                 "order": 0
@@ -243,11 +245,24 @@
                 ]
               }
             },
-            "statOrder": 5,
+            "statOrder": 3,
             "statType": "rank",
             "value": "-"
           },
+          "Warlord": {
+            "group": "Warlord",
+            "groupOrder": 4,
+            "ranks": {
+              "✓": {
+                "number": 1,
+                "order": 1
+              }
+            },
+            "statOrder": 1
+          },
           "Warlord Trait": {
+            "group": "Warlord",
+            "groupOrder": 4,
             "ranks": {
               "-": {
                 "order": 0
@@ -282,6 +297,7 @@
           }
         }
       },
+      "Hive Fleet": {},
       "Relic": {
         "aspects": {
           "Unique": true
@@ -758,6 +774,9 @@
             "value": 0,
             "visibility": "hidden"
           },
+          "M": {
+            "tracked": true
+          },
           "Wings": {
             "dynamic": true,
             "group": "Upgrades",
@@ -771,6 +790,7 @@
                 "tracking": {
                   "Hammer of Wrath": 1,
                   "Hive Tyrant With Wings": 1,
+                  "M": 4,
                   "Points": 15
                 },
                 "traits": [
@@ -961,6 +981,19 @@
                   ]
                 ],
                 "value": "HQ"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
               }
             ],
             "evals": [
@@ -1006,6 +1039,15 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          },
+          "Warlord": {
+            "ranks": {
+              "✓": {
+                "number": 1,
+                "order": 1
+              }
+            },
+            "visibility": "hidden"
           }
         }
       },
@@ -1721,7 +1763,9 @@
         },
         "removed": {
           "stats": {
-            "Warlord": {}
+            "Warlord": {},
+            "Additional Warlord Trait": {},
+            "Warlord Trait": {}
           }
         },
         "stats": {
@@ -1766,6 +1810,15 @@
           }
         }
       },
+      "Hive Fleet§Behemoth": {},
+      "Hive Fleet§Gorgon": {},
+      "Hive Fleet§Hydra": {},
+      "Hive Fleet§Jormungandr": {},
+      "Hive Fleet§Kraken": {},
+      "Hive Fleet§Kronos": {},
+      "Hive Fleet§Leviathan": {},
+      "Hive Fleet§Ouroboros": {},
+      "Hive Fleet§Tiamet": {},
       "Melee Weapon§Acid Maw": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -2459,38 +2512,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 14
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 4
+          },
+          "Sv": {
             "value": 6
           },
-          "Strength (S)": {
+          "T": {
             "value": 4
           },
-          "Toughness (T)": {
-            "value": 4
-          },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 1
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -2503,38 +2556,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 33
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strength (S)": {
+          "S": {
             "value": 5
           },
-          "Toughness (T)": {
-            "value": 5
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 5
+          },
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -2549,38 +2602,46 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 5
           },
-          "Leadership (Ld)": {
+          "Inv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 5,
+            "visibility": "normal"
+          },
+          "Ld": {
             "value": 9
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 95
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 5
+          },
+          "Sv": {
             "value": 4
           },
-          "Strength (S)": {
+          "T": {
             "value": 5
           },
-          "Toughness (T)": {
-            "value": 5
-          },
-          "Weapon Skill (WS)": {
-            "value": 6
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 3
+          },
+          "WS": {
+            "value": 6
           }
         }
       },
@@ -2688,10 +2749,10 @@
           }
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
           "Carapace Bio-morph": {
@@ -2778,10 +2839,10 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
           "Lower Limbs Weapons": {
@@ -2870,14 +2931,20 @@
             "value": "Monstrous Scything Talons",
             "visibility": "active"
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 70
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 3
+          },
+          "T": {
+            "value": 7
           },
           "Tail Bio-morph": {
             "dynamic": true,
@@ -2914,9 +2981,6 @@
             "statType": "rank",
             "value": "-",
             "visibility": "normal"
-          },
-          "Toughness (T)": {
-            "value": 7
           },
           "Upper Limbs Weapons": {
             "dynamic": true,
@@ -3006,11 +3070,11 @@
             "value": "Monstrous Scything Talons",
             "visibility": "active"
           },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -3025,38 +3089,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 4
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 5
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 9
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 125
           },
-          "Save (Sv)": {
-            "value": 5
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
+          "Sv": {
             "value": 5
           },
-          "Weapon Skill (WS)": {
-            "value": 6
+          "T": {
+            "value": 5
           },
-          "Wounds (W)": {
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 6
           }
         }
       },
@@ -3074,38 +3138,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 7
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 125
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 3
+          },
+          "T": {
             "value": 7
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -3118,38 +3182,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 95
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strenght (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 7
+          },
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -3164,38 +3228,85 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "Bio Morph": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Scorch Bugs": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Scorch Bugs"
+                  }
+                ]
+              },
+              "Desiccator Larvae": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Desiccator Larvae"
+                  }
+                ]
+              },
+              "Electroshock Grubs": {
+                "order": 3,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Electro Shock Grubs"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
-          "Movement (M)": {
+          "M": {
             "value": 12
           },
           "Points": {
             "value": 10
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 3
+          },
+          "Sv": {
             "value": 6
           },
-          "Strength (S)": {
+          "T": {
             "value": 3
           },
-          "Toughness (T)": {
-            "value": 3
-          },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 1
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -3206,10 +3317,15 @@
           ]
         },
         "stats": {
+          "A": {
+            "value": 1
+          },
           "Armour": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
-              "n/a": {
+              "-": {
                 "order": 0,
                 "tracking": {}
               },
@@ -3217,7 +3333,7 @@
                 "order": 1,
                 "tracking": {
                   "Points": 1,
-                  "Save (Sv)": -1
+                  "Sv": -1
                 },
                 "traits": [
                   {
@@ -3226,20 +3342,20 @@
                 ]
               }
             },
+            "statOrder": 3,
             "statType": "rank",
-            "value": "n/a",
+            "value": "-",
             "visibility": "normal"
           },
-          "Attacks (A)": {
-            "value": 1
-          },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
           "Head Weapon": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
-              "n/a": {
+              "-": {
                 "order": 0
               },
               "Flesh Hooks": {
@@ -3265,18 +3381,21 @@
                 ]
               }
             },
+            "statOrder": 2,
             "statType": "rank",
-            "value": "n/a",
+            "value": "-",
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "I": {
             "value": 5
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
           "Loadout": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Rending Claws": {
                 "order": 0,
@@ -3301,23 +3420,27 @@
             "value": "Rending Claws",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 15
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "tracked": true,
             "value": 5
           },
-          "Toughness (T)": {
+          "T": {
             "value": 4
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 1
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -3331,16 +3454,16 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
-            "value": 3
+          "I": {
+            "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
           "Loadout": {
@@ -3377,26 +3500,26 @@
             "value": "2 Stranglethorn Cannons",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 12
           },
           "Points": {
             "value": 74
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 4
           },
-          "Strength (S)": {
+          "T": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 6
+          "W": {
+            "value": 4
           },
-          "Weapon Skill (WS)": {
+          "WS": {
             "value": 3
-          },
-          "Wounds (W)": {
-            "value": 4
           }
         }
       },
@@ -3413,38 +3536,45 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
-          "Movement (M)": {
+          "M": {
             "value": 12
           },
           "Points": {
             "value": 230
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 9
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
+          "T": {
             "value": 9
           },
-          "Toughness (T)": {
-            "value": 9
+          "Transport Capacity": {
+            "group": "Stats",
+            "statOrder": 12,
+            "statType": "numeric",
+            "value": 10,
+            "visibility": "normal"
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 12
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -3458,38 +3588,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 100
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strenght (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 7
+          },
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -3501,16 +3631,16 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
           "Loadout": {
@@ -3538,26 +3668,26 @@
             "value": "Bio Cannon",
             "visibility": "active"
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 130
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 8
+          },
+          "Sv": {
             "value": 2
           },
-          "Strength (S)": {
+          "T": {
             "value": 8
           },
-          "Toughness (T)": {
-            "value": 8
-          },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 6
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -3575,38 +3705,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 300
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 9
+          },
+          "Sv": {
             "value": 2
           },
-          "Strength (S)": {
+          "T": {
             "value": 9
           },
-          "Toughness (T)": {
-            "value": 9
-          },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 12
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -3623,38 +3753,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 12
           },
           "Points": {
             "value": 74
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 4
           },
-          "Strength (S)": {
+          "T": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 6
+          "W": {
+            "value": 4
           },
-          "Weapon Skill (WS)": {
+          "WS": {
             "value": 3
-          },
-          "Wounds (W)": {
-            "value": 4
           }
         }
       },
@@ -3666,20 +3796,22 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 2
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
           "Loadout": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Impaler Cannon": {
                 "order": 0,
@@ -3702,29 +3834,29 @@
               }
             },
             "statType": "rank",
-            "value": null,
+            "value": "Impaler Cannon",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 34
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 5
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
+          "T": {
             "value": 5
           },
-          "Toughness (T)": {
-            "value": 5
-          },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -3737,16 +3869,16 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 4
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 6
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
-          "Invulnerable Save (Inv)": {
+          "Inv": {
             "format": "{v}+",
             "group": "Stats",
             "statOrder": 11,
@@ -3754,12 +3886,13 @@
             "value": 4,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 10
           },
           "Lower Limbs Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Monstrous Scything Talons": {
                 "order": 0,
@@ -3844,26 +3977,27 @@
             "statOrder": 2,
             "statType": "rank",
             "value": "Monstrous Scything Talons",
-            "visibility": "normal"
+            "visibility": "active"
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 125
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 3
+          },
+          "T": {
             "value": 7
           },
           "Upper Limbs Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Monstrous Scything Talons": {
                 "order": 0,
@@ -3926,13 +4060,13 @@
             "statOrder": 1,
             "statType": "rank",
             "value": "Monstrous Scything Talons",
-            "visibility": "normal"
+            "visibility": "active"
           },
-          "Weapon Skill (WS)": {
-            "value": 6
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 6
           }
         }
       },
@@ -3944,38 +4078,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 2
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 6
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 3
+          },
+          "Sv": {
             "value": 6
           },
-          "Strength (S)": {
+          "T": {
             "value": 3
           },
-          "Toughness (T)": {
-            "value": 3
-          },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 1
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -3989,27 +4123,29 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Neurolictor": {
+            "group": "Upgrades",
+            "groupOrder": 4,
             "ranks": {
-              "No": {
+              "-": {
                 "order": 0
               },
-              "Yes": {
+              "✓": {
                 "order": 1,
                 "tracking": {
                   "Points": 20
@@ -4028,26 +4164,26 @@
               }
             },
             "statType": "rank",
-            "value": "No",
+            "value": "-",
             "visibility": "normal"
           },
           "Points": {
             "value": 70
           },
-          "Save (Sv)": {
-            "value": 5
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
+          "Sv": {
             "value": 5
           },
-          "Weapon Skill (WS)": {
+          "T": {
             "value": 5
           },
-          "Wounds (W)": {
+          "W": {
             "value": 3
+          },
+          "WS": {
+            "value": 5
           }
         }
       },
@@ -4059,75 +4195,75 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 3
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 50
           },
-          "Save (Sv)": {
-            "value": 5
-          },
-          "Strength (S)": {
+          "S": {
             "value": 4
           },
-          "Toughness (T)": {
+          "Sv": {
             "value": 5
           },
-          "Weapon Skill (WS)": {
+          "T": {
+            "value": 5
+          },
+          "W": {
             "value": 3
           },
-          "Wounds (W)": {
+          "WS": {
             "value": 3
           }
         }
       },
       "Model§Maleceptor": {
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 7
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 110
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strenght (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 7
+          },
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -4144,32 +4280,37 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 95
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
-            "value": 6
+          "T": {
+            "value": 7
           },
           "Tail Weapon": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Prehensile Tail": {
                 "order": 0,
@@ -4206,14 +4347,11 @@
             "value": "Prehensile Tail",
             "visibility": "normal"
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -4225,26 +4363,42 @@
           ]
         },
         "stats": {
-          "Leadership (Ld)": {
+          "A": {
+            "statType": "term",
+            "value": "-"
+          },
+          "BS": {
+            "statType": "term",
+            "value": "-"
+          },
+          "I": {
+            "statType": "term",
+            "value": "-"
+          },
+          "Ld": {
             "value": 10
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 6
           },
-          "Save (Sv)": {
-            "value": 6
-          },
-          "Strength (S)": {
+          "S": {
             "value": 1
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 6
+          },
+          "T": {
             "value": 3
           },
-          "Wounds (W)": {
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "statType": "term",
+            "value": "-"
           }
         }
       },
@@ -4255,16 +4409,16 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 1
           },
-          "Initiative (I)": {
+          "I": {
             "value": 1
           },
-          "Invulnerable Save (Inv)": {
+          "Inv": {
             "format": "{v}+",
             "group": "Stats",
             "statOrder": 11,
@@ -4272,28 +4426,28 @@
             "value": 3,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 1
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 0
           },
-          "Save (Sv)": {
-            "value": 7
-          },
-          "Strength (S)": {
+          "S": {
             "value": 1
           },
-          "Toughness (T)": {
+          "Sv": {
             "value": 1
           },
-          "Weapon Skill (WS)": {
+          "T": {
             "value": 1
           },
-          "Wounds (W)": {
+          "W": {
+            "value": 1
+          },
+          "WS": {
             "value": 1
           }
         }
@@ -4307,13 +4461,13 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
           "Invulnerable Save (Inv)": {
@@ -4324,29 +4478,29 @@
             "value": 3,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 9
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 110
           },
-          "Save (Sv)": {
+          "S": {
             "value": 4
           },
-          "Strength (S)": {
+          "Sv": {
             "value": 4
           },
-          "Toughness (T)": {
+          "T": {
             "value": 5
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 3
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -4361,37 +4515,37 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 6
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 6
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 200
           },
-          "Save (Sv)": {
-            "value": 2
-          },
-          "Strength (S)": {
+          "S": {
             "value": 7
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 3
+          },
+          "T": {
             "value": 7
           },
-          "Weapon Skill (WS)": {
+          "W": {
             "value": 6
           },
-          "Wounds (W)": {
+          "WS": {
             "value": 6
           }
         }
@@ -4407,37 +4561,37 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 6
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 6
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 210
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 7
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
+          "T": {
             "value": 7
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
+          "W": {
             "value": 6
           },
-          "Wounds (W)": {
+          "WS": {
             "value": 6
           }
         }
@@ -4452,37 +4606,37 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 5
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 110
           },
-          "Save (Sv)": {
-            "value": 2
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 2
+          },
+          "T": {
             "value": 7
           },
-          "Weapon Skill (WS)": {
+          "W": {
             "value": 5
           },
-          "Wounds (W)": {
+          "WS": {
             "value": 5
           }
         }
@@ -4498,38 +4652,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 5
           },
-          "Initiative (I)": {
+          "I": {
             "value": 5
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
-          "Movement (M)": {
+          "M": {
             "value": 12
           },
           "Points": {
             "value": 95
           },
-          "Save (Sv)": {
+          "S": {
             "value": 4
           },
-          "Strength (S)": {
+          "Sv": {
             "value": 4
           },
-          "Toughness (T)": {
+          "T": {
             "value": 4
           },
-          "Weapon Skill (WS)": {
-            "value": 5
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 3
+          },
+          "WS": {
+            "value": 5
           }
         }
       },
@@ -4543,38 +4697,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 75
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 6
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 6
+          },
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -4587,38 +4741,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 28
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strength (S)": {
+          "S": {
             "value": 5
           },
-          "Toughness (T)": {
-            "value": 5
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 5
+          },
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -4630,21 +4784,24 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
+            "tracked": true,
             "value": 2
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "tracked": true,
             "value": 6
           },
           "Loadout": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "2x Scything Talons": {
                 "order": 0,
@@ -4712,54 +4869,50 @@
             "value": "2x Scything Talons",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 10
           },
           "Points": {
             "value": 24
           },
           "Red Terror": {
-            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
             "ranks": {
-              "No": {
+              "-": {
                 "order": 0
               },
-              "Yes": {
+              "✓": {
                 "order": 1,
                 "tracking": {
-                  "Leadership (Ld)": 1,
-                  "Points": 15,
+                  "A": 1,
+                  "Ld": 1,
                   "Red Terror": 1,
-                  "Weapon Skill (WS)": 1,
-                  "Wounds (W)": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Special Rule§Swallow Whole"
-                  }
-                ]
+                  "W": 1,
+                  "WS": 1
+                }
               }
             },
             "statType": "rank",
-            "value": "No",
+            "value": "-",
             "visibility": "normal"
           },
-          "Save (Sv)": {
+          "S": {
             "value": 4
           },
-          "Strength (S)": {
+          "Sv": {
             "value": 4
           },
-          "Toughness (T)": {
+          "T": {
             "value": 4
           },
-          "Weapon Skill (WS)": {
-            "tracked": true,
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "tracked": true,
             "value": 2
+          },
+          "WS": {
+            "tracked": true,
+            "value": 4
           }
         }
       },
@@ -4771,35 +4924,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
-            "value": 4
+          "A": {
+            "value": 43
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 2
           },
-          "Initiative (I)": {
+          "I": {
             "value": 3
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 4
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 15
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 2
+          },
+          "Sv": {
             "value": 6
           },
-          "Strenght (S)": {
+          "T": {
             "value": 2
           },
-          "Toughness (T)": {
-            "value": 2
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 2
           }
         }
       },
@@ -4815,38 +4971,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 85
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strenght (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 7
+          },
+          "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -4857,23 +5013,44 @@
           ]
         },
         "stats": {
-          "Leadership (Ld)": {
+          "A": {
+            "statType": "term",
+            "value": "-"
+          },
+          "BS": {
+            "statType": "term",
+            "value": "-"
+          },
+          "I": {
+            "statType": "term",
+            "value": "-"
+          },
+          "Ld": {
             "value": 10
           },
-          "Movement (M)": {
+          "M": {
             "value": 3
           },
           "Points": {
             "value": 3
           },
-          "Strength (S)": {
+          "S": {
             "value": 1
           },
-          "Toughness (T)": {
+          "Sv": {
+            "format": "{v}",
+            "statType": "term",
+            "value": "-"
+          },
+          "T": {
             "value": 1
           },
-          "Wounds (W)": {
+          "W": {
             "value": 1
+          },
+          "WS": {
+            "statType": "term",
+            "value": "-"
           }
         }
       },
@@ -4886,19 +5063,20 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 2
           },
-          "Initiative (I)": {
+          "I": {
             "value": 1
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
           "Loadout": {
+            "group": "Loadout",
             "ranks": {
               "5 Deathspitters": {
                 "order": 0,
@@ -4971,26 +5149,26 @@
             "value": "5 Deathspitters",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 0
           },
           "Points": {
             "value": 105
           },
-          "Save (Sv)": {
-            "value": 4
-          },
-          "Strength (S)": {
+          "S": {
             "value": 5
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 4
+          },
+          "T": {
             "value": 6
           },
-          "Weapon Skill (WS)": {
+          "W": {
+            "value": 6
+          },
+          "WS": {
             "value": 2
-          },
-          "Wounds (W)": {
-            "value": 6
           }
         }
       },
@@ -5007,38 +5185,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 5
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 6
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 10
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 225
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strength (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 3
+          },
+          "T": {
             "value": 7
           },
-          "Weapon Skill (WS)": {
-            "value": 7
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 7
           }
         }
       },
@@ -5050,23 +5228,63 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
-            "value": 3
-          },
           "Bio-Morph": {
-            "group": "Bio-Morph",
-            "groupOrder": 5,
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Scorch Bugs": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Scorch Bugs"
+                  }
+                ]
+              },
+              "Desiccator Larvae": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Desiccator Larvae"
+                  }
+                ]
+              },
+              "Electroshock Grubs": {
+                "order": 3,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Bio-Morph§Electro Shock Grubs"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
             "statType": "rank",
-            "value": null,
+            "value": "-",
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "BS": {
+            "value": 3
+          },
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
           "Loadout": {
@@ -5136,27 +5354,26 @@
             "value": "Fleshborer",
             "visibility": "active"
           },
-          "Movement (M)": {
-            "groupOrder": 1,
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 7
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 3
+          },
+          "Sv": {
             "value": 6
           },
-          "Strenght (S)": {
+          "T": {
             "value": 3
           },
-          "Toughness (T)": {
-            "value": 3
-          },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 1
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -5169,19 +5386,21 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
-            "value": 3
+          "A": {
+            "value": 4
           },
-          "Ballistic Skill (BS)": {
-            "value": 3
+          "BS": {
+            "value": 6
           },
-          "Initiative (I)": {
-            "value": 3
+          "I": {
+            "value": 6
           },
-          "Leadership (Ld)": {
-            "value": 9
+          "Ld": {
+            "value": 10
           },
           "Loadout": {
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Monstrous Scything Talons": {
                 "order": 0,
@@ -5207,26 +5426,26 @@
             "value": "Monstrous Scything Talons",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 120
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
+          "T": {
             "value": 7
           },
-          "Toughness (T)": {
-            "value": 8
+          "W": {
+            "value": 4
           },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
-            "value": 5
+          "WS": {
+            "value": 6
           }
         }
       },
@@ -5239,13 +5458,13 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 6
           },
-          "Initiative (I)": {
+          "I": {
             "value": 5
           },
           "Invulnerable Save (Inv)": {
@@ -5256,29 +5475,29 @@
             "value": 3,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 10
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 110
           },
-          "Save (Sv)": {
-            "value": 5
-          },
-          "Strength (S)": {
+          "S": {
             "value": 4
           },
-          "Toughness (T)": {
-            "value": 4
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 5
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 4
+          },
+          "W": {
             "value": 3
+          },
+          "WS": {
+            "value": 5
           }
         }
       },
@@ -5293,13 +5512,13 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 5
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 6
           },
-          "Initiative (I)": {
+          "I": {
             "value": 6
           },
           "Invulnerable Save (Inv)": {
@@ -5310,29 +5529,29 @@
             "value": 4,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 10
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 180
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
-            "value": 6
-          },
-          "Toughness (T)": {
+          "T": {
             "value": 7
           },
-          "Weapon Skill (WS)": {
-            "value": 6
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 6
           }
         }
       },
@@ -5346,38 +5565,38 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 85
           },
-          "Save (Sv)": {
-            "value": 3
-          },
-          "Strenght (S)": {
+          "S": {
             "value": 6
           },
-          "Toughness (T)": {
-            "value": 7
-          },
-          "Weapon Skill (WS)": {
+          "Sv": {
             "value": 3
           },
-          "Wounds (W)": {
+          "T": {
+            "value": 7
+          },
+          "W": {
             "value": 5
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -5547,31 +5766,34 @@
           }
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "tracked": true,
-            "value": 3,
-            "visibility": "active"
-          },
-          "Ballistic Skill (BS)": {
             "value": 3
           },
-          "Initiative (I)": {
+          "BS": {
+            "tracked": true,
+            "value": 3
+          },
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 85
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 6
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
-            "value": 6
+          "T": {
+            "value": 7
           },
           "Tail Weapon": {
             "dynamic": true,
@@ -5610,9 +5832,6 @@
             "value": "Toxin spike",
             "visibility": "normal"
           },
-          "Toughness (T)": {
-            "value": 7
-          },
           "Trygon Prime": {
             "dynamic": true,
             "group": "Upgrades",
@@ -5624,10 +5843,11 @@
               "✓": {
                 "order": 1,
                 "tracking": {
-                  "Attacks (A)": 1,
+                  "A": 1,
+                  "BS": 1,
                   "Points": 35,
-                  "Weapon Skill (WS)": 1,
-                  "Wounds (W)": 1
+                  "W": 1,
+                  "WS": 1
                 },
                 "traits": [
                   {
@@ -5647,15 +5867,13 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Weapon Skill (WS)": {
+          "W": {
             "tracked": true,
-            "value": 3,
-            "visibility": "active"
+            "value": 4
           },
-          "Wounds (W)": {
+          "WS": {
             "tracked": true,
-            "value": 4,
-            "visibility": "active"
+            "value": 3
           }
         }
       },
@@ -5667,16 +5885,16 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 3
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 5
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 9
           },
           "Lower Limbs Weapons": {
@@ -5774,17 +5992,20 @@
             "value": "Devourer",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "tracked": true,
             "value": 6
           },
           "Points": {
             "value": 55
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 5
+          },
+          "Sv": {
             "value": 3
           },
-          "Strength (S)": {
+          "T": {
             "value": 5
           },
           "Torso Weapons": {
@@ -5810,9 +6031,6 @@
             "statType": "rank",
             "value": "-",
             "visibility": "normal"
-          },
-          "Toughness (T)": {
-            "value": 5
           },
           "Upper Limbs Weapons": {
             "dynamic": true,
@@ -5871,11 +6089,11 @@
             "value": "Scything Talons",
             "visibility": "normal"
           },
-          "Weapon Skill (WS)": {
-            "value": 5
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 3
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -5895,7 +6113,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Movement (M)",
+                    "M",
                     "value"
                   ]
                 ],
@@ -5924,15 +6142,13 @@
           }
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 2
-          },
-          "Ballistic Skill (BS)": {
-            "value": 4
           },
           "Bio Morph": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "-": {
                 "order": 0
@@ -5968,15 +6184,19 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "BS": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "I": {
+            "value": 4
+          },
+          "Ld": {
             "value": 7
           },
           "Lower Limbs Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "Devourer": {
                 "order": 0,
@@ -6079,22 +6299,25 @@
             "value": "Devourer",
             "visibility": "normal"
           },
-          "Movement (M)": {
-            "tracked": true,
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 25
           },
-          "Save (Sv)": {
+          "S": {
             "value": 4
           },
-          "Strength (S)": {
+          "Sv": {
+            "value": 4
+          },
+          "T": {
             "value": 4
           },
           "Torso Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "-": {
                 "order": 0
@@ -6115,12 +6338,10 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Toughness (T)": {
-            "value": 4
-          },
           "Upper Limbs Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "Scything Talons": {
                 "order": 0,
@@ -6171,11 +6392,11 @@
             "value": "Scything Talons",
             "visibility": "normal"
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -6187,19 +6408,21 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 2
           },
-          "Initiative (I)": {
+          "I": {
             "value": 3
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
           "Loadout": {
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "5 Deathspitters": {
                 "order": 0,
@@ -6272,26 +6495,26 @@
             "value": "5 Deathspitters",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 105
           },
-          "Save (Sv)": {
-            "value": 4
-          },
-          "Strength (S)": {
+          "S": {
             "value": 5
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 4
+          },
+          "T": {
             "value": 6
           },
-          "Weapon Skill (WS)": {
+          "W": {
+            "value": 6
+          },
+          "WS": {
             "value": 2
-          },
-          "Wounds (W)": {
-            "value": 6
           }
         }
       },
@@ -6304,10 +6527,7 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
-            "value": 3
-          },
-          "Ballistic Skill (BS)": {
+          "A": {
             "value": 3
           },
           "Bio-Morph": {
@@ -6357,26 +6577,32 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Initiative (I)": {
+          "BS": {
+            "value": 3
+          },
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 5
           },
-          "Movement (M)": {
+          "M": {
             "value": 8
           },
           "Points": {
             "value": 100
           },
-          "Save (Sv)": {
-            "value": 2
-          },
-          "Strenght (S)": {
+          "S": {
             "value": 7
           },
-          "Toughness (T)": {
+          "Sv": {
+            "value": 2
+          },
+          "T": {
             "value": 8
+          },
+          "W": {
+            "value": 6
           },
           "Weapon": {
             "dynamic": true,
@@ -6413,11 +6639,8 @@
             "value": "Acid Spray",
             "visibility": "active"
           },
-          "Weapon Skill (WS)": {
+          "WS": {
             "value": 3
-          },
-          "Wounds (W)": {
-            "value": 6
           }
         }
       },
@@ -6429,20 +6652,22 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 2
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 6
           },
           "Loadout": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 4,
             "ranks": {
               "Scything Talons": {
                 "order": 0,
@@ -6482,26 +6707,26 @@
             "value": "Scything Talons",
             "visibility": "normal"
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 35
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 5
+          },
+          "Sv": {
             "value": 2
           },
-          "Strength (S)": {
+          "T": {
             "value": 5
           },
-          "Toughness (T)": {
-            "value": 5
+          "W": {
+            "value": 2
           },
-          "Weapon Skill (WS)": {
+          "WS": {
             "value": 4
-          },
-          "Wounds (W)": {
-            "value": 2
           }
         }
       },
@@ -6517,75 +6742,72 @@
           ]
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 2
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 3
           },
-          "Initiative (I)": {
+          "I": {
             "value": 3
           },
-          "Leadership (Ld)": {
-            "value": 5
+          "Ld": {
+            "value": 55
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 40
           },
-          "Save (Sv)": {
-            "value": 5
-          },
-          "Strength (S)": {
+          "S": {
             "value": 4
           },
-          "Toughness (T)": {
+          "T": {
             "value": 4
           },
-          "Weapon Skill (WS)": {
-            "value": 3
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
       "Model§Von Ryan's Leaper": {
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "value": 4
           },
-          "Initiative (I)": {
+          "I": {
             "value": 4
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 7
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Points": {
             "value": 24
           },
-          "Save (Sv)": {
+          "S": {
             "value": 4
           },
-          "Strenght (S)": {
+          "Sv": {
             "value": 4
           },
-          "Toughness (T)": {
+          "T": {
             "value": 4
           },
-          "Weapon Skill (WS)": {
-            "value": 4
-          },
-          "Wounds (W)": {
+          "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -6649,18 +6871,17 @@
           }
         },
         "stats": {
-          "Attacks (A)": {
+          "A": {
             "value": 1
           },
-          "Ballistic Skill (BS)": {
+          "BS": {
             "tracked": true,
-            "value": 4,
-            "visibility": "active"
+            "value": 14
           },
-          "Initiative (I)": {
+          "I": {
             "value": 3
           },
-          "Invulnerable Save (Inv)": {
+          "Inv": {
             "format": "{v}+",
             "group": "Stats",
             "groupOrder": 0,
@@ -6669,10 +6890,10 @@
             "value": 3,
             "visibility": "normal"
           },
-          "Leadership (Ld)": {
+          "Ld": {
             "value": 8
           },
-          "Movement (M)": {
+          "M": {
             "value": 6
           },
           "Neurothrope": {
@@ -6685,10 +6906,10 @@
               "✓": {
                 "order": 1,
                 "tracking": {
-                  "Ballistic Skill (BS)": 1,
+                  "BS": 1,
                   "Neurothrope Adaptation": 1,
                   "Points": 30,
-                  "Wounds (W)": 1
+                  "W": 1
                 },
                 "traits": [
                   {
@@ -6707,22 +6928,21 @@
           "Points": {
             "value": 40
           },
-          "Save (Sv)": {
+          "S": {
+            "value": 4
+          },
+          "Sv": {
             "value": 5
           },
-          "Strength (S)": {
+          "T": {
             "value": 4
           },
-          "Toughness (T)": {
-            "value": 4
-          },
-          "Weapon Skill (WS)": {
-            "value": 1
-          },
-          "Wounds (W)": {
+          "W": {
             "tracked": true,
-            "value": 2,
-            "visibility": "active"
+            "value": 2
+          },
+          "WS": {
+            "value": 1
           }
         }
       },
@@ -7771,7 +7991,17 @@
           "classifications": []
         },
         "constraints": {
-          "none": []
+          "none": [
+            "Behemoth",
+            "Leviathan",
+            "Kraken",
+            "Hydra",
+            "Gorgon",
+            "Jormungandr",
+            "Kronos",
+            "Ouroboros",
+            "Tiamet"
+          ]
         },
         "removed": {
           "allowed": {
@@ -7781,6 +8011,148 @@
           }
         },
         "rules": {
+          "AddBehemothKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Behemoth"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Behemoth"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddJormungandrKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Jormungandr"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Jormungandr"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowBehemothUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Behemoth"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Behemoth"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowJormungandrUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Jormungandr"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Jormungandr"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "Assault Wave; Need to have more \"Assault\" keyword units than \"Feeder\" keyword units": {
             "evals": [
               {
@@ -8699,10 +9071,91 @@
                 "order": 1
               }
             },
-            "value": "-"
+            "value": "Tyranids"
           },
           "Fast Attack unit count": {},
           "Heavy Support unit count": {},
+          "Hive Fleet": {
+            "dynamic": true,
+            "group": "Rooster",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Behemoth": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Behemoth"
+                  }
+                ]
+              },
+              "Jormungandr": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Jormungandr"
+                  }
+                ]
+              },
+              "Kraken": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Kraken"
+                  }
+                ]
+              },
+              "Hydra": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Hydra"
+                  }
+                ]
+              },
+              "Leviathan": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Leviathan"
+                  }
+                ]
+              },
+              "Gorgon": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Gorgon"
+                  }
+                ]
+              },
+              "Kronos": {
+                "order": 7
+              },
+              "Ouroboros": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Ouroboros"
+                  }
+                ]
+              },
+              "Tiamet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Hive Fleet§Tiamet"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
           "HQ unit count": {},
           "Non flyer units tally": {
             "statType": "numeric",
@@ -8760,11 +9213,10 @@
                   }
                 ]
               }
-            }
+            },
+            "statOrder": 2
           },
-          "Troop unit count": {
-            "visibility": "always"
-          },
+          "Troop unit count": {},
           "Trygon prime amount": {
             "statType": "numeric",
             "value": 0,
