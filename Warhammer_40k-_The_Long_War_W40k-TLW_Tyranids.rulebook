@@ -8875,51 +8875,6 @@
             "failState": "error",
             "order": 10
           },
-          "CalculateThousands": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Thousands",
-                    "value"
-                  ]
-                ],
-                "value": [
-                  "{this}",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ]
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "equation": {
-                  "operator": "T/O",
-                  "value": 1000
-                },
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "value"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 0
-          },
           "Chitinous Armored Spearhead: Must include at least 1 Carnifex Brood unit": {
             "evals": [
               {
@@ -9972,12 +9927,6 @@
               }
             },
             "statOrder": 4
-          },
-          "Thousands": {
-            "statType": "numeric",
-            "tracked": true,
-            "value": 0,
-            "visibility": "always"
           },
           "Troop unit count": {},
           "Trygon prime amount": {
