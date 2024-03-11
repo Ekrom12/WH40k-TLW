@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "NBY6YH",
+      "slug": "39CVPN",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -468,7 +468,7 @@
             ],
             "evaluate": "AND",
             "failState": "pass",
-            "order": 100
+            "order": 5
           }
         }
       },
@@ -8833,7 +8833,8 @@
               }
             ],
             "evaluate": "OR",
-            "failState": "error"
+            "failState": "error",
+            "order": 10
           },
           "Behemoth: Need to have at least 1 Heavy support unit per 1000 points": {
             "evals": [
