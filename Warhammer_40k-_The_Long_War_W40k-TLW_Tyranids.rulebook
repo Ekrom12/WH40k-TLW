@@ -222,6 +222,9 @@
               },
               "Alien Cunning": {
                 "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Alien Cunning"
@@ -230,6 +233,9 @@
               },
               "Synaptic Linchpin": {
                 "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Synaptic Linchpin"
@@ -238,6 +244,9 @@
               },
               "Heightened Senses": {
                 "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Heightened Senses"
@@ -245,7 +254,7 @@
                 ]
               }
             },
-            "statOrder": 3,
+            "statOrder": 4,
             "statType": "rank",
             "value": "-"
           },
@@ -292,7 +301,7 @@
                 ]
               }
             },
-            "statOrder": 4,
+            "statOrder": 3,
             "value": "-"
           }
         }
@@ -417,6 +426,20 @@
               }
             ],
             "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Jormungandr"
+              },
               {
                 "actionable": true,
                 "contains": true,
@@ -5468,6 +5491,7 @@
             "value": 10
           },
           "Loadout": {
+            "dynamic": true,
             "group": "Loadout",
             "groupOrder": 4,
             "ranks": {
@@ -6162,7 +6186,7 @@
             "value": 3
           },
           "WS": {
-            "value": 4
+            "value": 5
           }
         }
       },
