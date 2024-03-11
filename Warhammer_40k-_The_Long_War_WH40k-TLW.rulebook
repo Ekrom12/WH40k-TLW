@@ -633,6 +633,51 @@
           "Group Includes": true
         },
         "rules": {
+          "CalculateThousands": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thousands",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 1000
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
           "EliteUnitTotalCount": {
             "actions": [
               {
@@ -868,6 +913,12 @@
             "tracked": true,
             "value": "-",
             "visibility": "always"
+          },
+          "Thousands": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           },
           "Troop unit count": {
             "max": 6,
