@@ -9772,7 +9772,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "always"
+            "visibility": "hidden"
           },
           "Elite unit count": {},
           "Faction": {

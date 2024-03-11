@@ -778,6 +778,31 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Rooster is over the points limit": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "stats",
+                  "Points Limit",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "warning"
+          },
           "TroopTotalUnitCount": {
             "actions": [
               {
@@ -814,6 +839,7 @@
           },
           "Faction": {
             "dynamic": true,
+            "group": "Rooster",
             "ranks": {
               "-": {
                 "order": 0
@@ -862,7 +888,7 @@
             "statType": "rank",
             "tracked": true,
             "value": "Small (1000 pts)",
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Heavy Support unit count": {
             "max": 3,
@@ -889,6 +915,16 @@
           "Points": {
             "group": "Cost",
             "groupOrder": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Points Limit": {
+            "dynamic": true,
+            "group": "Cost",
+            "groupOrder": 0,
+            "statOrder": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
