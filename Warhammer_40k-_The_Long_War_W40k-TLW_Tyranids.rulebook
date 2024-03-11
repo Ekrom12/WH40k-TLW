@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "39CVPN",
+      "slug": "NBY6YH",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -5456,13 +5456,13 @@
         },
         "stats": {
           "A": {
-            "value": 4
+            "value": 3
           },
           "BS": {
-            "value": 6
+            "value": 3
           },
           "I": {
-            "value": 6
+            "value": 3
           },
           "Ld": {
             "value": 10
@@ -5502,19 +5502,19 @@
             "value": 120
           },
           "S": {
-            "value": 6
+            "value": 7
           },
           "Sv": {
             "value": 3
           },
           "T": {
-            "value": 7
+            "value": 8
           },
           "W": {
-            "value": 4
+            "value": 5
           },
           "WS": {
-            "value": 6
+            "value": 3
           }
         }
       },
