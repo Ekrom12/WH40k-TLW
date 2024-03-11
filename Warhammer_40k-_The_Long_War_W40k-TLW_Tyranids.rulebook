@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "0.0.3",
+  "revision": "0.9.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -8793,22 +8793,8 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points (Large Game Size)": {
+          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points": {
             "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Large (2000 pts)"
-              },
               {
                 "actionable": true,
                 "not": true,
@@ -8825,7 +8811,16 @@
               },
               {
                 "actionable": true,
-                "min": 6,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 3
+                },
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Thousands",
+                  "value"
+                ],
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -8840,101 +8835,7 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points (Medium Game Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Medium (1500 pts)"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Assault Wave"
-              },
-              {
-                "actionable": true,
-                "min": 6,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Assault"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          },
-          "Assault Wave: Need to have at least 3 \"Assault\" keyword units for every 1000 points (Small Game Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Small (1000 pts)"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Assault Wave"
-              },
-              {
-                "actionable": true,
-                "min": 3,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Assault"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          },
-          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points (LargeGame Size)": {
+          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points": {
             "evals": [
               {
                 "actionable": true,
@@ -8952,131 +8853,71 @@
               },
               {
                 "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Thousands",
+                  "value"
                 ],
-                "value": "Large (2000 pts)"
-              },
-              {
-                "actionable": true,
-                "min": 2,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{self}",
-                    "stats",
-                    "Heavy Support unit count",
-                    "value"
+                    "tally",
+                    "Heavy Support"
                   ]
                 ]
               }
             ],
             "evaluate": "OR",
-            "failState": "error"
+            "failState": "error",
+            "order": 10
           },
-          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points (Medium Game Size)": {
+          "CalculateThousands": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thousands",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
             "evals": [
               {
                 "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Hive Fleet",
-                    "value"
-                  ]
-                ],
-                "value": "Behemoth"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Medium (1500 pts)"
-              },
-              {
-                "actionable": true,
-                "min": 2,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 1000
+                },
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{self}",
                     "stats",
-                    "Heavy Support unit count",
+                    "Points",
                     "value"
                   ]
                 ]
               }
             ],
-            "evaluate": "OR",
-            "failState": "error"
-          },
-          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points (Small Game Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Hive Fleet",
-                    "value"
-                  ]
-                ],
-                "value": "Behemoth"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Small (1000 pts)"
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Heavy Support unit count",
-                    "value"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
           },
           "Chitinous Armored Spearhead: Must include at least 1 Carnifex Brood unit": {
             "evals": [
@@ -9144,22 +8985,8 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "Chitinous Armored Spearhead: Need to have at least 2 Monster type units with the \"Assault\" keyword units for every 1000 points (Large Game Size)": {
+          "Chitinous Armored Spearhead: Need to have at least 2 Monster type units with the \"Assault\" keyword units for every 1000 points": {
             "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Large (2000 pts)"
-              },
               {
                 "actionable": true,
                 "not": true,
@@ -9176,7 +9003,16 @@
               },
               {
                 "actionable": true,
-                "min": 4,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Thousands",
+                  "value"
+                ],
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -9190,103 +9026,7 @@
             ],
             "evaluate": "OR",
             "failState": "error",
-            "order": 1
-          },
-          "Chitinous Armored Spearhead: Need to have at least 2 Monster type units with the \"Assault\" keyword units for every 1000 points (Medium Game Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Medium (1500 pts)"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Chitinous Armoured Spearhead"
-              },
-              {
-                "actionable": true,
-                "min": 4,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Assault monster count"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error",
-            "order": 1
-          },
-          "Chitinous Armored Spearhead: Need to have at least 2 Monster type units with the \"Assault\" keyword units for every 1000 points (Small Game Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Small (1000 pts)"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Chitinous Armoured Spearhead"
-              },
-              {
-                "actionable": true,
-                "min": 2,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Assault monster count"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error",
-            "order": 1
+            "order": 10
           },
           "Count trygon primes": {
             "actions": [
@@ -9457,22 +9197,8 @@
             "failState": "pass",
             "order": 1
           },
-          "Hydra: Must have at least 3 troop choices for every 1000 points (Large Game Size)": {
+          "Hydra: Must have at least 3 troop choices for every 1000 points": {
             "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Large (2000 pts)"
-              },
               {
                 "actionable": true,
                 "not": true,
@@ -9489,101 +9215,16 @@
               },
               {
                 "actionable": true,
-                "min": 6,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Troops"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          },
-          "Hydra: Must have at least 3 troop choices for every 1000 points (MediumGame Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
+                "equation": {
+                  "operator": "T/O",
+                  "value": 3
+                },
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Thousands",
+                  "value"
                 ],
-                "value": "Medium (1500 pts)"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Hive Fleet",
-                    "value"
-                  ]
-                ],
-                "value": "Hydra"
-              },
-              {
-                "actionable": true,
-                "min": 6,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Troops"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          },
-          "Hydra: Must have at least 3 troop choices for every 1000 points (Small Game Size)": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Game Size",
-                    "value"
-                  ]
-                ],
-                "value": "Small (1000 pts)"
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Hive Fleet",
-                    "value"
-                  ]
-                ],
-                "value": "Hydra"
-              },
-              {
-                "actionable": true,
-                "min": 3,
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -10175,7 +9816,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "hidden"
+            "visibility": "always"
           },
           "Elite unit count": {},
           "Faction": {
@@ -10330,6 +9971,12 @@
               }
             },
             "statOrder": 4
+          },
+          "Thousands": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "always"
           },
           "Troop unit count": {},
           "Trygon prime amount": {
