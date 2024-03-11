@@ -9,10 +9,10 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "73NEEM",
+      "slug": "39CVPN",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
-      "source": "https://raw.githubusercontent.com/teacup122/WH40k-TLW-Tyranids/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
     }
   ],
   "rulebook": {
@@ -402,6 +402,39 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "JormungandrAddDeepStrikeNonFly": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Fly"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "SkySwarmAssaultSelfReportNonFlyer": {
             "actions": [
               {
@@ -569,6 +602,9 @@
           "items": [
             "Model§Deathleaper"
           ]
+        },
+        "aspects": {
+          "Unique": true
         },
         "assets": {
           "included": [
@@ -1269,6 +1305,9 @@
             "Model§Old One Eye"
           ]
         },
+        "aspects": {
+          "Unique": true
+        },
         "assets": {
           "included": [
             "Model§Old One Eye"
@@ -1335,6 +1374,9 @@
           "items": [
             "Model§Parasite of Mortrex"
           ]
+        },
+        "aspects": {
+          "Unique": true
         },
         "assets": {
           "included": [
@@ -1426,6 +1468,9 @@
           "items": [
             "Model§Swarmlord"
           ]
+        },
+        "aspects": {
+          "Unique": true
         },
         "assets": {
           "included": [
@@ -1572,6 +1617,9 @@
             "Model§The Doom of Malan'tai"
           ]
         },
+        "aspects": {
+          "Unique": true
+        },
         "assets": {
           "included": [
             "Model§The Doom of Malan'tai"
@@ -1642,6 +1690,9 @@
           "items": [
             "Model§The Nephilim King"
           ]
+        },
+        "aspects": {
+          "Unique": true
         },
         "assets": {
           "included": [
@@ -1810,15 +1861,33 @@
           }
         }
       },
-      "Hive Fleet§Behemoth": {},
-      "Hive Fleet§Gorgon": {},
-      "Hive Fleet§Hydra": {},
-      "Hive Fleet§Jormungandr": {},
-      "Hive Fleet§Kraken": {},
-      "Hive Fleet§Kronos": {},
-      "Hive Fleet§Leviathan": {},
-      "Hive Fleet§Ouroboros": {},
-      "Hive Fleet§Tiamet": {},
+      "Hive Fleet§Behemoth": {
+        "text": "● Hyper Aggression: Behemoth units gain the Rage (2) special rule while within Synapse Range.\n\n● Overwhelming Ferocity: A Behemoth Army must have at least 1 Heavy support\nchoice for every 1000pts"
+      },
+      "Hive Fleet§Gorgon": {
+        "text": "● Hyper Adaptive Biology: A Gorgon unit with this special rule that is within Synapse range gains the Poison (4+) special rule on all weapons they are equipped with. If they already have the Poison (x) special rule,\nimprove the value of (x) by 1 to a max of (2+). Units with Poison Sacs Adaptation go to Poison (3+).\n\n● Sustainable Consumption: If a Gorgon army does not slay more units than the opponent by the end of the game, you lose 1VP."
+      },
+      "Hive Fleet§Hydra": {
+        "text": "● The Swarm: At the start of combat, at\ninitiative step 10, if a Hydra unit with 5 or\nmore models is engaged in Combat and in\nSynapse Range, Hydra models in that unit\ngain +1 to their Weapon Skill (WS)\ncharacteristic until the end of combat.\n\n● The Many Headed Beast: A Hydra army\nmust have 3 Troops choices for every\n1000pts."
+      },
+      "Hive Fleet§Jormungandr": {
+        "text": "●Tunnel Networks: Jourmangandr units\nthat do not have the Fly keyword gain the\nDeep Strike special rule.\n\n● The enemy below: A Jourmangandr army\nmust have more Elite choices than Heavy\nSupport choices."
+      },
+      "Hive Fleet§Kraken": {
+        "text": "● Questing Tendrils: Kraken units gain the\nSprint (1) special rule while within Synapse\nRange. If they already have the Sprint (x)\nspecial rule, increase the value of x by 1 to a\nmax of 3.\n\n● Speedy Consumption: A Kraken army\nmust include more Fast Attack Choices than\nHeavy Support choices"
+      },
+      "Hive Fleet§Kronos": {
+        "text": "● The Deepest Shadow: Enemy units within\nSynapse range of a Kronos unit suffer -2 to\ntheir Leadership (LD) characteristic.\n\n● The shadow hunt: Kronos units must\nattempt to charge any units with the Psyker\n(x) rule or units with models with the Psyker\n(x) rule in them if they are eligible to charge\nin the charge Phase unless another unit is\ncloser"
+      },
+      "Hive Fleet§Leviathan": {
+        "text": "● Synaptic Focus: Leviathan units in\nSynapse range gain the Hatred special rule.\n\n● Synaptic Chain: If no Leviathan units are\non the board with the Synapse rule at the\nend of the battle. Your opponent scores 2\nadditional VP"
+      },
+      "Hive Fleet§Ouroboros": {
+        "text": "● Flocking Doom: Ouroboros units with the\nFly Keyword in Synapse Range may perform\na Counter Charge with reaction with no\nnegative modifiers to their Charge roll.\n\n● Primordial Biology: An Ouroboros army\nmust select the Caustic Blood Physiology\n(see Adaptive Physiology section). All\nOuroboros units gain the M32 keyword."
+      },
+      "Hive Fleet§Tiamet": {
+        "text": "● Defensive Organisms: Tiamet units in\nSynapse range gain the benefit of the Feel\nno Pain (5+) special rule. When Tiamet units\nare under the affects of the Catalyst Psychic\nPower, they gain Feel no Pain (4+).\n\n● The first to arrive: All Tiamet units gain the\nM35 keyword. Tiamet may not field any\nUnique keyword units"
+      },
       "Melee Weapon§Acid Maw": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -8048,6 +8117,80 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "AddGorgonKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Gorgon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Gorgon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddHydraKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Hydra"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Hydra"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "AddJormungandrKeyword": {
             "actions": [
               {
@@ -8080,6 +8223,191 @@
                   ]
                 ],
                 "value": "Jormungandr"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddKrakenKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kraken"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Kraken"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddKronosKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kronos"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Kronos"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddLeviathanKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Leviathan"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Leviathan"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddOuroborosKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ouroboros"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Ouroboros"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddTiametKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tiamet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Tiamet"
               }
             ],
             "evaluate": "AND",
@@ -8119,6 +8447,74 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "AllowGorgonUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Gorgon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Gorgon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowHydraUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Hydra"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Hydra"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "AllowJormungandrUniqueUnits": {
             "actions": [
               {
@@ -8148,6 +8544,176 @@
                   ]
                 ],
                 "value": "Jormungandr"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowKrakenUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Kraken"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Kraken"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowKronosUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Kronos"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Kronos"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowLeviathanUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Leviathan"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Leviathan"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowOuroborosUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Ouroboros"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Ouroboros"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowTiametUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Tiamet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Tiamet"
               }
             ],
             "evaluate": "AND",
@@ -8361,6 +8927,150 @@
                     "{self}",
                     "tally",
                     "Assault"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points (LargeGame Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Behemoth"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Large (2000 pts)"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Support unit count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points (Medium Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Behemoth"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Medium (1500 pts)"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Support unit count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Behemoth: Need to have at least 1 Heavy support unit per 1000 points (Small Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Behemoth"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Small (1000 pts)"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Support unit count",
+                    "value"
                   ]
                 ]
               }
@@ -8747,6 +9457,301 @@
             "failState": "pass",
             "order": 1
           },
+          "Hydra: Must have at least 3 troop choices for every 1000 points (Large Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Large (2000 pts)"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Hydra"
+              },
+              {
+                "actionable": true,
+                "min": 6,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Troops"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Hydra: Must have at least 3 troop choices for every 1000 points (MediumGame Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Medium (1500 pts)"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Hydra"
+              },
+              {
+                "actionable": true,
+                "min": 6,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Troops"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Hydra: Must have at least 3 troop choices for every 1000 points (Small Game Size)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Game Size",
+                    "value"
+                  ]
+                ],
+                "value": "Small (1000 pts)"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Hydra"
+              },
+              {
+                "actionable": true,
+                "min": 3,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Troops"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Jormungandr: Must have more \"Elite\" keyword units than \"Heavy Support\" keyword units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Jormungandr"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Elites"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Heavy Support"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Kraken: Must have more \"Fast Attack\" keyword units than \"Heavy Support\" keyword units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Kraken"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "tally",
+                  "Fast Attack"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Heavy Support"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "OuroborosAddM32Keyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "M32"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Ouroboros"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "OuroborosForceCausticBlood": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Adaptive Physiology",
+                    "value"
+                  ]
+                ],
+                "value": "Caustic Blood"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Ouroboros"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "Select your Warlord": {
             "evals": [
               {
@@ -8976,6 +9981,77 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "TiametAddM35Keyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classIdentity",
+                    "Unit",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "M35"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Tiamet"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "TiametNoUniqueUnits": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Unique"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "Tiamet"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "Vanguard Wave: Need to have at least 2 units of Genestealers": {
             "evals": [
               {
@@ -9057,6 +10133,44 @@
           }
         },
         "stats": {
+          "Adaptive Physiology": {
+            "dynamic": true,
+            "group": "Rooster",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Adrenal Glands": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Adaptive Physiology§Adrenal Glands"
+                  }
+                ]
+              },
+              "Toxin Sacs": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Adaptive Physiology§Toxin Sacs"
+                  }
+                ]
+              },
+              "Caustic Blood": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Adaptive Physiology§Caustic Blood"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
           "Assault monster count": {
             "statType": "numeric",
             "tracked": true,
@@ -9066,6 +10180,7 @@
           "Elite unit count": {},
           "Faction": {
             "dynamic": false,
+            "group": "Faction",
             "ranks": {
               "Tyranids": {
                 "order": 1
@@ -9214,7 +10329,7 @@
                 ]
               }
             },
-            "statOrder": 2
+            "statOrder": 4
           },
           "Troop unit count": {},
           "Trygon prime amount": {
