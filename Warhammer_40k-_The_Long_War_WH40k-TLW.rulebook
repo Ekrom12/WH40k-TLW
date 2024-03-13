@@ -1,6 +1,6 @@
 {
   "name": "WH40k:TLW",
-  "revision": "0.0.1",
+  "revision": "0.9.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -385,6 +385,7 @@
             "visibility": "hidden"
           },
           "x": {
+            "format": " {v}",
             "statType": "term",
             "value": null,
             "visibility": "hidden"
@@ -633,6 +634,51 @@
           "Group Includes": true
         },
         "rules": {
+          "CalculateThousands": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thousands",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 1000
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
           "EliteUnitTotalCount": {
             "actions": [
               {
@@ -733,6 +779,31 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Rooster is over the points limit": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "stats",
+                  "Points Limit",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "warning"
+          },
           "TroopTotalUnitCount": {
             "actions": [
               {
@@ -769,6 +840,7 @@
           },
           "Faction": {
             "dynamic": true,
+            "group": "Rooster",
             "ranks": {
               "-": {
                 "order": 0
@@ -817,7 +889,7 @@
             "statType": "rank",
             "tracked": true,
             "value": "Small (1000 pts)",
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Heavy Support unit count": {
             "max": 3,
@@ -849,6 +921,16 @@
             "value": 0,
             "visibility": "normal"
           },
+          "Points Limit": {
+            "dynamic": true,
+            "group": "Cost",
+            "groupOrder": 0,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
           "Relic": {
             "max": 1,
             "statType": "numeric",
@@ -868,6 +950,12 @@
             "tracked": true,
             "value": "-",
             "visibility": "always"
+          },
+          "Thousands": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           },
           "Troop unit count": {
             "max": 6,
@@ -895,6 +983,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
@@ -920,7 +1009,7 @@
             "Universal Special Rule"
           ]
         },
-        "text": "Models Embarked in a transport with this special rule\nare subject to the following:\n● Embarked models can shoot and Fight in the\nshooting Phase and Combat Phase while\nembarked as normal.\n● All measurement and line of sight is\nmeasured from the Vehicles hull.\n● Units embarked can only ever make 1 attack\nin the combat phase.\n● Unless the embarked unit disembarks during\nthe turn, the embarked unit is considered to\nhave made the same type of movement as\nthe transport for the purposes of determining\nmodifiers and eligibility to shoot.\n● When a transport is slain, destroyed,\nwrecked or explodes with this special rule.\nModels that disembark are slain on a roll of a\n1 or a 2 instead of a 1.\n● If a Transport with this special rule is Pinned,\nthe embarked models count as being Pinned\nas well."
+        "text": "Models Embarked in a transport with this special rule are subject to the following:\n\n● Embarked models can shoot and Fight in the shooting Phase and Combat Phase while embarked as normal.\n\n● All measurement and line of sight is measured from the Vehicles hull.\n\n● Units embarked can only ever make 1 attack in the combat phase.\n\n● Unless the embarked unit disembarks during the turn, the embarked unit is considered to have made the same type of movement as the transport for the purposes of determining modifiers and eligibility to shoot.\n\n● When a transport is slain, destroyed, wrecked or explodes with this special rule. Models that disembark are slain on a roll of a 1 or a 2 instead of a 1.\n\n● If a Transport with this special rule is Pinned, the embarked models count as being Pinned as well."
       },
       "Special Rule§Bane": {
         "keywords": {
@@ -986,6 +1075,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
@@ -1023,6 +1113,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
@@ -1098,6 +1189,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
@@ -1111,7 +1203,7 @@
         },
         "stats": {
           "x": {
-            "format": "{v}+",
+            "format": " {v}+",
             "statType": "numeric"
           }
         },
@@ -1122,6 +1214,11 @@
           "Keywords": [
             "Universal Special Rule"
           ]
+        },
+        "stats": {
+          "x": {
+            "format": " {v}"
+          }
         },
         "text": "A unit with this special rule may attack in the shooting\nphase with a number of different weapons equal to the\nvalue of (x)."
       },
@@ -1163,6 +1260,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
@@ -1184,6 +1282,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
@@ -1242,6 +1341,9 @@
             "statType": "term",
             "value": null,
             "visibility": "normal"
+          },
+          "x": {
+            "format": " {v}"
           }
         },
         "text": "A model from a unit with this special rule can re-roll hit\nrolls of 1 against enemy units. Where the (x) following\nthe special rule has a unit type (see 18.0) or Keyword,\nthe unit can only re-roll hit of 1 against units with that\nspecific type or Keyword. If no type or keyword is\nindicated by an (x), the unit re-rolls all hit rolls of 1\nregardless of type or keyword of the target enemy unit."
@@ -1415,6 +1517,11 @@
             "Universal Special Rule"
           ]
         },
+        "stats": {
+          "x": {
+            "format": " {v}"
+          }
+        },
         "text": "A model from a unit with this special rule can re-roll\nwound rolls of 1 against enemy units. Where the (x)\nfollowing the special rule has a unit type (see 18.0) or\nKeyword, the unit can only re-roll hit of 1 against units\nwith that specific type or Keyword. If no type or keyword\nis indicated by an (x), the unit re-rolls all wound rolls of\n1 regardless of type or keyword of the target enemy\nunit."
       },
       "Special Rule§Priest": {
@@ -1425,6 +1532,7 @@
         },
         "stats": {
           "x": {
+            "format": " {v}",
             "statType": "numeric"
           }
         },
