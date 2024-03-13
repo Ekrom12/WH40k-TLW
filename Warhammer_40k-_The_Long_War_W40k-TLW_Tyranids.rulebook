@@ -9,6 +9,7 @@
   "wip": true,
   "dependencies": [
     {
+
       "slug": "39CVPN",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
@@ -3536,6 +3537,7 @@
             "value": 5
           },
           "Loadout": {
+            "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
@@ -3713,6 +3715,7 @@
             "value": 6
           },
           "Loadout": {
+            "dynamic": true,
             "group": "Loadout",
             "groupOrder": 3,
             "ranks": {
@@ -5468,6 +5471,7 @@
             "value": 10
           },
           "Loadout": {
+            "dynamic": true,
             "group": "Loadout",
             "groupOrder": 4,
             "ranks": {
