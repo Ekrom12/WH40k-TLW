@@ -9,12 +9,7 @@
   "wip": false,
   "dependencies": [
     {
-<<<<<<< Updated upstream
-
       "slug": "39CVPN",
-=======
-      "slug": "UQSX9H",
->>>>>>> Stashed changes
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
