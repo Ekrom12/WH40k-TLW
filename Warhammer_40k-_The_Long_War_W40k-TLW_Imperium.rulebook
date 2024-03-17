@@ -1,0 +1,26 @@
+{
+  "name": "W40k:TLW Imperium",
+  "revision": "0.0.1",
+  "game": "Warhammer 40k: The Long War",
+  "genre": "generic",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "dependencies": [
+    {
+      "slug": "UQSX9H",
+      "name": "WH40k:TLW",
+      "game": "Warhammer 40k: The Long War",
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
+    }
+  ],
+  "rulebook": {
+    "assetTaxonomy": {},
+    "assetCatalog": {
+      "Roster§Roster": {}
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
