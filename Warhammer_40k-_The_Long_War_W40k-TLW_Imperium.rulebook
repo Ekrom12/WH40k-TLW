@@ -18,6 +18,288 @@
   "rulebook": {
     "assetTaxonomy": {},
     "assetCatalog": {
+      "Ranged Weapon§Bolt Pistol": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Boltgun": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Flamer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Hand Flamer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Strength": {
+            "value": "3"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Bolter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Flamer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Inferno Pistol": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Heavy Bolter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Heavy Flamer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Multi-Melta": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Storm Bolter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 2"
+          }
+        }
+      },
+      "Ranged Weapon§Melta": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Multi-Melta": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Storm Bolter": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 2"
+          }
+        }
+      },
       "Roster§Roster": {}
     },
     "gameModes": {},
