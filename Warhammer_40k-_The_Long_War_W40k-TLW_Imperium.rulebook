@@ -745,6 +745,26 @@
           ]
         },
         "text": "A weapon with this trait is made of two weapons. You do not require the Firing Protocols special rule to fire\nboth weapons in a shooting phase however and are treated as one weapon for all other purposes."
+      },
+      "Wargear§Artificer Armour": {},
+      "Wargear§Digital Weapons": {
+        "text": "A model with Digital weapons gains\nthe Furious Charge (1) special rule."
+      },
+      "Wargear§Jump Pack": {
+        "text": "A unit that is equipped with a Jump\nPack increases its Movement (M)\ncharacteristic to 12”. The model\ngains the Hammer of Wrath (1),\nBulky (2), and Deep Strike special\nrules. The equipped model gains the\nFly keyword."
+      },
+      "Wargear§Melta Bomb": {
+        "text": "In combat, a model with this wargear\nmay forgo its attacks and instead\nmake a single Strength 8, AP1 attack\nwith the Melta Special rule at\nInitiative step 1."
+      },
+      "Wargear§Power Armour": {},
+      "Wargear§Rosarius": {
+        "text": "A model with a Rosarius has a 4+\nInvulnerable save."
+      },
+      "Wargear§Search Light": {
+        "text": "A model with this special rule gains\nthe Night Vision special rule. Any\nunit that it targets in the Shooting\nPhase no longer gains the benefit of\nNight Fighting. Any attacks against\nthis unit are not affected by Night\nFighting."
+      },
+      "Wargear§Smoke Launchers": {
+        "text": "Smoke Launchers:\nA model equipped with this Wargear\ncan set to smoke instead of\nOverwatching. Until the start of its\nnext turn, the model gains a 4+\nCover Save."
       }
     },
     "gameModes": {},
