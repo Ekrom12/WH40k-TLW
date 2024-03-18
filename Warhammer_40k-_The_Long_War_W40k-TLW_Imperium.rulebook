@@ -18,6 +18,75 @@
   "rulebook": {
     "assetTaxonomy": {},
     "assetCatalog": {
+      "Melee Weapon§Chainsword": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
+      "Melee Weapon§Power Maul": {
+        "assets": {
+          "traits": [
+            "Special Rule§Concussive",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+2"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
+      "Melee Weapon§Power Sword": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "user"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
       "Ranged Weapon§Bolt Pistol": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -50,6 +119,221 @@
           }
         }
       },
+      "Ranged Weapon§Combi Flamer (Boltgun)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Combi"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Flamer (Flamer)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Grav (Boltgun)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Combi"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Grav (Grav)": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Melta (Boltgun)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Combi"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Melta (Melta)": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Melta",
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Plasma (Boltgun)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Combi"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Plasma (Plasma)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!",
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
       "Ranged Weapon§Flamer": {
         "assets": {
           "traits": [
@@ -68,6 +352,27 @@
           },
           "Type": {
             "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Frag Grenade": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Grenade 1"
           }
         }
       },
@@ -134,6 +439,35 @@
           }
         }
       },
+      "Ranged Weapon§Hunter-Killer Missile": {
+        "assets": {
+          "included": [],
+          "traits": [
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
       "Ranged Weapon§Inferno Pistol": {
         "assets": {
           "traits": [
@@ -152,6 +486,22 @@
           },
           "Type": {
             "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Krak Grenade": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Grenade 1"
           }
         }
       },
@@ -221,6 +571,29 @@
           }
         }
       },
+      "Ranged Weapon§Linked Plasma Cannon": {
+        "assets": {
+          "included": [
+            "Special Rule§Blast",
+            "Special Rule§Gets Hot!",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
       "Ranged Weapon§Linked Storm Bolter": {
         "assets": {
           "traits": [
@@ -284,6 +657,70 @@
           }
         }
       },
+      "Ranged Weapon§Plasma Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plasma Gun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plasma Pistol": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
       "Ranged Weapon§Storm Bolter": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -300,7 +737,15 @@
           }
         }
       },
-      "Roster§Roster": {}
+      "Roster§Roster": {},
+      "Special Rule§Combi": {
+        "keywords": {
+          "Tags": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this trait is made of two weapons. You do not require the Firing Protocols special rule to fire\nboth weapons in a shooting phase however and are treated as one weapon for all other purposes."
+      }
     },
     "gameModes": {},
     "theme": {}
