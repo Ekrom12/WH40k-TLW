@@ -13,12 +13,140 @@
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
+    },
+    {
+      "slug": "ZUD2MY",
+      "name": "W40k:TLW Imperium",
+      "game": "Warhammer 40k: The Long War",
+      "source": ""
     }
   ],
   "rulebook": {
     "assetTaxonomy": {},
     "assetCatalog": {
-      "Roster§Roster": {}
+      "Model§Space Marine Captain": {
+        "stats": {
+          "Armor": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Armor": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Power Armour"
+                  }
+                ]
+              },
+              "Artificer Armor": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Artificer Armour"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Power Armor",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 60
+          }
+        }
+      },
+      "Roster§Roster": {},
+      "Wargear§Assault Launchers": {
+        "text": "A model equipped with this Wargear\ncan make 1 additional Hammer of\nWrath Attack."
+      },
+      "Wargear§Auspex Scanner": {
+        "text": "Enemy units may not Infiltrate within\n18” of a model equipped with this\nwargear."
+      },
+      "Wargear§Bionics": {
+        "text": "A model with this wargear has a 6+\nInvulnerable save."
+      },
+      "Wargear§Camo Cloaks": {
+        "text": "A Model with a Camo Cloak gains\nthe benefit of Light Cover even if\nthey would not normally do so. In\naddition, if they are already\nbenefiting from Light Cover, they\nreceive heavy Cover instead. A\nmodel with this wargear gains a 4+\nCover save if it is already receiving\nthe benefit of Heavy cover."
+      },
+      "Wargear§Cataphractii Terminator Armour": {
+        "text": "An ancient heavier pattern of Terminator Armour rarely used. It provides a 2+ Armour save and a 4+ Invulnerable save. The Wearer gains the Relentless, Bulky (2), Deep Strike, Relentless and Slow & Purposeful special rules. The wearers Movement (M) Characteristic is decreased by 1”"
+      },
+      "Wargear§Centurion Armour": {
+        "text": "Centurion Armour is a massive, powered suit of Armour\nworn over normal power Armour. It provides a 2+ Armour\nsave. In addition, it grants the wearer +1 to their Wound\n(W), Strength (S) and Toughness (T) characteristics, as\nwell as the Relentless, Bulky (3) and Slow & Purposeful\nspecial rules. The wearers Movement (M) Characteristic\nis decreased by 2”"
+      },
+      "Wargear§Chapter Banner": {
+        "text": "Friendly Space Marines units within\n12” of the Banner can re-roll Pinning\nand Panic tests. In addition, when\ncalculating the number of wounds\ncaused in a combat for the purpose\nof determining if a unit within 12” of\na model with this wargear has won\nor lost a combat, add 1 to the\nnumber of wounds caused by\nfriendly Space Marine units within\n12” of a model with this wargear"
+      },
+      "Wargear§Dreadnought Plate": {
+        "text": "These ancient and powerful mechanised war suit\nencompasses a sarcophagus where an ancient warrior\nlay entombed. When combined, the warrior may take to\nthe field again with a new body. It confers a 2+ Armour\nsave."
+      },
+      "Wargear§Grapple Hooks": {
+        "text": "A model with a Grapple Hook\nignores vertical distances when\nmoving as if they had the Fly\nKeyword."
+      },
+      "Wargear§Grav Chute": {
+        "text": "A model with a Grav Chute gains\nthe Deep Strike Special rule"
+      },
+      "Wargear§Gravis Armour": {
+        "text": "Gravis Armour is a bulk multi-layered heavy assault\nArmour for Primaris. It provides a 3+ Armour save and\ngrants the wearer +1 to their Toughness (T)\ncharacteristic. The wearers Movement (M)\nCharacteristic is decreased by 1”. The model gains the\nBulky (2) special rule. If a model wearing Gravis Armour\nis hit by a weapon with the Blast or Large Blast special\nrule, decrease the AP of the weapon by 1 (e.g 3 becomes\n4) for the purposes of resolving that hit. The model gains\nthe Relentless Special rule"
+      },
+      "Wargear§Indomitus Terminator Armour": {
+        "text": "The Standard Terminator Armour used by most Astartes forces. It provides a 2+ Armour Save and a 5+ Invulnerable Save. The wearer gains the Relentless, Bulky (2) and Deep Strike special rule. Models equipped with this Armour may not perform Sweeping Advances."
+      },
+      "Wargear§Iron Halo": {
+        "text": "A model with an Iron Halo has a 4+\nInvulnerable save."
+      },
+      "Wargear§Narthecium": {
+        "text": "A model with this Wargear and their\nattached unit gain Feel No Pain (5+)\nSpecial rule."
+      },
+      "Wargear§Omni Scrambler": {
+        "text": "Enemy units may not Deep Strike\nwithin 18” of a model equipped with\nthis wargear."
+      },
+      "Wargear§Phobos Armour": {
+        "text": "A Stealth designed version of the standard power Armour for infiltration. It provides a 3+ Armour save and grants the wearer the Infiltrate special rule."
+      },
+      "Wargear§Psychic Hood": {
+        "text": "Enemy Psykers within 24” of a\nmodel with this wargear suffer an\nadditional -1 to their Leadership\n(LD) Characteristic when attempting\nto cast a Psychic power in the\nPsychic phase."
+      },
+      "Wargear§Refractor Field": {
+        "text": "A model with a refractor Field has a\n5+ Invulnerable save."
+      },
+      "Wargear§Relic Shield": {
+        "text": "A Model with a Relic Shield has a 4+\nInvulnerable save and gains the\nAdamantium Will special rule."
+      },
+      "Wargear§Scout Armor": {
+        "text": "Basic Armour used by Space Marine Scout forces. It's lightweight and easy to move in. It provides a 4+ Armour save and gives the \nwearer the Scout and Outflank special rules."
+      },
+      "Wargear§Space Marine Bike": {
+        "text": "A unit that is equipped with a Bike\nbecomes a Bike type unit. In\naddition, it gains +1 Toughness (T)\nCharacteristics. A Space marine\nBike is equipped with a Linked\nBoltgun."
+      },
+      "Wargear§Space Marine Outrider Bike": {
+        "text": "A unit that is equipped with a Bike\nbecomes a Bike Type unit. In\naddition, it gains +1 Toughness (T)\nCharacteristics. A Space Marine\nOutrider Bike is equipped with a\nLinked Bolt Rifle."
+      },
+      "Wargear§Storm Shields": {
+        "text": "Storm Shields provide the model\nequipped with the Storm Shield a 4+\nInvulnerable save. A model with a\nStorm Shield ignores Instant Death"
+      },
+      "Wargear§Tartaros Terminator Armour": {
+        "text": "A more mobile ancient pattern of Terminator Armour rarely used. It provides a 2+ Armour Save and a 5+ Invulnerable save. The Wearer gains Relentless, Sprint (1), Bulky (2), and Deep Strike special rules."
+      },
+      "Wargear§Telepor Homer": {
+        "text": "A unit that arrives on the battlefield\nvia Deep Strike within 12” of a unit\nwith this wargear does not scatter"
+      },
+      "Wargear§Tempormortis": {
+        "text": "At the start of the combat phase,\nenemy units in combat with a model\nequipped with this wargear have their\nInitiative reduced by 1"
+      },
+      "Warlord Trait§Rites of Battle": {
+        "text": "If your Warlord has this trait, you can increase the number of Elite Slots, Fast Attack Slots or Heavy Support slots in your army by 1."
+      },
+      "Warlord Trait§Storm of Fire": {
+        "text": "Once per game during the shooting phase, your Warlord and any unit they are attached to gains the Rending (5+) special rule on all of their shooting weapons until the end of that shooting phase."
+      },
+      "Warlord Trait§The Imperium's Sword": {
+        "text": "The Warlord gains +1 to its Strength (S) and +1 Attacks (A) Characteristics."
+      }
     },
     "gameModes": {},
     "theme": {}
