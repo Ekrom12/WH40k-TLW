@@ -258,7 +258,7 @@
       "Ranged Weapon§Combi Melta (Melta)": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Melta",
+            "Ranged Weapon§Melta Gun",
             {
               "item": "Special Rule§Ammo",
               "stats": {
@@ -573,7 +573,8 @@
       },
       "Ranged Weapon§Linked Plasma Cannon": {
         "assets": {
-          "included": [
+          "included": [],
+          "traits": [
             "Special Rule§Blast",
             "Special Rule§Gets Hot!",
             "Special Rule§Linked"
@@ -615,7 +616,7 @@
           }
         }
       },
-      "Ranged Weapon§Melta": {
+      "Ranged Weapon§Melta Gun": {
         "assets": {
           "traits": [
             "Special Rule§Melta"
