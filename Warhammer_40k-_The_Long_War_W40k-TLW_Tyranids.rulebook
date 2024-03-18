@@ -5972,6 +5972,7 @@
           "Lower Limbs Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "Devourer": {
                 "order": 0,
@@ -6083,6 +6084,7 @@
           "Torso Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "-": {
                 "order": 0
@@ -6107,6 +6109,7 @@
           "Upper Limbs Weapons": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "4": {
                 "order": 4
