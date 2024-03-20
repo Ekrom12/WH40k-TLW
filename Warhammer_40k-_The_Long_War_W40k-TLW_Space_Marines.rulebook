@@ -9,13 +9,13 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "ACM62R",
+      "slug": "4SHXCR",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
     },
     {
-      "slug": "ZUD2MY",
+      "slug": "6FHG72",
       "name": "W40k:TLW Imperium",
       "game": "Warhammer 40k: The Long War",
       "source": ""
