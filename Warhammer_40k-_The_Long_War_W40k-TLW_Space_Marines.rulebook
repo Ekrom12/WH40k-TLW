@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "UQSX9H",
+      "slug": "ACM62R",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -24,6 +24,298 @@
   "rulebook": {
     "assetTaxonomy": {},
     "assetCatalog": {
+      "Character§Space Marine Captain": {
+        "allowed": {
+          "items": [
+            "Model§Space Marine Captain"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Space Marine Captain"
+          ]
+        },
+        "stats": {
+          "Space Marine Captain": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Melee Weapon§AssaultDrills": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Chain Fist": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Dreadnought Close Combat Weapon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Force Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            {
+              "item": "Special Rule§Force",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Force Stave": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Force",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Force Sword": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Force",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "user"
+          }
+        }
+      },
+      "Melee Weapon§Lightning Claws": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "user"
+          }
+        }
+      },
+      "Melee Weapon§Marine Crew Weapons": {
+        "stats": {
+          "Strength": {
+            "value": "4"
+          }
+        }
+      },
+      "Melee Weapon§Omnissian Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Two-Handed"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Power Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Power Lance": {
+        "assets": {
+          "traits": [
+            "Special Rule§Reach"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Relic Blade": {
+        "assets": {
+          "traits": [
+            "Special Rule§Two-Handed"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Seismic Hammer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Concussive",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+4"
+          }
+        }
+      },
+      "Melee Weapon§Servo Arm": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Cumbersome"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Thunder Hammer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
       "Model§Space Marine Captain": {
         "stats": {
           "Armor": {
@@ -38,7 +330,7 @@
                   }
                 ]
               },
-              "Artificer Armor": {
+              "Artificer Armour": {
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -48,10 +340,98 @@
                     "trait": "Wargear§Artificer Armour"
                   }
                 ]
+              },
+              "Phobos Armour": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  }
+                ]
+              },
+              "Scout Armor": {
+                "order": 3,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Scout Armor"
+                  }
+                ]
               }
             },
+            "statOrder": 1,
             "statType": "rank",
             "value": "Power Armor",
+            "visibility": "normal"
+          },
+          "Bolt Pistol": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "0": {
+                "order": 0
+              },
+              "1": {
+                "order": 1
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Boltgun": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "0": {
+                "order": 0
+              },
+              "1": {
+                "order": 1
+              },
+              "2": {
+                "order": 2
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Chainsword": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Jump Pack": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "-",
             "visibility": "normal"
           },
           "Points": {
@@ -59,7 +439,1679 @@
           }
         }
       },
+      "Ranged Weapon§Assault Bolters": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Pistol 3"
+          }
+        }
+      },
+      "Ranged Weapon§Assault Cannon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 5"
+          }
+        }
+      },
+      "Ranged Weapon§Assault Plasma Incinerator": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Astartes Grenade Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Astartes Shotgun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Concussive"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Auto Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Auto Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Bolt Carbine": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Bolt Sniper Rifle": {
+        "assets": {
+          "traits": [
+            "Special Rule§Precision Strikes",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Bolt Storm Gauntlet (Shooting)": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Bolter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Conversion Beamer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Conversion"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Cyclone Missile Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Cyclone Missile Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Demolisher Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Ordinance",
+            "Special Rule§Concussive",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Dragonfire Boltgun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Ignores Cover"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Executioner Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "HEavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Flame Storm Gauntlets (Shooting)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 8
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Fragstorm Grenade Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Grav Cannon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Grav Gun": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Grav Pistol": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Grenade Harness": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Grenade 2"
+          }
+        }
+      },
+      "Ranged Weapon§Grenade Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Haywire Mine": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Strength": {
+            "value": "1"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Bolt Pistol": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 15
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Plasma Incinerator": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Stubber": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Hell Storm Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Hunter Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Hurricane Bolter": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 6"
+          }
+        }
+      },
+      "Ranged Weapon§Icarus Rocket Pod": {
+        "assets": {
+          "traits": [
+            "Special Rule§Skyfire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Icarus Storm Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Skyfire",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Krak Storm Grenade Launcher": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Las Cannon Array": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Las Fusil": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Las Talon": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Laser Destroyer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Assault Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 5"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Auto Bolt Rifle": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Autocannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Bolt Rifle": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Boltgun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Heavy Stubber": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Icarus Storm Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Skyfire",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Las Talon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Macro Plasma Incinerator": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Melta Destroyer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Melta Rifle": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Missile Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Missile Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Neo Volkite Pistol": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Orbital Bombardment": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder",
+            "Special Rule§Large Blast",
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 60
+          },
+          "Strength": {
+            "value": "12"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plasma Blaster": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Plasma Exterminator": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plasma Incinerator": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Reaper Autocannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            "Special Rule§Linked",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Shock Grenades": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blind"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "0"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Skyhammer Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Skyfire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Sniper Rifle": {
+        "assets": {
+          "traits": [
+            "Special Rule§Precision Strikes",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Stalker Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Storm Strike Missiles": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Tempest Bolter": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 4"
+          }
+        }
+      },
+      "Ranged Weapon§Thunderfire Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Indirect Fire",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 60
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Typhoon Missile Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Typhoon Missile Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Calivers": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 15
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Charger": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Culverin": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Whirl-Wind Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Pinning",
+            "Special Rule§Indirect Fire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
       "Roster§Roster": {},
+      "Special Rule§Conversion": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "If the target of this weapon is not within half of the weapons range when making an attack, the\nweapon gains +2 to its Strength characteristic."
+      },
+      "Special Rule§Variable": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "When firing this weapon, you must select which mode you will use for that attack."
+      },
       "Wargear§Assault Launchers": {
         "text": "A model equipped with this Wargear\ncan make 1 additional Hammer of\nWrath Attack."
       },
