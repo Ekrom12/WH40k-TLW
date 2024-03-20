@@ -136,12 +136,17 @@
         "stats": {
           "Additional Warlord Trait": {
             "dynamic": true,
+            "group": "Warlord",
+            "groupOrder": 4,
+            "statOrder": 3,
             "statType": "term",
             "value": "n/a",
             "visibility": "hidden"
           },
           "Warlord": {
             "dynamic": true,
+            "group": "Warlord",
+            "groupOrder": 4,
             "ranks": {
               "-": {
                 "order": 0
@@ -151,6 +156,7 @@
                 "order": 1
               }
             },
+            "statOrder": 1,
             "statType": "rank",
             "tracked": true,
             "value": "-",
@@ -158,6 +164,9 @@
           },
           "Warlord Trait": {
             "dynamic": true,
+            "group": "Warlord",
+            "groupOrder": 4,
+            "statOrder": 2,
             "statType": "rank",
             "value": null,
             "visibility": "hidden"
