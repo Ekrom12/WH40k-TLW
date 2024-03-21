@@ -30,12 +30,71 @@
             "Model§Space Marine Captain"
           ]
         },
+        "aspects": {
+          "Unique": true
+        },
         "assets": {
           "included": [
             "Model§Space Marine Captain"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death"
           ]
         },
+        "rules": {
+          "CaptainMasterofExecutionsAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred (Characters)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Characters)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "masterOfExecutions",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "masterOfExecutions": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Space Marine Captain": {
             "max": 1,
             "min": 1,
@@ -318,6 +377,111 @@
       },
       "Model§Space Marine Captain": {
         "rules": {
+          "CaptainChapterMasterRule": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Master of Command"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Chapter Master"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "CaptainMasterofRecruitsArmorChoice": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armor",
+                    "value"
+                  ]
+                ],
+                "value": "Power Armor"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Power Armour"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Master of Recruits Armour Choice",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armor",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of Recruits"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "CaptainMasterOfTheArsenalBoltgunChoice": {
             "actions": [
               {
@@ -380,7 +544,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Upgrade",
+                    "Captain Upgrade",
                     "value"
                   ]
                 ],
@@ -388,7 +552,160 @@
               }
             ],
             "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "CaptainMasterOfTheMarchesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sprint"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Special Rule§Sprint",
+                    "stats",
+                    "x",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fleet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Marches"
+              }
+            ],
+            "evaluate": "AND",
             "failState": "pass"
+          },
+          "CaptainMasterofTheRitesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Priest"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Priest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Rites"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "removeDuplicateArmours": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Master of Recruits Armour Choice",
+                    "value"
+                  ]
+                ],
+                "value": "Scout Armor"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Scout Armor"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of Recruits"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
           },
           "removeDuplicateWeapons": {
             "actions": [
@@ -420,25 +737,27 @@
             "evals": [
               {
                 "actionable": true,
-                "not": false,
+                "not": true,
                 "operator": "AND",
                 "paths": [
                   [
                     "{self}",
                     "stats",
-                    "Upgrade",
+                    "Captain Upgrade",
                     "value"
                   ]
                 ],
-                "value": "-"
+                "value": "Master of the Arsenal"
               }
             ],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 4
           }
         },
         "stats": {
           "A": {
+            "tracked": true,
             "value": 3
           },
           "Armor": {
@@ -457,7 +776,8 @@
               "Artificer Armour": {
                 "order": 1,
                 "tracking": {
-                  "Points": 5
+                  "Points": 5,
+                  "Sv": -1
                 },
                 "traits": [
                   {
@@ -478,7 +798,9 @@
               },
               "Scout Armor": {
                 "order": 3,
-                "tracking": {},
+                "tracking": {
+                  "Sv": 1
+                },
                 "traits": [
                   {
                     "trait": "Wargear§Scout Armor"
@@ -500,7 +822,12 @@
                 "order": 0
               },
               "✓": {
-                "order": 1
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Auspex Scanner"
+                  }
+                ]
               }
             },
             "statOrder": 6,
@@ -779,6 +1106,86 @@
           "BS": {
             "value": 5
           },
+          "Captain Upgrade": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Master of the Fleet": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Orbital Bombardment"
+                  }
+                ]
+              },
+              "Master of the Watch": {
+                "order": 2,
+                "tracking": {
+                  "BS": 1,
+                  "Points": 15
+                }
+              },
+              "Master of the Arsenal": {
+                "order": 3,
+                "tracking": {
+                  "BS": 1,
+                  "Points": 15
+                }
+              },
+              "Master of the Marches": {
+                "order": 4,
+                "tracking": {
+                  "M": 1,
+                  "Points": 15
+                }
+              },
+              "Master of the Rites": {
+                "order": 5,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Master of Executions": {
+                "order": 6,
+                "tracking": {
+                  "masterOfExecutions": 1,
+                  "Points": 15
+                }
+              },
+              "Master of Relics": {
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                }
+              },
+              "Master of Recruits": {
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Chapter Master": {
+                "order": 9,
+                "tracking": {
+                  "A": 1,
+                  "Points": 25,
+                  "W": 1,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
           "Chainsword": {
             "dynamic": true,
             "group": "Wargear",
@@ -887,7 +1294,12 @@
                 "order": 0
               },
               "✓": {
-                "order": 1
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Digital Weapons"
+                  }
+                ]
               }
             },
             "statOrder": 7,
@@ -927,7 +1339,39 @@
             "value": 9
           },
           "M": {
+            "tracked": true,
             "value": 6
+          },
+          "Master of Recruits Armour Choice": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Scout Armor": {
+                "order": 0,
+                "tracking": {
+                  "Sv": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Scout Armor"
+                  }
+                ]
+              },
+              "Phobos Armour": {
+                "order": 1,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Scout Armor",
+            "visibility": "hidden"
           },
           "Master of the Arsenal Boltgun Choice": {
             "dynamic": true,
@@ -1189,7 +1633,12 @@
                 "order": 0
               },
               "✓": {
-                "order": 1
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Melta Bomb"
+                  }
+                ]
               }
             },
             "statOrder": 8,
@@ -1204,6 +1653,7 @@
             "value": 4
           },
           "Sv": {
+            "tracked": true,
             "value": 3
           },
           "T": {
@@ -1218,7 +1668,12 @@
                 "order": 0
               },
               "✓": {
-                "order": 1
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Telepor Homer"
+                  }
+                ]
               }
             },
             "statOrder": 9,
@@ -1226,48 +1681,12 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Upgrade": {
-            "dynamic": true,
-            "group": "Upgrades",
-            "groupOrder": 3,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Master of the Fleet": {
-                "order": 1,
-                "tracking": {
-                  "Points": 20
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Orbital Bombardment"
-                  }
-                ]
-              },
-              "Master of the Watch": {
-                "order": 2,
-                "tracking": {
-                  "BS": 1,
-                  "Points": 15
-                }
-              },
-              "Master of the Arsenal": {
-                "order": 3,
-                "tracking": {
-                  "BS": 1,
-                  "Points": 15
-                }
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "W": {
+            "tracked": true,
             "value": 3
           },
           "WS": {
+            "tracked": true,
             "value": 5
           }
         }
@@ -2929,6 +3348,30 @@
         }
       },
       "Roster§Roster": {},
+      "Special Rule§And They Shall Know no Fear": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "Space Marine units with this rule gain the following benefits:\n\n○ Space Marine units automatically Rally at the start of your movement phase.\n\n○ Space Marine units do not take any wounds when retreating from a model that performed a sweeping advance ending their sweeping advance within 1” of the Space Marine model."
+      },
+      "Special Rule§Angels of Death": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "If Space Marine units with this rule are in combat with an enemy unit that has a lower Leadership (LD) Characteristic, the space marine units have the Fear (1) special rule."
+      },
+      "Special Rule§Combat Squads": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "During Deployment, any Space marine unit of 10 models or 6 models with this rule with this\nspecial rule can split its squad in half, becoming two separate units. The unit must be split in half rounding up and\nare treated as separate units from that point on."
+      },
       "Special Rule§Conversion": {
         "keywords": {
           "Keywords": [
@@ -2936,6 +3379,24 @@
           ]
         },
         "text": "If the target of this weapon is not within half of the weapons range when making an attack, the\nweapon gains +2 to its Strength characteristic."
+      },
+      "Special Rule§Hatred (Characters)": {},
+      "Special Rule§Master of Command": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "You may only field 1 model in your army with this special rule. If your army includes a model with this special rule, they must be your Warlord."
+      },
+      "Special Rule§Preferred Enemy (Characters)": {},
+      "Special Rule§Sub Commander": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "You may include 2 units with this special rule for each HQ slot in your army."
       },
       "Special Rule§Variable": {
         "keywords": {
@@ -2958,6 +3419,63 @@
         "text": "A Model with a Camo Cloak gains\nthe benefit of Light Cover even if\nthey would not normally do so. In\naddition, if they are already\nbenefiting from Light Cover, they\nreceive heavy Cover instead. A\nmodel with this wargear gains a 4+\nCover save if it is already receiving\nthe benefit of Heavy cover."
       },
       "Wargear§Cataphractii Terminator Armour": {
+        "rules": {
+          "CataphractiiTerminatorArmorAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Slow & Purposeful"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "An ancient heavier pattern of Terminator Armour rarely used. It provides a 2+ Armour save and a 4+ Invulnerable save. The Wearer gains the Relentless, Bulky (2), Deep Strike, Relentless and Slow & Purposeful special rules. The wearers Movement (M) Characteristic is decreased by 1”"
       },
       "Wargear§Centurion Armour": {
@@ -2976,13 +3494,151 @@
         "text": "A model with a Grav Chute gains\nthe Deep Strike Special rule"
       },
       "Wargear§Gravis Armour": {
+        "rules": {
+          "GravisArmorAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "Gravis Armour is a bulk multi-layered heavy assault\nArmour for Primaris. It provides a 3+ Armour save and\ngrants the wearer +1 to their Toughness (T)\ncharacteristic. The wearers Movement (M)\nCharacteristic is decreased by 1”. The model gains the\nBulky (2) special rule. If a model wearing Gravis Armour\nis hit by a weapon with the Blast or Large Blast special\nrule, decrease the AP of the weapon by 1 (e.g 3 becomes\n4) for the purposes of resolving that hit. The model gains\nthe Relentless Special rule"
       },
       "Wargear§Indomitus Terminator Armour": {
+        "rules": {
+          "IndomTerminatorArmorAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "The Standard Terminator Armour used by most Astartes forces. It provides a 2+ Armour Save and a 5+ Invulnerable Save. The wearer gains the Relentless, Bulky (2) and Deep Strike special rule. Models equipped with this Armour may not perform Sweeping Advances."
       },
       "Wargear§Iron Halo": {
         "text": "A model with an Iron Halo has a 4+\nInvulnerable save."
+      },
+      "Wargear§Jump Pack": {
+        "rules": {
+          "JumpPackAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hammer of Wrath"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Fly"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
       },
       "Wargear§Narthecium": {
         "text": "A model with this Wargear and their\nattached unit gain Feel No Pain (5+)\nSpecial rule."
@@ -2991,6 +3647,27 @@
         "text": "Enemy units may not Deep Strike\nwithin 18” of a model equipped with\nthis wargear."
       },
       "Wargear§Phobos Armour": {
+        "rules": {
+          "PhobosArmorAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Infiltrate"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "A Stealth designed version of the standard power Armour for infiltration. It provides a 3+ Armour save and grants the wearer the Infiltrate special rule."
       },
       "Wargear§Psychic Hood": {
@@ -3003,6 +3680,39 @@
         "text": "A Model with a Relic Shield has a 4+\nInvulnerable save and gains the\nAdamantium Will special rule."
       },
       "Wargear§Scout Armor": {
+        "rules": {
+          "ScoutArmorAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Scout"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Outflank"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "Basic Armour used by Space Marine Scout forces. It's lightweight and easy to move in. It provides a 4+ Armour save and gives the \nwearer the Scout and Outflank special rules."
       },
       "Wargear§Space Marine Bike": {
@@ -3015,6 +3725,63 @@
         "text": "Storm Shields provide the model\nequipped with the Storm Shield a 4+\nInvulnerable save. A model with a\nStorm Shield ignores Instant Death"
       },
       "Wargear§Tartaros Terminator Armour": {
+        "rules": {
+          "TartarosTerminatorArmorAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sprint"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "A more mobile ancient pattern of Terminator Armour rarely used. It provides a 2+ Armour Save and a 5+ Invulnerable save. The Wearer gains Relentless, Sprint (1), Bulky (2), and Deep Strike special rules."
       },
       "Wargear§Telepor Homer": {
