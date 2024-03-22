@@ -124,7 +124,15 @@
         }
       },
       "Character§Space Marine Captain in Terminator Armour": {
+        "allowed": {
+          "items": [
+            "Model§Space Marine Captain in Terminator Armour"
+          ]
+        },
         "assets": {
+          "included": [
+            "Model§Space Marine Captain in Terminator Armour"
+          ],
           "traits": [
             "Special Rule§And They Shall Know no Fear",
             "Special Rule§Angels of Death"
@@ -712,6 +720,41 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Master of the Arsenal cannot be equipped with Phobos Armor": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Arsenal"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armor",
+                    "value"
+                  ]
+                ],
+                "value": "Phobos Armour"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 1
+          },
           "removeDuplicateArmours": {
             "actions": [
               {
@@ -1195,21 +1238,21 @@
                 "order": 2,
                 "tracking": {
                   "BS": 1,
-                  "Points": 15
+                  "Points": 5
                 }
               },
               "Master of the Arsenal": {
                 "order": 3,
                 "tracking": {
                   "BS": 1,
-                  "Points": 15
+                  "Points": 5
                 }
               },
               "Master of the Marches": {
                 "order": 4,
                 "tracking": {
                   "M": 1,
-                  "Points": 15
+                  "Points": 5
                 }
               },
               "Master of the Rites": {
@@ -1765,20 +1808,145 @@
           }
         }
       },
-      "Model§Space Marine Captain in Termnator Armour": {
+      "Model§Space Marine Captain in Terminator Armour": {
         "assets": {
           "traits": [
             "Wargear§Iron Halo"
           ]
         },
+        "rules": {
+          "removeDuplicateWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Master of the Arsenal Storm Bolter Choice",
+                    "value"
+                  ]
+                ],
+                "value": "Storm Bolter"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Storm Bolter"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Arsenal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
+          },
+          "TerminatorCaptainMasterOfTheArsenalBoltgunChoice": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Storm Bolter",
+                    "value"
+                  ]
+                ],
+                "value": "Storm Bolter"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Storm Bolter"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Storm Bolter",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Master of the Arsenal Storm Bolter Choice",
+                    "visibility"
+                  ]
+                ],
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Arsenal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
         "stats": {
           "A": {
+            "tracked": true,
             "value": 3
           },
           "BS": {
+            "tracked": true,
             "value": 5
           },
           "I": {
+            "tracked": true,
             "value": 5
           },
           "Inv": {
@@ -1791,11 +1959,197 @@
             "visibility": "normal"
           },
           "Ld": {
+            "tracked": true,
             "value": 9
           },
           "M": {
             "tracked": true,
             "value": 6
+          },
+          "Master of the Arsenal Storm Bolter Choice": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 4,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 9,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 10,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Storm Shield": {
+                "order": 11,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 12,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 13,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 14,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Storm Bolter",
+            "visibility": "hidden"
           },
           "Points": {
             "value": 70
@@ -1900,6 +2254,7 @@
             "visibility": "normal"
           },
           "S": {
+            "tracked": true,
             "value": 4
           },
           "Storm Bolter": {
@@ -2064,12 +2419,15 @@
             "visibility": "normal"
           },
           "Sv": {
+            "tracked": true,
             "value": 2
           },
           "T": {
+            "tracked": true,
             "value": 4
           },
           "Terminator Armour": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
@@ -2130,21 +2488,21 @@
                 "order": 2,
                 "tracking": {
                   "BS": 1,
-                  "Points": 15
+                  "Points": 5
                 }
               },
               "Master of the Arsenal": {
                 "order": 3,
                 "tracking": {
                   "BS": 1,
-                  "Points": 15
+                  "Points": 5
                 }
               },
               "Master of the Marches": {
                 "order": 4,
                 "tracking": {
                   "M": 1,
-                  "Points": 15
+                  "Points": 5
                 }
               },
               "Master of the Rites": {
@@ -2166,14 +2524,8 @@
                   "Points": 5
                 }
               },
-              "Master of Recruits": {
-                "order": 8,
-                "tracking": {
-                  "Points": 10
-                }
-              },
               "Chapter Master": {
-                "order": 9,
+                "order": 8,
                 "tracking": {
                   "A": 1,
                   "Points": 25,
@@ -2188,9 +2540,11 @@
             "visibility": "normal"
           },
           "W": {
+            "tracked": true,
             "value": 3
           },
           "WS": {
+            "tracked": true,
             "value": 5
           }
         }

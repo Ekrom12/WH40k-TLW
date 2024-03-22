@@ -9,7 +9,7 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "4SHXCR",
+      "slug": "PUHATY",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -274,7 +274,6 @@
       "Ranged Weapon§Combi Melta (Melta)": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Melta Gun",
             {
               "item": "Special Rule§Ammo",
               "stats": {
@@ -282,7 +281,8 @@
                   "value": 2
                 }
               }
-            }
+            },
+            "Special Rule§Melta"
           ]
         },
         "stats": {
