@@ -60,52 +60,6 @@
             "Imperium"
           ]
         },
-        "rules": {
-          "CaptainMasterofExecutionsAddRules": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "value": "Special Rule§Hatred (Characters)"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "value": "Special Rule§Preferred Enemy (Characters)"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "masterOfExecutions",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "masterOfExecutions": {
             "statType": "numeric",
@@ -470,6 +424,50 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "CaptainMasterOfExecutionsRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred (Characters)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Characters)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of Executions"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "CaptainMasterofRecruitsArmorChoice": {
             "actions": [
               {
@@ -626,23 +624,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Special Rule§Sprint"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits",
-                    "item",
-                    "Special Rule§Sprint",
-                    "stats",
-                    "x",
-                    "value"
-                  ]
-                ],
-                "value": 1
+                "value": "Special Rule§Sprint (1)"
               },
               {
                 "actionType": "add",
@@ -698,7 +680,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Special Rule§Priest"
+                "value": "Special Rule§Priest (1)"
               }
             ],
             "evals": [
@@ -1272,7 +1254,12 @@
                 "order": 7,
                 "tracking": {
                   "Points": 5
-                }
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Master of Relics"
+                  }
+                ]
               },
               "Master of Recruits": {
                 "order": 8,
@@ -1862,6 +1849,95 @@
             "failState": "pass",
             "order": 4
           },
+          "TerminatorCaptainMasterofExecutionsRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred (Characters)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Characters)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of Executions"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "TerminatorCaptainMasterofRitesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Priest"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Priest (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Rites"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "TerminatorCaptainMasterOfTheArsenalBoltgunChoice": {
             "actions": [
               {
@@ -1934,6 +2010,50 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 5
+          },
+          "TerminatorCaptainMasterOfTheMarchesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sprint (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fleet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator Captain Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Marches"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
@@ -2522,7 +2642,12 @@
                 "order": 7,
                 "tracking": {
                   "Points": 5
-                }
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Master of Relics"
+                  }
+                ]
               },
               "Chapter Master": {
                 "order": 8,
@@ -4222,7 +4347,13 @@
         },
         "text": "If Space Marine units with this rule are in combat with an enemy unit that has a lower Leadership (LD) Characteristic, the space marine units have the Fear (1) special rule."
       },
-      "Special Rule§Bulky (2)": {},
+      "Special Rule§Bulky (2)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
       "Special Rule§Combat Squads": {
         "keywords": {
           "Keywords": [
@@ -4254,6 +4385,9 @@
         },
         "text": "You may only field 1 model in your army with this special rule. If your army includes a model with this special rule, they must be your Warlord."
       },
+      "Special Rule§Master of Relics": {
+        "text": "A model with this upgrade gains the Master Crafted special rule\non all weapons it is equipped with."
+      },
       "Special Rule§Preferred Enemy (Characters)": {
         "keywords": {
           "Keywords": [
@@ -4261,7 +4395,21 @@
           ]
         }
       },
-      "Special Rule§Sprint (1)": {},
+      "Special Rule§Priest (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "A unit with the Priest (x) special rule can perform a number of Prayers each player turn equal to the value of (x). A Priest knows Prayers from the relevant Litanies listed in their codex."
+      },
+      "Special Rule§Sprint (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
       "Special Rule§Sub Commander": {
         "keywords": {
           "Keywords": [
