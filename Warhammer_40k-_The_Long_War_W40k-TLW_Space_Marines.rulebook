@@ -24,6 +24,39 @@
   "rulebook": {
     "assetTaxonomy": {},
     "assetCatalog": {
+      "Character§Lieutenant": {
+        "allowed": {
+          "items": [
+            "Model§Lieutenant"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Lieutenant"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death",
+            "Special Rule§Sub Commander"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Imperium",
+            "Lieutenant",
+            "Space Marines"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Imperium"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        }
+      },
       "Character§Space Marine Captain": {
         "allowed": {
           "items": [
@@ -77,6 +110,36 @@
           }
         }
       },
+      "Character§Space Marine Captain in Gravis Armour": {
+        "allowed": {
+          "items": [
+            "Model§Space Marine Captain in Gravis Armour"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Space Marine Captain in Gravis Armour"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Captain",
+            "Character",
+            "Imperium",
+            "M42+",
+            "Space Marines"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Imperium"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        }
+      },
       "Character§Space Marine Captain in Terminator Armour": {
         "allowed": {
           "items": [
@@ -109,6 +172,62 @@
           ],
           "Faction": [
             "Imperium"
+          ]
+        }
+      },
+      "Character§Space Marnie Captain on Bike": {
+        "allowed": {
+          "items": [
+            "Model§Space Marine Captain on Bike"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Space Marine Captain on Bike"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Captain",
+            "Character",
+            "Imperium",
+            "M31",
+            "Space Marines"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Imperium"
+          ],
+          "Unit Type": [
+            "Infantry"
           ]
         }
       },
@@ -382,6 +501,447 @@
           }
         }
       },
+      "Model§Lieutenant": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "tracked": true,
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 4,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "normal"
+          },
+          "Mobility": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Jump Pack": {
+                "order": 1,
+                "tracking": {
+                  "M": 6,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              },
+              "Space Marine Bike": {
+                "order": 2,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 3,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 30
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Bolt Rifle": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Rifle"
+                  }
+                ]
+              },
+              "Auto Bolt Rifle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Auto Bolt Rifle"
+                  }
+                ]
+              },
+              "Stalker Bolt Rifle": {
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Stalker Bolt Rifle"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 7,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 9,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 10,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 11,
+                "tracking": {
+                  "Points": 0
+                }
+              },
+              "Power Sword": {
+                "order": 12,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 13,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 14,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 15,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Storm Shield": {
+                "order": 16,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              },
+              "Bolt Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
       "Model§Space Marine Captain": {
         "assets": {
           "traits": [
@@ -501,7 +1061,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Master of Recruits Armour Choice",
+                    "Master of Recruits Armour",
                     "visibility"
                   ]
                 ],
@@ -746,7 +1306,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Master of Recruits Armour Choice",
+                    "Master of Recruits Armour",
                     "value"
                   ]
                 ],
@@ -793,7 +1353,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Master of the Arsenal Boltgun Choice",
+                    "Master of the Arsenal Primary Weapon",
                     "value"
                   ]
                 ],
@@ -912,288 +1472,6 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Bolt Pistol": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt Pistol": {
-                "order": 0,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Bolt Pistol"
-                  }
-                ]
-              },
-              "Plasma Pistol": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Plasma Pistol"
-                  }
-                ]
-              },
-              "Hand Flamer": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Hand Flamer"
-                  }
-                ]
-              },
-              "Grav Pistol": {
-                "order": 3,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Grav Pistol"
-                  }
-                ]
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "value": "Bolt Pistol",
-            "visibility": "normal"
-          },
-          "Boltgun": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "Boltgun": {
-                "order": 0,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Boltgun"
-                  }
-                ]
-              },
-              "Bolt Rifle": {
-                "order": 1,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Bolt Rifle"
-                  }
-                ]
-              },
-              "Auto Bolt Rifle": {
-                "order": 2,
-                "tracking": {
-                  "Points": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Auto Bolt Rifle"
-                  }
-                ]
-              },
-              "Stalker Bolt Rifle": {
-                "order": 3,
-                "tracking": {
-                  "Points": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Stalker Bolt Rifle"
-                  }
-                ]
-              },
-              "Storm Bolter": {
-                "order": 4,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Storm Bolter"
-                  }
-                ]
-              },
-              "Sniper Rifle": {
-                "order": 5,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sniper Rifle"
-                  }
-                ]
-              },
-              "Combi-Flamer": {
-                "order": 6,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
-                  }
-                ]
-              },
-              "Combi-Plasma": {
-                "order": 7,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
-                  }
-                ]
-              },
-              "Combi-Melta": {
-                "order": 8,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Melta (Melta)"
-                  }
-                ]
-              },
-              "Combi-Grav": {
-                "order": 9,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Grav (Grav)"
-                  }
-                ]
-              },
-              "Volkite Charger": {
-                "order": 10,
-                "tracking": {
-                  "Points": 2
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Volkite Charger"
-                  }
-                ]
-              },
-              "Lightning Claw": {
-                "order": 11,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Lightning Claws"
-                  }
-                ]
-              },
-              "Chainsword": {
-                "order": 12,
-                "tracking": {
-                  "Points": 0
-                }
-              },
-              "Power Sword": {
-                "order": 13,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Sword"
-                  }
-                ]
-              },
-              "Power Axe": {
-                "order": 14,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Axe"
-                  }
-                ]
-              },
-              "Power Lance": {
-                "order": 15,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Lance"
-                  }
-                ]
-              },
-              "Power Fist": {
-                "order": 16,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Fist"
-                  }
-                ]
-              },
-              "Storm Shield": {
-                "order": 17,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Storm Shields"
-                  }
-                ]
-              },
-              "Relic Shield": {
-                "order": 18,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Relic Shield"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Boltgun",
-            "visibility": "normal"
-          },
           "BS": {
             "value": 5
           },
@@ -1282,105 +1560,6 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Chainsword": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "Chainsword": {
-                "order": 0,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Chainsword"
-                  }
-                ]
-              },
-              "Power Sword": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Sword"
-                  }
-                ]
-              },
-              "Power Axe": {
-                "order": 2,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Axe"
-                  }
-                ]
-              },
-              "Power Lance": {
-                "order": 3,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Lance"
-                  }
-                ]
-              },
-              "Power Fist": {
-                "order": 4,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Fist"
-                  }
-                ]
-              },
-              "Thunder Hammer": {
-                "order": 5,
-                "tracking": {
-                  "Points": 20
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Thunder Hammer"
-                  }
-                ]
-              },
-              "Lightning Claw": {
-                "order": 6,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Lightning Claws"
-                  }
-                ]
-              },
-              "Relic Blade": {
-                "order": 7,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Relic Blade"
-                  }
-                ]
-              }
-            },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "Chainsword",
-            "visibility": "normal"
-          },
           "Digital Weapons": {
             "dynamic": true,
             "group": "Wargear",
@@ -1446,7 +1625,7 @@
             "tracked": true,
             "value": 6
           },
-          "Master of Recruits Armour Choice": {
+          "Master of Recruits Armour": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
@@ -1477,7 +1656,7 @@
             "value": "Scout Armor",
             "visibility": "hidden"
           },
-          "Master of the Arsenal Boltgun Choice": {
+          "Master of the Arsenal Primary Weapon": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
@@ -1728,6 +1907,105 @@
             "value": "Boltgun",
             "visibility": "hidden"
           },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 5,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Relic Blade": {
+                "order": 7,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Relic Blade"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "normal"
+          },
           "Melta Bomb": {
             "dynamic": true,
             "group": "Wargear",
@@ -1753,8 +2031,290 @@
           "Points": {
             "value": 60
           },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Bolt Rifle": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Rifle"
+                  }
+                ]
+              },
+              "Auto Bolt Rifle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Auto Bolt Rifle"
+                  }
+                ]
+              },
+              "Stalker Bolt Rifle": {
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Stalker Bolt Rifle"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Sniper Rifle": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sniper Rifle"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 8,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 9,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 10,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 11,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                }
+              },
+              "Power Sword": {
+                "order": 13,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 14,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 15,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 16,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Storm Shield": {
+                "order": 17,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              },
+              "Relic Shield": {
+                "order": 18,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Relic Shield"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
           "S": {
             "value": 4
+          },
+          "Seconday Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
           },
           "Sv": {
             "tracked": true,
@@ -1795,6 +2355,387 @@
           }
         }
       },
+      "Model§Space Marine Captain in Gravis Armour": {
+        "assets": {
+          "traits": [
+            "Wargear§Iron Halo",
+            "Wargear§Gravis Armour"
+          ]
+        },
+        "keywords": {
+          "CaptainInGravisMasterofTheMarchesRules": []
+        },
+        "rules": {
+          "CaptaininGravisMasterofExecutionsRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred (Characters)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Characters)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain in Gravis Armour Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of Executions"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "CaptainInGravisMasteroftheMarchesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sprint (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fleet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain in Gravis Armour Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Marches"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "CaptaininGravisMasterofTheRitesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Priest"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Priest (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain in Gravis Armour Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Rites"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 5
+          },
+          "Captain in Gravis Armour Upgrade": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Master of the Fleet": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Orbital Bombardment"
+                  }
+                ]
+              },
+              "Master of the Watch": {
+                "order": 2,
+                "tracking": {
+                  "BS": 1,
+                  "Points": 5
+                }
+              },
+              "Master of the Marches": {
+                "order": 3,
+                "tracking": {
+                  "M": 1,
+                  "Points": 5
+                }
+              },
+              "Master of the Rites": {
+                "order": 4,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Master of Executions": {
+                "order": 5,
+                "tracking": {
+                  "masterOfExecutions": 1,
+                  "Points": 15
+                }
+              },
+              "Master of Relics": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Master of Relics"
+                  }
+                ]
+              },
+              "Chapter Master": {
+                "order": 7,
+                "tracking": {
+                  "A": 1,
+                  "Points": 25,
+                  "W": 1,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 5
+          },
+          "Melee Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Sword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Sword",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 65
+          },
+          "Primary Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Rifle"
+                  }
+                ]
+              },
+              "Bolt Storm Gauntlet": {
+                "order": 1,
+                "tracking": {
+                  "Points": 25
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Storm Gauntlet (Shooting)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Heavy Bolt Rifle",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 2,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
       "Model§Space Marine Captain in Terminator Armour": {
         "assets": {
           "traits": [
@@ -1811,7 +2752,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Master of the Arsenal Storm Bolter Choice",
+                    "Master of the Arsenal Primary Weapon",
                     "value"
                   ]
                 ],
@@ -1947,7 +2888,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Storm Bolter",
+                    "Primary Weapon",
                     "value"
                   ]
                 ],
@@ -1971,7 +2912,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Storm Bolter",
+                    "Primary Weapon",
                     "visibility"
                   ]
                 ],
@@ -2086,7 +3027,7 @@
             "tracked": true,
             "value": 6
           },
-          "Master of the Arsenal Storm Bolter Choice": {
+          "Master of the Arsenal Primary Weapon": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
@@ -2271,10 +3212,7 @@
             "value": "Storm Bolter",
             "visibility": "hidden"
           },
-          "Points": {
-            "value": 70
-          },
-          "Power Sword": {
+          "Melee Weapon": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
@@ -2373,11 +3311,10 @@
             "value": "Power Sword",
             "visibility": "normal"
           },
-          "S": {
-            "tracked": true,
-            "value": 4
+          "Points": {
+            "value": 70
           },
-          "Storm Bolter": {
+          "Primary Weapon": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
@@ -2538,6 +3475,10 @@
             "value": "Storm Bolter",
             "visibility": "normal"
           },
+          "S": {
+            "tracked": true,
+            "value": 4
+          },
           "Sv": {
             "tracked": true,
             "value": 2
@@ -2663,6 +3604,617 @@
             "tracked": true,
             "value": "-",
             "visibility": "normal"
+          },
+          "W": {
+            "tracked": true,
+            "value": 3
+          },
+          "WS": {
+            "tracked": true,
+            "value": 5
+          }
+        }
+      },
+      "Model§Space Marine Captain on Bike": {
+        "assets": {
+          "traits": [
+            "Wargear§Iron Halo",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "captainMasterofTheRitesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Priest"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Priest (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain on Bike Upgrades",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Rites"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "CaptainOnBikeMasterOfExecutionsRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred (Characters)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Characters)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain on Bike Upgrades",
+                    "value"
+                  ]
+                ],
+                "value": "Master of Executions"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "CaptainOnBikeMasterofMarchesRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sprint (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fleet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Captain on Bike Upgrades",
+                    "value"
+                  ]
+                ],
+                "value": "Master of the Marches"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "tracked": true,
+            "value": 3
+          },
+          "Bike": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Space Marine Bike": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Space Marine Bike",
+            "visibility": "normal"
+          },
+          "Bolt Pistol": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Boltgun": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 5,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                }
+              },
+              "Power Sword": {
+                "order": 8,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 9,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 10,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 11,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Storm Shield": {
+                "order": 12,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "BS": {
+            "tracked": true,
+            "value": 5
+          },
+          "Captain on Bike Upgrades": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Master of the Fleet": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Orbital Bombardment"
+                  }
+                ]
+              },
+              "Master of the Watch": {
+                "order": 2,
+                "tracking": {
+                  "BS": 1,
+                  "Points": 5
+                }
+              },
+              "Master of the Marches": {
+                "order": 3,
+                "tracking": {
+                  "M": 1,
+                  "Points": 5
+                }
+              },
+              "Master of the Rites": {
+                "order": 4,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Master of Executions": {
+                "order": 5,
+                "tracking": {
+                  "masterOfExecutions": 1,
+                  "Points": 15
+                }
+              },
+              "Master of Relics": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Special Rule§Master of Relics"
+                  }
+                ]
+              },
+              "Chapter Master": {
+                "order": 7,
+                "tracking": {
+                  "A": 1,
+                  "Points": 25,
+                  "W": 1,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "tracked": true,
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 9
+          },
+          "M": {
+            "tracked": true,
+            "value": 12
+          },
+          "Points": {
+            "value": 70
+          },
+          "Power Sword": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Sword": {
+                "order": 0,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 5,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Relic Blade": {
+                "order": 7,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Relic Blade"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Sword",
+            "visibility": "normal"
+          },
+          "S": {
+            "tracked": true,
+            "value": 4
+          },
+          "Sv": {
+            "tracked": true,
+            "value": 2
+          },
+          "T": {
+            "tracked": true,
+            "value": 5
           },
           "W": {
             "tracked": true,
@@ -4386,6 +5938,11 @@
         "text": "You may only field 1 model in your army with this special rule. If your army includes a model with this special rule, they must be your Warlord."
       },
       "Special Rule§Master of Relics": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
         "text": "A model with this upgrade gains the Master Crafted special rule\non all weapons it is equipped with."
       },
       "Special Rule§Preferred Enemy (Characters)": {
@@ -4736,9 +6293,49 @@
         "text": "Basic Armour used by Space Marine Scout forces. It's lightweight and easy to move in. It provides a 4+ Armour save and gives the \nwearer the Scout and Outflank special rules."
       },
       "Wargear§Space Marine Bike": {
+        "rules": {
+          "addLinkedBoltgun": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Boltgun"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "A unit that is equipped with a Bike\nbecomes a Bike type unit. In\naddition, it gains +1 Toughness (T)\nCharacteristics. A Space marine\nBike is equipped with a Linked\nBoltgun."
       },
       "Wargear§Space Marine Outrider Bike": {
+        "rules": {
+          "addLinkedBoltRifle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Bolt Rifle"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "text": "A unit that is equipped with a Bike\nbecomes a Bike Type unit. In\naddition, it gains +1 Toughness (T)\nCharacteristics. A Space Marine\nOutrider Bike is equipped with a\nLinked Bolt Rifle."
       },
       "Wargear§Storm Shields": {
