@@ -175,7 +175,7 @@
           ]
         }
       },
-      "Character§Space Marine Captain on Bike": {
+      "Character§Space Marnie Captain on Bike": {
         "allowed": {
           "items": [
             "Model§Space Marine Captain on Bike"
@@ -1109,7 +1109,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Boltgun",
+                    "Primary Weapon",
                     "value"
                   ]
                 ],
@@ -1133,7 +1133,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Boltgun",
+                    "Primary Weapon",
                     "visibility"
                   ]
                 ],
@@ -1150,7 +1150,7 @@
                     "visibility"
                   ]
                 ],
-                "value": "active"
+                "value": "normal"
               }
             ],
             "evals": [
