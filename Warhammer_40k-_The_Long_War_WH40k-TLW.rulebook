@@ -791,7 +791,7 @@
             "evaluate": "AND",
             "failState": "pass"
           },
-          "Rooster is over the points limit": {
+          "Roster is over the points limit": {
             "evals": [
               {
                 "actionable": true,

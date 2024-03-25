@@ -175,7 +175,7 @@
           ]
         }
       },
-      "Character§Space Marnie Captain on Bike": {
+      "Character§Space Marine Captain on Bike": {
         "allowed": {
           "items": [
             "Model§Space Marine Captain on Bike"
@@ -1146,7 +1146,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Master of the Arsenal Boltgun Choice",
+                    "Master of the Arsenal Primary Weapon",
                     "visibility"
                   ]
                 ],
