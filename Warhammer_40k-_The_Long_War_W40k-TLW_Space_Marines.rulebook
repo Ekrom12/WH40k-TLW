@@ -2953,7 +2953,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Master of the Arsenal Storm Bolter Choice",
+                    "Master of the Arsenal Primary Weapon",
                     "visibility"
                   ]
                 ],
@@ -3060,8 +3060,52 @@
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
-              "Storm Bolter": {
+              "Boltgun": {
                 "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Bolt Rifle": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Rifle"
+                  }
+                ]
+              },
+              "Auto Bolt Rifle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Auto Bolt Rifle"
+                  }
+                ]
+              },
+              "Stalker Bolt Rifle": {
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Stalker Bolt Rifle"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 4,
                 "tracking": {
                   "Points": 0
                 },
@@ -3071,8 +3115,19 @@
                   }
                 ]
               },
+              "Sniper Rifle": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sniper Rifle"
+                  }
+                ]
+              },
               "Combi-Flamer": {
-                "order": 1,
+                "order": 6,
                 "tracking": {
                   "Points": 5
                 },
@@ -3086,7 +3141,7 @@
                 ]
               },
               "Combi-Plasma": {
-                "order": 2,
+                "order": 7,
                 "tracking": {
                   "Points": 10
                 },
@@ -3100,7 +3155,7 @@
                 ]
               },
               "Combi-Melta": {
-                "order": 3,
+                "order": 8,
                 "tracking": {
                   "Points": 15
                 },
@@ -3114,7 +3169,7 @@
                 ]
               },
               "Volkite Charger": {
-                "order": 4,
+                "order": 9,
                 "tracking": {
                   "Points": 2
                 },
@@ -3125,7 +3180,7 @@
                 ]
               },
               "Lightning Claw": {
-                "order": 5,
+                "order": 10,
                 "tracking": {
                   "Points": 10
                 },
@@ -3136,7 +3191,7 @@
                 ]
               },
               "Chainsword": {
-                "order": 6,
+                "order": 11,
                 "tracking": {
                   "Points": 0
                 },
@@ -3147,7 +3202,7 @@
                 ]
               },
               "Power Sword": {
-                "order": 7,
+                "order": 12,
                 "tracking": {
                   "Points": 5
                 },
@@ -3158,7 +3213,7 @@
                 ]
               },
               "Power Axe": {
-                "order": 8,
+                "order": 13,
                 "tracking": {
                   "Points": 10
                 },
@@ -3169,7 +3224,7 @@
                 ]
               },
               "Power Lance": {
-                "order": 9,
+                "order": 14,
                 "tracking": {
                   "Points": 10
                 },
@@ -3180,7 +3235,7 @@
                 ]
               },
               "Power Fist": {
-                "order": 10,
+                "order": 15,
                 "tracking": {
                   "Points": 15
                 },
@@ -3191,7 +3246,7 @@
                 ]
               },
               "Storm Shield": {
-                "order": 11,
+                "order": 16,
                 "tracking": {
                   "Points": 5
                 },
@@ -3201,8 +3256,19 @@
                   }
                 ]
               },
+              "Relic Shield": {
+                "order": 17,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Relic Shield"
+                  }
+                ]
+              },
               "Heavy Bolter": {
-                "order": 12,
+                "order": 18,
                 "tracking": {
                   "Points": 5
                 },
@@ -3213,7 +3279,7 @@
                 ]
               },
               "Heavy Flamer": {
-                "order": 13,
+                "order": 19,
                 "tracking": {
                   "Points": 5
                 },
@@ -3224,7 +3290,7 @@
                 ]
               },
               "Lascannon": {
-                "order": 14,
+                "order": 20,
                 "tracking": {
                   "Points": 5
                 },
@@ -3233,11 +3299,50 @@
                     "trait": "Ranged Weapon§Lascannon"
                   }
                 ]
+              },
+              "Multi-Melta": {
+                "order": 21,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 22,
+                "tracking": {
+                  "Points": 15
+                }
+              },
+              "Plasma Cannon": {
+                "order": 23,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 24,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
               }
             },
             "statOrder": 1,
             "statType": "rank",
-            "value": "Storm Bolter",
+            "value": "Boltgun",
             "visibility": "hidden"
           },
           "Melee Weapon": {
