@@ -1900,6 +1900,34 @@
                     "trait": "Ranged Weapon§Lascannon"
                   }
                 ]
+              },
+              "Multi-Melta": {
+                "order": 21,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 22,
+                "tracking": {
+                  "Points": 15
+                }
+              },
+              "Plasma Cannon": {
+                "order": 23,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
               }
             },
             "statOrder": 1,
