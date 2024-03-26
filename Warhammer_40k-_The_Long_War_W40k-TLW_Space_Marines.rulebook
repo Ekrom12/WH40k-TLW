@@ -541,138 +541,7 @@
           ]
         },
         "rules": {
-          "librarianChiefUpgrade": {
-            "actions": [
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Special Rule§Psyker (1)"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Special Rule§Psyker (2)"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Chief Librarian",
-                    "value"
-                  ]
-                ],
-                "value": "✓"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 6
-          },
-          "LibrarianRemoveStuff": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Librarian Melee Weapon",
-                    "value"
-                  ]
-                ],
-                "value": "Force Sword"
-              },
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "value": "Melee Weapon§Force Sword"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Chief Librarian",
-                    "value"
-                  ]
-                ],
-                "value": "-"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Phobos Librarian",
-                    "value"
-                  ]
-                ],
-                "value": "-"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Librarian Terminator",
-                    "value"
-                  ]
-                ],
-                "value": "-"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Lieutenant Upgrade",
-                    "value"
-                  ]
-                ],
-                "value": "Librarian"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 6
-          },
-          "librarianTerminator": {
+          "AllTerminatorUpgrade": {
             "actions": [
               {
                 "actionType": "set",
@@ -795,6 +664,19 @@
                   ]
                 ],
                 "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
               }
             ],
             "evals": [
@@ -806,7 +688,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Terminator",
+                    "Terminator",
                     "value"
                   ]
                 ],
@@ -817,7 +699,7 @@
             "failState": "pass",
             "order": 7
           },
-          "librarianTerminatorRemoveStuff": {
+          "chaplainUpgrade": {
             "actions": [
               {
                 "actionType": "set",
@@ -826,11 +708,11 @@
                   [
                     "{self}",
                     "stats",
-                    "Terminator Armour",
+                    "Melee Weapon",
                     "value"
                   ]
                 ],
-                "value": "Indomitus Terminator Armour"
+                "value": "Close Combat Weapon"
               },
               {
                 "actionType": "remove",
@@ -841,10 +723,36 @@
                     "traits"
                   ]
                 ],
-                "value": "Wargear§Indomitus Terminator Armour"
+                "value": "Melee Weapon§Close Combat Weapons"
               },
               {
-                "actionType": "remove",
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaplain Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
                 "iterations": 1,
                 "paths": [
                   [
@@ -852,10 +760,23 @@
                     "traits"
                   ]
                 ],
-                "value": "Wargear§Tartaros Terminator Armour"
+                "value": "Melee Weapon§Power Maul"
               },
               {
-                "actionType": "remove",
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
                 "iterations": 1,
                 "paths": [
                   [
@@ -863,14 +784,187 @@
                     "traits"
                   ]
                 ],
-                "value": "Wargear§Cataphractii Terminator Armour"
+                "value": "Wargear§Rosarius"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Zealot (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Priest (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Priest"
               }
             ],
             "evals": [
               {
                 "actionable": true,
-                "not": true,
+                "not": false,
                 "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Chaplain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "librarianChiefUpgrade": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Psyker (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Psyker (2)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords"
+                  ]
+                ],
+                "value": "Chief Librarian"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chief Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "LibrarianRemoveStuff": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Force Sword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Force Sword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chief Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Phobos Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
                 "paths": [
                   [
                     "{self}",
@@ -879,8 +973,10 @@
                     "value"
                   ]
                 ],
-                "value": "✓"
-              },
+                "value": "-"
+              }
+            ],
+            "evals": [
               {
                 "actionable": true,
                 "not": true,
@@ -896,9 +992,9 @@
                 "value": "Librarian"
               }
             ],
-            "evaluate": "OR",
+            "evaluate": "AND",
             "failState": "pass",
-            "order": 4
+            "order": 6
           },
           "librarianUpgrade": {
             "actions": [
@@ -985,7 +1081,10 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Terminator",
+                    [
+                      "Librarian Terminator",
+                      "Terminator"
+                    ],
                     "visibility"
                   ]
                 ],
@@ -1023,6 +1122,30 @@
                   ]
                 ],
                 "value": "Ranged Weapon§Smite"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Librarian"
               }
             ],
             "evals": [
@@ -1044,6 +1167,112 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 5
+          },
+          "nonLibrarianorChaplaintSetTerminatorToNo": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Librarian"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Chaplain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "nonTerminatorRemoveTerminatorArmours": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Indomitus Terminator Armour"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Tartaros Terminator Armour"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Cataphractii Terminator Armour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "pass",
+            "order": 4
           },
           "phobosLibrarianAddStuff": {
             "actions": [
@@ -1098,6 +1327,14 @@
           "BS": {
             "value": 4
           },
+          "Chaplain Melee Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "statOrder": 3,
+            "statType": "term",
+            "value": "Power Maul",
+            "visibility": "hidden"
+          },
           "Chief Librarian": {
             "dynamic": true,
             "group": "Upgrades",
@@ -1120,6 +1357,14 @@
           },
           "I": {
             "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "hidden"
           },
           "Ld": {
             "value": 8
@@ -1157,23 +1402,6 @@
             "statOrder": 3,
             "statType": "rank",
             "value": "Force Sword",
-            "visibility": "hidden"
-          },
-          "Librarian Terminator": {
-            "dynamic": true,
-            "group": "Upgrades",
-            "groupOrder": 3,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "value": "-",
             "visibility": "hidden"
           },
           "Lieutenant Upgrade": {
@@ -1667,6 +1895,23 @@
           },
           "T": {
             "value": 4
+          },
+          "Terminator": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
           },
           "Terminator Armour": {
             "dynamic": true,
@@ -6769,6 +7014,13 @@
         },
         "text": "When firing this weapon, you must select which mode you will use for that attack."
       },
+      "Special Rule§Zealot (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
       "Wargear§Assault Launchers": {
         "text": "A model equipped with this Wargear\ncan make 1 additional Hammer of\nWrath Attack."
       },
@@ -6834,7 +7086,23 @@
                 "value": "Special Rule§Slow & Purposeful"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Wargear§Cataphractii Terminator Armour",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass",
             "order": 10
@@ -6934,7 +7202,23 @@
                 "value": "Special Rule§Deep Strike"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "assets",
+                    "item",
+                    "Wargear§Indomitus Terminator Armour",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass",
             "order": 10
@@ -6999,7 +7283,23 @@
                 "value": "Fly"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "assets",
+                    "item",
+                    "Wargear§Jump Pack",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass"
           }
@@ -7096,7 +7396,23 @@
                 "value": "Ranged Weapon§Linked Boltgun"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Wargear§Space Marine Bike",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass"
           }
@@ -7119,7 +7435,23 @@
                 "value": "Ranged Weapon§Linked Bolt Rifle"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Wargear§Space Marine Outrider Bike",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass"
           }
@@ -7167,7 +7499,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Special Rule§Sprint (1)"
+                "value": "Special Rule§Deep Strike"
               },
               {
                 "actionType": "add",
@@ -7179,10 +7511,26 @@
                     "traits"
                   ]
                 ],
-                "value": "Special Rule§Deep Strike"
+                "value": "Special Rule§Sprint (1)"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Wargear§Tartaros Terminator Armour",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass",
             "order": 10
