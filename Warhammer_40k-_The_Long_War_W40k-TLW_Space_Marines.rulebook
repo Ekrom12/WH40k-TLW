@@ -534,6 +534,15 @@
         }
       },
       "Model§Lieutenant": {
+        "allowed": {
+          "items": [
+            "Wargear§Bionics",
+            "Wargear§Melta Bomb",
+            "Wargear§Refractor Field",
+            "Wargear§Teleport Homer",
+            "Wargear§Digital Weapons"
+          ]
+        },
         "assets": {
           "traits": [
             "Ranged Weapon§Frag Grenade",
@@ -1168,7 +1177,7 @@
             "failState": "pass",
             "order": 5
           },
-          "nonLibrarianorChaplaintSetTerminatorToNo": {
+          "nonLibrarianOrChaplaintSetTerminatorToNo": {
             "actions": [
               {
                 "actionType": "set",
@@ -1212,6 +1221,69 @@
                   ]
                 ],
                 "value": "Chaplain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "nonTechmarineRemoveServoHarnessAndHeavyBolter": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Servo Harness",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Bolter",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Tech Marine Battlesmith"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Tech Marine Ordinator"
               }
             ],
             "evaluate": "AND",
@@ -1318,6 +1390,459 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 9
+          },
+          "refractorFieldInv": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 5
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Refractor Field",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "ReiverCommanderUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reiver Commander Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Heavy Bolt Pistol"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Shock Grenades"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fear (2)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Terror Commander"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Reiver Commander"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "ServoHarnessUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Firing Protocol (3)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Servo Harness",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "techMarineUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Servo Harness",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Bolter",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Tech-Priest (1)"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Tech Marine Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Omnissian Axe"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Bionics"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Tech Marine Battlesmith"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Tech Marine Ordinator"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "pass",
+            "order": 5
+          },
+          "VanguardCommanderUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Carbine"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vanguard Commander Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Commander"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
           }
         },
         "stats": {
@@ -1325,6 +1850,7 @@
             "value": 2
           },
           "BS": {
+            "tracked": true,
             "value": 4
           },
           "Chaplain Melee Weapon": {
@@ -1355,6 +1881,31 @@
             "value": "-",
             "visibility": "hidden"
           },
+          "Heavy Bolter": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "I": {
             "value": 4
           },
@@ -1363,6 +1914,7 @@
             "group": "Stats",
             "statOrder": 10,
             "statType": "numeric",
+            "tracked": true,
             "value": 4,
             "visibility": "hidden"
           },
@@ -1428,25 +1980,56 @@
                 "order": 3,
                 "tracking": {
                   "Points": 15
-                }
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  }
+                ]
               },
               "Vanguard Commander": {
                 "order": 4,
                 "tracking": {
+                  "BS": 1,
                   "Points": 10
-                }
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  },
+                  {
+                    "trait": "Wargear§Grav Chute"
+                  }
+                ]
               },
               "Tech Marine Battlesmith": {
                 "order": 5,
                 "tracking": {
-                  "Points": 20
-                }
+                  "Inv": 2,
+                  "Points": 15,
+                  "Sv": -1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Artificer Armour"
+                  }
+                ]
               },
               "Tech Marine Ordinator": {
                 "order": 6,
                 "tracking": {
-                  "Points": 50
-                }
+                  "Inv": 2,
+                  "Points": 45,
+                  "Sv": -1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Artificer Armour"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Thunderfire Cannon"
+                  }
+                ]
               }
             },
             "statOrder": 1,
@@ -1821,6 +2404,14 @@
             "value": "Boltgun",
             "visibility": "normal"
           },
+          "Reiver Commander Primary Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "statOrder": 1,
+            "statType": "term",
+            "value": "Shock Grenades and Heavy Bolt Pistol",
+            "visibility": "hidden"
+          },
           "S": {
             "value": 4
           },
@@ -1890,11 +2481,50 @@
             "value": "Bolt Pistol",
             "visibility": "normal"
           },
+          "Servo Harness": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Servo Arm"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Sv": {
             "value": 3
           },
           "T": {
             "value": 4
+          },
+          "Tech Marine Primary Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "statOrder": 1,
+            "statType": "term",
+            "value": "Omnissian Axe",
+            "visibility": "hidden"
           },
           "Terminator": {
             "dynamic": true,
@@ -1948,6 +2578,14 @@
             "value": "Indomitus Terminator Armour",
             "visibility": "hidden"
           },
+          "Vanguard Commander Primary Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "statOrder": 1,
+            "statType": "term",
+            "value": "Bolt Carbine",
+            "visibility": "hidden"
+          },
           "W": {
             "value": 2
           },
@@ -1957,6 +2595,14 @@
         }
       },
       "Model§Space Marine Captain": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner",
+            "Wargear§Digital Weapons",
+            "Wargear§Teleport Homer"
+          ]
+        },
         "assets": {
           "traits": [
             "Wargear§Iron Halo",
@@ -2464,28 +3110,6 @@
             "value": "Power Armor",
             "visibility": "normal"
           },
-          "Auspex Scanner": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Auspex Scanner"
-                  }
-                ]
-              }
-            },
-            "statOrder": 6,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "BS": {
             "value": 5
           },
@@ -2571,28 +3195,6 @@
             },
             "statType": "rank",
             "tracked": true,
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Digital Weapons": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Digital Weapons"
-                  }
-                ]
-              }
-            },
-            "statOrder": 7,
-            "statType": "rank",
             "value": "-",
             "visibility": "normal"
           },
@@ -3020,28 +3622,6 @@
             "value": "Chainsword",
             "visibility": "normal"
           },
-          "Melta Bomb": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Melta Bomb"
-                  }
-                ]
-              }
-            },
-            "statOrder": 8,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "Points": {
             "value": 60
           },
@@ -3337,28 +3917,6 @@
           "T": {
             "value": 4
           },
-          "Teleport Homer": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Telepor Homer"
-                  }
-                ]
-              }
-            },
-            "statOrder": 9,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "W": {
             "tracked": true,
             "value": 3
@@ -3370,6 +3928,14 @@
         }
       },
       "Model§Space Marine Captain in Gravis Armour": {
+        "allowed": {
+          "items": [
+            "Wargear§Auspex Scanner",
+            "Wargear§Digital Weapons",
+            "Wargear§Melta Bomb",
+            "Wargear§Bionics"
+          ]
+        },
         "assets": {
           "traits": [
             "Wargear§Iron Halo",
@@ -3754,6 +4320,15 @@
         }
       },
       "Model§Space Marine Captain in Terminator Armour": {
+        "allowed": {
+          "items": [
+            "Wargear§Auspex Scanner",
+            "Wargear§Digital Weapons",
+            "Wargear§Melta Bomb",
+            "Wargear§Bionics",
+            "Wargear§Teleport Homer"
+          ]
+        },
         "assets": {
           "traits": [
             "Wargear§Iron Halo"
@@ -4633,6 +5208,15 @@
         }
       },
       "Model§Space Marine Captain on Bike": {
+        "allowed": {
+          "items": [
+            "Wargear§Auspex Scanner",
+            "Wargear§Digital Weapons",
+            "Wargear§Melta Bomb",
+            "Wargear§Bionics",
+            "Wargear§Teleport Homer"
+          ]
+        },
         "assets": {
           "traits": [
             "Wargear§Iron Halo",
@@ -6939,6 +7523,27 @@
         },
         "text": "If the target of this weapon is not within half of the weapons range when making an attack, the\nweapon gains +2 to its Strength characteristic."
       },
+      "Special Rule§Fear (2)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Firing Protocol (3)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Furious Charge (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
       "Special Rule§Hatred (Characters)": {
         "keywords": {
           "Keywords": [
@@ -7006,6 +7611,21 @@
         },
         "text": "You may include 2 units with this special rule for each HQ slot in your army."
       },
+      "Special Rule§Tech-Priest (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Terror Commander": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "If your army\nincludes a model with this special rule is in your army, you may include 1 Reiver unit without taking up a force organization slot. In addition, the model with this special rule and any attached Reiver unit gains the Rending (6+) special rule on all melee weapons they are equipped with."
+      },
       "Special Rule§Variable": {
         "keywords": {
           "Keywords": [
@@ -7025,9 +7645,31 @@
         "text": "A model equipped with this Wargear\ncan make 1 additional Hammer of\nWrath Attack."
       },
       "Wargear§Auspex Scanner": {
+        "aspects": {
+          "Unique": true
+        },
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 10,
+            "visibility": "normal"
+          }
+        },
         "text": "Enemy units may not Infiltrate within\n18” of a model equipped with this\nwargear."
       },
       "Wargear§Bionics": {
+        "aspects": {
+          "Unique": true
+        },
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 5,
+            "visibility": "normal"
+          }
+        },
         "text": "A model with this wargear has a 6+\nInvulnerable save."
       },
       "Wargear§Camo Cloaks": {
@@ -7115,6 +7757,57 @@
       },
       "Wargear§Chapter Banner": {
         "text": "Friendly Space Marines units within\n12” of the Banner can re-roll Pinning\nand Panic tests. In addition, when\ncalculating the number of wounds\ncaused in a combat for the purpose\nof determining if a unit within 12” of\na model with this wargear has won\nor lost a combat, add 1 to the\nnumber of wounds caused by\nfriendly Space Marine units within\n12” of a model with this wargear"
+      },
+      "Wargear§Digital Weapons": {
+        "aspects": {
+          "Unique": true
+        },
+        "rules": {
+          "DigitalWeaponsAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Furious Charge (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "assets",
+                    "item",
+                    "Wargear§Digital Weapons",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 10,
+            "visibility": "normal"
+          }
+        }
       },
       "Wargear§Dreadnought Plate": {
         "text": "These ancient and powerful mechanised war suit\nencompasses a sarcophagus where an ancient warrior\nlay entombed. When combined, the warrior may take to\nthe field again with a new body. It confers a 2+ Armour\nsave."
@@ -7305,6 +7998,19 @@
           }
         }
       },
+      "Wargear§Melta Bomb": {
+        "aspects": {
+          "Unique": true
+        },
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 5,
+            "visibility": "normal"
+          }
+        }
+      },
       "Wargear§Narthecium": {
         "text": "A model with this Wargear and their\nattached unit gain Feel No Pain (5+)\nSpecial rule."
       },
@@ -7339,6 +8045,17 @@
         "text": "Enemy Psykers within 24” of a\nmodel with this wargear suffer an\nadditional -1 to their Leadership\n(LD) Characteristic when attempting\nto cast a Psychic power in the\nPsychic phase."
       },
       "Wargear§Refractor Field": {
+        "aspects": {
+          "Unique": true
+        },
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 10,
+            "visibility": "normal"
+          }
+        },
         "text": "A model with a refractor Field has a\n5+ Invulnerable save."
       },
       "Wargear§Relic Shield": {
@@ -7539,6 +8256,14 @@
         "text": "A more mobile ancient pattern of Terminator Armour rarely used. It provides a 2+ Armour Save and a 5+ Invulnerable save. The Wearer gains Relentless, Sprint (1), Bulky (2), and Deep Strike special rules."
       },
       "Wargear§Teleport Homer": {
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 5,
+            "visibility": "normal"
+          }
+        },
         "text": "A unit that arrives on the battlefield\nvia Deep Strike within 12” of a unit\nwith this wargear does not scatter"
       },
       "Wargear§Tempormortis": {
