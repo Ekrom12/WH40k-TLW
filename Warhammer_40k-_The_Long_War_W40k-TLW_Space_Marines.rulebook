@@ -1368,8 +1368,8 @@
           },
           "Phobos Librarian": {
             "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
+            "group": "Upgrades",
+            "groupOrder": 3,
             "ranks": {
               "-": {
                 "number": 1,
@@ -1380,7 +1380,7 @@
                 "order": 1
               }
             },
-            "statOrder": 4,
+            "statOrder": 3,
             "statType": "rank",
             "value": "-",
             "visibility": "hidden"
