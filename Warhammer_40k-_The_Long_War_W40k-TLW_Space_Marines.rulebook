@@ -632,11 +632,11 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Armour",
+                    "Phobos Librarian",
                     "value"
                   ]
                 ],
-                "value": "Power Armor"
+                "value": "-"
               },
               {
                 "actionType": "set",
@@ -681,20 +681,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Armour",
-                    "value"
-                  ]
-                ],
-                "value": "Power Armor"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Librarian Armour",
+                    "Phobos Librarian",
                     "visibility"
                   ]
                 ],
@@ -707,7 +694,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Terminator Armour",
+                    "Terminator Armour",
                     "visibility"
                   ]
                 ],
@@ -795,6 +782,19 @@
                   ]
                 ],
                 "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Phobos Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "-"
               }
             ],
             "evals": [
@@ -815,7 +815,7 @@
             ],
             "evaluate": "AND",
             "failState": "pass",
-            "order": 6
+            "order": 7
           },
           "librarianTerminatorRemoveStuff": {
             "actions": [
@@ -826,7 +826,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Terminator Armour",
+                    "Terminator Armour",
                     "value"
                   ]
                 ],
@@ -972,7 +972,7 @@
                   [
                     "{self}",
                     "stats",
-                    "Librarian Armour",
+                    "Phobos Librarian",
                     "visibility"
                   ]
                 ],
@@ -1044,6 +1044,51 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 5
+          },
+          "phobosLibrarianAddStuff": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Phobos Armour"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Camo Cloaks"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Phobos Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
           }
         },
         "stats": {
@@ -1078,28 +1123,6 @@
           },
           "Ld": {
             "value": 8
-          },
-          "Librarian Armour": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "Power Armor": {
-                "order": 0
-              },
-              "Phobos Armour": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Phobos Armour"
-                  }
-                ]
-              }
-            },
-            "statOrder": 4,
-            "statType": "rank",
-            "value": "Power Armor",
-            "visibility": "hidden"
           },
           "Librarian Melee Weapon": {
             "dynamic": true,
@@ -1151,49 +1174,6 @@
             "statOrder": 2,
             "statType": "rank",
             "value": "-",
-            "visibility": "hidden"
-          },
-          "Librarian Terminator Armour": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cataphractii Terminator Armour"
-                  }
-                ]
-              },
-              "Indomitus Terminator Armour": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Indomitus Terminator Armour"
-                  }
-                ]
-              },
-              "Tartaros Terminator Armour": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Tartaros Terminator Armour"
-                  }
-                ]
-              },
-              "Cataphractii Terminator Armour": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cataphractii Terminator Armour"
-                  }
-                ]
-              }
-            },
-            "statOrder": 4,
-            "statType": "rank",
-            "value": "Indomitus Terminator Armour",
             "visibility": "hidden"
           },
           "Lieutenant Upgrade": {
@@ -1385,6 +1365,25 @@
             "statType": "rank",
             "value": "-",
             "visibility": "normal"
+          },
+          "Phobos Librarian": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "number": 1,
+                "order": 0
+              },
+              "✓": {
+                "number": 2,
+                "order": 1
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
           },
           "Points": {
             "value": 30
@@ -1668,6 +1667,41 @@
           },
           "T": {
             "value": 4
+          },
+          "Terminator Armour": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Indomitus Terminator Armour": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              },
+              "Tartaros Terminator Armour": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Tartaros Terminator Armour"
+                  }
+                ]
+              },
+              "Cataphractii Terminator Armour": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Cataphractii Terminator Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Indomitus Terminator Armour",
+            "visibility": "hidden"
           },
           "W": {
             "value": 2
@@ -6996,8 +7030,7 @@
             ],
             "evals": [],
             "evaluate": "AND",
-            "failState": "pass",
-            "order": 10
+            "failState": "pass"
           }
         },
         "text": "A Stealth designed version of the standard power Armour for infiltration. It provides a 3+ Armour save and grants the wearer the Infiltrate special rule."
