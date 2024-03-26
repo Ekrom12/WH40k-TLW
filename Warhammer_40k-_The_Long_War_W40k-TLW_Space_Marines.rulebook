@@ -540,6 +540,407 @@
             "Ranged Weapon§Krak Grenade"
           ]
         },
+        "rules": {
+          "librarianChiefUpgrade": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Psyker (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Psyker (2)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chief Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "LibrarianRemoveStuff": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Force Sword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Force Sword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chief Librarian",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Power Armor"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Terminator",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Librarian"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "librarianTerminator": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Power Armor"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Armour",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Terminator Armour",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Terminator",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "librarianTerminatorRemoveStuff": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Terminator Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Indomitus Terminator Armour"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Tartaros Terminator Armour"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Cataphractii Terminator Armour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Terminator",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Librarian"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "pass",
+            "order": 4
+          },
+          "librarianUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Close Combat Weapon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chief Librarian",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Armour",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Librarian Terminator",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Psyker (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Librarian"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
         "stats": {
           "A": {
             "value": 2
@@ -547,11 +948,198 @@
           "BS": {
             "value": 4
           },
+          "Chief Librarian": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "I": {
             "value": 4
           },
           "Ld": {
             "value": 8
+          },
+          "Librarian Armour": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Armor": {
+                "order": 0
+              },
+              "Phobos Armour": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Power Armor",
+            "visibility": "hidden"
+          },
+          "Librarian Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Force Sword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Force Sword"
+                  }
+                ]
+              },
+              "Force Axe": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Force Axe"
+                  }
+                ]
+              },
+              "Force Stave": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Force Stave"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Force Sword",
+            "visibility": "hidden"
+          },
+          "Librarian Terminator": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Librarian Terminator Armour": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Cataphractii Terminator Armour"
+                  }
+                ]
+              },
+              "Indomitus Terminator Armour": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              },
+              "Tartaros Terminator Armour": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Tartaros Terminator Armour"
+                  }
+                ]
+              },
+              "Cataphractii Terminator Armour": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Cataphractii Terminator Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Indomitus Terminator Armour",
+            "visibility": "hidden"
+          },
+          "Lieutenant Upgrade": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Librarian": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Chaplain": {
+                "order": 2,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Reiver Commander": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                }
+              },
+              "Vanguard Commander": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Tech Marine Battlesmith": {
+                "order": 5,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Tech Marine Ordinator": {
+                "order": 6,
+                "tracking": {
+                  "Points": 50
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
           },
           "M": {
             "tracked": true,
@@ -562,8 +1150,17 @@
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
-              "Chainsword": {
+              "Close Combat Weapon": {
                 "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
                 "tracking": {
                   "Points": 0
                 },
@@ -574,7 +1171,7 @@
                 ]
               },
               "Power Axe": {
-                "order": 1,
+                "order": 2,
                 "tracking": {
                   "Points": 10
                 },
@@ -585,7 +1182,7 @@
                 ]
               },
               "Power Lance": {
-                "order": 2,
+                "order": 3,
                 "tracking": {
                   "Points": 10
                 },
@@ -596,7 +1193,7 @@
                 ]
               },
               "Power Fist": {
-                "order": 3,
+                "order": 4,
                 "tracking": {
                   "Points": 15
                 },
@@ -607,7 +1204,7 @@
                 ]
               },
               "Thunder Hammer": {
-                "order": 4,
+                "order": 5,
                 "tracking": {
                   "Points": 20
                 },
@@ -618,7 +1215,7 @@
                 ]
               },
               "Lightning Claw": {
-                "order": 5,
+                "order": 6,
                 "tracking": {
                   "Points": 10
                 },
@@ -631,10 +1228,11 @@
             },
             "statOrder": 3,
             "statType": "rank",
-            "value": "Chainsword",
+            "value": "Close Combat Weapon",
             "visibility": "normal"
           },
           "Mobility": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
@@ -678,7 +1276,7 @@
                 ]
               }
             },
-            "statOrder": 4,
+            "statOrder": 5,
             "statType": "rank",
             "value": "-",
             "visibility": "normal"
@@ -5995,6 +6593,20 @@
         },
         "text": "A unit with the Priest (x) special rule can perform a number of Prayers each player turn equal to the value of (x). A Priest knows Prayers from the relevant Litanies listed in their codex."
       },
+      "Special Rule§Psyker (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Psyker (2)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
       "Special Rule§Sprint (1)": {
         "keywords": {
           "Keywords": [
@@ -6085,7 +6697,8 @@
             ],
             "evals": [],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 10
           }
         },
         "text": "An ancient heavier pattern of Terminator Armour rarely used. It provides a 2+ Armour save and a 4+ Invulnerable save. The Wearer gains the Relentless, Bulky (2), Deep Strike, Relentless and Slow & Purposeful special rules. The wearers Movement (M) Characteristic is decreased by 1”"
@@ -6184,7 +6797,8 @@
             ],
             "evals": [],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 10
           }
         },
         "text": "The Standard Terminator Armour used by most Astartes forces. It provides a 2+ Armour Save and a 5+ Invulnerable Save. The wearer gains the Relentless, Bulky (2) and Deep Strike special rule. Models equipped with this Armour may not perform Sweeping Advances."
@@ -6277,7 +6891,8 @@
             ],
             "evals": [],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 10
           }
         },
         "text": "A Stealth designed version of the standard power Armour for infiltration. It provides a 3+ Armour save and grants the wearer the Infiltrate special rule."
@@ -6431,7 +7046,8 @@
             ],
             "evals": [],
             "evaluate": "AND",
-            "failState": "pass"
+            "failState": "pass",
+            "order": 10
           }
         },
         "text": "A more mobile ancient pattern of Terminator Armour rarely used. It provides a 2+ Armour Save and a 5+ Invulnerable save. The Wearer gains Relentless, Sprint (1), Bulky (2), and Deep Strike special rules."
