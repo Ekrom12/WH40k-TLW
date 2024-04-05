@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "1.0.1",
+  "revision": "1.0.2",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -5025,7 +5025,7 @@
             "value": 8
           },
           "Points": {
-            "value": 15
+            "value": 45
           },
           "S": {
             "value": 2
