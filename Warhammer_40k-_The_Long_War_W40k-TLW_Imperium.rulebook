@@ -773,7 +773,8 @@
       "Roster§Roster": {},
       "Special Rule§Combi": {
         "keywords": {
-          "Tags": [
+          "Tags": [],
+          "Keywords": [
             "Weapon Special Rule"
           ]
         },
