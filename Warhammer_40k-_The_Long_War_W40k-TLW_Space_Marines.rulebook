@@ -175,54 +175,7 @@
           ]
         }
       },
-      "Character§Space Marine Command Squad": {
-        "allowed": {
-          "items": [
-            "Model§Champion"
-          ]
-        },
-        "keywords": {
-          "Keywords": [
-            "Command Squad",
-            "M31",
-            "Space Marine",
-            "Veterans"
-          ],
-          "Role": [
-            "HQ"
-          ],
-          "Faction": [
-            "Imperium"
-          ],
-          "Unit Type": [
-            "Infantry"
-          ]
-        },
-        "rules": {
-          "Need at least 1 model": {
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "assets",
-                    "classification",
-                    "Model",
-                    "quantity"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        }
-      },
-      "Character§Space Marnie Captain on Bike": {
+      "Character§Space Marine Captain on Bike": {
         "allowed": {
           "items": [
             "Model§Space Marine Captain on Bike"
@@ -276,6 +229,62 @@
           "Unit Type": [
             "Infantry"
           ]
+        }
+      },
+      "Character§Space Marine Command Squad": {
+        "allowed": {
+          "items": [
+            "Model§Champion",
+            "Model§Apothecary",
+            "Model§Ancient",
+            "Model§Judicator"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Command Squad",
+            "M31",
+            "Space Marine",
+            "Veterans"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Faction": [
+            "Imperium"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "rules": {
+          "Need at least 1 model": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Model",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
       "Melee Weapon§AssaultDrills": {
@@ -580,23 +589,174 @@
           }
         }
       },
-      "Model§Apothecary": {
+      "Model§Ancient": {
         "allowed": {
           "items": [
-            "Wargear§Artificer Armour",
             "Wargear§Bionics",
             "Wargear§Refractor Field",
             "Wargear§Melta Bomb",
-            "Wargear§Digital Weapons"
+            "Wargear§Digital Weapons",
+            "Wargear§Artificer Armour"
           ]
         },
         "assets": {
-          "included": [
-            "Wargear§Narthecium",
-            "Wargear§Power Armour",
+          "traits": [
             "Ranged Weapon§Frag Grenade",
-            "Ranged Weapon§Krak Grenade"
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Chapter Banner",
+            "Wargear§Power Armour"
           ]
+        },
+        "rules": {
+          "hasBionics": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Bionics",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasRefractorField": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 5
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Refractor Field",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasTerminatorArmor": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 4
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wargear Option",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
         },
         "stats": {
           "A": {
@@ -608,10 +768,550 @@
           "I": {
             "value": 4
           },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "hidden"
+          },
           "Ld": {
             "value": 8
           },
           "M": {
+            "tracked": true,
+            "value": 6
+          },
+          "Points": {
+            "value": 35
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Bolt Rifle": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Rifle"
+                  }
+                ]
+              },
+              "Stalker Bolt Rifle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Stalker Bolt Rifle"
+                  }
+                ]
+              },
+              "Auto Bolt Rifle": {
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Auto Bolt Rifle"
+                  }
+                ]
+              },
+              "Heavy Bolt Rifle": {
+                "order": 4,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Rifle"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 5,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 8,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 10,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "order": 11,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 12,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 13,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 14,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Storm Shield": {
+                "order": 15,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Heavy Bolt Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "tracked": true,
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "Wargear Option": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Jump Pack": {
+                "order": 1,
+                "tracking": {
+                  "M": 6,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              },
+              "Space Marine Bike": {
+                "order": 2,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 3,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              },
+              "Indomitus Terminator Armour": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              },
+              "Gravis Armour": {
+                "order": 5,
+                "tracking": {
+                  "M": -1,
+                  "Points": 10,
+                  "T": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Gravis Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Apothecary": {
+        "allowed": {
+          "items": [
+            "Wargear§Artificer Armour",
+            "Wargear§Bionics",
+            "Wargear§Refractor Field",
+            "Wargear§Melta Bomb",
+            "Wargear§Digital Weapons"
+          ]
+        },
+        "assets": {
+          "included": [],
+          "traits": [
+            "Wargear§Narthecium",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "hasBionics": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Bionics",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasRefractorField": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 5
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Refractor Field",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasTerminatorArmor": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 4
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wargear Option",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "hidden"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "tracked": true,
             "value": 6
           },
           "Melee Weapon": {
@@ -765,10 +1465,85 @@
             "value": 3
           },
           "T": {
+            "tracked": true,
             "value": 4
           },
           "W": {
             "value": 2
+          },
+          "Wargear Option": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Jump Pack": {
+                "order": 1,
+                "tracking": {
+                  "M": 6,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              },
+              "Space Marine Bike": {
+                "order": 2,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 3,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              },
+              "Indomitus Terminator Armour": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              },
+              "Gravis Armour": {
+                "order": 5,
+                "tracking": {
+                  "M": -1,
+                  "Points": 10,
+                  "T": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Gravis Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
           },
           "WS": {
             "value": 5
@@ -781,7 +1556,8 @@
             "Wargear§Bionics",
             "Wargear§Refractor Field",
             "Wargear§Melta Bomb",
-            "Wargear§Digital Weapons"
+            "Wargear§Digital Weapons",
+            "Wargear§Artificer Armour"
           ]
         },
         "assets": {
@@ -793,6 +1569,157 @@
             "Ranged Weapon§Krak Grenade"
           ]
         },
+        "rules": {
+          "hasBionics": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Bionics",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasRefractorField": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 5
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Refractor Field",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasTerminatorArmor": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 4
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wargear Option",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
         "stats": {
           "A": {
             "value": 3
@@ -803,10 +1730,20 @@
           "I": {
             "value": 4
           },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "hidden"
+          },
           "Ld": {
             "value": 8
           },
           "M": {
+            "tracked": true,
             "value": 6
           },
           "Points": {
@@ -863,13 +1800,425 @@
             "value": 3
           },
           "T": {
+            "tracked": true,
             "value": 4
           },
           "W": {
             "value": 2
           },
+          "Wargear Option": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Jump Pack": {
+                "order": 1,
+                "tracking": {
+                  "M": 6,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              },
+              "Space Marine Bike": {
+                "order": 2,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 3,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              },
+              "Indomitus Terminator Armour": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              },
+              "Gravis Armour": {
+                "order": 5,
+                "tracking": {
+                  "M": -1,
+                  "Points": 10,
+                  "T": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Gravis Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
           "WS": {
             "value": 6
+          }
+        }
+      },
+      "Model§Judicator": {
+        "allowed": {
+          "items": [
+            "Wargear§Bionics",
+            "Wargear§Refractor Field",
+            "Wargear§Melta Bomb",
+            "Wargear§Digital Weapons",
+            "Wargear§Artificer Armour"
+          ]
+        },
+        "aspects": {
+          "Type": "conceptual"
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Power Sword",
+            "Wargear§Tempormortis",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "hasBionics": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Bionics",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasRefractorField": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 5
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    "Wargear§Refractor Field",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "hasTerminatorArmor": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 4
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wargear Option",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "hidden"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "tracked": true,
+            "value": 6
+          },
+          "Points": {
+            "value": 38
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Heavy Bolt Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "tracked": true,
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "Wargear Option": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Jump Pack": {
+                "order": 1,
+                "tracking": {
+                  "M": 6,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              },
+              "Space Marine Bike": {
+                "order": 2,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 3,
+                "tracking": {
+                  "M": 6,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              },
+              "Indomitus Terminator Armour": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              },
+              "Gravis Armour": {
+                "order": 5,
+                "tracking": {
+                  "M": -1,
+                  "Points": 10,
+                  "T": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Gravis Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 5
           }
         }
       },
@@ -7855,6 +9204,14 @@
         },
         "text": "During Deployment, any Space marine unit of 10 models or 6 models with this rule with this\nspecial rule can split its squad in half, becoming two separate units. The unit must be split in half rounding up and\nare treated as separate units from that point on."
       },
+      "Special Rule§Company Specialists": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "During deployment, instead of deploying this unit as 1 unit, each model in the unit may be deployed separately. Each model then counts as its own unit with the Character Keyword."
+      },
       "Special Rule§Conversion": {
         "keywords": {
           "Keywords": [
@@ -7890,6 +9247,14 @@
             "Space Marine Special Rule"
           ]
         }
+      },
+      "Special Rule§Honor Duel": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "A Champion model can issue a challenge to an engaged enemy model during the combat phase. Both\nmust be allocated wounds from the other first before other models in the Combat."
       },
       "Special Rule§Master of Command": {
         "keywords": {
