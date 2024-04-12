@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "1.0.2",
+  "revision": "1.1.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -304,6 +304,9 @@
         }
       },
       "Unit": {
+        "aspects": {
+          "Group By": "null"
+        },
         "rules": {
           "ChitinousArmoredSpearheadSelfReportAssaultMonsters": {
             "actions": [
@@ -595,6 +598,9 @@
             "Psyker",
             "Synapse",
             "Tyranids"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -686,6 +692,9 @@
             "M41",
             "Unique",
             "Vanguard"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -770,6 +779,9 @@
           ],
           "Role": [
             "HQ"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "rules": {
@@ -909,6 +921,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -966,6 +981,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "rules": {
@@ -1153,6 +1171,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -1232,6 +1253,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "8 - Lords of War"
           ]
         },
         "stats": {
@@ -1300,6 +1324,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "8 - Lords of War"
           ]
         },
         "stats": {
@@ -1370,6 +1397,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -1441,6 +1471,9 @@
             "Tyranids",
             "Unique",
             "Vanguard"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -1537,6 +1570,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -1609,7 +1645,9 @@
           "Role": [
             "HQ"
           ],
-          "Tags": [],
+          "Tags": [
+            "1 - HQ"
+          ],
           "Faction": [
             "Tyranids"
           ]
@@ -1678,6 +1716,9 @@
           ],
           "Role": [
             "HQ"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -1761,6 +1802,9 @@
             "The Nephilim King",
             "Tyranids",
             "Unique"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -1824,6 +1868,9 @@
             "Synapse",
             "Tyranid Prime",
             "Tyranids"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -10400,6 +10447,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -10444,6 +10494,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -10487,6 +10540,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "rules": {
@@ -10697,6 +10753,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "6 - Fast Attack"
           ]
         },
         "stats": {
@@ -10736,6 +10795,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "stats": {
@@ -10794,6 +10856,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "6 - Fast Attack"
           ]
         },
         "rules": {
@@ -10991,6 +11056,9 @@
           ],
           "Role": [
             "Troops"
+          ],
+          "Tags": [
+            "2 - Troops"
           ]
         },
         "rules": {
@@ -11104,6 +11172,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "5 - Flyers"
           ]
         },
         "rules": {
@@ -11285,6 +11356,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "8 - Lords of War"
           ]
         },
         "stats": {
@@ -11346,6 +11420,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "rules": {
@@ -11502,6 +11579,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Tags": [
+            "8 - Lords of War"
           ]
         },
         "stats": {
@@ -11577,6 +11657,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "8 - Lords of War"
           ]
         },
         "stats": {
@@ -11643,6 +11726,9 @@
             "Hive Crone",
             "M41",
             "Tyranids"
+          ],
+          "Tags": [
+            "5 - Flyers"
           ]
         },
         "rules": {
@@ -11804,6 +11890,9 @@
             "Hive Guard",
             "M41",
             "Tyranids"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "rules": {
@@ -11956,6 +12045,9 @@
             "Hormagaunts",
             "M41",
             "Tyranids"
+          ],
+          "Tags": [
+            "2 - Troops"
           ]
         },
         "stats": {
@@ -12025,6 +12117,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -12081,6 +12176,9 @@
           ],
           "Role": [
             "Heavy Support"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "rules": {
@@ -12240,6 +12338,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "6 - Fast Attack"
           ]
         },
         "stats": {
@@ -12286,6 +12387,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "6 - Fast Attack"
           ]
         },
         "stats": {
@@ -12351,6 +12455,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -12395,6 +12502,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -12472,6 +12582,9 @@
             "Raveners",
             "Tyranids",
             "Vanguard"
+          ],
+          "Tags": [
+            "2 - Troops"
           ]
         },
         "stats": {
@@ -12526,6 +12639,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Tags": [
+            "2 - Troops"
           ]
         },
         "stats": {
@@ -12604,6 +12720,9 @@
           ],
           "Unit Type": [
             "Heavy Support"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "stats": {
@@ -12650,6 +12769,9 @@
           ],
           "Faction": [
             "Tyranids"
+          ],
+          "Tags": [
+            "6 - Fast Attack"
           ]
         },
         "stats": {
@@ -12707,6 +12829,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "9 - Fortifications"
           ]
         },
         "stats": {
@@ -12755,6 +12880,9 @@
             "M41",
             "Termagants",
             "Tyranids"
+          ],
+          "Tags": [
+            "2 - Troops"
           ]
         },
         "stats": {
@@ -12811,6 +12939,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "rules": {
@@ -12970,6 +13101,9 @@
             "Trygon",
             "Tyranids",
             "Vanguard"
+          ],
+          "Tags": [
+            "6 - Fast Attack"
           ]
         },
         "rules": {
@@ -13142,6 +13276,9 @@
             "Synapse",
             "Tyranid Warriors",
             "Tyranids"
+          ],
+          "Tags": [
+            "2 - Troops"
           ]
         },
         "rules": {
@@ -13310,6 +13447,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "4 - Dedicated Transports"
           ]
         },
         "stats": {
@@ -13370,6 +13510,9 @@
           ],
           "Unit Type": [
             "Monster"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
           ]
         },
         "stats": {
@@ -13427,6 +13570,9 @@
             "M41",
             "Tyranids",
             "Tyrant Guard"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -13484,6 +13630,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
@@ -13537,6 +13686,9 @@
             "Tyranids",
             "Vanguard",
             "Von Ryan's Leapers"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "rules": {
@@ -13711,6 +13863,9 @@
             "Synapse",
             "Tyranids",
             "Zoanthropes"
+          ],
+          "Tags": [
+            "3 - Elites"
           ]
         },
         "stats": {
