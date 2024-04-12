@@ -23,9 +23,619 @@
   ],
   "rulebook": {
     "assetTaxonomy": {
-      "Ranged Weapon": {}
+      "Character": {
+        "assets": {
+          "traits": []
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Imperium",
+            "Space Marines"
+          ],
+          "Faction": [
+            "Imperium"
+          ],
+          "Role": [],
+          "Unit Type": []
+        },
+        "removed": {
+          "stats": {
+            "M": {},
+            "WS": {},
+            "BS": {},
+            "S": {},
+            "T": {},
+            "W": {},
+            "A": {},
+            "I": {},
+            "Ld": {},
+            "Sv": {},
+            "modelCost": {}
+          }
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "The Imperium's Sword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Imperium's Sword"
+                  }
+                ]
+              },
+              "Rites of Battle": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Rites of Battle"
+                  }
+                ]
+              },
+              "Storm of Fire": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Storm of Fire"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": null
+          },
+          "Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "The Imperium's Sword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Imperium's Sword"
+                  }
+                ]
+              },
+              "Rites of Battle": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Rites of Battle"
+                  }
+                ]
+              },
+              "Storm of Fire": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Storm of Fire"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Ranged Weapon": {},
+      "Unit": {
+        "assets": {
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Imperium"
+          ],
+          "Keywords": [
+            "Space Marine"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "M": {},
+            "WS": {},
+            "BS": {},
+            "S": {},
+            "T": {},
+            "W": {},
+            "A": {},
+            "I": {},
+            "Ld": {},
+            "Sv": {},
+            "modelCost": {}
+          }
+        },
+        "rules": {
+          "addBloodRavensAllegiance": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Allegiance: Blood Ravens"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Blood Ravens"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addCarcharodonsAllegiance": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Allegiance: Carcharodon's"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Carcharodons"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addCrimsonFistsAllegiance": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Allegiance: Crimson Fists"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Crimson Fists"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addMinotaursAllegiance": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Allegiance: Minotaurs"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Minotaurs"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addRaptorsAllegiance": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Allegiance: Raptors"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Raptors"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addRedScorpionsAllegiance": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Allegiance: Red Scorpions"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "count1in5": {
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 5
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          }
+        }
+      }
     },
     "assetCatalog": {
+      "Character§Asterion Moloch": {
+        "allowed": {
+          "items": [
+            "Model§Asterion Moloch"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Asterion Moloch"
+          ],
+          "traits": [
+            "Special Rule§Master of Command"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Asterion Moloch",
+            "Captain",
+            "M41",
+            "Minotaurs",
+            "Terminator"
+          ]
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "value": "Rites of Battle"
+          },
+          "Warlord Trait": {
+            "value": "The Imperium's Sword"
+          }
+        }
+      },
+      "Character§Captains Casan Sabius & Sirae Karagon": {
+        "allowed": {
+          "items": [
+            "Model§Casan Sabius",
+            "Model§Sirae Karagon"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Casan Sabius",
+            "Model§Sirae Karagon"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death",
+            "Special Rule§Master of Command",
+            {
+              "item": "Special Rule§Zealot",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Stubborn",
+            "Special Rule§Co Captains"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Captain",
+            "Casan Sabius & Sirae Karagon",
+            "M42+",
+            "Red Scorpions"
+          ]
+        },
+        "rules": {
+          "resetWarlordTrait": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Warlord Trait",
+                      "Additional Warlord Trait",
+                      "Additional Warlord Trait 2"
+                    ],
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ]
+          },
+          "showWarlordTraitStat": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Warlord Trait",
+                      "Additional Warlord Trait",
+                      "Additional Warlord Trait 2"
+                    ],
+                    "visibility"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "active"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ]
+          }
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "value": "Storm of Fire"
+          },
+          "Additional Warlord Trait 2": {
+            "dynamic": true,
+            "group": "Warlord",
+            "groupOrder": 4,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "The Imperium's Sword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Imperium's Sword"
+                  }
+                ]
+              },
+              "Rites of Battle": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Rites of Battle"
+                  }
+                ]
+              },
+              "Storm of Fire": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Storm of Fire"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Rites of Battle",
+            "visibility": "hidden"
+          },
+          "Warlord": {},
+          "Warlord Trait": {
+            "value": "The Imperium's Sword"
+          }
+        }
+      },
+      "Character§Carab Culln": {
+        "allowed": {
+          "items": [
+            "Model§Carab Culln"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Carab Culln"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death",
+            "Special Rule§Master of Command",
+            "Special Rule§Counter Attack",
+            "Special Rule§Stubborn"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Captain",
+            "Carab Culln",
+            "Red Scorpions"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "removed": {
+          "stats": {}
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "value": "Rites of Battle"
+          },
+          "Warlord Trait": {
+            "value": "The Imperium's Sword"
+          }
+        }
+      },
       "Character§Damocles Command Rhino": {
         "allowed": {
           "items": [
@@ -70,6 +680,83 @@
           ]
         }
       },
+      "Character§Gabriel Angelos, Chapter Master of the Blood Ravens": {
+        "allowed": {
+          "items": [
+            "Model§Gabriel Angelos, Chapter Master of the Blood Ravens"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Gabriel Angelos, Chapter Master of the Blood Ravens"
+          ],
+          "traits": [
+            "Special Rule§Master of Command",
+            "Special Rule§Deny the Witch",
+            "Special Rule§Last Stand"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Blood Ravens",
+            "Captain",
+            "Gabriel Angelos",
+            "Terminator"
+          ]
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "value": "Rites of Battle"
+          },
+          "Warlord Trait": {
+            "value": "Storm of Fire"
+          }
+        }
+      },
+      "Character§Lias Issodon": {
+        "allowed": {
+          "items": [
+            "Model§Lias Issodon"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Lias Issodon"
+          ],
+          "traits": [
+            "Special Rule§Master of Command",
+            "Special Rule§Infiltrate",
+            "Special Rule§Fade & Fire"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Captain",
+            "Lias Issodon",
+            "Raptors"
+          ]
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "value": "Rites of Battle"
+          },
+          "Warlord Trait": {
+            "value": "Storm of Fire"
+          }
+        }
+      },
       "Character§Lieutenant": {
         "allowed": {
           "items": [
@@ -101,6 +788,100 @@
           "Unit Type": [
             "Infantry"
           ]
+        }
+      },
+      "Character§Pedro Kantor": {
+        "allowed": {
+          "items": [
+            "Model§Pedro Kantor"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Pedro Kantor"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death",
+            "Special Rule§Master of Command",
+            "Special Rule§Defenders of Rynn's World",
+            "Warlord Trait§Storm of Fire",
+            "Warlord Trait§Rites of Battle"
+          ]
+        },
+        "keywords": {
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Keywords": [
+            "Captain",
+            "Crimson Fists"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Additional Warlord Trait": {},
+            "Warlord Trait": {}
+          }
+        }
+      },
+      "Character§Sevrin Loth": {
+        "allowed": {
+          "items": [
+            "Model§Sevrin Loth"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Sevrin Loth"
+          ],
+          "traits": [
+            "Special Rule§And They Shall Know no Fear",
+            "Special Rule§Angels of Death",
+            "Special Rule§Sub Commander",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Wargear§Armour of Selket"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "M41",
+            "Psyker",
+            "Red Scorpions",
+            "Sevrin Loth"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Role": [
+            "HQ"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Additional Warlord Trait": {}
+          }
+        },
+        "stats": {
+          "Warlord Trait": {
+            "value": "Storm of Fire"
+          }
         }
       },
       "Character§Space Marine Captain": {
@@ -333,7 +1114,63 @@
           }
         }
       },
-      "Melee Weapon§AssaultDrills": {
+      "Character§Tyberos, The Red Wake": {
+        "allowed": {
+          "items": [
+            "Model§Tyberos, The Red Wake"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Tyberos, The Red Wake"
+          ],
+          "traits": [
+            "Special Rule§Master of Command",
+            {
+              "item": "Special Rule§Rage",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Captain",
+            "Carcharodons",
+            "Terminator",
+            "Tyberos, The Red Wake"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Role": [
+            "HQ"
+          ]
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "value": "Rites of Battle"
+          },
+          "Warlord Trait": {
+            "value": "The Imperium's Sword"
+          }
+        }
+      },
+      "Melee Weapon§Assault Drills": {
         "assets": {
           "traits": [
             "Special Rule§Unwieldy",
@@ -488,6 +1325,88 @@
           }
         }
       },
+      "Melee Weapon§God Splitter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            {
+              "item": "Special Rule§Bane",
+              "stats": {
+                "keyword": {
+                  "value": "Chaos"
+                }
+              }
+            },
+            "Special Rule§Unwieldy",
+            "Special Rule§Two-Handed",
+            "Special Rule§Concussive",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Hunger": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Leviathan Siege Claw": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            },
+            "Special Rule§Concussive"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
       "Melee Weapon§Lightning Claws": {
         "assets": {
           "traits": [
@@ -609,6 +1528,73 @@
           },
           "Strength": {
             "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Slake": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "user"
+          }
+        }
+      },
+      "Melee Weapon§Sword of the Scorpion": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Rending"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+3"
+          }
+        }
+      },
+      "Melee Weapon§Sword of Vord": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Precision Strikes",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "user"
+          }
+        }
+      },
+      "Melee Weapon§The Black Spear (Melee)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Reach",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
           }
         }
       },
@@ -1596,6 +2582,520 @@
           }
         }
       },
+      "Model§Asterion Moloch": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Storm Shields",
+            "Wargear§Iron Halo",
+            "Wargear§Tartaros Terminator Armour",
+            "Ranged Weapon§The Black Spear (Shooting)",
+            "Melee Weapon§The Black Spear (Melee)"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 125
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
+      "Model§Carab Culln": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [],
+          "traits": [
+            "Wargear§Indomitus Terminator Armour",
+            "Ranged Weapon§Storm Bolter",
+            "Wargear§Iron Halo",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Melee Weapon§Sword of Vord"
+          ]
+        },
+        "rules": {
+          "interredCarabCulln": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Carab Culln, the Risen"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Carab Culln, the Risen"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lord Commander",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lord Commander",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Sword of the Scorpion"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Sword of Vord"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Storm Bolter"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Iron Halo"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Krak Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Indomitus Terminator Armour"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hammer of Wrath (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fade & Fire"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Walker"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Infantry"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Interred",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "lordCommander": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Sword of Vord"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lord Commander",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 8
+          }
+        },
+        "stats": {
+          "A": {
+            "tracked": true,
+            "value": 5
+          },
+          "BS": {
+            "tracked": true,
+            "value": 5
+          },
+          "I": {
+            "tracked": true,
+            "value": 5
+          },
+          "Interred": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "I": -1,
+                  "Inv": 1,
+                  "M": 2,
+                  "Points": 100,
+                  "S": 3,
+                  "Sv": -1,
+                  "T": 4,
+                  "W": 2,
+                  "WS": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Leviathan Siege Claw"
+                  },
+                  {
+                    "trait": "Wargear§Dreadnought Plate"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Linked Assault Cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Hunter-Killer Missile"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Hunter-Killer Missile"
+                  },
+                  {
+                    "trait": "Special Rule§Atomantic Shielding"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 9
+          },
+          "Lord Commander": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Ld": 1,
+                  "Points": 15,
+                  "WS": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sword of the Scorpion"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "M": {
+            "tracked": true,
+            "value": 6
+          },
+          "Points": {
+            "value": 100
+          },
+          "S": {
+            "tracked": true,
+            "value": 5
+          },
+          "Sv": {
+            "tracked": true,
+            "value": 3
+          },
+          "T": {
+            "tracked": true,
+            "value": 4
+          },
+          "W": {
+            "tracked": true,
+            "value": 4
+          },
+          "WS": {
+            "tracked": true,
+            "value": 5
+          }
+        }
+      },
+      "Model§Casan Sabius": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Artificer Armour",
+            "Wargear§Digital Weapons",
+            "Melee Weapon§Relic Blade",
+            "Wargear§Iron Halo",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 115
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
       "Model§Champion": {
         "allowed": {
           "items": [
@@ -2014,6 +3514,61 @@
           }
         }
       },
+      "Model§Gabriel Angelos, Chapter Master of the Blood Ravens": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Tartaros Terminator Armour",
+            "Melee Weapon§God Splitter",
+            "Wargear§Iron Halo"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 130
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
       "Model§Judicator": {
         "allowed": {
           "items": [
@@ -2351,6 +3906,66 @@
           }
         }
       },
+      "Model§Lias Issodon": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Artificer Armour",
+            "Ranged Weapon§Malice",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Iron Halo"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 6
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 130
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
       "Model§Lieutenant": {
         "allowed": {
           "items": [
@@ -2659,6 +4274,18 @@
                   ]
                 ],
                 "value": "Priest"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Chaplain"
               }
             ],
             "evals": [
@@ -2970,6 +4597,18 @@
                     "{parent}",
                     "keywords",
                     "Keywords"
+                  ]
+                ],
+                "value": "Librarian"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
                   ]
                 ],
                 "value": "Librarian"
@@ -3341,6 +4980,18 @@
                   ]
                 ],
                 "value": "Special Rule§Terror Commander"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Reiver Commander"
               }
             ],
             "evals": [
@@ -3520,6 +5171,18 @@
                   ]
                 ],
                 "value": "Wargear§Bionics"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Tech Marine"
               }
             ],
             "evals": [
@@ -3640,6 +5303,18 @@
                   ]
                 ],
                 "value": "Special Rule§Deep Strike"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Vanguard Commander"
               }
             ],
             "evals": [
@@ -4406,6 +6081,448 @@
           },
           "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Pedro Kantor": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Power Fist",
+            "Ranged Weapon§Dorn's Arrow",
+            "Wargear§Iron Halo",
+            "Wargear§Artificer Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 100
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
+      "Model§Scout Marine": {
+        "rules": {
+          "specialWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Special Weapon Choice",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Special Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "Camo Cloak": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Camo Cloaks"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Chainsword": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Heavy Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Heavy Weapon Choice": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "increment": {},
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Heavy Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
+          },
+          "Special Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Special Weapon Choice": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "increment": {},
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Astartes Shotgun": {
+                "order": 1,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Shotgun"
+                  }
+                ]
+              },
+              "Sniper Rifle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sniper Rifle"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Model§Sevrin Loth": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Bolt Pistol",
+            "Melee Weapon§Force Axe",
+            "Wargear§Psychic Hood",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Ranged Weapon§Smite"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 110
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Sirae Karagon": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Bolt Pistol",
+            "Melee Weapon§Power Sword",
+            "Wargear§Power Armour",
+            "Wargear§Vexilla Imperialis Standard",
+            "Wargear§Iron Halo",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 125
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
           },
           "WS": {
             "value": 5
@@ -7645,6 +9762,63 @@
           }
         }
       },
+      "Model§Tyberos, The Red Wake": {
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Indomitus Terminator Armour",
+            "Melee Weapon§Hunger",
+            "Melee Weapon§Slake",
+            "Wargear§Iron Halo"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 135
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
       "Ranged Weapon§Assault Bolters": {
         "assets": {
           "traits": [
@@ -8002,6 +10176,28 @@
           },
           "Type": {
             "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Dorn's Arrow": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 5"
           }
         }
       },
@@ -8744,6 +10940,36 @@
           }
         }
       },
+      "Ranged Weapon§Malice": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Precision Strikes",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
       "Ranged Weapon§Melta Destroyer": {
         "assets": {
           "traits": [
@@ -9105,6 +11331,27 @@
           }
         }
       },
+      "Ranged Weapon§The Black Spear (Shooting)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
       "Ranged Weapon§Thunderfire Cannon": {
         "assets": {
           "traits": [
@@ -9301,7 +11548,65 @@
           }
         }
       },
-      "Roster§Roster": {},
+      "Roster§Roster": {
+        "stats": {
+          "Faction": {
+            "ranks": {
+              "Space Marines": {
+                "order": 1
+              }
+            }
+          }
+        }
+      },
+      "Special Rule§Allegiance: Blood Ravens": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Chapter Allegiances"
+          ]
+        },
+        "text": "• None Wanting: All Blood Ravens units in your army have the Stubborn and Adamantium Will special rules.\n\n• Psyker Mutation: Blood Ravens armies must include at least 1 Lieutenant model upgraded to be a Librarian."
+      },
+      "Special Rule§Allegiance: Carcharodon's": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Chapter Allegiances"
+          ]
+        },
+        "text": "• Blood in the Water: Carcharodon units have +1 to all Wound with melee attacks and +1 to all Charge rolls against enemy units that\nhave already had any wound allocated to them or had a model removed as a casualty.\n\n• Return to the Void: A Carcharodon army gains the Expendable Keyword on all units at the start of the fifth battle round."
+      },
+      "Special Rule§Allegiance: Crimson Fists": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Chapter Allegiances"
+          ]
+        },
+        "text": "• An army of Heroes: You may field 4 units in every HQ slot instead of 2 for units with the Sub Commander special rule.\n\n• Vengeance for Rynn’s world: Crimson Fist units may not Retreat in the Movement Phase. Crimson Fist units have Hatred (Orks)."
+      },
+      "Special Rule§Allegiance: Minotaurs": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Chapter Allegiances"
+          ]
+        },
+        "text": "• Sanctioned Fratricide: Minotaur units gain the Preferred Enemy (Space Marines) and Preferred Enemy (Chaos Space Marines).\nEnemy units engaged in combat with a Minotaur unit may not make Retreat Moves in the Movement Phase.\n\n• Forever Apart: Minotaur armies may not take any Allied Detachments except for Allies from Codex – Imperial Agents."
+      },
+      "Special Rule§Allegiance: Raptors": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Chapter Allegiances"
+          ]
+        },
+        "text": "• Raptor Hunt: Raptor Vanguard units gain +1 to their Ballistic Skill (BS) Characteristic. Raptor units in your army when performing a\nRetreat Move in the Movement Phase, move an additional 3”.\n\n• Solitary Hunters: A Raptor army may not use the Pride of the Chapter Rite of War."
+      },
+      "Special Rule§Allegiance: Red Scorpions": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Chapter Allegiances"
+          ]
+        },
+        "text": "• Purity of Purpose: All Red Scorpion Lieutenants models in your army not equipped with Scout Armour or otherwise upgraded are equipped with a Narthecium. \n\n• Codex Dogma: A Red Scorpions army must include 1 Captain Keyword unit and then 3 Tactical or Intercessor Squads, 1 Assault\nMarine squad and 1 Devastator or Desolator Squad."
+      },
       "Special Rule§And They Shall Know no Fear": {
         "keywords": {
           "Keywords": [
@@ -9318,12 +11623,28 @@
         },
         "text": "If Space Marine units with this rule are in combat with an enemy unit that has a lower Leadership (LD) Characteristic, the space marine units have the Fear (1) special rule."
       },
+      "Special Rule§Atomantic Shielding": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "This confers a 5+ Invulnerable save. When a model with this wargear is slain and removed from play, the model suffers an Explodes result per the Vehicle damage chart before it is removed from play."
+      },
       "Special Rule§Bulky (2)": {
         "keywords": {
           "Keywords": [
             "Space Marine Special Rule"
           ]
         }
+      },
+      "Special Rule§Co Captains": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "This unit may still join friendly units of Infantry and attach to those units"
       },
       "Special Rule§Combat Squads": {
         "keywords": {
@@ -9357,6 +11678,14 @@
         },
         "text": "If the target of this weapon is not within half of the weapons range when making an attack, the\nweapon gains +2 to its Strength characteristic."
       },
+      "Special Rule§Defenders of Rynn's World": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "This unit and any friendly unit in an army that includes it with the Crimson Fists Keyword gains the Hatred (Orks), Preferred Enemy (Orks) and the Sweeping (1) special rule on all Melee weapons they are equipped with."
+      },
       "Special Rule§Fear (2)": {
         "keywords": {
           "Keywords": [
@@ -9372,6 +11701,13 @@
         }
       },
       "Special Rule§Furious Charge (1)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Hammer of Wrath (1)": {
         "keywords": {
           "Keywords": [
             "Space Marine Special Rule"
@@ -9498,6 +11834,79 @@
             "Space Marine Special Rule"
           ]
         }
+      },
+      "Unit§Scouts": {
+        "allowed": {
+          "items": [
+            "Model§Scout Marine"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Scout Marine",
+              "quantity": 4
+            }
+          ],
+          "traits": [
+            "Special Rule§Combat Squads",
+            "Special Rule§Scout",
+            "Special Rule§Outflank"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Close Support",
+            "M31",
+            "Scout Squad"
+          ],
+          "Role": [
+            "Troops"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Tags": [
+            "Troops"
+          ]
+        },
+        "rules": {
+          "1 in 5 can have a Special Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    [
+                      "Flamer",
+                      "Plasma Gun",
+                      "Grav Gun",
+                      "Melta Gun"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Wargear§Armour of Selket": {
+        "text": "The Phase in which this unit successfully casts a Psychic Power that is not a Psychic Weapon, this unit gains a 3+ Invulnerable save until the end of the Phase"
       },
       "Wargear§Assault Launchers": {
         "text": "A model equipped with this Wargear\ncan make 1 additional Hammer of\nWrath Attack."
@@ -10126,6 +12535,9 @@
       },
       "Wargear§Tempormortis": {
         "text": "At the start of the combat phase,\nenemy units in combat with a model\nequipped with this wargear have their\nInitiative reduced by 1"
+      },
+      "Wargear§Vexilla Imperialis Standard": {
+        "text": "Vexilla Imperialis Standard: Friendly Space Marines units within 12” of the Banner can re-roll Pinning and Panic tests. In addition, when calculating the number of wounds caused in a combat for the purpose of determining if a unit within 12” of a model with this wargear has won or lost a combat, add 2 to the number of wounds caused by friendly Space Marine units within 12” of a model with this wargear"
       },
       "Warlord Trait§Rites of Battle": {
         "text": "If your Warlord has this trait, you can increase the number of Elite Slots, Fast Attack Slots or Heavy Support slots in your army by 1."
