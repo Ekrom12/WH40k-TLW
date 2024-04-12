@@ -280,6 +280,56 @@
         }
       },
       "Ranged Weapon": {
+        "rules": {
+          "SetVehicleType": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Vehicle Type",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vehicle Type",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          }
+        },
+        "stats": {
+          "Vehicle Type": {
+            "format": "({v})",
+            "statType": "term",
+            "value": null,
+            "visibility": "hidden"
+          }
+        },
         "templateClass": "Weapon"
       },
       "Relic": {
