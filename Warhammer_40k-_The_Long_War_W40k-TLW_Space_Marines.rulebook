@@ -6144,21 +6144,28 @@
         }
       },
       "Model§Scout Marine": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Scout Armor",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
         "rules": {
-          "specialWeapons": {
+          "removeCCWifChainswordSelected": {
             "actions": [
               {
-                "actionType": "set",
+                "actionType": "remove",
                 "iterations": 1,
                 "paths": [
                   [
                     "{self}",
-                    "stats",
-                    "Special Weapon Choice",
-                    "visibility"
+                    "traits"
                   ]
                 ],
-                "value": "normal"
+                "value": "Melee Weapon§Close Combat Weapons"
               }
             ],
             "evals": [
@@ -6170,11 +6177,11 @@
                   [
                     "{self}",
                     "stats",
-                    "Special Weapon",
+                    "Primary Weapon",
                     "value"
                   ]
                 ],
-                "value": "✓"
+                "value": "Chainsword"
               }
             ],
             "evaluate": "AND",
@@ -6213,83 +6220,6 @@
             "value": "-",
             "visibility": "normal"
           },
-          "Chainsword": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 3,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1
-              }
-            },
-            "statOrder": 4,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Heavy Weapon": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 3,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "tracked": true,
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Heavy Weapon Choice": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 3,
-            "increment": {},
-            "ranks": {
-              "-": {
-                "order": 0,
-                "tracking": {}
-              },
-              "Heavy Bolter": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Heavy Bolter"
-                  }
-                ]
-              },
-              "Missile Launcher": {
-                "order": 2,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
-                  }
-                ]
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "tracked": true,
-            "value": "-",
-            "visibility": "hidden"
-          },
           "I": {
             "value": 4
           },
@@ -6302,36 +6232,20 @@
           "Points": {
             "value": 12
           },
-          "S": {
-            "value": 4
-          },
-          "Special Weapon": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 3,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "tracked": true,
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Special Weapon Choice": {
+          "Primary Weapon": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 3,
             "increment": {},
             "ranks": {
-              "-": {
+              "Boltgun": {
                 "order": 0,
-                "tracking": {}
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
               },
               "Astartes Shotgun": {
                 "order": 1,
@@ -6358,7 +6272,8 @@
               "Flamer": {
                 "order": 3,
                 "tracking": {
-                  "Points": 5
+                  "Points": 5,
+                  "Special Weapon Selection": 1
                 },
                 "traits": [
                   {
@@ -6369,7 +6284,8 @@
               "Plasma Gun": {
                 "order": 4,
                 "tracking": {
-                  "Points": 10
+                  "Points": 10,
+                  "Special Weapon Selection": 1
                 },
                 "traits": [
                   {
@@ -6380,7 +6296,8 @@
               "Melta Gun": {
                 "order": 5,
                 "tracking": {
-                  "Points": 15
+                  "Points": 15,
+                  "Special Weapon Selection": 1
                 },
                 "traits": [
                   {
@@ -6391,11 +6308,50 @@
               "Grav Gun": {
                 "order": 6,
                 "tracking": {
-                  "Points": 10
+                  "Points": 10,
+                  "Special Weapon Selection": 1
                 },
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 8,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 9,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
                   }
                 ]
               }
@@ -6403,8 +6359,266 @@
             "statOrder": 2,
             "statType": "rank",
             "tracked": true,
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Model§Scout Sergeant": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner",
+            "Wargear§Teleport Homer"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Scout Armor",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "removeCCWifChainswordSelected": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "Camo Cloak": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Camo Cloaks"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
             "value": "-",
-            "visibility": "hidden"
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 12
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
           },
           "Sv": {
             "value": 4
@@ -11838,7 +12052,8 @@
       "Unit§Scouts": {
         "allowed": {
           "items": [
-            "Model§Scout Marine"
+            "Model§Scout Marine",
+            "Model§Scout Sergeant"
           ]
         },
         "assets": {
@@ -11846,12 +12061,11 @@
             {
               "item": "Model§Scout Marine",
               "quantity": 4
-            }
+            },
+            "Model§Scout Sergeant"
           ],
           "traits": [
-            "Special Rule§Combat Squads",
-            "Special Rule§Scout",
-            "Special Rule§Outflank"
+            "Special Rule§Combat Squads"
           ]
         },
         "keywords": {
@@ -11871,6 +12085,33 @@
           ]
         },
         "rules": {
+          "1 in 5 can have a Heavy Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
           "1 in 5 can have a Special Weapon": {
             "evals": [
               {
@@ -11889,19 +12130,44 @@
                 "paths": [
                   [
                     "{self}",
-                    "tally",
-                    [
-                      "Flamer",
-                      "Plasma Gun",
-                      "Grav Gun",
-                      "Melta Gun"
-                    ]
+                    "tracked",
+                    "Special Weapon Selection"
                   ]
                 ]
               }
             ],
             "evaluate": "AND",
             "failState": "error"
+          }
+        },
+        "stats": {
+          "Heavy Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Scout Marine": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Scout Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Special Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
