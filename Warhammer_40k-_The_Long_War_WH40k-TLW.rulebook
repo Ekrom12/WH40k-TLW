@@ -1,6 +1,6 @@
 {
   "name": "WH40k:TLW",
-  "revision": "1.0.0",
+  "revision": "1.0.2",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -180,14 +180,6 @@
             "Range": {}
           }
         },
-        "stats": {
-          "Armor Penetration (AP)": {
-            "value": "-"
-          },
-          "Type": {
-            "value": "melee"
-          }
-        },
         "templateClass": "Weapon"
       },
       "Model": {
@@ -201,28 +193,28 @@
             "statOrder": 6,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "BS": {
             "group": "Stats",
             "statOrder": 2,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "I": {
             "group": "Stats",
             "statOrder": 7,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "group": "Stats",
             "statOrder": 8,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "M": {
             "format": "{v}\"",
@@ -230,7 +222,7 @@
             "statOrder": 0,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Points": {
             "format": "{v}",
@@ -246,7 +238,7 @@
             "statOrder": 3,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Sv": {
             "format": "{v}+",
@@ -254,28 +246,28 @@
             "statOrder": 9,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "T": {
             "group": "Stats",
             "statOrder": 4,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "W": {
             "group": "Stats",
             "statOrder": 5,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "WS": {
             "group": "Stats",
             "statOrder": 1,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           }
         }
       },
@@ -622,7 +614,7 @@
             "statOrder": 3,
             "statType": "term",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Range": {
             "format": "{v}\"",
@@ -630,21 +622,21 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Strength": {
             "group": "Stats",
             "statOrder": 2,
             "statType": "term",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Type": {
             "group": "Stats",
             "statOrder": 0,
             "statType": "term",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           }
         }
       }
