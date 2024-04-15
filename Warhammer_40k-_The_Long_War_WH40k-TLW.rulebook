@@ -1,6 +1,6 @@
 {
   "name": "WH40k:TLW",
-  "revision": "1.0.2",
+  "revision": "1.0.3",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -858,6 +858,26 @@
             ],
             "evaluate": "AND",
             "failState": "warning"
+          },
+          "Select your Warlord": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 5
           },
           "TroopTotalUnitCount": {
             "actions": [
