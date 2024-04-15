@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "1.1.1",
+  "revision": "1.1.2",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -852,7 +852,6 @@
                 "tracking": {
                   "Hammer of Wrath": 1,
                   "Hive Tyrant With Wings": 1,
-                  "M": 4,
                   "Points": 15
                 },
                 "traits": [
@@ -863,6 +862,7 @@
               }
             },
             "statType": "rank",
+            "tracked": true,
             "value": "-",
             "visibility": "normal"
           }
@@ -3999,6 +3999,44 @@
             "Wargear§Bonded Exoskeleton",
             "Ranged Weapon§Smite"
           ]
+        },
+        "rules": {
+          "HiveTyrantWingsAddMovement": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": 12
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Wings",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
         },
         "stats": {
           "A": {
