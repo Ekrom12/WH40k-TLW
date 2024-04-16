@@ -125,19 +125,10 @@
       "Ranged Weapon": {},
       "Unit": {
         "allowed": {
-          "items": [
-            "Model§Vanguard Marine",
-            "Model§Vanguard Sergeant"
-          ]
+          "items": []
         },
         "assets": {
-          "included": [
-            {
-              "item": "Model§Vanguard Marine",
-              "quantity": 4
-            },
-            "Model§Vanguard Sergeant"
-          ],
+          "included": [],
           "traits": [
             "Special Rule§And They Shall Know no Fear",
             "Special Rule§Angels of Death"
@@ -15029,6 +15020,21 @@
         }
       },
       "Unit§Vanguard Veterans": {
+        "allowed": {
+          "items": [
+            "Model§Vanguard Marine",
+            "Model§Vanguard Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Vanguard Marine",
+              "quantity": 4
+            },
+            "Model§Vanguard Sergeant"
+          ]
+        },
         "keywords": {
           "Role": [
             "Elites"
@@ -15044,6 +15050,24 @@
             "Vanguard Veteran Squad",
             "Veterans"
           ]
+        },
+        "stats": {
+          "Vanguard Marine": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Vanguard Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
         }
       },
       "Wargear§Armour of Selket": {
