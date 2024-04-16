@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Space Marines",
-  "revision": "0.1.0",
+  "revision": "0.3.5",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -2667,6 +2667,139 @@
           }
         }
       },
+      "Model§Bladeguard Marine": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Heavy Bolt Pistol",
+            "Melee Weapon§Power Sword",
+            "Wargear§Relic Shield",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 45
+          },
+          "S": {
+            "value": 44
+          },
+          "Sv": {
+            "value": 3
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Bladeguard Sergeant": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Heavy Bolt Pistol",
+            "Melee Weapon§Power Sword",
+            "Wargear§Relic Shield",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 45
+          },
+          "S": {
+            "value": 44
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Neo Volkite Pistol": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Neo Volkite Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Heavy Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Carab Culln": {
         "aspects": {
           "Unique": true
@@ -3124,6 +3257,322 @@
           }
         }
       },
+      "Model§Centurion": {
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 4
+          },
+          "Points": {
+            "value": 45
+          },
+          "Primary Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Flamers & 2 Siege Drills": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Flamer",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Assault Drills",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              },
+              "2 Heavy Bolters": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Missile Launchers": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Frag)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Krak)",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Flamers & 2 Siege Drills",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 5
+          },
+          "Torso Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Assault Launchers": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Assault Launchers"
+                  }
+                ]
+              },
+              "Hurricane Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hurricane Bolter"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Assault Launchers",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Centurion Sergeant": {
+        "rules": {
+          "forceHurricaneBolterIfDevastatorCenturion": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Torso Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Hurricane Bolter"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "2 Flamers & 2 Siege Drills"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 4
+          },
+          "Points": {
+            "value": 45
+          },
+          "Primary Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Flamers & 2 Siege Drills": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Flamer",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Assault Drills",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": -5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              },
+              "2 Heavy Bolters": {
+                "order": 2,
+                "tracking": {
+                  "Points": -5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Missile Launchers": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Frag)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Krak)",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "2 Flamers & 2 Siege Drills",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 5
+          },
+          "Torso Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Assault Launchers": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Assault Launchers"
+                  }
+                ]
+              },
+              "Hurricane Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hurricane Bolter"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Assault Launchers",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Champion": {
         "allowed": {
           "items": [
@@ -3536,6 +3985,175 @@
             "statType": "numeric",
             "value": 6,
             "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Eliminator Marine": {
+        "assets": {
+          "traits": [
+            "Wargear§Phobos Armour",
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Camo Cloaks",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 25
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Sniper Rifle": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Sniper Rifle"
+                  }
+                ]
+              },
+              "Las Fusil": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Las Fusil"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Bolt Sniper Rifle",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Eliminator Sergeant": {
+        "assets": {
+          "traits": [
+            "Wargear§Phobos Armour",
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Camo Cloaks",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 25
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Carbine": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Carbine"
+                  }
+                ]
+              },
+              "Bolt Sniper Rifle": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Sniper Rifle"
+                  }
+                ]
+              },
+              "Las Fusil": {
+                "order": 2,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Las Fusil"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Bolt Carbine",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
           },
           "WS": {
             "value": 4
@@ -14498,6 +15116,164 @@
           ]
         }
       },
+      "Unit§Bladeguard Veterans": {
+        "allowed": {
+          "items": [
+            "Model§Bladeguard Marine",
+            "Model§Bladeguard Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Bladeguard Marine",
+              "quantity": 2
+            },
+            "Model§Bladeguard Sergeant"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Elites"
+          ],
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Bladeguard Veteran Squad",
+            "M42+",
+            "Veterans"
+          ]
+        },
+        "stats": {
+          "Bladeguard Marine": {
+            "max": 8,
+            "min": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Bladeguard Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Centurions": {
+        "allowed": {
+          "items": [
+            "Model§Centurion",
+            "Model§Centurion Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Centurion",
+              "quantity": 2
+            },
+            "Model§Centurion Sergeant"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Centurion Squad",
+            "Centurions",
+            "Close Support",
+            "M36",
+            "Veterans"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Centurion": {
+            "max": 11,
+            "min": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Centurion Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Unit§Eliminator Squad": {
+        "allowed": {
+          "items": [
+            "Model§Eliminator Marine",
+            "Model§Eliminator Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Eliminator Marine",
+              "quantity": 2
+            },
+            "Model§Eliminator Sergeant"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Eliminator Squad",
+            "M42+",
+            "Vanguard"
+          ]
+        },
+        "stats": {
+          "Eliminator Marine": {
+            "max": 7,
+            "min": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Eliminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Infiltrator Squad": {
         "allowed": {
           "items": [
@@ -14522,7 +15298,7 @@
         },
         "keywords": {
           "Tags": [
-            "Troops"
+            "2 - Troops"
           ],
           "Role": [
             "Troops"
@@ -14582,7 +15358,7 @@
         },
         "keywords": {
           "Tags": [
-            "Troops"
+            "2 - Troops"
           ],
           "Role": [
             "Troops"
@@ -14718,7 +15494,7 @@
             "Infantry"
           ],
           "Tags": [
-            "Troops"
+            "2 - Troops"
           ]
         },
         "rules": {
@@ -14835,7 +15611,7 @@
             "Infantry"
           ],
           "Tags": [
-            "Elites"
+            "3 - Elites"
           ],
           "Keywords": [
             "M31",
@@ -14918,7 +15694,7 @@
         },
         "keywords": {
           "Tags": [
-            "Troops"
+            "2 - Troops"
           ],
           "Role": [
             "Troops"
@@ -15043,7 +15819,7 @@
             "Infantry"
           ],
           "Tags": [
-            "Elites"
+            "3 - Elites"
           ],
           "Keywords": [
             "M31",
@@ -15448,6 +16224,9 @@
       },
       "Wargear§Omni Scrambler": {
         "text": "Enemy units may not Deep Strike\nwithin 18” of a model equipped with\nthis wargear."
+      },
+      "Wargear§Omni-Scope": {
+        "text": "A model with this wargear ignores cover."
       },
       "Wargear§Phobos Armour": {
         "rules": {
