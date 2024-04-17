@@ -1230,6 +1230,25 @@
           }
         }
       },
+      "Melee Weapon§Brutalis Claws": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
       "Melee Weapon§Chain Fist": {
         "assets": {
           "traits": [
@@ -2610,6 +2629,180 @@
           }
         }
       },
+      "Model§Assault Terminator": {
+        "assets": {
+          "traits": [
+            "Wargear§Indomitus Terminator Armour"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Lightning Claws": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Lightning Claws",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Thunder Hammer & Storm Shield": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 47
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Assault Terminator Sergeant": {
+        "assets": {
+          "traits": [
+            "Wargear§Indomitus Terminator Armour"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Lightning Claws": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Lightning Claws",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Thunder Hammer & Storm Shield": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "2 Lightning Claws",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 47
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Asterion Moloch": {
         "aspects": {
           "Unique": true
@@ -3257,7 +3450,525 @@
           }
         }
       },
+      "Model§Castraferrum Dreadnought": {
+        "assets": {
+          "traits": [
+            "Wargear§Smoke Launchers",
+            "Wargear§Dreadnought Plate"
+          ]
+        },
+        "rules": {
+          "VenerableDreadnoughtUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Feel No Pain (6+)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords"
+                  ]
+                ],
+                "value": "Venerable Dreadnought"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Venerable Dreadnought",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "2 Hunter Killer Missiles": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "A": {
+            "tracked": true,
+            "value": 3
+          },
+          "Assault Launchers": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Assault Launchers"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "tracked": true,
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 8
+          },
+          "Left Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Meltagun": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Cyclone Missile Launcher": {
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Linked Heavy Bolter": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Seismic Hammer": {
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Seismic Hammer"
+                  }
+                ]
+              },
+              "Chainfist & Melta Gun": {
+                "order": 10,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Chainfist & Flamer": {
+                "order": 11,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hurricane Bolter": {
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hurricane Bolter"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 85
+          },
+          "Right Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Meltagun": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Cyclone Missile Launcher": {
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Linked Heavy Bolter": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Seismic Hammer": {
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Seismic Hammer"
+                  }
+                ]
+              },
+              "Chainfist & Melta Gun": {
+                "order": 10,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Chainfist & Flamer": {
+                "order": 11,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hurricane Bolter": {
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hurricane Bolter"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "Venerable Dreadnought": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "A": 1,
+                  "BS": 1,
+                  "Ld": 1,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "tracked": true,
+            "value": 4
+          }
+        }
+      },
       "Model§Centurion": {
+        "assets": {
+          "traits": [
+            "Wargear§Centurion Armour"
+          ]
+        },
         "stats": {
           "A": {
             "value": 2
@@ -3398,6 +4109,12 @@
         }
       },
       "Model§Centurion Sergeant": {
+        "assets": {
+          "traits": [
+            "Wargear§Omni-Scope",
+            "Wargear§Centurion Armour"
+          ]
+        },
         "rules": {
           "forceHurricaneBolterIfDevastatorCenturion": {
             "actions": [
@@ -3905,6 +4622,370 @@
           },
           "WS": {
             "value": 6
+          }
+        }
+      },
+      "Model§Contemptor Dreadnought": {
+        "assets": {
+          "traits": [
+            "Special Rule§Atomantic Shielding",
+            "Wargear§Dreadnought Plate"
+          ]
+        },
+        "rules": {
+          "venerableDreadnoughtUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Feel No Pain (6+)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords"
+                  ]
+                ],
+                "value": "Venerable Dreadnought"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Venerable Dreadnought",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "tracked": true,
+            "value": 3
+          },
+          "BS": {
+            "tracked": true,
+            "value": 5
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 5,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 8
+          },
+          "Left Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 100
+          },
+          "Right Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "Venerable Dreadnought": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "A": 1,
+                  "BS": 1,
+                  "Ld": 1,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "W": {
+            "tracked": true,
+            "value": 4
+          },
+          "WS": {
+            "tracked": true,
+            "value": 5
           }
         }
       },
@@ -7686,6 +8767,1170 @@
           },
           "WS": {
             "value": 6
+          }
+        }
+      },
+      "Model§Redemptor Dreadnought": {
+        "rules": {
+          "balistusLoadout": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Icarus Rocket Pod",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Torso Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "2 Storm Bolters"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Weapon Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Ballistus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "brutalisLoadout": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Torso Weapons",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Torso Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "2 Storm Bolters"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Storm Bolter"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brutalis Melee Weapons",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brutalis Torso Weapons",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Weapon Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Brutalis"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "removeBrutalisWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brutalis Torso Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "2 Heavy Bolters"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brutalis Melee Weapons",
+                    "value"
+                  ]
+                ],
+                "value": "2 Dreadnought Close Combat Weapons with Linked Bolt Rifles"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Heavy Bolter"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 3,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Dreadnought Close Combat Weapon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Bolt Rifle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Weapon Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Brutalis"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "removeRedemptorWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Redemptor Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Assault Cannon"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Redemptor Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Dreadnought Close Combat Weapon & Flamer"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Redemptor Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Redemptor Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Icarus Rocket Pod",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Icarus Rocket Pod",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Dreadnought Close Combat Weapon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Assault Cannon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Heavy Flamer"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Weapon Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Redemptor"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "venerableDreadnoughtUpgrade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Feel No Pain (6+)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords"
+                  ]
+                ],
+                "value": "Venerable Dreadnought"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Venerable Dreadnought",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "tracked": true,
+            "value": 3
+          },
+          "Brutalis Melee Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Dreadnought Close Combat Weapons with Linked Bolt Rifles": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Bolt Rifle",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  }
+                ]
+              },
+              "Brutalis Claws": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Brutalis Claws",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Dreadnought Close Combat Weapons with Linked Bolt Rifles",
+            "visibility": "hidden"
+          },
+          "Brutalis Torso Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Heavy Bolters": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Multi-Melta": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Multi-Melta",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Heavy Bolters",
+            "visibility": "hidden"
+          },
+          "BS": {
+            "tracked": true,
+            "value": 4
+          },
+          "Heavy Stubber": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Stubber"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "I": {
+            "value": 4
+          },
+          "Icarus Rocket Pod": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Icarus Rocket Pod"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 8
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 80
+          },
+          "Redemptor Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Assault Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Macro Plasma Incinerator": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Macro Plasma Incinerator"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Assault Cannon",
+            "visibility": "normal"
+          },
+          "Redemptor Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Assault Cannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Dreadnought Close Combat Weapon & Flamer",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "Torso Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Storm Bolters": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Assault Launchers": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Assault Launchers"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Storm Bolters",
+            "visibility": "normal"
+          },
+          "Venerable Dreadnought": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "A": 1,
+                  "BS": 1,
+                  "Ld": 1,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": 4
+          },
+          "Weapon Configuration": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Redemptor": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  }
+                ]
+              },
+              "Ballistus": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Brutalis": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Redemptor",
+            "visibility": "normal"
+          },
+          "WS": {
+            "tracked": true,
+            "value": 4
+          }
+        }
+      },
+      "Model§Relic Terminator": {
+        "assets": {
+          "traits": []
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Fist": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Fist",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 47
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Combi Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 5,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Reaper Autocannon": {
+                "order": 6,
+                "text": "10 pts",
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Combi Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Relic Terminator Sergeant": {
+        "assets": {
+          "traits": []
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "Grenade Harness": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grenade Harness"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Fist": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Fist",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 47
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Combi Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Plasma Blaster": {
+                "order": 5,
+                "text": "10 pts",
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Blaster"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 6,
+                "text": "10 pts",
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 7,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Reaper Autocannon": {
+                "order": 8,
+                "text": "10 pts",
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Combi Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -12726,6 +14971,438 @@
           }
         }
       },
+      "Model§Tactical Terminator": {
+        "assets": {
+          "traits": [
+            "Wargear§Indomitus Terminator Armour"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "Cyclone Missile Launcher": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Cyclone Missile Launcher Selection": 1,
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Fist": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Fist",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 47
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 5,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 6,
+                "text": "10 pts",
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Storm Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Tactical Terminator Sergeant": {
+        "assets": {
+          "traits": [
+            "Wargear§Indomitus Terminator Armour"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "Cyclone Missile Launcher": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Cyclone Missile Launcher Selection": 1,
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Fist": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Fist",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 47
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Storm Bolter": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 5,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 6,
+                "text": "10 pts",
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Storm Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Tyberos, The Red Wake": {
         "aspects": {
           "Unique": true
@@ -14199,6 +16876,27 @@
           }
         }
       },
+      "Ranged Weapon§Linked Lascannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": ""
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
       "Ranged Weapon§Macro Plasma Incinerator": {
         "assets": {
           "traits": [
@@ -14830,6 +17528,32 @@
         }
       },
       "Roster§Roster": {
+        "rules": {
+          "countVenerableDreadnoughts": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Venerable Dreadnought count",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{roster}",
+                  "tally",
+                  "Venerable Dreadnought"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Faction": {
             "ranks": {
@@ -14837,6 +17561,14 @@
                 "order": 1
               }
             }
+          },
+          "Venerable Dreadnought count": {
+            "max": 1,
+            "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
@@ -14917,7 +17649,16 @@
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "Each model in a unit with this special rule counts as a\nnumber of models equal to the value of 2 for transport\ncapacity in Transports."
+      },
+      "Special Rule§Bulky (3)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "Each model in a unit with this special rule counts as a\nnumber of models equal to the value of 3 for transport\ncapacity in Transports."
       },
       "Special Rule§Co Captains": {
         "keywords": {
@@ -14972,6 +17713,14 @@
           "Keywords": [
             "Space Marine Special Rule"
           ]
+        },
+        "text": "Enemy units within 3” of a model from a unit with this\nspecial rule suffer a -3 to their Leadership (LD) Characteristic."
+      },
+      "Special Rule§Feel No Pain (6+)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
         }
       },
       "Special Rule§Firing Protocol (3)": {
@@ -14979,28 +17728,32 @@
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "A unit with this special rule may attack in the shooting\nphase with 3 different weapons."
       },
       "Special Rule§Furious Charge (1)": {
         "keywords": {
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "A unit with the Furious Charge (1) special rule gains 1\nadditional attack on the charge.\nThis is in addition to the normal +1 attack bonus on the\ncharge.\nYou cannot benefit from the Rage (x) special rule in the\nsame turn as you benefit from Furious Charge."
       },
       "Special Rule§Hammer of Wrath (1)": {
         "keywords": {
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "At the start of the Initiative step 10 during the Fight sequence (see 13.1), every model in the unit in melee range may makes a number of attacks equal to the value of X at Strength User attack with AP6 so long as the unit completed a charge that turn.\nIf the unit with this special rule is a vehicle or monster,\nthe attack has AP2. Hammer of Wrath attacks are only\never made in the first round of a combat. These attacks\nhit automatically."
       },
       "Special Rule§Hatred (Characters)": {
         "keywords": {
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "A model from a unit with this special rule can re-roll hit\nrolls of 1 against enemy units. Where the (x) following\nthe special rule has a unit type (see 18.0) or Keyword,\nthe unit can only re-roll hit of 1 against units with that\nspecific type or Keyword. If no type or keyword is\nindicated by an (x), the unit re-rolls all hit rolls of 1\nregardless of type or keyword of the target enemy unit."
       },
       "Special Rule§Honor Duel": {
         "keywords": {
@@ -15031,7 +17784,8 @@
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "A model from a unit with this special rule can re-roll\nwound rolls of 1 against enemy units. Where the (x)\nfollowing the special rule has a unit type (see 18.0) or\nKeyword, the unit can only re-roll hit of 1 against units\nwith that specific type or Keyword. If no type or keyword\nis indicated by an (x), the unit re-rolls all wound rolls of\n1 regardless of type or keyword of the target enemy\nunit."
       },
       "Special Rule§Priest (1)": {
         "keywords": {
@@ -15053,7 +17807,8 @@
           "Keywords": [
             "Space Marine Special Rule"
           ]
-        }
+        },
+        "text": "A unit with the Psyker (x) special rule can cast a\nnumber of Psychic Powers each player turn equal to\nthe value of (x). All Psykers know the Smite Power\n(see 8.4). A Psyker knows spells from the relevant\ndiscipline indicated in their codex."
       },
       "Special Rule§Sprint (1)": {
         "keywords": {
@@ -15114,6 +17869,62 @@
           "Keywords": [
             "Space Marine Special Rule"
           ]
+        },
+        "text": "A unit with the Zealot special rule adds the value of (x)\nto its Strength (S) Characteristic in the combat phase\nafter it has completed a charge move (see 12.1)"
+      },
+      "Unit§Assault Terminators": {
+        "allowed": {
+          "items": [
+            "Model§Assault Terminator",
+            "Model§Assault Terminator Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Assault Terminator",
+              "quantity": 4
+            },
+            "Model§Assault Terminator Sergeant"
+          ],
+          "traits": [
+            "Special Rule§Combat Squads"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Assault Terminator Squad",
+            "M31",
+            "Terminator",
+            "Veterans"
+          ]
+        },
+        "stats": {
+          "Assault Terminator": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Assault Terminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
         }
       },
       "Unit§Bladeguard Veterans": {
@@ -15158,6 +17969,56 @@
             "visibility": "hidden"
           },
           "Bladeguard Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Castraferrum Dreadnought": {
+        "allowed": {
+          "items": [
+            "Model§Castraferrum Dreadnought"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Castraferrum Dreadnought"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Walker"
+          ],
+          "Keywords": [
+            "Battle Line",
+            "Dreadnought",
+            "M31"
+          ]
+        },
+        "stats": {
+          "Castraferrum Dreadnought": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -15220,6 +18081,45 @@
           },
           "Points": {
             "value": 5
+          }
+        }
+      },
+      "Unit§Contemptor Dreadnought": {
+        "allowed": {
+          "items": [
+            "Model§Contemptor Dreadnought"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Contemptor Dreadnought"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Contemptor",
+            "Dreadnought",
+            "M31",
+            "Veterans"
+          ],
+          "Unit Type": [
+            "Walker"
+          ]
+        },
+        "stats": {
+          "Contemptor Dreadnought": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
@@ -15459,6 +18359,247 @@
           "Points": {
             "value": -5,
             "visibility": "always"
+          }
+        }
+      },
+      "Unit§Redemptor Dreadnought": {
+        "allowed": {
+          "items": [
+            "Model§Redemptor Dreadnought"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Redemptor Dreadnought"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Walker"
+          ],
+          "Keywords": [
+            "Battle Line",
+            "Dreadnought",
+            "M42+",
+            "Redemptor"
+          ]
+        },
+        "stats": {
+          "Redemptor Dreadnought": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Relic Terminators": {
+        "allowed": {
+          "items": [
+            "Model§Relic Terminator",
+            "Model§Relic Terminator Sergeant"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Relic Terminator",
+              "quantity": 4
+            },
+            "Model§Relic Terminator Sergeant"
+          ],
+          "traits": [
+            "Special Rule§Combat Squads"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "M31",
+            "Relic Terminator Squad",
+            "Terminator",
+            "Veterans"
+          ]
+        },
+        "rules": {
+          "1 in 5 can have a Heavy Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "RelicTerminatorSquadCataphractii": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    [
+                      "Model§Relic Terminator",
+                      "Model§Relic Terminator Sergeant"
+                    ],
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Cataphractii Terminator Armour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Relic Terminator Armor",
+                    "value"
+                  ]
+                ],
+                "value": "Cataphractii Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
+          },
+          "RelicTerminatorSquadTartaros": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "item",
+                    [
+                      "Model§Relic Terminator",
+                      "Model§Relic Terminator Sergeant"
+                    ],
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Tartaros Terminator Armour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Relic Terminator Armor",
+                    "value"
+                  ]
+                ],
+                "value": "Tartaros Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
+          }
+        },
+        "stats": {
+          "Heavy Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Relic Terminator": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Relic Terminator Armor": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Tartaros Terminator Armour": {
+                "order": 0
+              },
+              "Cataphractii Terminator Armour": {
+                "order": 1
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Tartaros Terminator Armour",
+            "visibility": "normal"
+          },
+          "Relic Terminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
@@ -15795,6 +18936,117 @@
           }
         }
       },
+      "Unit§Tactical Terminators": {
+        "allowed": {
+          "items": [
+            "Model§Tactical Terminator",
+            "Model§Tactical Terminator Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Tactical Terminator",
+              "quantity": 4
+            },
+            "Model§Tactical Terminator Sergeant"
+          ],
+          "traits": [
+            "Special Rule§Combat Squads"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "M31",
+            "Tactical Terminator Squad",
+            "Terminator",
+            "Veterans"
+          ]
+        },
+        "rules": {
+          "1 in 5 can have a Cyclone Missile Launcher": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Cyclone Missile Launcher"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "1 in 5 can have a heavy weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Tactical Terminator": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Tactical Terminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Vanguard Veterans": {
         "allowed": {
           "items": [
@@ -15961,6 +19213,68 @@
         "text": "An ancient heavier pattern of Terminator Armour rarely used. It provides a 2+ Armour save and a 4+ Invulnerable save. The Wearer gains the Relentless, Bulky (2), Deep Strike, Relentless and Slow & Purposeful special rules. The wearers Movement (M) Characteristic is decreased by 1”"
       },
       "Wargear§Centurion Armour": {
+        "rules": {
+          "addCenturionArmorRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky (3)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Slow & Purposeful"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Wargear§Cataphractii Terminator Armour",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
         "text": "Centurion Armour is a massive, powered suit of Armour\nworn over normal power Armour. It provides a 2+ Armour\nsave. In addition, it grants the wearer +1 to their Wound\n(W), Strength (S) and Toughness (T) characteristics, as\nwell as the Relentless, Bulky (3) and Slow & Purposeful\nspecial rules. The wearers Movement (M) Characteristic\nis decreased by 2”"
       },
       "Wargear§Chapter Banner": {
