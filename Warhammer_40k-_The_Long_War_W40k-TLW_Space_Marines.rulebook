@@ -9,13 +9,13 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "PUHATY",
+      "slug": "466U6M",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
     },
     {
-      "slug": "9GZ8W2",
+      "slug": "F2PJWD",
       "name": "W40k:TLW Imperium",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
@@ -18638,6 +18638,9 @@
       },
       "Unit§Invictor Tactical Warsuit": {
         "assets": {
+          "included": [
+            "Model§Invictor Tactical Warsuit"
+          ],
           "traits": [
             "Special Rule§Relentless",
             "Special Rule§Scout",
@@ -18724,6 +18727,50 @@
         },
         "stats": {
           "Land Speeder Storm": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Predator MBT": {
+        "allowed": {
+          "items": [
+            "Vehicle§Predator MBT"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Predator MBT"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M31",
+            "Predator Tank",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Predator MBT": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -19573,6 +19620,50 @@
           }
         }
       },
+      "Unit§Vindicator Siege Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Vindicator Siege Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Vindicator Siege Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M31",
+            "Tank",
+            "Vindicator Tank"
+          ]
+        },
+        "stats": {
+          "Vindicator Siege Tank": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Vehicle§Damocles Command Rhino": {
         "allowed": {
           "items": []
@@ -20302,6 +20393,165 @@
           }
         }
       },
+      "Vehicle§Predator MBT": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Storm Bolter",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light",
+            "Melee Weapon§Marine Crew Weapons"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "Hunter-Killer Missile": {
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 100
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "Sponsons": {
+            "group": "Wargear",
+            "ranks": {
+              "2 Heavy Bolters": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2 Lascannons": {
+                "order": 1,
+                "tracking": {
+                  "Points": 30
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Heavy Bolters",
+            "visibility": "normal"
+          },
+          "Turret Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Autocannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Auto Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Lascannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Autocannon",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Razorback IFV": {
         "assets": {
           "traits": [
@@ -20476,6 +20726,95 @@
             "statType": "numeric",
             "value": 11,
             "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Vindicator Siege Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Demolisher Cannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "Hunter-Killer Missile": {
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 105
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
           },
           "WS": {
             "value": 4
