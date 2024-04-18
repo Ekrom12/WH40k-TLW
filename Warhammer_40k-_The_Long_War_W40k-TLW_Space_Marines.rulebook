@@ -18387,6 +18387,51 @@
           }
         }
       },
+      "Unit§Hunter Artillery Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hunter Artillery Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hunter Artillery Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Hunter Tank",
+            "Imperium",
+            "M36",
+            "Tactical Terminator Squad",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Hunter Artillery Tank": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Impulsor": {
         "allowed": {
           "items": [
@@ -19247,6 +19292,43 @@
           }
         }
       },
+      "Unit§Stalker AA Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hunter Artillery Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hunter Artillery Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Faction": [
+            "Fire Support",
+            "M36",
+            "Space Marine",
+            "Stalker Tank",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Points": {}
+        }
+      },
       "Unit§Sternguard Veterans": {
         "allowed": {
           "items": [
@@ -19661,6 +19743,47 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Whirlwind Artillery Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Whirlwind Artillery Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Whirlwind Artillery Tank"
+          ],
+          "traits": [
+            "Special Rule§Hammer of Wrath (1)",
+            "Special Rule§Relentless"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M36",
+            "Tank",
+            "Whirlwind Tank"
+          ]
+        },
+        "stats": {
+          "Whirlwind Artillery Tank": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
@@ -20148,6 +20271,95 @@
           }
         }
       },
+      "Vehicle§Hunter Artillery Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Hunter Missile Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Hunter-Killer Missile": {
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 85
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Impulsor": {
         "assets": {
           "traits": [
@@ -20413,6 +20625,7 @@
             "value": 13
           },
           "Hunter-Killer Missile": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "-": {
@@ -20463,6 +20676,7 @@
             "value": 11
           },
           "Sponsons": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "2 Heavy Bolters": {
@@ -20507,6 +20721,7 @@
             "visibility": "normal"
           },
           "Turret Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Autocannon": {
@@ -20732,6 +20947,96 @@
           }
         }
       },
+      "Vehicle§Stalker AA Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Linked Icarus Storm Cannon",
+              "quantity": 2,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 90
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Vindicator Siege Tank": {
         "assets": {
           "traits": [
@@ -20767,6 +21072,7 @@
             "value": 13
           },
           "Hunter-Killer Missile": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "-": {
@@ -20792,7 +21098,7 @@
               }
             },
             "statType": "rank",
-            "value": null,
+            "value": "-",
             "visibility": "normal"
           },
           "I": {
@@ -20806,6 +21112,95 @@
           },
           "Points": {
             "value": 105
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Whirlwind Artillery Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Whirl-Wind Missile Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 80
           },
           "RA": {
             "value": 10
