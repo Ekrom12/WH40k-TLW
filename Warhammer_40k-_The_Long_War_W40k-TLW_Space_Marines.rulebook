@@ -677,12 +677,12 @@
       "Character§Damocles Command Rhino": {
         "allowed": {
           "items": [
-            "Model§Damocles Command Rhino"
+            "Vehicle§Damocles Command Rhino"
           ]
         },
         "assets": {
           "included": [
-            "Model§Damocles Command Rhino"
+            "Vehicle§Damocles Command Rhino"
           ],
           "traits": [
             "Special Rule§And They Shall Know no Fear",
@@ -698,7 +698,15 @@
             },
             "Special Rule§Command Uplink",
             "Special Rule§Tactical Interface",
-            "Special Rule§Transport (Rhino)"
+            {
+              "item": "Special Rule§Transport",
+              "text": " May not carry models with the Bulky Special rule. May transport 6 models",
+              "stats": {
+                "x": {
+                  "value": "Damocles Command Rhino"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -5027,89 +5035,6 @@
           }
         }
       },
-      "Model§Damocles Command Rhino": {
-        "allowed": {
-          "items": []
-        },
-        "assets": {
-          "included": [],
-          "traits": [
-            {
-              "item": "Ranged Weapon§Storm Bolter",
-              "stats": {
-                "Vehicle Type": {
-                  "value": "(S)"
-                }
-              }
-            },
-            "Melee Weapon§Marine Crew Weapons",
-            "Wargear§Smoke Launchers",
-            "Ranged Weapon§Orbital Bombardment"
-          ]
-        },
-        "removed": {
-          "stats": {
-            "T": {},
-            "W": {},
-            "Sv": {}
-          }
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "BS": {
-            "value": 4
-          },
-          "Front": {
-            "group": "Armor",
-            "groupOrder": 2,
-            "statType": "numeric",
-            "value": 11,
-            "visibility": "normal"
-          },
-          "I": {
-            "value": 4
-          },
-          "Ld": {
-            "value": 8
-          },
-          "M": {
-            "value": 12
-          },
-          "Points": {
-            "value": 100
-          },
-          "Rear": {
-            "group": "Armor",
-            "groupOrder": 2,
-            "statType": "numeric",
-            "value": 11,
-            "visibility": "normal"
-          },
-          "S": {
-            "value": 7
-          },
-          "Side": {
-            "group": "Armor",
-            "groupOrder": 2,
-            "statType": "numeric",
-            "value": 10,
-            "visibility": "normal"
-          },
-          "Transport Capacity": {
-            "group": "Transport",
-            "groupOrder": 3,
-            "statOrder": 1,
-            "statType": "numeric",
-            "value": 6,
-            "visibility": "normal"
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
       "Model§Eliminator Marine": {
         "assets": {
           "traits": [
@@ -6683,6 +6608,50 @@
           },
           "WS": {
             "value": 5
+          }
+        }
+      },
+      "Model§Land Speeder Storm": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Heavy Bolter",
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Assault Launchers"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 14
+          },
+          "Points": {
+            "value": 40
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -17853,6 +17822,14 @@
         },
         "text": "If the target of this weapon is not within half of the weapons range when making an attack, the\nweapon gains +2 to its Strength characteristic."
       },
+      "Special Rule§Death Storm": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "A Drop Pod upgraded to a Deathstorm Drop Pod inflicts D6 automatic Strength 6, AP3 hits on all units within 12” after it has resolved its Deep Strike and been placed on the field."
+      },
       "Special Rule§Defenders of Rynn's World": {
         "keywords": {
           "Keywords": [
@@ -17860,6 +17837,14 @@
           ]
         },
         "text": "This unit and any friendly unit in an army that includes it with the Crimson Fists Keyword gains the Hatred (Orks), Preferred Enemy (Orks) and the Sweeping (1) special rule on all Melee weapons they are equipped with."
+      },
+      "Special Rule§Drop Pod Assault": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "Up to half the number of Drop pods in your army can be deployed during the first turn. When arriving from Deep Strike, Drop Pods never scatter. A unit embarked on a Drop Pod must disembark the turn a Drop Pod arrives. A Drop Pod may not be garrisoned after it has arrived on the Battlefield"
       },
       "Special Rule§Fear (2)": {
         "keywords": {
@@ -17963,6 +17948,14 @@
         },
         "text": "A unit with the Psyker (x) special rule can cast a\nnumber of Psychic Powers each player turn equal to\nthe value of (x). All Psykers know the Smite Power\n(see 8.4). A Psyker knows spells from the relevant\ndiscipline indicated in their codex."
       },
+      "Special Rule§Reliable Machine Spirit": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "When a unit with this special rule would be destroyed. Embarked units are not required to roll for models inside being slain (see Rule 10.2 in the core rules). In addition, a unit with this special rule ignores all Crew Injury results on the Vehicle damage table"
+      },
       "Special Rule§Sprint (1)": {
         "keywords": {
           "Keywords": [
@@ -18001,13 +17994,20 @@
         },
         "text": "If your army\nincludes a model with this special rule is in your army, you may include 1 Reiver unit without taking up a force organization slot. In addition, the model with this special rule and any attached Reiver unit gains the Rending (6+) special rule on all melee weapons they are equipped with."
       },
-      "Special Rule§Transport (Rhino)": {
+      "Special Rule§Transport": {
+        "keywords": {
+          "Keywords": [
+            "Universal Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Transport (Dreadnought Drop Pod)": {
         "keywords": {
           "Keywords": [
             "Space Marine Special Rule"
           ]
         },
-        "text": "May not carry models with the Bulky Special rule. May transport 6 models."
+        "text": "A Dreadnought Drop Pod can transport 1 Walker type unit instead of any other models"
       },
       "Special Rule§Variable": {
         "keywords": {
@@ -18276,6 +18276,66 @@
           }
         }
       },
+      "Unit§Drop Pod": {
+        "allowed": {
+          "items": [
+            "Vehicle§Drop Pod"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Drop Pod"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            {
+              "item": "Special Rule§Transport",
+              "text": "This unit can transport 10 Infantry models. It cannot Transport models in Terminator Armour (any kind) or Gravis\nArmour",
+              "stats": {
+                "x": {
+                  "value": "Drop Pod"
+                }
+              }
+            },
+            "Special Rule§Drop Pod Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transports"
+          ],
+          "Role": [
+            "Dedicated Transport"
+          ],
+          "Unit Type": [
+            "Fortification"
+          ],
+          "Keywords": [
+            "Battle Line",
+            "Drop Pod",
+            "M31",
+            "Transport"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Special Rule§Angels of Death",
+              "Special Rule§And They Shall Know no Fear"
+            ]
+          }
+        },
+        "stats": {
+          "Drop Pod": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Eliminator Squad": {
         "allowed": {
           "items": [
@@ -18318,6 +18378,67 @@
             "visibility": "hidden"
           },
           "Eliminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Impulsor": {
+        "allowed": {
+          "items": [
+            "Vehicle§Impulsor"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Impulsor"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Assault Vehicle",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Transport",
+              "text": "Transport: This unit can transport 6 Space Marine Infantry models. It cannot Transport models with the Bulky (x) special rule.",
+              "stats": {
+                "x": {
+                  "value": "Impulsor"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transports"
+          ],
+          "Role": [
+            "Dedicated Transport"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Impulsor",
+            "M42",
+            "Transport",
+            "Vanguard"
+          ]
+        },
+        "stats": {
+          "Impulsor": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -18546,6 +18667,121 @@
           "Unit Type": [
             "Walker"
           ]
+        }
+      },
+      "Unit§Land Speeder Storm": {
+        "allowed": {
+          "items": [
+            "Model§Land Speeder Storm"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Land Speeder Storm"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Transport",
+              "text": "This unit can transport 6 Infantry models. It may only transport models in Scout Armour.",
+              "stats": {
+                "x": {
+                  "value": "Land Speeder Storm"
+                }
+              }
+            },
+            "Special Rule§Assault Vehicle"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transports"
+          ],
+          "Role": [
+            "Dedicated Transport"
+          ],
+          "Unit Type": [
+            "Jetbike"
+          ],
+          "Keywords": [
+            "Close Support",
+            "Fly",
+            "Land Speeder",
+            "Land Speeder Storm",
+            "M36",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Land Speeder Storm": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Razorback IFV": {
+        "allowed": {
+          "items": [
+            "Vehicle§Razorback IFV"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Razorback IFV"
+          ],
+          "traits": [
+            "Special Rule§Reliable Machine Spirit",
+            {
+              "item": "Special Rule§Transport",
+              "text": "This unit can transport 6 Infantry models. It may not transport models with the Bulky (x) special rule",
+              "stats": {
+                "x": {
+                  "value": "Razorback"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transports"
+          ],
+          "Keywords": [
+            "M36",
+            "Razorback",
+            "Tank",
+            "Transport"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Role": [
+            "Dedicated Transport"
+          ]
+        },
+        "stats": {
+          "Razorback IFV": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
         }
       },
       "Unit§Redemptor Dreadnought": {
@@ -18780,6 +19016,59 @@
             "visibility": "normal"
           },
           "Relic Terminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Rhino APC": {
+        "allowed": {
+          "items": [
+            "Vehicle§Rhino APC"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Rhino APC"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath",
+            {
+              "item": "Special Rule§Transport",
+              "text": " This unit can transport 11 Infantry models. It may not transport models with the Bulky (x) special rule.",
+              "stats": {
+                "x": {
+                  "value": "Rhino"
+                }
+              }
+            },
+            "Special Rule§Reliable Machine Spirit"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Dedicated Transport"
+          ],
+          "Tags": [
+            "4 - Dedicated Transports"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "M31",
+            "Rhino",
+            "Tank",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Rhino APC": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -19281,6 +19570,915 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          }
+        }
+      },
+      "Vehicle§Damocles Command Rhino": {
+        "allowed": {
+          "items": []
+        },
+        "assets": {
+          "included": [],
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "(S)"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Ranged Weapon§Orbital Bombardment"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "T": {},
+            "W": {},
+            "Sv": {}
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "Front": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statType": "numeric",
+            "value": 11,
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 100
+          },
+          "Rear": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statType": "numeric",
+            "value": 11,
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 7
+          },
+          "Side": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statType": "numeric",
+            "value": 10,
+            "visibility": "normal"
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 3,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 6,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Drop Pod": {
+        "rules": {
+          "DeathstormDropPodUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Drop Pod Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Death Storm Drop Pod Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Transport"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Transport Capacity",
+                    "value"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Drop Pod Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Death Storm Drop Pod"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "DreadnoughtDropPodUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Transport Capacity",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Transport"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Transport (Dreadnought Drop Pod)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Drop Pod Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Dreadnought Drop Pod"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "RemoveDeathstormWeapon": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Death Storm Drop Pod Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Linked Assault Cannon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Assault Cannon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Drop Pod Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Death Storm Drop Pod"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "removeStormBolter": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Drop Pod Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Storm Bolter (S)"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Storm Bolter"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Drop Pod Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Dreadnought Drop Pod"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "Death Storm Drop Pod Weapon": {
+            "ranks": {
+              "Linked Assault Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Assault Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Typhoon Missile Launcher": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Typhoon Missile Launcher (Frag)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Typhoon Missile Launcher (Krak)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "Linked Assault Cannon",
+            "visibility": "hidden"
+          },
+          "Drop Pod Configuration": {
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "Drop Pod": {
+                "order": 0
+              },
+              "Dreadnought Drop Pod": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Death Storm Drop Pod": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Drop Pod",
+            "visibility": "normal"
+          },
+          "Drop Pod Weapon": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "Storm Bolter (S)": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Missile Launcher (S)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Frag)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Krak)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Storm Bolter (S)",
+            "visibility": "normal"
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 0
+          },
+          "Ld": {
+            "value": 0
+          },
+          "M": {
+            "value": 0
+          },
+          "Points": {
+            "value": 35
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 0
+          },
+          "SA": {
+            "value": 12
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 11,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 0
+          }
+        }
+      },
+      "Vehicle§Impulsor": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Marine Crew Weapons"
+          ]
+        },
+        "rules": {
+          "ShieldDome": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Additional Wargear",
+                    "value"
+                  ]
+                ],
+                "value": "Shield Dome"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "Additional Wargear": {
+            "group": "Wargear",
+            "groupOrder": 5,
+            "ranks": {
+              "Shield Dome": {
+                "order": 0,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Linked Heavy Stubber (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Stubber",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Missile Launcher (P)": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Frag)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Missile Launcher (Krak)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Orbital Array": {
+                "order": 3,
+                "tracking": {
+                  "Points": 30
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Orbital Bombardment"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Shield Dome",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Heavy Stubber": {
+            "group": "Wargear",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Stubber",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 5,
+            "visibility": "hidden"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 75
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "Secondary Weapons": {
+            "group": "Wargear",
+            "groupOrder": 5,
+            "ranks": {
+              "Storm Bolter (S)": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Fragstorm Grenade Launchers": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Fragstorm Grenade Launcher",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Storm Bolter (S)",
+            "visibility": "normal"
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 3,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 6,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Razorback IFV": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 65
+          },
+          "Primary Weapon": {
+            "group": "Wargear",
+            "groupOrder": 5,
+            "ranks": {
+              "Linked Heavy Bolter (P)": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Assault Cannon": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Assault Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Linked Heavy Bolter (P)",
+            "visibility": "normal"
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 6,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Rhino APC": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 60
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 11,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
