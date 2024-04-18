@@ -565,28 +565,13 @@
       "Vehicle": {
         "removed": {
           "stats": {
-            "Toughness (T)": {},
-            "Wounds (W)": {}
+            "T": {},
+            "W": {},
+            "Sv": {}
           }
         },
         "stats": {
-          "Front Armor": {
-            "group": "Armor",
-            "groupOrder": 2,
-            "statOrder": 0,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "Rear Armor": {
-            "group": "Armor",
-            "groupOrder": 2,
-            "statOrder": 2,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "Side Armor": {
+          "FA": {
             "group": "Armor",
             "groupOrder": 2,
             "statOrder": 1,
@@ -594,16 +579,27 @@
             "value": null,
             "visibility": "normal"
           },
-          "Transport Capacity": {
-            "group": "Transport",
-            "groupOrder": 4,
+          "M": {
+            "groupOrder": 1
+          },
+          "RA": {
+            "group": "Armor",
+            "groupOrder": 2,
             "statOrder": 3,
+            "statType": "numeric",
+            "value": null,
+            "visibility": "normal"
+          },
+          "SA": {
+            "group": "Armor",
+            "groupOrder": 2,
+            "statOrder": 2,
             "statType": "numeric",
             "value": null,
             "visibility": "normal"
           }
         },
-        "templateClass": "Unit"
+        "templateClass": "Model"
       },
       "Wargear": {},
       "Warlord Trait": {},
