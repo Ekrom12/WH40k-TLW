@@ -9,7 +9,7 @@
   "wip": false,
   "dependencies": [
     {
-      "slug": "PUHATY",
+      "slug": "466U6M",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -2681,8 +2681,9 @@
         "assets": {
           "traits": [
             "Wargear§Bonded Exoskeleton",
-            "Ranged Weapon§Spore Mine Launcher",
-            "Melee Weapon§Close Combat Weapons"
+            "Ranged Weapon§Spore Mine Launcher (ground)",
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Spore Mine Launcher (air)"
           ]
         },
         "stats": {
@@ -5227,7 +5228,7 @@
       "Model§Sporocyst": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Spore Mine Launcher",
+            "Ranged Weapon§Spore Mine Launcher (ground)",
             "Wargear§Hardened Carapace",
             "Melee Weapon§Close Combat Weapons"
           ]
@@ -7710,12 +7711,36 @@
           }
         }
       },
-      "Ranged Weapon§Spore Mine Launcher": {
+      "Ranged Weapon§Spore Mine Launcher (air)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Ignores Cover",
+            "Special Rule§Variable",
+            "Special Rule§Skyfire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Spore Mine Launcher (ground)": {
         "assets": {
           "traits": [
             "Special Rule§Indirect Fire",
             "Special Rule§Blast",
-            "Special Rule§Ignores Cover"
+            "Special Rule§Ignores Cover",
+            "Special Rule§Variable"
           ]
         },
         "stats": {

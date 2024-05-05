@@ -1856,6 +1856,14 @@
         },
         "text": "A weapon with this special rule always strikes at\ninitiative step 1 in the Fight Sequence regardless of\nequipped model’s Initiative (I) characteristic (see\n13.1)."
       },
+      "Special Rule§Variable": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "When attacking with this weapon, before making any attacks, you must declare which mode you will fire\nthe weapons with. All attacks that phase must use the declared mode of fire."
+      },
       "Special Rule§Zealot": {
         "keywords": {
           "Keywords": [
