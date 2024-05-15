@@ -21043,6 +21043,54 @@
           ]
         }
       },
+      "Unit§Stormraven Gunship": {
+        "allowed": {
+          "items": [
+            "Vehicle§Stormraven Gunship"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Stormraven Gunship"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Hover",
+            "Special Rule§Machine Spirit",
+            {
+              "item": "Special Rule§Transport",
+              "text": " This model can transport 10 Infantry models. It may also Transport 1 Dreadnought model."
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Aircraft"
+          ],
+          "Keywords": [
+            "Fly",
+            "M36",
+            "Stormraven Gunship",
+            "Transport"
+          ]
+        }
+      },
       "Unit§Stormtalon Gunship": {
         "allowed": {
           "items": [
@@ -24744,6 +24792,166 @@
           },
           "SA": {
             "value": 11
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
+      "Vehicle§Stormraven Gunship": {
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "Additional Hurricane Bolters": {
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hurricane Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "20-30"
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Assault Cannon (P)": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Assault Cannon"
+                  }
+                ]
+              },
+              "Linked Lascannon (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Linked Plasma Cannon (P)": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Plasma Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Linked Assault Cannon (P)",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 145
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 12
+          },
+          "Side Sponsons": {
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Typhoon Missile Launcher (P)": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Typhoon Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Typhoon Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "2x Multi-Melta": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Multi-Melta",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2x Heavy Bolters": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Typhoon Missile Launcher (P)",
+            "visibility": "normal"
           },
           "WS": {
             "value": 1
