@@ -5035,6 +5035,615 @@
           }
         }
       },
+      "Model§Deredeo Dreadnought": {
+        "assets": {
+          "traits": [
+            "Special Rule§Atomantic Shielding",
+            "Wargear§Dreadnought Plate"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "Arm Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Anvilus Autocannon Battery": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Anvilus Autocannon Battery"
+                  }
+                ]
+              },
+              "Arachnus Heavy Lascannon Battery": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Arachnus Heavy Lascannon Battery"
+                  }
+                ]
+              },
+              "Hellfire Plasma Cannonade": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hellfire Plasma Cannonade"
+                  }
+                ]
+              },
+              "Volkite Falconet Battery": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Falconet Battery"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Anvilus Autocannon Battery",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 5
+          },
+          "Carapace Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Aiolos Missile Launcher": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Aiolos Missile Launcher"
+                  }
+                ]
+              },
+              "Boreas Missile Launcher": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boreas Missile Launcher"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 95
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "Torso Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2x Linked Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2x Linked Heavy Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Flamer",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2x Linked Heavy Bolter",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Devastator Marine": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "Heavy Weapon Selection": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "7": {
+                "order": 7
+              },
+              "Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 19
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Devastator Sergeant": {
+        "assets": {
+          "traits": [
+            "Wargear§Power Armour",
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "Auspex Scanner": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Auspex Scanner"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 5,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "normal"
+          },
+          "Meltabomb": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Melta Bomb"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Pistol": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 19
+          },
+          "Ranged Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Eliminator Marine": {
         "assets": {
           "traits": [
@@ -5256,6 +5865,63 @@
           },
           "WS": {
             "value": 6
+          }
+        }
+      },
+      "Model§Gravis Marine": {
+        "assets": {
+          "traits": [
+            "Wargear§Gravis Armour"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "Configuration": {
+            "dynamic": true,
+            "ranks": {
+              "Eradicator": {
+                "order": 0
+              },
+              "Aggressor": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "Eradicator",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 35
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -14596,6 +15262,11 @@
             "Wargear§Power Armour"
           ]
         },
+        "removed": {
+          "stats": {
+            "Devastator Marine": {}
+          }
+        },
         "stats": {
           "A": {
             "value": 1
@@ -15899,6 +16570,120 @@
           }
         }
       },
+      "Ranged Weapon§Aiolos Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Anvilus Autocannon Battery": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Pinning",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 6"
+          }
+        }
+      },
+      "Ranged Weapon§Arachnus Heavy Lascannon Battery": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
+      "Ranged Weapon§Arcus Launchers": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Skyfire",
+            "Special Rule§Indirect Fire",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          },
+          "Vehicle Type": {
+            "value": "p"
+          }
+        }
+      },
       "Ranged Weapon§Assault Bolters": {
         "assets": {
           "traits": [
@@ -16139,6 +16924,27 @@
           },
           "Type": {
             "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Boreas Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Skyfire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 1"
           }
         }
       },
@@ -16623,6 +17429,61 @@
           }
         }
       },
+      "Ranged Weapon§Hellfire Plasma Cannonade": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 6"
+          }
+        }
+      },
+      "Ranged Weapon§Herakles Pattern Autocannon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Skyfire",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 6"
+          },
+          "Vehicle Type": {
+            "value": "p"
+          }
+        }
+      },
       "Ranged Weapon§Hunter Missile Launcher": {
         "assets": {
           "traits": [
@@ -16728,6 +17589,31 @@
           }
         }
       },
+      "Ranged Weapon§Kratos Battle Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          },
+          "Vehicle Type": {
+            "value": "p"
+          }
+        }
+      },
       "Ranged Weapon§Las Cannon Array": {
         "assets": {
           "traits": [
@@ -16799,6 +17685,25 @@
           },
           "Type": {
             "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Laser Volley Cannon": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          },
+          "Vehicle Type": {
+            "value": "p"
           }
         }
       },
@@ -17071,6 +17976,31 @@
           }
         }
       },
+      "Ranged Weapon§Melta Blast-Gun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta",
+            "Special Rule§Large Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          },
+          "Vehicle Type": {
+            "value": "p"
+          }
+        }
+      },
       "Ranged Weapon§Melta Destroyer": {
         "assets": {
           "traits": [
@@ -17184,6 +18114,31 @@
           }
         }
       },
+      "Ranged Weapon§Omega Plasma Array": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          },
+          "Vehicle Type": {
+            "value": "p"
+          }
+        }
+      },
       "Ranged Weapon§Orbital Bombardment": {
         "assets": {
           "traits": [
@@ -17278,6 +18233,38 @@
           }
         }
       },
+      "Ranged Weapon§Punisher Rotary Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 10"
+          },
+          "Vehicle Type": {
+            "value": "p"
+          }
+        }
+      },
       "Ranged Weapon§Reaper Autocannon": {
         "assets": {
           "traits": [
@@ -17326,6 +18313,30 @@
           },
           "Type": {
             "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Sicaran Laser Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          },
+          "Vehicle Type": {
+            "value": "p"
           }
         }
       },
@@ -17562,6 +18573,34 @@
           }
         }
       },
+      "Ranged Weapon§Volkite Cardenelle": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 45
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 8"
+          }
+        }
+      },
       "Ranged Weapon§Volkite Charger": {
         "assets": {
           "traits": [
@@ -17615,6 +18654,35 @@
           },
           "Type": {
             "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Falconet Battery": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 6"
           }
         }
       },
@@ -17900,6 +18968,14 @@
           ]
         },
         "text": "A Champion model can issue a challenge to an engaged enemy model during the combat phase. Both\nmust be allocated wounds from the other first before other models in the Combat."
+      },
+      "Special Rule§Machine Spirit": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "This unit may always set to Overwatch, even if it made a shooting attack in the Shooting phase. However, it\nmay only perform the attack with one weapon it is equipped with if it did so."
       },
       "Special Rule§Master of Command": {
         "keywords": {
@@ -18276,6 +19352,106 @@
           }
         }
       },
+      "Unit§Deredeo Dreadnought": {
+        "allowed": {
+          "items": [
+            "Model§Deredeo Dreadnought"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Deredeo Dreadnought"
+          ],
+          "traits": [
+            "Special Rule§Feel No Pain (6+)",
+            "Special Rule§Hammer of Wrath (1)",
+            "Special Rule§Relentless"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Keywords": [
+            "Deredeo",
+            "Dreadnought",
+            "Imperium",
+            "M31",
+            "Veterans"
+          ],
+          "Unit Type": [
+            "Walker"
+          ]
+        },
+        "stats": {
+          "Deredeo Dreadnought": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Devastator Squad": {
+        "allowed": {
+          "items": [
+            "Model§Devastator Marine",
+            "Model§Devastator Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Devastator Marine",
+              "quantity": 4
+            },
+            "Model§Devastator Sergeant"
+          ],
+          "traits": [
+            "Special Rule§Combat Squads"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Devastator Squad",
+            "Fire Support",
+            "Imperium",
+            "M31"
+          ]
+        },
+        "stats": {
+          "Devastator Marine": {
+            "max": 4,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Devastator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Drop Pod": {
         "allowed": {
           "items": [
@@ -18378,6 +19554,96 @@
             "visibility": "hidden"
           },
           "Eliminator Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Gladiator Assault Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Gladiator Assault Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Gladiator Assault Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Gladiator Tank",
+            "Imperium",
+            "M42+",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Gladiator Assault Tank": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Hunter Artillery Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hunter Artillery Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hunter Artillery Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Hunter Tank",
+            "Imperium",
+            "M36",
+            "Tactical Terminator Squad",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Hunter Artillery Tank": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -18637,7 +19903,15 @@
         }
       },
       "Unit§Invictor Tactical Warsuit": {
+        "allowed": {
+          "items": [
+            "Model§Invictor Tactical Warsuit"
+          ]
+        },
         "assets": {
+          "included": [
+            "Model§Invictor Tactical Warsuit"
+          ],
           "traits": [
             "Special Rule§Relentless",
             "Special Rule§Scout",
@@ -18667,6 +19941,208 @@
           "Unit Type": [
             "Walker"
           ]
+        }
+      },
+      "Unit§Kratos Super Heavy Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Kratos Super Heavy Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Kratos Super Heavy Tank"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Super Heavy",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Outflank"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "Kratos Super Heavy Tank",
+            "M31"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 0
+          }
+        }
+      },
+      "Unit§Land Raider": {
+        "allowed": {
+          "items": [
+            "Vehicle§Land Raider"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Land Raider"
+          ],
+          "traits": [
+            "Special Rule§Transport",
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)",
+            "Special Rule§Machine Spirit"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "Land Raider",
+            "M31",
+            "Tank",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Land Raider": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Land Raider Crusader": {
+        "allowed": {
+          "items": [
+            "Vehicle§Land Raider Crusader"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Land Raider Crusader"
+          ],
+          "traits": [
+            "Special Rule§Transport",
+            "Special Rule§Relentless",
+            "Special Rule§Machine Spirit",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "Land Raider Crusader",
+            "M31",
+            "Tank",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Land Raider Crusader": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Land Raider Redeemer": {
+        "allowed": {
+          "items": [
+            "Vehicle§Land Raider Redeemer"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Land Raider Redeemer"
+          ],
+          "traits": [
+            "Special Rule§Transport",
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)",
+            "Special Rule§Machine Spirit"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "Land Raider Redeemer",
+            "M31",
+            "Tank",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Land Raider Redeemer": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
         }
       },
       "Unit§Land Speeder Storm": {
@@ -18724,6 +20200,50 @@
         },
         "stats": {
           "Land Speeder Storm": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Predator MBT": {
+        "allowed": {
+          "items": [
+            "Vehicle§Predator MBT"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Predator MBT"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M31",
+            "Predator Tank",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Predator MBT": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -19025,6 +20545,116 @@
           }
         }
       },
+      "Unit§Repulsor Executioner": {
+        "allowed": {
+          "items": [
+            "Vehicle§Repulsor Executioner"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Repulsor Executioner"
+          ],
+          "traits": [
+            "Special Rule§Transport",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Machine Spirit",
+            "Special Rule§Move Through Cover"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Close Support",
+            "Imperium",
+            "M42+",
+            "Repulsor Executioner",
+            "Tank",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Repulsor Executioner": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Repulsor HIFV": {
+        "allowed": {
+          "items": [
+            "Vehicle§Repulsor HIFV"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Repulsor HIFV"
+          ],
+          "traits": [
+            "Special Rule§Transport",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Machine Spirit",
+            "Special Rule§Move Through Cover"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Close Support",
+            "Imperium",
+            "M42+",
+            "Repulsor HIFV",
+            "Tank",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Repulsor HIFV": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Rhino APC": {
         "allowed": {
           "items": [
@@ -19200,6 +20830,89 @@
           }
         }
       },
+      "Unit§Sicaran Heavy Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Sicaran Heavy Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Sicaran Heavy Tank"
+          ],
+          "traits": [
+            "Special Rule§Outflank",
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Faction": [],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M31",
+            "Sicaran Heavy Tank"
+          ]
+        },
+        "stats": {
+          "Sicaran Heavy Tank": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Stalker AA Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hunter Artillery Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hunter Artillery Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Faction": [],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M36",
+            "Stalker Tank",
+            "Tank"
+          ]
+        },
+        "stats": {
+          "Points": {}
+        }
+      },
       "Unit§Sternguard Veterans": {
         "allowed": {
           "items": [
@@ -19331,9 +21044,41 @@
         }
       },
       "Unit§Stormtalon Gunship": {
+        "allowed": {
+          "items": [
+            "Vehicle§Stormtalon Gunship"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Stormtalon Gunship"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Hover"
+          ]
+        },
         "keywords": {
           "Tags": [
             "5 - Flyers"
+          ],
+          "Keywords": [
+            "Fly",
+            "M36",
+            "Stormtalon Gunship"
+          ],
+          "Role": [
+            "Flyer"
           ]
         }
       },
@@ -19612,6 +21357,139 @@
             "visibility": "hidden"
           },
           "Vanguard Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Vindicator Laser Destroyer": {
+        "allowed": {
+          "items": [
+            "Vehicle§Vindicator Laser Destroyer"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Vindicator Laser Destroyer"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)",
+            "Special Rule§Outflank"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M31",
+            "Tank",
+            "Vindicator Laser Destroyer"
+          ]
+        },
+        "stats": {
+          "Vindicator Laser Destroyer": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Vindicator Siege Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Vindicator Siege Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Vindicator Siege Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Hammer of Wrath (1)"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M31",
+            "Tank",
+            "Vindicator Tank"
+          ]
+        },
+        "stats": {
+          "Vindicator Siege Tank": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Whirlwind Artillery Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Whirlwind Artillery Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Whirlwind Artillery Tank"
+          ],
+          "traits": [
+            "Special Rule§Hammer of Wrath (1)",
+            "Special Rule§Relentless"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M36",
+            "Tank",
+            "Whirlwind Tank"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ]
+        },
+        "stats": {
+          "Whirlwind Artillery Tank": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -20105,6 +21983,284 @@
           }
         }
       },
+      "Vehicle§Gladiator Assault Tank": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Heavy Stubber",
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Assault Launchers",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "I": {
+            "value": 4
+          },
+          "Icarus Rocket Pod": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Icarus Rocket Pod": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Icarus Rocket Pod"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 110
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 12
+          },
+          "Sponsons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2x Tempest Bolters": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Tempest Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2x storm bolters and 2x Fragstorm Bolters": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Fragstorm Grenade Launcher",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2x Multi-Melta": {
+                "order": 2,
+                "tracking": {
+                  "Points": 50
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Multi-Melta",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2x Tempest Bolters",
+            "visibility": "normal"
+          },
+          "Turret Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Linked Las Talon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Las Talon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Assault Cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Assault Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Laser Destroyer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Laser Destroyer"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Linked Las Talon",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Hunter Artillery Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Hunter Missile Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Hunter-Killer Missile": {
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 85
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Impulsor": {
         "assets": {
           "traits": [
@@ -20350,6 +22506,1191 @@
           }
         }
       },
+      "Vehicle§Kratos Super Heavy Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Auto Cannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 5
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 14
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "Lower Sponson 1": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Flamer",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Volkite Culverin",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "Lower Sponson 2": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Flamer",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Volkite Culverin",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 180
+          },
+          "RA": {
+            "value": 11
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 13
+          },
+          "Turret Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Kratos Battle Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos Battle Cannon"
+                  }
+                ]
+              },
+              "Melta Blast-Gun": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Blast-Gun"
+                  }
+                ]
+              },
+              "Volkite Cardenelle": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Cardenelle"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Kratos Battle Cannon",
+            "visibility": "normal"
+          },
+          "Upper Sponson 1": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Autocannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Auto Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Volkite Culverin",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "Upper Sponson 2": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Autocannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Auto Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Volkite Culverin",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Land Raider": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Linked Lascannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              },
+              "quantity": 2
+            },
+            {
+              "item": "Ranged Weapon§Linked Heavy Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Wargear§Smoke Launchers",
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 14
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Pintle Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Storm Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Multi-Melta",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Flamer (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Flamer (Flamer)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Plasma (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Plasma (Plasma)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Melta (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Melta (Melta)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Grav (Grav)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Grav (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Storm Bolter",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 165
+          },
+          "RA": {
+            "value": 14
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 14
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "statType": "numeric",
+            "value": 10,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Land Raider Crusader": {
+        "assets": {
+          "traits": [
+            "Wargear§Smoke Launchers",
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Search Light",
+            {
+              "item": "Ranged Weapon§Linked Assault Cannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Hurricane Bolter",
+              "quantity": 2,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Wargear§Assault Launchers"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 14
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Pintle Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Storm Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Multi-Melta",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Flamer (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Flamer (Flamer)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Plasma (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Plasma (Plasma)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Melta (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Melta (Melta)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Grav (Grav)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Grav (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Storm Bolter",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 140
+          },
+          "RA": {
+            "value": 14
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 14
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "statType": "numeric",
+            "value": 16,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Land Raider Redeemer": {
+        "assets": {
+          "traits": [
+            "Wargear§Smoke Launchers",
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Search Light",
+            {
+              "item": "Ranged Weapon§Heavy Flamer",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              },
+              "quantity": 2
+            },
+            {
+              "item": "Ranged Weapon§Linked Assault Cannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 14
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Pintle Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Storm Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Multi-Melta",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Flamer (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Flamer (Flamer)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Plasma (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Plasma (Plasma)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Melta (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Melta (Melta)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Grav (Grav)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Grav (Boltgun)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Storm Bolter",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 145
+          },
+          "RA": {
+            "value": 14
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 14
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "statType": "numeric",
+            "value": 12,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Predator MBT": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Storm Bolter",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light",
+            "Melee Weapon§Marine Crew Weapons"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 100
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "Sponsons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Heavy Bolters": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2 Lascannons": {
+                "order": 1,
+                "tracking": {
+                  "Points": 30
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Heavy Bolters",
+            "visibility": "normal"
+          },
+          "Turret Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Autocannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Auto Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Lascannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Autocannon",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Razorback IFV": {
         "assets": {
           "traits": [
@@ -20470,6 +23811,490 @@
           }
         }
       },
+      "Vehicle§Repulsor Executioner": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Marine Crew Weapons",
+            {
+              "item": "Ranged Weapon§Assault Cannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Linked Heavy Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Heavy Stubber",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Linked Heavy Stubber",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "quantity": 2,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            "Wargear§Assault Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 5
+          },
+          "BS": {
+            "value": 4
+          },
+          "Extra Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heavy Stubber": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Stubber",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "FA": {
+            "value": 14
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 155
+          },
+          "RA": {
+            "value": 13
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 13
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "statType": "numeric",
+            "value": 6,
+            "visibility": "normal"
+          },
+          "Turret Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Macro Plasma Incinerator": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Macro Plasma Incinerator",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Laser Destroyer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Laser Destroyer",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Macro Plasma Incinerator",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Repulsor HIFV": {
+        "assets": {
+          "traits": [
+            "Wargear§Assault Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 5
+          },
+          "BS": {
+            "value": 4
+          },
+          "Coaxial Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Stubber": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Stubber",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Assault Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Stubber",
+            "visibility": "normal"
+          },
+          "Extra Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heavy Stubber": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Stubber",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "FA": {
+            "value": 14
+          },
+          "Hull Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Linked Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Lascannon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Linked Heavy Bolter",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 145
+          },
+          "RA": {
+            "value": 13
+          },
+          "Rear Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Linked Heavy Stubber": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Stubber",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Fragstorm Grenade Launchers": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Fragstorm Grenade Launcher",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Icarus Rocket Pod": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Icarus Rocket Pod",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Krakstorm Grenade Launcher": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Krak Storm Grenade Launcher",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Linked Heavy Stubber",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 13
+          },
+          "Support Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2x Storm Bolters": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Storm Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Fragstorm Grenade Launchers": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Fragstorm Grenade Launcher",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2x Storm Bolters",
+            "visibility": "normal"
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "statType": "numeric",
+            "value": 10,
+            "visibility": "normal"
+          },
+          "Turret Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "1": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Las Talon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Assault Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Assault Cannon",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Rhino APC": {
         "assets": {
           "traits": [
@@ -20524,6 +24349,264 @@
             "statType": "numeric",
             "value": 11,
             "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Sicaran Heavy Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Heavy Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Combi Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light",
+            "Melee Weapon§Marine Crew Weapons"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 105
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Herakles Pattern Autocannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Herakles Pattern Autocannon"
+                  }
+                ]
+              },
+              "Punisher Rotary Cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Punisher Rotary Cannon"
+                  }
+                ]
+              },
+              "Sicaran Laser Cannon": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sicaran Laser Cannon"
+                  }
+                ]
+              },
+              "Arcus Launcher": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Arcus Launchers"
+                  }
+                ]
+              },
+              "Omega Plasma Array": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Omega Plasma Array"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Herakles Pattern Autocannon",
+            "visibility": "normal"
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 12
+          },
+          "Sponsons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "2x Heavy Bolters": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2x Lascannons": {
+                "order": 2,
+                "tracking": {
+                  "Points": 40
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "p"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Stalker AA Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Linked Icarus Storm Cannon",
+              "quantity": 2,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 90
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
           },
           "WS": {
             "value": 4
@@ -20647,7 +24730,7 @@
             },
             "statOrder": 3,
             "statType": "rank",
-            "value": null,
+            "value": "Skyhammer Missile Launcher (P)",
             "visibility": "normal"
           },
           "Points": {
@@ -20664,6 +24747,352 @@
           },
           "WS": {
             "value": 1
+          }
+        }
+      },
+      "Vehicle§Stormtalon Gunship": {
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "20-30"
+          },
+          "Points": {
+            "value": 105
+          },
+          "RA": {
+            "value": 11
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 11
+          },
+          "Side Sponsons": {
+            "ranks": {
+              "Skyhammer Missile Launcher (P)": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Skyhammer Missile Launcher"
+                  }
+                ]
+              },
+              "Typhoon Missile Launcher (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Typhoon Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Typhoon Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Heavy Bolter (P)": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
+      "Vehicle§Vindicator Laser Destroyer": {
+        "allowed": {
+          "items": []
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light",
+            "Ranged Weapon§Laser Volley Cannon"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 120
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Vindicator Siege Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Demolisher Cannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 105
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Whirlwind Artillery Tank": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Storm Bolter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "s"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Whirl-Wind Missile Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "p"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            "Wargear§Search Light"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "Hunter-Killer Missile": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hunter Killer Missile": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "s"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 80
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
