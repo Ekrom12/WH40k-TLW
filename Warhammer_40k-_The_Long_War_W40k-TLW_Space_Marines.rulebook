@@ -379,6 +379,29 @@
             "failState": "pass",
             "order": 100
           },
+          "count1in3": {
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 3
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
           "count1in5": {
             "evals": [
               {
@@ -5874,26 +5897,227 @@
             "Wargear§Gravis Armour"
           ]
         },
+        "rules": {
+          "AggressorConfiguration": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Erradicator Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Melta Rifle"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Erradicator Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Aggressor Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Melta Rifle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Aggressor"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "EradicatorConfiguration": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Aggressor Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "2 Flamestorm Gauntlets"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Flame Storm Gauntlet (melee)"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Flame Storm Gauntlets (Shooting)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Eradicator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "A": {
             "value": 1
           },
+          "Aggressor Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Boltstorm Gauntlets & Fragstorm Grenade Launchers": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Bolt Storm Gauntlet (melee)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Bolt Storm Gauntlet (Shooting)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": "Ranged Weapon§Fragstorm Grenade Launcher"
+                  }
+                ]
+              },
+              "2 Flamestorm Gauntlets": {
+                "order": 1,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Flame Storm Gauntlet (melee)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Flame Storm Gauntlets (Shooting)",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Boltstorm Gauntlets & Fragstorm Grenade Launchers",
+            "visibility": "hidden"
+          },
           "BS": {
             "value": 4
           },
-          "Configuration": {
+          "Erradicator Weapon": {
             "dynamic": true,
+            "group": "Wargear",
             "ranks": {
-              "Eradicator": {
-                "order": 0
+              "Melta Rifle": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Rifle"
+                  }
+                ]
               },
-              "Aggressor": {
-                "order": 1
+              "Multi-Melta": {
+                "order": 1,
+                "tracking": {
+                  "Multi-Melta choice": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
               }
             },
+            "statOrder": 2,
             "statType": "rank",
             "tracked": true,
-            "value": "Eradicator",
+            "value": "Melta Rifle",
             "visibility": "normal"
           },
           "I": {
@@ -5901,6 +6125,264 @@
           },
           "Ld": {
             "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 35
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Gravis Sergeant": {
+        "assets": {
+          "traits": [
+            "Wargear§Gravis Armour"
+          ]
+        },
+        "rules": {
+          "AggressorConfiguration": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Erradicator Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Melta Rifle"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Erradicator Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Aggressor Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Melta Rifle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Aggressor"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "EradicatorConfiguration": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Aggressor Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "2 Flamestorm Gauntlets"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Flame Storm Gauntlet (melee)"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Flame Storm Gauntlets (Shooting)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Eradicator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "Aggressor Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Boltstorm Gauntlets & Fragstorm Grenade Launchers": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Bolt Storm Gauntlet (melee)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Bolt Storm Gauntlet (Shooting)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": "Ranged Weapon§Fragstorm Grenade Launcher"
+                  }
+                ]
+              },
+              "2 Flamestorm Gauntlets": {
+                "order": 1,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Flame Storm Gauntlet (melee)",
+                      "quantity": 2
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Flame Storm Gauntlets (Shooting)",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Boltstorm Gauntlets & Fragstorm Grenade Launchers",
+            "visibility": "hidden"
+          },
+          "BS": {
+            "value": 4
+          },
+          "Erradicator Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Melta Rifle": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Rifle"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 1,
+                "tracking": {
+                  "Multi-Melta choice": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Melta Rifle",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
           },
           "M": {
             "value": 6
@@ -19655,6 +20137,126 @@
             "tracked": true,
             "value": 0,
             "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Gravis Support Squad": {
+        "allowed": {
+          "items": [
+            "Model§Gravis Marine",
+            "Model§Gravis Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Gravis Marine",
+              "quantity": 2
+            },
+            "Model§Gravis Sergeant"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Relentless"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Gravis Squad",
+            "M42+"
+          ]
+        },
+        "rules": {
+          "1 in 3 can have a Multi-Melta": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in3",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Multi-Melta choice"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "All models in the unit must share the same configuration": {
+            "evals": []
+          }
+        },
+        "stats": {
+          "Configuration": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Eradicator": {
+                "order": 0
+              },
+              "Aggressor": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Eradicator",
+            "visibility": "normal"
+          },
+          "Gravis Marine": {
+            "max": 8,
+            "min": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Gravis Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Multi-Melta choice": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
