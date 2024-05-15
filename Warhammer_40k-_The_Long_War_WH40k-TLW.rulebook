@@ -780,6 +780,56 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "FlyerTotalUnitCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Flyer unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Flyer"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "FortificationTotalUnitCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Fortification unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Fortification"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "HeavySupportUnitTotalCount": {
             "actions": [
               {
@@ -823,6 +873,31 @@
                   "{self}",
                   "tally",
                   "HQ"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "LordOfWarTotalUnitCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lords of War unit count",
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Lord of War"
                 ]
               }
             ],
