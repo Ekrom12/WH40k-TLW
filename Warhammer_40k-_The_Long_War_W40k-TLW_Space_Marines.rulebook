@@ -2901,6 +2901,625 @@
           }
         }
       },
+      "Model§Bike Marine": {
+        "rules": {
+          "AddBikeWeapons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Boltgun"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Bike",
+                    "value"
+                  ]
+                ],
+                "value": "Space Marine Bike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddOutriderBikeWeapons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Bolt Rifle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Bike",
+                    "value"
+                  ]
+                ],
+                "value": "Space Marine Outrider Bike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 12
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Close Combat Weapon": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 18
+          },
+          "Ranged Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Astartes Shotgun": {
+                "order": 2,
+                "tracking": {
+                  "Points": 1,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Shotgun"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Bike Sergeant": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb"
+          ]
+        },
+        "rules": {
+          "AddBikeWeapons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Boltgun"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Bike",
+                    "value"
+                  ]
+                ],
+                "value": "Space Marine Bike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AddOutriderBikeWeapons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Bolt Rifle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Bike",
+                    "value"
+                  ]
+                ],
+                "value": "Space Marine Outrider Bike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 12
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Close Combat Weapon": {
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 6,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 8,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 10,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 19
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Astartes Shotgun": {
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Shotgun"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 8,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 9,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 10,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 11,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Bladeguard Marine": {
         "assets": {
           "traits": [
@@ -18189,6 +18808,36 @@
           }
         }
       },
+      "Ranged Weapon§Linked Anvilus Stub Autocannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Pinning",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
       "Ranged Weapon§Linked Assault Cannon": {
         "assets": {
           "traits": [
@@ -18617,6 +19266,28 @@
           }
         }
       },
+      "Ranged Weapon§Neutron Blaster": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder",
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
       "Ranged Weapon§Omega Plasma Array": {
         "assets": {
           "traits": [
@@ -18795,6 +19466,34 @@
           },
           "Type": {
             "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Sabre Missiles": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 1"
           }
         }
       },
@@ -19212,6 +19911,34 @@
           },
           "Strength": {
             "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 6"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Saker": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "6"
           },
           "Type": {
             "value": "Heavy 6"
@@ -19681,6 +20408,133 @@
           "Assault Terminator Sergeant": {
             "max": 1,
             "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Bike Squad": {
+        "allowed": {
+          "items": [
+            "Model§Bike Sergeant",
+            "Model§Bike Marine"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Bike Marine",
+              "quantity": 2
+            },
+            "Model§Bike Sergeant"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            "Special Rule§Fade & Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Keywords": [
+            "Bike Squad",
+            "Close Support",
+            "M31"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Bike"
+          ]
+        },
+        "rules": {
+          "I in 3 can have a Special Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in3",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Special Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Bike": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Space Marine Bike": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Bike"
+                  }
+                ]
+              },
+              "Space Marine Outrider Bike": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Space Marine Outrider Bike"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Space Marine Bike",
+            "visibility": "normal"
+          },
+          "Bike Marine": {
+            "max": 8,
+            "min": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Bike Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Special Weapon Selection": {
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -21351,6 +22205,56 @@
         },
         "stats": {
           "Rhino APC": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Sabre Strike Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Sabre Strike Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Sabre Strike Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "M31",
+            "Sabre Strike Tank"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ]
+        },
+        "stats": {
+          "Sabre Strike Tank": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -25135,6 +26039,154 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": 11,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Sabre Strike Tank": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            {
+              "item": "Ranged Weapon§Sabre Missiles",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 14
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Anvilus Stub Autocannon (P)": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Anvilus Stub Autocannon"
+                  }
+                ]
+              },
+              "Volkite Saker (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Saker"
+                  }
+                ]
+              },
+              "Neutron Blaster (P)": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Neutron Blaster"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Linked Anvilus Stub Autocannon (P)",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 95
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 12
+          },
+          "Turret Weapon": {
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Heavy Bolter (P)": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Volkite Culverin (P)": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Culverin"
+                  }
+                ]
+              },
+              "Multi-Melta (P)": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Heavy Bolter (P)",
             "visibility": "normal"
           },
           "WS": {
