@@ -2670,6 +2670,232 @@
           }
         }
       },
+      "Model§Assault Marine": {
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Loadout": {
+            "group": "Wargear",
+            "ranks": {
+              "Chansword & Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Chainsword & Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "2 Bolt Pistols": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Bolt Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Plasma Pistols": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plasma Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Chansword & Bolt Pistol",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 18
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Assault Marine Sergeant": {
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "Loadout": {
+            "group": "Wargear",
+            "ranks": {
+              "Chansword & Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Chainsword & Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "2 Bolt Pistols": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Bolt Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Plasma Pistols": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plasma Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Chansword & Bolt Pistol",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 18
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Assault Terminator": {
         "assets": {
           "traits": [
