@@ -29251,6 +29251,7 @@
             "value": 12
           },
           "Frontal Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29335,6 +29336,7 @@
             "visibility": "normal"
           },
           "Wing Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29377,6 +29379,7 @@
             "value": 0
           },
           "Additional Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29425,6 +29428,7 @@
             "value": "20-30"
           },
           "Main Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29457,6 +29461,7 @@
             "visibility": "normal"
           },
           "Missile Launcher": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29514,6 +29519,7 @@
             "value": 0
           },
           "Additional Hurricane Bolters": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29557,6 +29563,7 @@
             "value": "20-30"
           },
           "Main Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29612,6 +29619,7 @@
             "value": 12
           },
           "Side Sponsons": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -29714,6 +29722,7 @@
             "value": 11
           },
           "Side Sponsons": {
+            "dynamic": true,
             "ranks": {
               "Skyhammer Missile Launcher (P)": {
                 "order": 0,
