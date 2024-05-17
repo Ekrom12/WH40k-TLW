@@ -28011,6 +28011,7 @@
             "value": 65
           },
           "Primary Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 5,
             "ranks": {
