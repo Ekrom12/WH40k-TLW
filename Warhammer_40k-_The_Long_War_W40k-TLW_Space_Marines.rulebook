@@ -28671,6 +28671,7 @@
             "value": 14
           },
           "Main Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
@@ -28726,6 +28727,7 @@
             "value": 12
           },
           "Turret Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 4,
             "ranks": {
