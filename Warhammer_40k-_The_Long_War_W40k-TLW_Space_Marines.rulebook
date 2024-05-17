@@ -23145,6 +23145,36 @@
           }
         }
       },
+      "Unit§Hammerfall Bunker": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hammerfall Bunker"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hammerfall Bunker"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "9 - Fortifications"
+          ],
+          "Role": [
+            "Fortification"
+          ],
+          "Unit Type": [
+            "Fortification"
+          ],
+          "Keywords": [
+            "Hammerfall Bunker",
+            "M31"
+          ]
+        }
+      },
       "Unit§Hunter Artillery Tank": {
         "allowed": {
           "items": [
@@ -26446,6 +26476,106 @@
             },
             "statType": "rank",
             "value": "Linked Las Talon",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Hammerfall Bunker": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Typhoon Missile Launcher (Frag)",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Typhoon Missile Launcher (Krak)",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "I": {
+            "value": 0
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 0
+          },
+          "Points": {
+            "value": 120
+          },
+          "RA": {
+            "value": 13
+          },
+          "S": {
+            "value": 0
+          },
+          "SA": {
+            "value": 13
+          },
+          "Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "4 Heavy Bolters (P)": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 4,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "4 Heavy Flamers (P)": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Flamer",
+                      "quantity": 4,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "4 Heavy Bolters (P)",
             "visibility": "normal"
           },
           "WS": {
