@@ -11355,7 +11355,7 @@
             "statOrder": 10,
             "statType": "numeric",
             "tracked": true,
-            "value": 4,
+            "value": 5,
             "visibility": "hidden"
           },
           "Ld": {
@@ -12006,6 +12006,9 @@
               },
               "Cataphractii Terminator Armour": {
                 "order": 2,
+                "tracking": {
+                  "Inv": -1
+                },
                 "traits": [
                   {
                     "trait": "Wargear§Cataphractii Terminator Armour"
