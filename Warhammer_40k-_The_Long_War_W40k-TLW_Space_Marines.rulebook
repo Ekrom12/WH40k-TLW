@@ -18363,6 +18363,122 @@
           ]
         },
         "rules": {
+          "DesolationFragLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Frag Launcher (Castellan Missiles)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Frag Launcher (Frag)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Desolation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Desolator Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Castellan Frag Launcher"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "DesolationKrakLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Krak Launcher (Castellan Missiles)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Krak Launcher (Krak)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Desolation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Desolator Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Castellan Krak Launcher"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "HellblasterAutoIncineratorLoadout": {
             "actions": [
               {
@@ -18553,6 +18669,417 @@
           },
           "M": {
             "value": 6
+          },
+          "Points": {
+            "value": 20
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Support Marine Sergeant": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "DesolationFragLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Frag Launcher (Castellan Missiles)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Frag Launcher (Frag)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Desolation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Desolator Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Castellan Frag Launcher"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "DesolationKrakLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Krak Launcher (Castellan Missiles)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Castellan Krak Launcher (Krak)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Desolation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Desolator Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Castellan Krak Launcher"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "HellblasterAutoIncineratorLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Auto Plasma Incinerator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Auto Plasma Incinerator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "HellblasterHeavyIncineratorLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Heavy Plasma Incinerator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Heavy Plasma Incinerator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "HellblasterIncineratorLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plasma Incinerator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Plasma Incinerator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "InfernusLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Flamer"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Infernus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "Auspex Scanner": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Auspex Scanner"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Meltabomb": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Melta Bomb"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Pistol": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "normal"
           },
           "Points": {
             "value": 20
@@ -20384,6 +20911,116 @@
           },
           "Strength": {
             "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Castellan Frag Launcher (Castellan Missiles)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Indirect Fire",
+            "Special Rule§Combi"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Castellan Frag Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Castellan Krak Launcher (Castellan Missiles)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Indirect Fire",
+            "Special Rule§Combi"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Castellan Krak Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder",
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
           },
           "Type": {
             "value": "Heavy 1"
@@ -27146,15 +27783,72 @@
       "Unit§Weapon Support Squad": {
         "allowed": {
           "items": [
-            "Model§Support Marine"
+            "Model§Support Marine",
+            "Model§Support Marine Sergeant"
           ]
         },
         "assets": {
           "included": [
-            "Model§Support Marine"
+            {
+              "item": "Model§Support Marine",
+              "quantity": 4
+            },
+            "Model§Support Marine Sergeant"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "Heavy Support"
+          ],
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "Imperium",
+            "M42+",
+            "Support Weapon Squad"
           ]
         },
         "rules": {
+          "DesolatorWeaponOption": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Desolator Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Desolation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "HellblasterWeaponOption": {
             "actions": [
               {
@@ -27192,6 +27886,23 @@
           }
         },
         "stats": {
+          "Desolator Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Castellan Frag Launcher": {
+                "order": 0
+              },
+              "Castellan Krak Launcher": {
+                "order": 1
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Castellan Frag Launcher",
+            "visibility": "hidden"
+          },
           "Hellblaster Weapon": {
             "dynamic": true,
             "group": "Wargear",
@@ -27229,6 +27940,22 @@
             "statType": "rank",
             "tracked": true,
             "value": "Infernus",
+            "visibility": "normal"
+          },
+          "Support Marine": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Support Marine Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
             "visibility": "normal"
           }
         }
