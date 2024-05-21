@@ -9,13 +9,13 @@
   "wip": true,
   "dependencies": [
     {
-      "slug": "PUHATY",
+      "slug": "466U6M",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
     },
     {
-      "slug": "9GZ8W2",
+      "slug": "F2PJWD",
       "name": "W40k:TLW Imperium",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
@@ -11355,7 +11355,7 @@
             "statOrder": 10,
             "statType": "numeric",
             "tracked": true,
-            "value": 4,
+            "value": 5,
             "visibility": "hidden"
           },
           "Ld": {
@@ -12006,6 +12006,9 @@
               },
               "Cataphractii Terminator Armour": {
                 "order": 2,
+                "tracking": {
+                  "Inv": -1
+                },
                 "traits": [
                   {
                     "trait": "Wargear§Cataphractii Terminator Armour"
@@ -18349,6 +18352,228 @@
           }
         }
       },
+      "Model§Support Marine": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "HellblasterAutoIncineratorLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Auto Plasma Incinerator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Auto Plasma Incinerator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "HellblasterHeavyIncineratorLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Heavy Plasma Incinerator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Heavy Plasma Incinerator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "HellblasterIncineratorLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plasma Incinerator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Plasma Incinerator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "InfernusLoadout": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Flamer"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Infernus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 20
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Supressor Marine": {
         "assets": {
           "traits": [
@@ -19951,27 +20176,6 @@
           }
         }
       },
-      "Ranged Weapon§Assault Plasma Incinerator": {
-        "assets": {
-          "traits": [
-            "Special Rule§Gets Hot!"
-          ]
-        },
-        "stats": {
-          "Armor Penetration (AP)": {
-            "value": "2"
-          },
-          "Range": {
-            "value": 24
-          },
-          "Strength": {
-            "value": "6"
-          },
-          "Type": {
-            "value": "Assault 2"
-          }
-        }
-      },
       "Ranged Weapon§Astartes Grenade Launcher": {
         "assets": {
           "traits": [
@@ -20056,6 +20260,27 @@
           },
           "Type": {
             "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Auto Plasma Incinerator": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 2"
           }
         }
       },
@@ -20934,27 +21159,6 @@
           }
         }
       },
-      "Ranged Weapon§Las Cannon Array": {
-        "assets": {
-          "traits": [
-            "Special Rule§Linked"
-          ]
-        },
-        "stats": {
-          "Armor Penetration (AP)": {
-            "value": "2"
-          },
-          "Range": {
-            "value": 48
-          },
-          "Strength": {
-            "value": "9"
-          },
-          "Type": {
-            "value": "Heavy 2"
-          }
-        }
-      },
       "Ranged Weapon§Las Fusil": {
         "stats": {
           "Armor Penetration (AP)": {
@@ -20987,13 +21191,34 @@
           }
         }
       },
-      "Ranged Weapon§Las-ripper": {
+      "Ranged Weapon§Las-Ripper": {
         "stats": {
           "Armor Penetration (AP)": {
             "value": "2"
           },
           "Range": {
             "value": 12
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Lascannon Array": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
           },
           "Strength": {
             "value": "9"
@@ -26914,6 +27139,96 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Weapon Support Squad": {
+        "allowed": {
+          "items": [
+            "Model§Support Marine"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Support Marine"
+          ]
+        },
+        "rules": {
+          "HellblasterWeaponOption": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hellblaster Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Loadout",
+                    "value"
+                  ]
+                ],
+                "value": "Hellblaster"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Hellblaster Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Plasma Incinerator": {
+                "order": 0
+              },
+              "Auto Plasma Incinerator": {
+                "order": 1
+              },
+              "Heavy Plasma Incinerator": {
+                "order": 2
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Plasma Incinerator",
+            "visibility": "hidden"
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Infernus": {
+                "order": 0
+              },
+              "Hellblaster": {
+                "order": 1
+              },
+              "Desolation": {
+                "order": 2
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "Infernus",
             "visibility": "normal"
           }
         }
