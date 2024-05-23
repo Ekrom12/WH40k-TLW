@@ -32191,7 +32191,12 @@
                   {
                     "trait": {
                       "item": "Ranged Weapon§Linked Lascannon",
-                      "quantity": 2
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
                     }
                   }
                 ]
@@ -32208,7 +32213,7 @@
                       "quantity": 2,
                       "stats": {
                         "Vehicle Type": {
-                          "value": "p"
+                          "value": "P"
                         }
                       }
                     }
