@@ -10858,6 +10858,53 @@
             "failState": "pass",
             "order": 9
           },
+          "RedScorpionAddNarthecium": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Narthecium"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "refractorFieldInv": {
             "actions": [
               {
@@ -23460,11 +23507,113 @@
             "evaluate": "AND",
             "failState": "pass"
           },
-          "Blood Ravens: Need to have at least 1 Lieutenant upgraded to a Librarian": {
+          "AllowCrimsonFistsUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Crimson Fists"
+              }
+            ],
             "evals": [
               {
                 "actionable": true,
                 "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Crimson Fists"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowMinotaursUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Minotaurs"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Minotaurs"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowRedScorpionsUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blood Ravens: Need to have at least 1 Lieutenant upgraded to a Librarian": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
                 "operator": "AND",
                 "paths": [
                   [
@@ -23490,7 +23639,7 @@
                 ]
               }
             ],
-            "evaluate": "AND",
+            "evaluate": "OR",
             "failState": "error"
           },
           "countSubCommanderUnits": {
@@ -23540,6 +23689,148 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 1 Assault Marine unit)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Assault Marine Squad"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 1 Captain)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Captain"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 1 Devastator/Support Weapon unit)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Devastator Squad"
+                  ],
+                  [
+                    "{self}",
+                    "tally",
+                    "Support Weapon Squad"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 3 Tactical/Intercessor units)": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Red Scorpions"
+              },
+              {
+                "actionable": true,
+                "min": 3,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Tactical Squad"
+                  ],
+                  [
+                    "{self}",
+                    "tally",
+                    "Intercessor Squad"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
@@ -31406,7 +31697,7 @@
                   }
                 ]
               },
-              "Linked Lascannons": {
+              "Linked Lascannons (P)": {
                 "order": 1,
                 "tracking": {
                   "Points": 15
@@ -31424,7 +31715,7 @@
                   }
                 ]
               },
-              "Linked Assault Cannon": {
+              "Linked Assault Cannon (P)": {
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -31433,6 +31724,34 @@
                   {
                     "trait": {
                       "item": "Ranged Weapon§Linked Assault Cannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Plasma Gun & Lascannon (P)": {
+                "order": 3,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plasma Gun",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
                       "stats": {
                         "Vehicle Type": {
                           "value": "P"
