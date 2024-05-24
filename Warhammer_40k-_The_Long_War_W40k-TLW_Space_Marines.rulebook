@@ -509,6 +509,9 @@
             "M41",
             "Minotaurs",
             "Terminator"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -563,6 +566,9 @@
             "Casan Sabius & Sirae Karagon",
             "M42+",
             "Red Scorpions"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "rules": {
@@ -723,6 +729,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -786,6 +795,9 @@
           ],
           "Unit Type": [
             "Vehicle"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         }
       },
@@ -814,6 +826,15 @@
             "Captain",
             "Gabriel Angelos",
             "Terminator"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -855,6 +876,9 @@
             "Captain",
             "Lias Issodon",
             "Raptors"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -896,6 +920,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         }
       },
@@ -931,6 +958,9 @@
           "Keywords": [
             "Captain",
             "Crimson Fists"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -980,6 +1010,9 @@
           ],
           "Role": [
             "HQ"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -1027,6 +1060,9 @@
           ],
           "Faction": [
             "Imperium"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -1073,6 +1109,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         }
       },
@@ -1108,6 +1147,9 @@
           ],
           "Faction": [
             "Imperium"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         }
       },
@@ -1164,6 +1206,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         }
       },
@@ -1197,6 +1242,9 @@
           ],
           "Unit Type": [
             "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "rules": {
@@ -1268,6 +1316,9 @@
           ],
           "Role": [
             "HQ"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "stats": {
@@ -10554,6 +10605,18 @@
                 "paths": [
                   [
                     "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Librarian"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
                     "aspects",
                     "Label"
                   ]
@@ -23327,7 +23390,133 @@
         }
       },
       "Roster§Roster": {
+        "constraints": {
+          "none": [
+            "Blood Ravens",
+            "Red Scorpions",
+            "Crimson Fists",
+            "Minotaurs",
+            "Carcharodons",
+            "Raptors"
+          ]
+        },
         "rules": {
+          "allow2SubCommanderUnitsPerHQSlot": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": [
+                  "{self}",
+                  "stats",
+                  "sub commander count",
+                  "value"
+                ],
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "HQ unit count",
+                    "value"
+                  ]
+                ],
+                "value": -0.5
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "AllowBloodRavensUnits": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "Blood Ravens"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Blood Ravens"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blood Ravens: Need to have at least 1 Lieutenant upgraded to a Librarian": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Blood Ravens"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Librarian"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "countSubCommanderUnits": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "sub commander count",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{roster}",
+                  "tally",
+                  "Sub Commander"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "countVenerableDreadnoughts": {
             "actions": [
               {
@@ -23354,12 +23543,54 @@
           }
         },
         "stats": {
+          "Chapter Allegiance": {
+            "dynamic": true,
+            "group": "Rooster",
+            "ranks": {
+              "Custom": {
+                "order": 0
+              },
+              "Blood Ravens": {
+                "order": 1
+              },
+              "Red Scorpions": {
+                "order": 2
+              },
+              "Crimson Fists": {
+                "order": 3
+              },
+              "Minotaurs": {
+                "order": 4
+              },
+              "Carcharodons": {
+                "order": 5
+              },
+              "Raptors": {
+                "order": 6
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Custom",
+            "visibility": "always"
+          },
           "Faction": {
+            "dynamic": false,
             "ranks": {
               "Space Marines": {
                 "order": 1
               }
-            }
+            },
+            "statOrder": 2,
+            "value": "Space Marines"
+          },
+          "HQ unit count": {},
+          "sub commander count": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           },
           "Venerable Dreadnought count": {
             "max": 1,
@@ -23718,9 +23949,6 @@
           ]
         },
         "text": "When firing this weapon, you must select which mode you will use for that attack."
-      },
-      "Special Rule§Void Shields": {
-        "text": "A unit with this wargear gains a number of Void Shield Tokens equal to the value of (x). Each time this unit takes a Penetrating Hit, if it has a Void Shield Token, you spend a token to ignore that Penetrating Hit. At the start of each\nBattle Round, you regain 1 spent Void Shield Token. Instead of setting to Overwatch, you can set to Recharge Voids. A unit that Recharges Voids, regains all of its Void Shield Tokens."
       },
       "Special Rule§Zealot (1)": {
         "keywords": {
@@ -34349,6 +34577,9 @@
       },
       "Wargear§Vexilla Imperialis Standard": {
         "text": "Vexilla Imperialis Standard: Friendly Space Marines units within 12” of the Banner can re-roll Pinning and Panic tests. In addition, when calculating the number of wounds caused in a combat for the purpose of determining if a unit within 12” of a model with this wargear has won or lost a combat, add 2 to the number of wounds caused by friendly Space Marine units within 12” of a model with this wargear"
+      },
+      "Wargear§Void Shields": {
+        "text": "A unit with this wargear gains a number of Void Shield Tokens equal to the value of (x). Each time this unit takes a Penetrating Hit, if it has a Void Shield Token, you spend a token to ignore that Penetrating Hit. At the start of each\nBattle Round, you regain 1 spent Void Shield Token. Instead of setting to Overwatch, you can set to Recharge Voids. A unit that Recharges Voids, regains all of its Void Shield Tokens."
       },
       "Warlord Trait§Rites of Battle": {
         "text": "If your Warlord has this trait, you can increase the number of Elite Slots, Fast Attack Slots or Heavy Support slots in your army by 1."
