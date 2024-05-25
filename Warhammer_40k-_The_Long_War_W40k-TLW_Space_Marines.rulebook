@@ -4229,7 +4229,7 @@
             "value": 45
           },
           "S": {
-            "value": 44
+            "value": 4
           },
           "Sv": {
             "value": 3
@@ -4273,7 +4273,7 @@
             "value": 45
           },
           "S": {
-            "value": 44
+            "value": 4
           },
           "Secondary Weapon": {
             "dynamic": true,
@@ -23723,7 +23723,7 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 1 Captain)": {
+          "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 1 Captain keyword unit)": {
             "evals": [
               {
                 "actionable": true,
@@ -28596,7 +28596,7 @@
             "value": 12
           },
           "Points": {
-            "value": 250
+            "value": 265
           },
           "RA": {
             "value": 12
