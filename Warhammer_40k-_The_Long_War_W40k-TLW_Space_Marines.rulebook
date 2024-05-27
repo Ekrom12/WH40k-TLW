@@ -257,6 +257,39 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "addCrimsonFistsRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred (Orks)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "Crimson Fists"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "addMinotaursAllegiance": {
             "actions": [
               {
@@ -282,6 +315,50 @@
                     "{self}",
                     "keywords",
                     "Keywords"
+                  ]
+                ],
+                "value": "Minotaurs"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addMinotaursRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Space Marines)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Preferred Enemy (Chaos Space Marines)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Chapter Allegiance",
+                    "value"
                   ]
                 ],
                 "value": "Minotaurs"
@@ -24132,6 +24209,14 @@
         },
         "text": "A model from a unit with this special rule can re-roll hit\nrolls of 1 against enemy units. Where the (x) following\nthe special rule has a unit type (see 18.0) or Keyword,\nthe unit can only re-roll hit of 1 against units with that\nspecific type or Keyword. If no type or keyword is\nindicated by an (x), the unit re-rolls all hit rolls of 1\nregardless of type or keyword of the target enemy unit."
       },
+      "Special Rule§Hatred (Orks)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        },
+        "text": "A model from a unit with this special rule can re-roll hit\nrolls of 1 against enemy units with the Orks keyword."
+      },
       "Special Rule§Honor Duel": {
         "keywords": {
           "Keywords": [
@@ -24173,6 +24258,13 @@
         },
         "text": "A model with this upgrade gains the Master Crafted special rule\non all weapons it is equipped with."
       },
+      "Special Rule§Preferred Enemy (Chaos Space Marines)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
+      },
       "Special Rule§Preferred Enemy (Characters)": {
         "keywords": {
           "Keywords": [
@@ -24180,6 +24272,13 @@
           ]
         },
         "text": "A model from a unit with this special rule can re-roll\nwound rolls of 1 against enemy units. Where the (x)\nfollowing the special rule has a unit type (see 18.0) or\nKeyword, the unit can only re-roll hit of 1 against units\nwith that specific type or Keyword. If no type or keyword\nis indicated by an (x), the unit re-rolls all wound rolls of\n1 regardless of type or keyword of the target enemy\nunit."
+      },
+      "Special Rule§Preferred Enemy (Space Marines)": {
+        "keywords": {
+          "Keywords": [
+            "Space Marine Special Rule"
+          ]
+        }
       },
       "Special Rule§Priest (1)": {
         "keywords": {
