@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Tyranids",
-  "revision": "1.1.2",
+  "revision": "1.1.3",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -9,7 +9,7 @@
   "wip": false,
   "dependencies": [
     {
-      "slug": "466U6M",
+      "slug": "PUHATY",
       "name": "WH40k:TLW",
       "game": "Warhammer 40k: The Long War",
       "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
@@ -6802,6 +6802,9 @@
               },
               "Rupture Cannon": {
                 "order": 2,
+                "tracking": {
+                  "Points": 20
+                },
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Rupture Cannon"
