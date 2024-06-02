@@ -19639,7 +19639,8 @@
             "Wargear§Jump Pack",
             "Wargear§Power Armour",
             "Melee Weapon§Close Combat Weapons",
-            "Ranged Weapon§Auto Cannon"
+            "Ranged Weapon§Auto Cannon",
+            "Wargear§Smoke Launchers"
           ]
         },
         "stats": {
