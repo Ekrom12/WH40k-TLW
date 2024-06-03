@@ -121,7 +121,59 @@
           }
         }
       },
-      "Model": {},
+      "Model": {
+        "rules": {
+          "RoWMechanizedAssaultTransportsIncreaseBS": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Mechanized Assault"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Transport"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
       "Ranged Weapon": {},
       "Unit": {
         "allowed": {
@@ -836,6 +888,153 @@
                   ]
                 ],
                 "value": "Infantry"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "RoWMechanizedAssaultOutflank": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Outflank"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Mechanized Assault"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Transport"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWMechanizedAssaultSelfReportTransport&Battleline": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Battleline or Close Support Transport Count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Transport"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battle Line"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "RoWMechanizedAssaultSelfReportTransport&CloseSupport": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Battleline or Close Support Transport Count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Transport"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Close Support"
               }
             ],
             "evaluate": "AND",
@@ -24144,6 +24343,39 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Mechanized Assault: Need to include at least 1 Damocles Command Rhino in your army": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Mechanized Assault"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Damocles Command Rhino"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "Red Scorpions: Need to meet \"Codex Dogma\" requirements (At least 1 Assault Marine unit)": {
             "evals": [
               {
@@ -24764,6 +24996,46 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "RoWMechanizedAssaultSetTransportMinimum": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battleline or Close Support Transport Count",
+                    "min"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Battle Line Infantry count",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Mechanized Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
@@ -24771,7 +25043,13 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "hidden"
+            "visibility": "normal"
+          },
+          "Battleline or Close Support Transport Count": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           },
           "Chapter Allegiance": {
             "dynamic": true,
