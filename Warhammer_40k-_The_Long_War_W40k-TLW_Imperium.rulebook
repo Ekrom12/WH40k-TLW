@@ -6,7 +6,7 @@
   "publisher": "",
   "url": "",
   "notes": "",
-  "wip": true,
+  "wip": false,
   "dependencies": [
     {
       "slug": "PUHATY",
