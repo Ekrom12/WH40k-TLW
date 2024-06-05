@@ -1,12 +1,12 @@
 {
   "name": "W40k:TLW Space Marines",
-  "revision": "0.3.5",
+  "revision": "1.0.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
   "url": "",
   "notes": "",
-  "wip": true,
+  "wip": false,
   "dependencies": [
     {
       "slug": "PUHATY",
@@ -594,6 +594,54 @@
               }
             ]
           },
+          "Pride of the Chapter: All troop units must have the Veteran or Terminator keywords": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Veterans"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "RoWArmouredSupportSelfReportCloseSupportVehicle": {
             "actions": [
               {
@@ -1040,6 +1088,163 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 2
+          },
+          "RoWPrideAddVeteranKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Veterans"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWPrideRemoveVeteranKeyword": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "RoWPrideShowVeteranOptionIfInfantry": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Infantry"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Veterans"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          }
+        },
+        "stats": {
+          "Veteran": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 6,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Veteran Upgrade": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
           }
         }
       },
@@ -1090,11 +1295,17 @@
             "1 - HQ"
           ]
         },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
+        },
         "stats": {
           "Additional Warlord Trait": {
             "value": "Rites of Battle"
           },
           "Warlord Trait": {
+            "dynamic": false,
             "value": "The Imperium's Sword"
           }
         }
@@ -1146,6 +1357,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         },
         "rules": {
           "resetWarlordTrait": {
@@ -1311,7 +1527,9 @@
           ]
         },
         "removed": {
-          "stats": {}
+          "stats": {
+            "Veteran": {}
+          }
         },
         "stats": {
           "Additional Warlord Trait": {
@@ -1375,6 +1593,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         }
       },
       "Character§Gabriel Angelos, Chapter Master of the Blood Ravens": {
@@ -1412,6 +1635,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         },
         "stats": {
           "Additional Warlord Trait": {
@@ -1457,6 +1685,11 @@
             "1 - HQ"
           ]
         },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
+        },
         "stats": {
           "Additional Warlord Trait": {
             "value": "Rites of Battle"
@@ -1500,6 +1733,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         }
       },
       "Character§Pedro Kantor": {
@@ -1542,7 +1780,8 @@
         "removed": {
           "stats": {
             "Additional Warlord Trait": {},
-            "Warlord Trait": {}
+            "Warlord Trait": {},
+            "Veteran": {}
           }
         }
       },
@@ -1593,7 +1832,8 @@
         },
         "removed": {
           "stats": {
-            "Additional Warlord Trait": {}
+            "Additional Warlord Trait": {},
+            "Veteran": {}
           }
         },
         "stats": {
@@ -1640,6 +1880,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         },
         "stats": {
           "masterOfExecutions": {
@@ -1689,6 +1934,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         }
       },
       "Character§Space Marine Captain in Terminator Armour": {
@@ -1727,6 +1977,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         }
       },
       "Character§Space Marine Captain on Bike": {
@@ -1786,6 +2041,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         }
       },
       "Character§Space Marine Command Squad": {
@@ -1822,6 +2082,11 @@
           "Tags": [
             "1 - HQ"
           ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
         },
         "rules": {
           "Need at least 1 model": {
@@ -1897,11 +2162,17 @@
             "1 - HQ"
           ]
         },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
+        },
         "stats": {
           "Additional Warlord Trait": {
             "value": "Rites of Battle"
           },
           "Warlord Trait": {
+            "dynamic": false,
             "value": "The Imperium's Sword"
           }
         }
@@ -11852,6 +12123,62 @@
             "failState": "pass",
             "order": 5
           },
+          "Vanguard Support: This unit needs to be equipped with Phobos or Scout Armor": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Support"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lieutenant Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Librarian"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "Wargear§Phobos Armour",
+                    "quantity"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "Wargear§Scout Armor",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "warning"
+          },
           "VanguardCommanderUpgrade": {
             "actions": [
               {
@@ -15564,6 +15891,48 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 4
+          },
+          "Vanguard Support: This unit needs to be equipped with Phobos or Scout Armor": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Support"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "Wargear§Phobos Armour",
+                    "quantity"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "Wargear§Scout Armor",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "warning"
           }
         },
         "stats": {
@@ -24255,6 +24624,51 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "CalculateThousands2": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thousands times two",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T*O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thousands",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
           "countSubCommanderUnits": {
             "actions": [
               {
@@ -24371,6 +24785,44 @@
                     "Damocles Command Rhino"
                   ]
                 ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Pride of the Chapter: Need at least 2 Sternguard of Vanguard Veterans units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Vanguard Veterans"
+                  ],
+                  [
+                    "{self}",
+                    "tally",
+                    "Sternguard Veterans"
+                  ]
+                ],
+                "value": 2
               }
             ],
             "evaluate": "OR",
@@ -25036,6 +25488,359 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "RoWVanguardSupportRemoveDisallowedUnits": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Sabre Strike Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Predator MBT"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Vindicator Laser Destroyer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Vindicator Siege Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Whirlwind Artillery Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Hunter Artillery Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Stalker AA Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Gladiator Assault Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Land Raider"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Land Raider Crusader"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Land Raider Redeemer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Repulsor HIFV"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Repulsor Executioner"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Sicaran Heavy Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Kratos Super Heavy Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Spartan Assault Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Astraeus"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Cerberus"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Falchion"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Fellblade"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Mastodon"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Typhon Siege Tank"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Unit§Storm Speeder"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": null
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Support"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Vanguard Support: Need at least 2 Scout or Infiltrator squads per 1000 points": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Vanguard Support"
+              },
+              {
+                "actionable": true,
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Thousands times two",
+                  "value"
+                ],
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Scout Squad"
+                  ],
+                  [
+                    "{self}",
+                    "tally",
+                    "Infiltrator Squad"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
@@ -25043,13 +25848,13 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Battleline or Close Support Transport Count": {
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Chapter Allegiance": {
             "dynamic": true,
@@ -25155,9 +25960,22 @@
             "value": 0,
             "visibility": "hidden"
           },
+          "Thousands times two": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Venerable Dreadnought count": {
             "max": 1,
             "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Veteran Upgrade": {
+            "max": 1,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -25682,6 +26500,20 @@
                   ]
                 ],
                 "value": "Drop Pod Assault"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
               }
             ],
             "evaluate": "AND",
@@ -25717,6 +26549,88 @@
                   ]
                 ],
                 "value": "Drop Pod Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
               }
             ],
             "evaluate": "AND",
@@ -25799,7 +26713,141 @@
             "Veterans"
           ]
         },
+        "rules": {
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Assault Terminator": {
             "max": 9,
             "min": 4,
@@ -26096,7 +27144,141 @@
             "Veterans"
           ]
         },
+        "rules": {
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Bladeguard Marine": {
             "max": 8,
             "min": 2,
@@ -26199,7 +27381,141 @@
             "Infantry"
           ]
         },
+        "rules": {
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Centurion": {
             "max": 11,
             "min": 2,
@@ -26287,6 +27603,9 @@
             "Model§Contemptor Dreadnought"
           ]
         },
+        "aspects": {
+          "Unique": true
+        },
         "assets": {
           "included": [
             "Model§Contemptor Dreadnought"
@@ -26309,7 +27628,141 @@
             "Walker"
           ]
         },
+        "rules": {
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Contemptor Dreadnought": {
             "max": 1,
             "min": 1,
@@ -26401,7 +27854,141 @@
             "M31"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Heavy Support"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Devastator Marine": {
             "max": 4,
             "min": 4,
@@ -26512,7 +28099,141 @@
             "Vanguard"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Eliminator Marine": {
             "max": 7,
             "min": 2,
@@ -27066,9 +28787,141 @@
           },
           "All models in the unit must share the same configuration": {
             "evals": []
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Heavy Support"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Configuration": {
             "dynamic": true,
             "group": "Wargear",
@@ -27283,7 +29136,141 @@
             "M42+"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Inceptor Marine": {
             "max": 8,
             "min": 2,
@@ -27337,7 +29324,141 @@
             "Vanguard"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Incursor Marine": {
             "max": 9,
             "min": 4,
@@ -27690,7 +29811,141 @@
             "M31"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Javelin Speeder": {
             "max": 1,
             "min": 1,
@@ -28712,7 +30967,141 @@
             "Vanguard"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Mobility Gear": {
             "group": "Wargear",
             "groupOrder": 4,
@@ -28902,9 +31291,141 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 4
+          },
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Heavy Weapon Selection": {
             "statType": "numeric",
             "tracked": true,
@@ -29567,9 +32088,141 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Heavy Weapon Selection": {
             "statType": "numeric",
             "tracked": true,
@@ -29880,7 +32533,141 @@
             "Supressor Squad"
           ]
         },
+        "rules": {
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Supressor Marine": {
             "max": 8,
             "min": 2,
@@ -30111,9 +32898,141 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Tactical Terminator": {
             "max": 9,
             "min": 4,
@@ -30280,7 +33199,141 @@
             "Veterans"
           ]
         },
+        "rules": {
+          "RoWPrideAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideTroopsChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Vanguard Marine": {
             "max": 9,
             "min": 4,
@@ -30491,9 +33544,141 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideInfantryVeteranAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Heavy Support"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWPrideInfantryVeteranAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Desolator Weapon": {
             "dynamic": true,
             "group": "Wargear",
