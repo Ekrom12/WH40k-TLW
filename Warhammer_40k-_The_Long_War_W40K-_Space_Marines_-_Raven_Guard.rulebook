@@ -1,0 +1,346 @@
+{
+  "name": "W40K: Space Marines - Raven Guard",
+  "revision": "0.0.1",
+  "game": "Warhammer 40k: The Long War",
+  "genre": "sci-fi",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "isModule": true,
+  "dependencies": [
+    {
+      "slug": "PUHATY",
+      "name": "WH40k:TLW",
+      "game": "Warhammer 40k: The Long War",
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
+    },
+    {
+      "slug": "9GZ8W2",
+      "name": "W40k:TLW Imperium",
+      "game": "Warhammer 40k: The Long War",
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
+    },
+    {
+      "slug": "Y2BAD8",
+      "name": "W40k:TLW Space Marines",
+      "game": "Warhammer 40k: The Long War",
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Space_Marines.rulebook"
+    }
+  ],
+  "rulebook": {
+    "assetTaxonomy": {
+      "Character": {}
+    },
+    "assetCatalog": {
+      "Character§Kayvaan Shrike": {
+        "allowed": {
+          "items": [
+            "Model§Kayvaan Shrike"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Kayvaan Shrike"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "1 - HQ"
+          ],
+          "Keywords": [
+            "Captain",
+            "Character",
+            "Fly",
+            "Kayvaan Shrike",
+            "M42+",
+            "Raven Guard",
+            "Unique"
+          ]
+        },
+        "stats": {
+          "Kayvaan Shrike": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Warlord Trait": {
+            "value": "Rites of Battle"
+          }
+        }
+      },
+      "Melee Weapon§Raven's Talon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Model§Kayvaan Shrike": {
+        "assets": {
+          "traits": [
+            "Wargear§Power Armour",
+            "Wargear§Jump Pack",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Iron Halo",
+            "Wargear§Smoke Launchers",
+            {
+              "item": "Melee Weapon§Raven's Talon",
+              "quantity": 2
+            },
+            "Wargear§Corvia",
+            "Wargear§Infravisor"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 104
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
+      "Ranged Weapon§Blackout": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Precision Strikes"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 2"
+          }
+        }
+      },
+      "Ranged Weapon§Korvidari Bolt Pistol": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Korvidari Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Korvidari Boltgun": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Korvidari Heavy Bolt Pistol": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 21
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Korvidari Stalker Bolt Rifle": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 42
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Roster§Roster": {
+        "stats": {
+          "Chapter Allegiance": {
+            "dynamic": false,
+            "ranks": {
+              "Raven Guard": {
+                "order": 7
+              }
+            },
+            "value": "Raven Guard"
+          },
+          "Rite of War": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Drop Pod Assault": {
+                "order": 1
+              },
+              "Armoured Support": {
+                "order": 2
+              },
+              "Mechanized Assault": {
+                "order": 3
+              },
+              "Vanguard Support": {
+                "order": 4
+              },
+              "Pride of the Chapter": {
+                "order": 5
+              },
+              "The Decapitation Strike": {
+                "order": 6
+              },
+              "Liberation Strike Force": {
+                "order": 7
+              }
+            }
+          }
+        }
+      },
+      "Wargear§Corvia": {
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        },
+        "text": "A model with this wargear may re-roll Cover Save\nrolls."
+      },
+      "Wargear§Infravisor": {
+        "stats": {
+          "Points": {
+            "value": 1
+          }
+        },
+        "text": "A model equipped with this wargear gains the Night\nVision special rule."
+      },
+      "Wargear§Shadow Master's Cloak": {
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        },
+        "text": "A model with this wargear gains a 4+ Cover save\nwhile benefiting from Light Cover."
+      },
+      "Wargear§Shard of Istvaan": {
+        "stats": {
+          "Points": {
+            "value": 2
+          }
+        },
+        "text": "A model with this wargear may re-roll all hit rolls\nagainst units with the Chaos Space Marines\nKeyword."
+      },
+      "Warlord Trait§Echo of the Ravenspire": {
+        "text": "Once per game during the\nMovement Phase, instead of\nconducting a normal Movement, you\nmay remove this model from the\nboard. Place the Warlord back on\nthe board anywhere on the\nBattlefield more than 9” away from\nany enemy models."
+      },
+      "Warlord Trait§Feigned Flight": {
+        "text": "A model with this Warlord trait and\ntheir attached unit may Retreat and\nStill Charge. A model with this\nWarlord trait and its attached unit\ngains the Sudden Strike (1) special\nrule."
+      },
+      "Warlord Trait§Master of Ambush": {
+        "text": "If your army includes a model with\nthis Warlord Trait, Raven Guard\nunits in your army automatically\narrive from Reserves when arriving\nvia Outflank. When Raven Guard\nunits arrive via Deep Strike, they are\nalways treated as having rolled a\nMinimal Deviation"
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
