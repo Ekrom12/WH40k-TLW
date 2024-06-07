@@ -86,7 +86,7 @@
               }
             },
             "statType": "rank",
-            "value": null
+            "value": "-"
           },
           "Warlord Trait": {
             "ranks": {
@@ -117,7 +117,8 @@
                   }
                 ]
               }
-            }
+            },
+            "value": "-"
           }
         }
       },
