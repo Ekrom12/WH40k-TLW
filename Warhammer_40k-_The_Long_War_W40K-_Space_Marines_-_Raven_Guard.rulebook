@@ -30,7 +30,83 @@
   ],
   "rulebook": {
     "assetTaxonomy": {
-      "Character": {}
+      "Character": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "1 - HQ"
+          ],
+          "Keywords": [
+            "Raven Guard"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": []
+        },
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Space Marines"
+            ]
+          }
+        },
+        "stats": {
+          "Warlord Trait": {
+            "ranks": {
+              "Feigned Flight": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Feigned Flight"
+                  }
+                ]
+              },
+              "Master of Ambush": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Master of Ambush"
+                  }
+                ]
+              },
+              "Echo of the Ravenspire": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Echo of the Ravenspire"
+                  }
+                ]
+              }
+            },
+            "value": "-"
+          }
+        }
+      },
+      "Unit": {
+        "keywords": {
+          "Keywords": [
+            "Raven Guard"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "M": {},
+            "WS": {},
+            "BS": {},
+            "S": {},
+            "T": {},
+            "W": {},
+            "A": {},
+            "I": {},
+            "Ld": {},
+            "Sv": {},
+            "modelCost": {}
+          }
+        }
+      }
     },
     "assetCatalog": {
       "Character§Kayvaan Shrike": {
@@ -45,12 +121,13 @@
         "assets": {
           "included": [
             "Model§Kayvaan Shrike"
+          ],
+          "traits": [
+            "Special Rule§Shadow Master"
           ]
         },
         "keywords": {
-          "Tags": [
-            "1 - HQ"
-          ],
+          "Tags": [],
           "Keywords": [
             "Captain",
             "Character",
@@ -61,7 +138,51 @@
             "Unique"
           ]
         },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
+        },
         "stats": {
+          "Additional Warlord Trait": {
+            "dynamic": false,
+            "ranks": {
+              "Feigned Flight": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Feigned Flight"
+                  }
+                ]
+              },
+              "Storm of Fire": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Storm of Fire"
+                  }
+                ]
+              },
+              "Master of Ambush": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Master of Ambush"
+                  }
+                ]
+              },
+              "Echo of the Ravenspire": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Echo of the Ravenspire"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Master of Ambush"
+          },
           "Kayvaan Shrike": {
             "max": 1,
             "min": 1,
@@ -71,7 +192,109 @@
             "visibility": "hidden"
           },
           "Warlord Trait": {
+            "dynamic": false,
+            "ranks": {
+              "Feigned Flight": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Feigned Flight"
+                  }
+                ]
+              },
+              "Master of Ambush": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Master of Ambush"
+                  }
+                ]
+              },
+              "Echo of the Ravenspire": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Echo of the Ravenspire"
+                  }
+                ]
+              }
+            },
             "value": "Rites of Battle"
+          }
+        }
+      },
+      "Character§Shadow Captain Solaq": {
+        "allowed": {
+          "items": [
+            "Model§Shadow Captain Solaq"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Shadow Captain Solaq"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "M41",
+            "Shadow Captain Solaq",
+            "Unique"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {}
+          }
+        },
+        "stats": {
+          "Shadow Captain Solaq": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Character§Shadow Master Korvydae": {
+        "allowed": {
+          "items": [
+            "Model§Shadow Master Korvydae"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Shadow Master Korvydae"
+          ]
+        },
+        "disallowed": {
+          "items": []
+        },
+        "keywords": {
+          "Keywords": [
+            "Captain",
+            "Fly",
+            "M41",
+            "Shadow Master Korvydae",
+            "Unique"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Veteran": {},
+            "Warlord Trait": {},
+            "Additional Warlord Trait": {}
+          }
+        },
+        "stats": {
+          "Shadow Master Korvydae": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
@@ -102,6 +325,207 @@
           }
         }
       },
+      "Model§Dark Fury": {
+        "assets": {
+          "traits": [
+            "Wargear§Power Armour",
+            "Melee Weapon§Raven's Talon",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Jump Pack"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 45
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 2
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Dark Fury Sergeant": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Jump Pack"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "Left Hand Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Raven's Talon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Raven's Talon"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Raven's Talon",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 45
+          },
+          "Right Hand Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Raven's Talon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Raven's Talon"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Raven's Talon",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 2
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Kayvaan Shrike": {
         "assets": {
           "traits": [
@@ -123,11 +547,48 @@
           "A": {
             "value": 4
           },
+          "Armour": {
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Power Armour": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Power Armour"
+                  }
+                ]
+              },
+              "Phobos Armor & Blackout": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Blackout"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Power Armour",
+            "visibility": "normal"
+          },
           "BS": {
             "value": 5
           },
           "I": {
             "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "normal"
           },
           "Ld": {
             "value": 10
@@ -152,6 +613,484 @@
           },
           "WS": {
             "value": 6
+          }
+        }
+      },
+      "Model§Mor Deythan Shadow Master": {
+        "assets": {
+          "traits": [
+            "Wargear§Corvia",
+            "Wargear§Infravisor",
+            "Wargear§Melta Bomb",
+            "Wargear§Digital Weapons",
+            "Wargear§Auspex Scanner",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "Accessory": {
+            "group": "Wargear",
+            "ranks": {
+              "Shadow Master's Cloak": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Shadow Master's Cloak"
+                  }
+                ]
+              },
+              "Jump Pack": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Jump Pack"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "Shadow Master's Cloak",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 6
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Close Combat Weapon": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 70
+          },
+          "Power Armour": {
+            "group": "Wargear",
+            "ranks": {
+              "Power Armour": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Wargear§Power Armour"
+                  }
+                ]
+              },
+              "Phobos Armour": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Phobos Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "Power Armour",
+            "visibility": "normal"
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Sniper Rifle": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sniper Rifle"
+                  }
+                ]
+              },
+              "Astartes Shotgun": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Shotgun"
+                  }
+                ]
+              },
+              "Korvidari Storm Bolter": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Astartes Grenade Launcher": {
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Grenade Launcher"
+                  }
+                ]
+              },
+              "Volkite Caliver": {
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Calivers"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "order": 9,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "order": 10,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "order": 11,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Sniper Rifle",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Neo Volkite Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Neo Volkite Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Shadow Captain Solaq": {
+        "assets": {
+          "traits": [
+            "Wargear§Artificer Armour",
+            "Melee Weapon§Power Sword",
+            "Ranged Weapon§Plasma Pistol",
+            "Wargear§The Raven Helm",
+            "Wargear§The Raven Helm",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Corvia",
+            "Wargear§Shadow Master's Cloak"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 95
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Shadow Master Korvydae": {
+        "assets": {
+          "traits": [
+            "Wargear§Artificer Armour",
+            "Wargear§Jump Pack",
+            "Melee Weapon§Thunder Hammer",
+            "Wargear§Melta Bomb",
+            "Wargear§Digital Weapons",
+            "Ranged Weapon§Korvidari Bolt Pistol",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Iron Halo"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "hidden"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 105
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 5
           }
         }
       },
@@ -258,6 +1197,27 @@
         }
       },
       "Roster§Roster": {
+        "rules": {
+          "Mor Deythan Shadow Master are limited to 3 per detachment": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 3,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Mor Deythan Shadow Master"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
         "stats": {
           "Chapter Allegiance": {
             "dynamic": false,
@@ -298,6 +1258,357 @@
           }
         }
       },
+      "Special Rule§Presence Unheeded": {
+        "keywords": {
+          "Tags": [],
+          "Keywords": [
+            "Raven guard Special Rule"
+          ]
+        },
+        "text": "A unit with this ability may not join friendly units even though it is a Character. This unit cannot be\ntargeted for an attack unless by enemy units within 12” of this unit and there are no other enemy units within range of the\nattacking unit’s weapons."
+      },
+      "Special Rule§Shadow Bird Pilot": {
+        "keywords": {
+          "Keywords": [
+            "Raven guard Special Rule"
+          ]
+        },
+        "text": "This unit may pivot 180 degrees at any point during its Movement instead of 90 degrees."
+      },
+      "Special Rule§Shadow Master": {
+        "keywords": {
+          "Tags": [],
+          "Keywords": [
+            "Raven guard Special Rule"
+          ]
+        },
+        "text": "A unit with this special rule may set to Disappear instead of Setting to Overwatch. At the end of\nyour opponent’s Charge Phase, a unit that has Set to disappear may be removed from the battlefield and placed\nin reserve. The unit may be removed even if enemy units are within 3” of it. At the start of your next Movement\nPhase, after removing the unit from the Battlefield, you may place it anywhere on the Battlefield at the end of\nYour movement Phase more than 9” away from any enemy models."
+      },
+      "Unit§Dark Furies": {
+        "allowed": {
+          "items": [
+            "Model§Dark Fury",
+            "Model§Dark Fury Sergeant"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Dark Fury",
+              "quantity": 4
+            },
+            "Model§Dark Fury Sergeant"
+          ]
+        },
+        "stats": {
+          "Dark Fury": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Dark Fury Sergeant": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Dark Wing Storm Eagle Gunship": {
+        "allowed": {
+          "items": [
+            "Vehicle§Dark Wing Storm Eagle Gunship"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Dark Wing Storm Eagle Gunship"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            "Special Rule§Hammer of Wrath",
+            "Special Rule§Hover",
+            {
+              "item": "Special Rule§Transport",
+              "text": "This model can transport 22 Infantry models"
+            },
+            "Special Rule§Allegiance: Blood Ravens",
+            "Special Rule§Skilled Rider",
+            "Special Rule§Shadow Bird Pilot"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Aircraft"
+          ],
+          "Keywords": [
+            "Dark Wing Storm Eagle Gunship",
+            "Fly",
+            "M31",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Dark Wing Storm Eagle Gunship": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Mor Deythan Shadow Master": {
+        "allowed": {
+          "items": [
+            "Model§Mor Deythan Shadow Master"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Mor Deythan Shadow Master"
+          ],
+          "traits": [
+            "Special Rule§Shadow Master",
+            "Special Rule§Relentless",
+            "Special Rule§Presence Unheeded"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Character",
+            "M31",
+            "Mor Deythan Shadow Master"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Mor Deythan Shadow Master": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Vehicle§Dark Wing Storm Eagle Gunship": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Vengeance Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            "Wargear§Rad Shroud Armor",
+            "Wargear§Quantum Field Repellers",
+            "Wargear§Infravisor"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "Frontal Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Heavy Bolter (P)": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Heavy Bolter",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Lascannon (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Linked Multi-melta (P)": {
+                "order": 2,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Multi-Melta",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Typhoon Missile Launcher (P)": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Typhoon Missile Launcher (Frag)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Typhoon Missile Launcher (Krak)",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Linked Heavy Bolter (P)",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "15-30"
+          },
+          "Points": {
+            "value": 155
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 12
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 5,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 22,
+            "visibility": "normal"
+          },
+          "Wing Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Hellstrike Launchers (P)": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Hellstrike Launcher",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2 Linked Lascannons (P)": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Linked Hellstrike Launchers (P)",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
       "Wargear§Corvia": {
         "stats": {
           "Points": {
@@ -314,6 +1625,12 @@
         },
         "text": "A model equipped with this wargear gains the Night\nVision special rule."
       },
+      "Wargear§Quantum Field Repellers": {
+        "text": "When this unit uses the Hover special rule and enter Hover mode, its Movement (M) characteristic\nbecomes 15” instead of 10”."
+      },
+      "Wargear§Rad Shroud Armor": {
+        "text": "This unit always gains the benefit of Light Cover. If it is already benefiting from Light Cover, it gains the\nbenefit of Heavy Cover instead."
+      },
       "Wargear§Shadow Master's Cloak": {
         "stats": {
           "Points": {
@@ -329,6 +1646,9 @@
           }
         },
         "text": "A model with this wargear may re-roll all hit rolls\nagainst units with the Chaos Space Marines\nKeyword."
+      },
+      "Wargear§The Raven Helm": {
+        "text": "A model with this wargear has the Fear (3) special rule."
       },
       "Warlord Trait§Echo of the Ravenspire": {
         "text": "Once per game during the\nMovement Phase, instead of\nconducting a normal Movement, you\nmay remove this model from the\nboard. Place the Warlord back on\nthe board anywhere on the\nBattlefield more than 9” away from\nany enemy models."
