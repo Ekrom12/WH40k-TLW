@@ -62,6 +62,9 @@
               },
               "The Imperium's Sword": {
                 "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§The Imperium's Sword"
@@ -70,6 +73,9 @@
               },
               "Rites of Battle": {
                 "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Rites of Battle"
@@ -78,6 +84,9 @@
               },
               "Storm of Fire": {
                 "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Storm of Fire"
@@ -86,6 +95,7 @@
               }
             },
             "statType": "rank",
+            "tracked": true,
             "value": "-"
           },
           "Warlord Trait": {
@@ -118,6 +128,7 @@
                 ]
               }
             },
+            "tracked": true,
             "value": "-"
           }
         }
