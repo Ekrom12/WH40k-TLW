@@ -98,6 +98,9 @@
             "tracked": true,
             "value": "-"
           },
+          "Veteran": {
+            "statOrder": 6
+          },
           "Warlord Trait": {
             "ranks": {
               "-": {
@@ -16807,7 +16810,7 @@
           },
           "Sv": {
             "tracked": true,
-            "value": 3
+            "value": 2
           },
           "T": {
             "value": 4
