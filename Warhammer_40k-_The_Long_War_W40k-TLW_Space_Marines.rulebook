@@ -14943,7 +14943,6 @@
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 3,
-            "increment": {},
             "ranks": {
               "Boltgun": {
                 "order": 0,
@@ -17067,6 +17066,7 @@
             "value": 5
           },
           "Melee Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
@@ -17129,6 +17129,7 @@
             "value": 65
           },
           "Primary Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
@@ -17164,6 +17165,7 @@
             "value": 4
           },
           "Secondary Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
