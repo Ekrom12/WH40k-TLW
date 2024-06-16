@@ -2328,7 +2328,7 @@
             "Model§Champion",
             "Model§Apothecary",
             "Model§Ancient",
-            "Model§Judicator"
+            "Model§Judiciar"
           ]
         },
         "assets": {
@@ -10318,7 +10318,7 @@
           }
         }
       },
-      "Model§Judicator": {
+      "Model§Judiciar": {
         "allowed": {
           "items": [
             "Wargear§Bionics",
