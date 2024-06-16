@@ -577,7 +577,7 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "M": {
             "groupOrder": 1
@@ -588,7 +588,7 @@
             "statOrder": 3,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "SA": {
             "group": "Armor",
@@ -596,7 +596,7 @@
             "statOrder": 2,
             "statType": "numeric",
             "value": null,
-            "visibility": "normal"
+            "visibility": "always"
           }
         },
         "templateClass": "Model"
