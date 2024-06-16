@@ -214,55 +214,6 @@
         },
         "stats": {
           "Additional Warlord Trait": {
-            "group": "Warlord",
-            "groupOrder": 4,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Alien Cunning": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Alien Cunning"
-                  }
-                ]
-              },
-              "Synaptic Linchpin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Synaptic Linchpin"
-                  }
-                ]
-              },
-              "Heightened Senses": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Warlord Trait§Heightened Senses"
-                  }
-                ]
-              }
-            },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "-"
-          },
-          "Warlord": {
-            "group": "Warlord",
-            "groupOrder": 4,
-            "ranks": {
-              "✓": {
-                "number": 1,
-                "order": 1
-              }
-            },
-            "statOrder": 1
-          },
-          "Warlord Trait": {
-            "group": "Warlord",
-            "groupOrder": 4,
             "ranks": {
               "-": {
                 "order": 0
@@ -293,6 +244,51 @@
               }
             },
             "statOrder": 4,
+            "statType": "rank",
+            "value": "-"
+          },
+          "Warlord": {
+            "group": "Warlord",
+            "groupOrder": 4,
+            "ranks": {
+              "✓": {
+                "number": 1,
+                "order": 1
+              }
+            },
+            "statOrder": 1
+          },
+          "Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Alien Cunning": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Alien Cunning"
+                  }
+                ]
+              },
+              "Synaptic Linchpin": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Synaptic Linchpin"
+                  }
+                ]
+              },
+              "Heightened Senses": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Heightened Senses"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
             "value": "-"
           }
         }
@@ -2884,6 +2880,7 @@
             "value": 3
           },
           "BS": {
+            "tracked": true,
             "value": 3
           },
           "Carapace Bio-morph": {
@@ -2934,6 +2931,7 @@
               "Enhanced Senses": {
                 "order": 1,
                 "tracking": {
+                  "BS": 1,
                   "Points": 5
                 },
                 "traits": [
