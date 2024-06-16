@@ -54,6 +54,240 @@
             "modelCost": {}
           }
         },
+        "rules": {
+          "resetWarlordTrait": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Warlord Trait",
+                      "Additional Warlord Trait"
+                    ],
+                    "value"
+                  ]
+                ],
+                "prepend": " ",
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rites of Battle Slot Selection",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ]
+          },
+          "RitesOfBattleIncreaseElites": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Elite unit count",
+                    "max"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rites of Battle Slot Selection",
+                    "value"
+                  ]
+                ],
+                "value": "Elite"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
+          "RitesOfBattleIncreaseFastAttack": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Fast Attack unit count",
+                    "max"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rites of Battle Slot Selection",
+                    "value"
+                  ]
+                ],
+                "value": "Fast Attack"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
+          "RitesOfBattleIncreaseHeavySupport": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Heavy Support unit count",
+                    "max"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rites of Battle Slot Selection",
+                    "value"
+                  ]
+                ],
+                "value": "Heavy Support"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
+          "RitesOfBattleResetSlot": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rites of Battle Slot Selection",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
+          "RitesOfBattleShowSlotOption": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rites of Battle Slot Selection",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Additional Warlord Trait",
+                      "Additional Warlord Trait 2"
+                    ],
+                    "value"
+                  ]
+                ],
+                "value": "Rites of Battle"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Additional Warlord Trait": {
             "ranks": {
@@ -97,6 +331,31 @@
             "statType": "rank",
             "tracked": true,
             "value": "-"
+          },
+          "Rites of Battle Slot Selection": {
+            "dynamic": true,
+            "group": "Warlord",
+            "groupOrder": 4,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Elite": {
+                "order": 1,
+                "tracking": {}
+              },
+              "Fast Attack": {
+                "order": 2
+              },
+              "Heavy Support": {
+                "order": 3
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
           },
           "Veteran": {
             "statOrder": 6
