@@ -18,6 +18,20 @@
         "disallowed": {
           "classifications": []
         },
+        "removed": {
+          "stats": {
+            "M": {},
+            "WS": {},
+            "BS": {},
+            "S": {},
+            "T": {},
+            "W": {},
+            "A": {},
+            "I": {},
+            "Ld": {},
+            "Sv": {}
+          }
+        },
         "rules": {
           "No more than one warlord is allowed": {
             "evals": [
@@ -463,52 +477,6 @@
           "Unit Type": []
         },
         "stats": {
-          "A": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 6,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "BS": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 2,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "I": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 7,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "Ld": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 8,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "M": {
-            "format": "{v}\"",
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 0,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "modelCost": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
           "Points": {
             "format": "{v}",
             "group": "Cost",
@@ -516,47 +484,6 @@
             "statOrder": 1,
             "statType": "numeric",
             "tracked": true,
-            "value": null,
-            "visibility": "normal"
-          },
-          "S": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 3,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "Sv": {
-            "format": "{v}+",
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 9,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "T": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 4,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "W": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 5,
-            "statType": "numeric",
-            "value": null,
-            "visibility": "normal"
-          },
-          "WS": {
-            "group": "Stats",
-            "groupOrder": 1,
-            "statOrder": 1,
-            "statType": "numeric",
             "value": null,
             "visibility": "normal"
           }
