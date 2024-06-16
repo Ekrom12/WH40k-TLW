@@ -1,0 +1,38 @@
+{
+  "name": "W40k:TLW Chaos Space Marines",
+  "revision": "0.0.1",
+  "game": "Warhammer 40k: The Long War",
+  "genre": "sci-fi",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "rulebook": {
+    "assetTaxonomy": {},
+    "assetCatalog": {
+      "Roster§Roster": {
+        "stats": {
+          "Faction": {
+            "dynamic": false,
+            "ranks": {
+              "Chaos Space Marines": {
+                "order": 1
+              }
+            },
+            "value": "Chaos Space Marines"
+          }
+        }
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  },
+  "dependencies": [
+    {
+      "slug": "9GZ8W2",
+      "name": "W40k:TLW Imperium",
+      "game": "Warhammer 40k: The Long War",
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
+    }
+  ]
+}
