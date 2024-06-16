@@ -25045,6 +25045,50 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Drop Pod Assault: Your army must include more Infantry units with the Battle Line and Close Support Keyword than the Fire Support Keyword.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Drop Pod Assault"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "stats",
+                  "RoW Drop Pod Battleline CS Units",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "RoW Drop Pod Fire Support Unit Count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 5
+          },
           "Mechanized Assault: Need to include at least 1 Damocles Command Rhino in your army": {
             "evals": [
               {
@@ -25384,48 +25428,8 @@
             ],
             "evals": [],
             "evaluate": "AND",
-            "failState": "pass"
-          },
-          "RoWDropPodAssaultSetMaxFireSupportUnits": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "RoW Drop Pod Fire Support Unit Count",
-                    "max"
-                  ]
-                ],
-                "value": [
-                  "{self}",
-                  "stats",
-                  "RoW Drop Pod Battleline CS Units",
-                  "value"
-                ]
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Drop Pod Assault"
-              }
-            ],
-            "evaluate": "AND",
             "failState": "pass",
-            "order": 10
+            "order": 4
           },
           "RoWDropPodRemoveUnallowedUnits": {
             "actions": [
@@ -26226,7 +26230,7 @@
           "RoW Drop Pod Battleline CS Units": {
             "statType": "numeric",
             "tracked": true,
-            "value": -1,
+            "value": 0,
             "visibility": "hidden"
           },
           "RoW Drop Pod Fire Support Unit Count": {
