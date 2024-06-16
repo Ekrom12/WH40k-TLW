@@ -17059,6 +17059,15 @@
           "I": {
             "value": 5
           },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 4,
+            "visibility": "always"
+          },
           "Ld": {
             "value": 9
           },
@@ -17151,7 +17160,7 @@
                     "trait": "Ranged Weapon§Bolt Storm Gauntlet (Shooting)"
                   },
                   {
-                    "trait": "Melee Weapon§Bolt Sotm Gauntlet (melee)"
+                    "trait": "Melee Weapon§Bolt Storm Gauntlet (melee)"
                   }
                 ]
               }
