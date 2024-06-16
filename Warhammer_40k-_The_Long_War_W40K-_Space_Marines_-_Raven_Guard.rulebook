@@ -7,20 +7,7 @@
   "url": "",
   "notes": "",
   "wip": true,
-  "isModule": true,
   "dependencies": [
-    {
-      "slug": "PUHATY",
-      "name": "WH40k:TLW",
-      "game": "Warhammer 40k: The Long War",
-      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_WH40k-TLW.rulebook"
-    },
-    {
-      "slug": "9GZ8W2",
-      "name": "W40k:TLW Imperium",
-      "game": "Warhammer 40k: The Long War",
-      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
-    },
     {
       "slug": "Y2BAD8",
       "name": "W40k:TLW Space Marines",
@@ -35,12 +22,8 @@
           "Unique": true
         },
         "keywords": {
-          "Tags": [
-            "1 - HQ"
-          ],
-          "Keywords": [
-            "Raven Guard"
-          ],
+          "Tags": [],
+          "Keywords": [],
           "Role": [
             "HQ"
           ],
@@ -85,7 +68,67 @@
           }
         }
       },
+      "Model": {
+        "rules": {
+          "nightBirdAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Infravisor"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Night Bird",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Night Bird": {
+            "group": "Upgrades",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                }
+              }
+            },
+            "statOrder": 99,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit": {
+        "aspects": {
+          "Group By": "Tags"
+        },
         "keywords": {
           "Keywords": [
             "Raven Guard"
@@ -104,6 +147,72 @@
             "Ld": {},
             "Sv": {},
             "modelCost": {}
+          }
+        }
+      },
+      "Vehicle": {
+        "rules": {
+          "shadowBirdAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Skilled Rider"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Wargear§Infravisor"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "value": "15-30"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shadow Bird",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Night Bird": {
+            "groupOrder": 7
           }
         }
       }
@@ -127,7 +236,9 @@
           ]
         },
         "keywords": {
-          "Tags": [],
+          "Tags": [
+            "1 - HQ"
+          ],
           "Keywords": [
             "Captain",
             "Character",
@@ -136,11 +247,17 @@
             "M42+",
             "Raven Guard",
             "Unique"
+          ],
+          "Unit Type": [
+            "Infantry"
           ]
         },
         "removed": {
           "stats": {
             "Veteran": {}
+          },
+          "keywords": {
+            "Tags": []
           }
         },
         "stats": {
@@ -239,6 +356,12 @@
             "M41",
             "Shadow Captain Solaq",
             "Unique"
+          ],
+          "Tags": [
+            "1 - HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
           ]
         },
         "removed": {
@@ -278,6 +401,12 @@
             "M41",
             "Shadow Master Korvydae",
             "Unique"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Tags": [
+            "1 - HQ"
           ]
         },
         "removed": {
@@ -633,6 +762,7 @@
             "value": 2
           },
           "Accessory": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Shadow Master's Cloak": {
@@ -670,6 +800,7 @@
             "value": 6
           },
           "Melee Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Close Combat Weapon": {
@@ -712,9 +843,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 70
+            "value": 34
           },
           "Power Armour": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Power Armour": {
@@ -908,6 +1040,7 @@
             "value": 4
           },
           "Secondary Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Bolt Pistol": {
@@ -1198,23 +1331,40 @@
       },
       "Roster§Roster": {
         "rules": {
-          "Mor Deythan Shadow Master are limited to 3 per detachment": {
+          "Decapitation Strike: Your army must include at least 1 Assault Marine Squad or Dark Fury Squad.": {
             "evals": [
               {
                 "actionable": true,
-                "max": 3,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "The Decapitation Strike"
+              },
+              {
+                "actionable": true,
+                "min": 1,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{self}",
                     "tally",
-                    "Mor Deythan Shadow Master"
+                    [
+                      "Assault Marine Squad",
+                      "Dark Furies"
+                    ]
                   ]
                 ]
               }
             ],
-            "evaluate": "AND",
+            "evaluate": "OR",
             "failState": "error"
           }
         },
@@ -1300,6 +1450,21 @@
             "Model§Dark Fury Sergeant"
           ]
         },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Dark Furies",
+            "M31"
+          ]
+        },
         "stats": {
           "Dark Fury": {
             "max": 9,
@@ -1346,10 +1511,10 @@
         },
         "keywords": {
           "Tags": [
-            "5 - Flyers"
+            "7 - Heavy Support"
           ],
           "Role": [
-            "Flyer"
+            "Heavy Support"
           ],
           "Unit Type": [
             "Aircraft"
@@ -1411,6 +1576,163 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Stormeagle Gunship": {
+        "inheritance": "removed"
+      },
+      "Unit§Stormtalon Gunship": {
+        "rules": {
+          "RodDecapitationStrikeRemoveHSRole": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Heavy Support",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "The Decapitation Strike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWDecapitationShowHSOption": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Heavy Support",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "The Decapitation Strike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWDecapitationStrikeAddAsHS": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Flyer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Heavy Support"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "The Decapitation Strike"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Heavy Support",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          }
+        },
+        "stats": {
+          "Add as Heavy Support": {
+            "dynamic": true,
+            "group": "Rooster",
+            "groupOrder": 7,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
             "visibility": "hidden"
           }
         }
@@ -1545,7 +1867,7 @@
             "value": "15-30"
           },
           "Points": {
-            "value": 155
+            "value": 154
           },
           "RA": {
             "value": 12
@@ -1606,6 +1928,110 @@
           },
           "WS": {
             "value": 1
+          }
+        }
+      },
+      "Vehicle§Stormhawk Interceptor": {
+        "stats": {
+          "Shadow Bird": {
+            "group": "Upgrades",
+            "groupOrder": 7,
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Vehicle§Stormraven Gunship": {
+        "stats": {
+          "Shadow Bird": {
+            "group": "Upgrades",
+            "groupOrder": 7,
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Vehicle§Thunderhawk Gunship": {
+        "rules": {
+          "shadowhawkAddRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Skilled Rider"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shadowhawk",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Shadowhawk": {
+            "group": "Upgrades",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
           }
         }
       },
