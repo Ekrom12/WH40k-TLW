@@ -2744,7 +2744,7 @@
             "statOrder": 10,
             "statType": "numeric",
             "value": 5,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "value": 9
@@ -3518,6 +3518,14 @@
           "I": {
             "value": 5
           },
+          "Inv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 5,
+            "visibility": "always"
+          },
           "Ld": {
             "value": 8
           },
@@ -4053,7 +4061,7 @@
             "statOrder": 11,
             "statType": "numeric",
             "value": 4,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "value": 10
@@ -4410,6 +4418,14 @@
           "I": {
             "value": 4
           },
+          "Inv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "always"
+          },
           "Ld": {
             "value": 7
           },
@@ -4639,13 +4655,13 @@
           "I": {
             "value": 4
           },
-          "Invulnerable Save (Inv)": {
+          "Inv": {
             "format": "{v}+",
             "group": "Stats",
             "statOrder": 11,
             "statType": "numeric",
             "value": 3,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "value": 9
@@ -4693,6 +4709,14 @@
           "I": {
             "value": 6
           },
+          "Inv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "always"
+          },
           "Ld": {
             "value": 8
           },
@@ -4738,6 +4762,14 @@
           },
           "I": {
             "value": 6
+          },
+          "Inv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "always"
           },
           "Ld": {
             "value": 8
@@ -5363,6 +5395,14 @@
           "I": {
             "value": 6
           },
+          "Inv": {
+            "format": "{v}+",
+            "group": "Stats",
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "always"
+          },
           "Ld": {
             "value": 10
           },
@@ -5637,13 +5677,13 @@
           "I": {
             "value": 5
           },
-          "Invulnerable Save (Inv)": {
+          "Inv": {
             "format": "{v}+",
             "group": "Stats",
             "statOrder": 11,
             "statType": "numeric",
             "value": 3,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "value": 10
@@ -5691,13 +5731,13 @@
           "I": {
             "value": 6
           },
-          "Invulnerable Save (Inv)": {
+          "Inv": {
             "format": "{v}+",
             "group": "Stats",
             "statOrder": 11,
             "statType": "numeric",
             "value": 4,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "value": 10
@@ -7064,7 +7104,7 @@
             "statOrder": 10,
             "statType": "numeric",
             "value": 3,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Ld": {
             "value": 8
