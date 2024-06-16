@@ -39337,6 +39337,7 @@
           "Bombs": {
             "dynamic": true,
             "group": "Wargear",
+            "groupOrder": 4,
             "ranks": {
               "Thunderhawk Cluster Bombs": {
                 "order": 0,
@@ -39358,6 +39359,7 @@
                 ]
               }
             },
+            "statOrder": 2,
             "statType": "rank",
             "value": "Thunderhawk Cluster Bombs",
             "visibility": "normal"
@@ -39368,6 +39370,7 @@
           "Cannon": {
             "dynamic": true,
             "group": "Wargear",
+            "groupOrder": 4,
             "ranks": {
               "Thunderhawk Cannon": {
                 "order": 0,
@@ -39389,6 +39392,7 @@
                 ]
               }
             },
+            "statOrder": 1,
             "statType": "rank",
             "value": "Thunderhawk Cannon",
             "visibility": "normal"
@@ -39420,6 +39424,7 @@
           },
           "Transport Capacity": {
             "group": "Transport",
+            "groupOrder": 3,
             "statType": "numeric",
             "value": 30,
             "visibility": "normal"
