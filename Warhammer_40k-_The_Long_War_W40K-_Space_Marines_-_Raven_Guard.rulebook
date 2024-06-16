@@ -1,12 +1,12 @@
 {
   "name": "W40K: Space Marines - Raven Guard",
-  "revision": "0.0.1",
+  "revision": "1.0.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
   "url": "",
   "notes": "",
-  "wip": true,
+  "wip": false,
   "dependencies": [
     {
       "slug": "Y2BAD8",
@@ -1329,6 +1329,141 @@
           }
         }
       },
+      "Relic§Armour of Shadows": {
+        "text": "A unit equipped with this relic gains the benefit of Heavy Cover even if they normally would not."
+      },
+      "Relic§Ex Tenebris": {
+        "rules": {
+          "This relic requires a Bolt Gun, Bolt Rifle, Heavy Bolt Rifle or Auto Bolt Rifle": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "tally",
+                    [
+                      "Boltgun",
+                      "Bolt Rifle",
+                      "Auto Bolt Rifle",
+                      "Heavy Bolt Rifle"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "AP": {
+            "group": "Stats",
+            "groupOrder": 2,
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 5,
+            "visibility": "normal"
+          },
+          "Points": {
+            "statOrder": 1,
+            "value": 5
+          },
+          "Range": {
+            "group": "Stats",
+            "groupOrder": 2,
+            "statOrder": 2,
+            "statType": "term",
+            "value": "72\"",
+            "visibility": "normal"
+          },
+          "Strength": {
+            "group": "Stats",
+            "groupOrder": 2,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 5,
+            "visibility": "normal"
+          },
+          "Type": {
+            "group": "Stats",
+            "groupOrder": 2,
+            "statOrder": 1,
+            "statType": "term",
+            "value": "Rapid Fire 1",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Relic§The Ebon Claws": {
+        "assets": {
+          "traits": [
+            "Special Rule§Bane",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "rules": {
+          "This relic requires 2 Lightning Claws": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "tally",
+                    "Lightning Claws"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "AP": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 2,
+            "visibility": "always"
+          },
+          "Points": {
+            "value": 15
+          },
+          "Range": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 2,
+            "statType": "term",
+            "value": "Melee",
+            "visibility": "normal"
+          },
+          "Strength": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 3,
+            "statType": "term",
+            "value": "+1",
+            "visibility": "always"
+          },
+          "Type": {
+            "group": "Stats",
+            "groupOrder": 1,
+            "statOrder": 1,
+            "statType": "term",
+            "value": "Melee",
+            "visibility": "always"
+          }
+        }
+      },
       "Roster§Roster": {
         "rules": {
           "Decapitation Strike: Your army must include at least 1 Assault Marine Squad or Dark Fury Squad.": {
@@ -1359,6 +1494,75 @@
                     [
                       "Assault Marine Squad",
                       "Dark Furies"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Liberation Strike Force: Must include at least 1 Captain": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Liberation Strike Force"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Captain"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Liberation Strike Force: Must include at least 1 Mor Deythan or Veteran unit": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Liberation Strike Force"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    [
+                      "Mor Deythan Shadow Master",
+                      "Veterans"
                     ]
                   ]
                 ]
@@ -1534,6 +1738,139 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Incursor Squad": {
+        "rules": {
+          "RoWDecapitationStrikeAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Fast Attack"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "The Decapitation Strike"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWDecapitationStrikeAddAsTroopsVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "The Decapitation Strike"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWPrideDisableTroopSelection": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Pride of the Chapter"
+              }
+            ]
           }
         }
       },
