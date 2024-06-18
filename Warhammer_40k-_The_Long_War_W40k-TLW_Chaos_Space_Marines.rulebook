@@ -7,9 +7,3163 @@
   "url": "",
   "notes": "",
   "wip": true,
+  "dependencies": [
+    {
+      "slug": "9GZ8W2",
+      "name": "W40k:TLW Imperium",
+      "game": "Warhammer 40k: The Long War",
+      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
+    }
+  ],
   "rulebook": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "Character": {
+        "stats": {
+          "Additional Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "The Gaze of the Gods": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Gaze of the Gods"
+                  }
+                ]
+              },
+              "The Lord of Terror": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Lord of Terror"
+                  }
+                ]
+              },
+              "Flames of Spite": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Flames of Spite"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-"
+          },
+          "Warlord Trait": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "The Gaze of the Gods": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Gaze of the Gods"
+                  }
+                ]
+              },
+              "The Lord of Terror": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Lord of Terror"
+                  }
+                ]
+              },
+              "Flames of Spite": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Flames of Spite"
+                  }
+                ]
+              }
+            },
+            "value": "-"
+          }
+        }
+      },
+      "Melee Weapon": {
+        "removed": {
+          "stats": {
+            "Range": {}
+          }
+        },
+        "stats": {
+          "Type": {
+            "value": "melee"
+          }
+        }
+      },
+      "Model": {
+        "rules": {
+          "addDaemonInv": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "always"
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": -1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 98
+          },
+          "addMarkofKhorneRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Khorne"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Khorne"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "AddMarkofNurgleRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Nurgle"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Feel No Pain (5+)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Nurgle"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Aircraft"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Vehicle"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "addMarkofSlaaneshRulesNonVehicle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Slaanesh"
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "I",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Slaanesh"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Vehicle"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Aircraft"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "addMarkofSlaaneshRulesVehicle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Slaanesh"
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Slaanesh"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Vehicle"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "addMarkofTzeentchKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzeentch"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Tzeentch"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "addMarkofUndividedRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Undivided"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Zealot (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Chaos Undivided"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 9
+          },
+          "addNurglePsykerWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plague Wind"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Nurgle"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 11
+          },
+          "AddTzeentchInv": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "always"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Tzeentch"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "addTzeentchPsykerWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt of Change"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Tzeentch"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 11
+          },
+          "ImproveInvTzeentch": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": -1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Tzeentch"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 99
+          }
+        },
+        "stats": {
+          "I": {
+            "tracked": true
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 6,
+            "visibility": "hidden"
+          },
+          "M": {
+            "tracked": true
+          },
+          "Mark of Chaos": {
+            "dynamic": true,
+            "group": "Mark of Chaos",
+            "groupOrder": 9,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Mark of Khorne": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Ranged Weapon": {},
+      "Unit": {
+        "assets": {
+          "traits": [
+            "Special Rule§Let the Galaxy Burn",
+            "Special Rule§Harbingers of Destruction"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Chaos",
+            "Chaos Space Marines"
+          ],
+          "Keywords": [
+            "Character"
+          ]
+        }
+      }
+    },
     "assetCatalog": {
+      "Character§Chaos Lord": {
+        "allowed": {
+          "items": [
+            "Model§Chaos Lord"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Chaos Lord"
+          ],
+          "traits": [
+            "Special Rule§Lord of Damnation",
+            "Special Rule§Chaos Boons"
+          ]
+        },
+        "keywords": {
+          "Role": [
+            "HQ"
+          ],
+          "Tags": [
+            "1 - HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Chaos Lord": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Character§Daemon Prince": {
+        "allowed": {
+          "items": [
+            "Model§Daemon Prince"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Daemon Prince"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "1 - HQ"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Prince"
+          ],
+          "Faction": [],
+          "Unit Type": [
+            "Monster"
+          ]
+        },
+        "removed": {
+          "stats": {},
+          "keywords": {
+            "Faction": [
+              "Chaos Space Marines"
+            ]
+          }
+        },
+        "stats": {
+          "Daemon Prince": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Melee Weapon§Chain Fist": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Chain Glaive": {
+        "assets": {
+          "traits": [
+            "Special Rule§Reach",
+            "Special Rule§Shred"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Daemonic Great Weapon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Two-Handed",
+            "Special Rule§Crushing"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Dreadnought Close Combat Weapon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Eviscerating Claws": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Force Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            {
+              "item": "Special Rule§Force",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Force Stave": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Force",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Force Sword": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Force",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Headsmen Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Two-Handed",
+            "Special Rule§Unwieldy"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Hideous Mutations": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Iron Claws": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            },
+            "Special Rule§Unwieldy"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+4"
+          }
+        }
+      },
+      "Melee Weapon§Lightning Claws": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred",
+            "Special Rule§Specialist Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "user"
+          }
+        }
+      },
+      "Melee Weapon§Malefic Talons": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Marine Crew Weapons": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Strength": {
+            "value": "4"
+          }
+        }
+      },
+      "Melee Weapon§Power Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Power Lance": {
+        "assets": {
+          "traits": [
+            "Special Rule§Reach"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Power Scourge": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Relic Blade": {
+        "assets": {
+          "traits": [
+            "Special Rule§Two-Handed"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Rod of Torment": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            {
+              "item": "Special Rule§Bane",
+              "stats": {
+                "keyword": {
+                  "value": "Infantry"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Thunder Hammer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Crushing"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Tyrant's Claw (Melee)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Shred",
+            "Special Rule§Master-Crafted",
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Model§Chaos Lord": {},
+      "Model§Daemon Prince": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Malefic Talons"
+          ]
+        },
+        "rules": {
+          "addPowerArmorSave": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sv",
+                    "value"
+                  ]
+                ],
+                "value": 3
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Armour",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "addPsykerKeywordAndRule": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Psyker (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Psyker",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "addWingsRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Fly"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Wings",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Can't have both \"Mark of Khorne\" and the psyker upgrade": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Khorne"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Psyker",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "Additional Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Warp Bolter": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Warp Bolter"
+                  }
+                ]
+              },
+              "Rift Barb": {
+                "order": 2,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Rift Barb"
+                  }
+                ]
+              },
+              "Hell Flame": {
+                "order": 3,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hell Flame"
+                  }
+                ]
+              },
+              "Spine Volley": {
+                "order": 4,
+                "tracking": {
+                  "Points": 3
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spine Volley"
+                  }
+                ]
+              },
+              "Hellfire": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hellfire"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 6
+          },
+          "I": {
+            "value": 6
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "tracked": true,
+            "value": 8
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              }
+            }
+          },
+          "Points": {
+            "value": 115
+          },
+          "Power Armour": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Power Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Psyker": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Smite"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "format": "{v}",
+            "statType": "term",
+            "value": "-"
+          },
+          "T": {
+            "value": 6
+          },
+          "W": {
+            "value": 4
+          },
+          "Weapon Option": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "2 Malefic Talons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Malefic Talons"
+                  }
+                ]
+              },
+              "Malefic talon & Daemonic Great Weapon": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Daemonic Great Weapon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "2 Malefic Talons",
+            "visibility": "normal"
+          },
+          "Wings": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "M": 4,
+                  "Points": 3
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Wings"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
+      "Ranged Weapon§Assault Cannon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 5"
+          }
+        }
+      },
+      "Ranged Weapon§Astartes Shotgun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Concussive"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Auto Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Bolt of Change": {
+        "assets": {
+          "traits": [
+            "Special Rule§Psychic Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Combi Bolter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Conversion Beamer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Conversion"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Cyclone Missile Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Cyclone Missile Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Demolisher Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Ordinance",
+            "Special Rule§Concussive",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Excruciator Cannons": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Fire Sweep": {
+        "assets": {
+          "traits": [
+            "Special Rule§Bombing Run",
+            "Special Rule§Large Blast",
+            "Special Rule§Ignores Cover",
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Bombing Run"
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Grav Cannon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Grav Gun": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "3"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Grav Pistol": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Graviton Charge Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Ordinance",
+            "Special Rule§Large Blast",
+            {
+              "item": "Special Rule§Haywire",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Grenade Harness": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Grenade 2"
+          }
+        }
+      },
+      "Ranged Weapon§Havoc Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Bolter Array": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 8"
+          }
+        }
+      },
+      "Ranged Weapon§Hell Flame": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Hellfire": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Hunter Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Indirect Fire",
+            "Special Rule§Skyfire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Infernal Bombs": {
+        "assets": {
+          "traits": [
+            "Special Rule§Bombing Run",
+            "Special Rule§Large Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Bombing Run"
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Killer Missile": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Lascannon Array": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Anvilus Stub Autocannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Pinning",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Autocannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "HEavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Boltgun": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "removed": {
+          "stats": {}
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Hell Strike Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Linked Lascannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "9"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Magma Cutter": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 6
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Melta Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Melta",
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 2"
+          }
+        }
+      },
+      "Ranged Weapon§Missile Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Missile Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Morbus Bombard": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            "Special Rule§Pinning",
+            "Special Rule§Indirect Fire",
+            "Special Rule§Ordinance"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "statType": "term",
+            "value": "12-36"
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Neutron Blaster": {
+        "assets": {
+          "traits": [
+            "Special Rule§Sunder",
+            "Special Rule§Blast"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "1"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "10"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plague Wind": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            },
+            "Special Rule§Psychic Weapon"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "1"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plasma Blaster": {
+        "assets": {
+          "traits": [
+            "Special Rule§Gets Hot!"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Quad Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Reaper Autocannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            "Special Rule§Linked"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Reaper Chain Cannon": {
+        "assets": {
+          "traits": [
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 5"
+          }
+        }
+      },
+      "Ranged Weapon§Rift Barb": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Rotary Missile Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            "Special Rule§Ignores Cover",
+            "Special Rule§Skyfire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 60
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Sabre Missiles": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Sniper Rifle": {
+        "assets": {
+          "traits": [
+            "Special Rule§Precision Strikes",
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Spicula Rocket System": {
+        "assets": {
+          "traits": [
+            "Special Rule§Ordinance",
+            "Special Rule§Large Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Pinning"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "statType": "term",
+            "value": "12-72"
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Spine Volley": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Assault 4"
+          }
+        }
+      },
+      "Ranged Weapon§Typhoon Missile Launcher (Frag)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Typhoon Missile Launcher (Krak)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Variable"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Tyrant's Claw (Shooting)": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Vengeance Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 48
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Calivers": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 15
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Charger": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Culverin": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 30
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 3"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Pistol": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Volkite Saker": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Heavy 6"
+          }
+        }
+      },
+      "Ranged Weapon§Warp Bolter": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          }
+        }
+      },
+      "Ranged Weapon§WhirlWind Missile Launche": {
+        "assets": {
+          "traits": [
+            "Special Rule§Large Blast",
+            {
+              "item": "Special Rule§Barrage",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            "Special Rule§Pinning",
+            "Special Rule§Indirect Fire"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "4"
+          },
+          "Range": {
+            "value": 72
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Xyclos Needler": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Poison"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "2"
+          },
+          "Type": {
+            "value": "Pistol 3"
+          }
+        }
+      },
       "Roster§Roster": {
         "stats": {
           "Faction": {
@@ -22,17 +3176,224 @@
             "value": "Chaos Space Marines"
           }
         }
+      },
+      "Special Rule§Chaos Boons": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "During Deployment, you may select 1 Chaos Space marine unit with this special rule. That unit may roll 2D6 on the Chaos Boon table below. That unit gains the listed benefit for the rest of the game."
+      },
+      "Special Rule§Conversion": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "If the target of this weapon is not within half of the weapons range when making an attack, the\nweapon gains +2 to its Strength characteristic."
+      },
+      "Special Rule§Daemon": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "A unit with this rule gains the Daemon Keyword. The Daemon unit has a 5+ Invulnerable save and the\nFear (1) special rule. Daemon units have +1” to their Movement (M) characteristic. (This is included in unit data\nsheets that have the Daemon special rule by default)"
+      },
+      "Special Rule§Feel No Pain (5+)": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Harbingers of Destruction": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "If Chaos Space Marine units with this rule are in combat with an enemy unit that has\na lower Leadership (LD) Characteristic, the Chaos space marine units have the Fear (1) special rule."
+      },
+      "Special Rule§Let the Galaxy Burn": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "Chaos Space Marine unit with this rule gain +1 to the charge roll in the charge phase against a Charge Target for each of the following conditions met:\n-The Charge Target is Pinned.\n- The Charge Target is affected by Blind.\n- The Charge Target is affected by Concussive.\n- The Charge Target is Falling Back after failing a Panic test"
+      },
+      "Special Rule§Lord of Damnation": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "You may only field 1 model in your army with this special rule. If your army includes a model\nwith this special rule, they must be your Warlord."
+      },
+      "Special Rule§Psyker (1)": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        }
+      },
+      "Special Rule§Zealot (1)": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "A unit with the Zealot special rule adds the value of (x) to its Strength (S) Characteristic in the combat phase after it has completed a charge move (see 12.1)"
+      },
+      "Wargear§Artificer Armour": {
+        "inheritance": "removed"
+      },
+      "Wargear§Aura of Dark Glory": {
+        "text": "A model with a Aura of Dark Glory has a 5+ Invulnerable save."
+      },
+      "Wargear§Auspex Scanner": {
+        "text": "Enemy units may not Infiltrate within\n18” of a model equipped with this\nwargear."
+      },
+      "Wargear§Cataphractii Terminator Armor": {
+        "text": "An ancient heavier pattern of Terminator Armour rarely\nused. It provides a 2+ Armour save and a 4+ Invulnerable\nsave. The Wearer gains the Relentless, Bulky (2), Deep\nStrike, Relentless and Slow & Purposeful special rules.\nThe wearers Movement (M) Characteristic is decreased\nby 1”"
+      },
+      "Wargear§Chaos Familiar": {
+        "text": "A model with Chaos Familiar gains\nthe Furious Charge (1) special rule."
+      },
+      "Wargear§Chaos Runes": {
+        "text": "A model with a Chaos Runes has a\n6+ Invulnerable save."
+      },
+      "Wargear§Chaos Sigil": {
+        "text": "A model with a Chaos Sigil has a 4+\nInvulnerable save."
+      },
+      "Wargear§Daemon Engine Armor": {
+        "text": "The living armoured skin of the Dameon engines crafted by Chaos artifice. It confers a 3+ armour save."
+      },
+      "Wargear§Daemonic Steed": {
+        "text": "A unit that is equipped with a Daemonic Steed becomes\na Cavalry type unit. In addition, it gains +1 Strength (S),\nToughness (T) and Wounds (W) Characteristics."
+      },
+      "Wargear§Dreadnought Plate": {
+        "text": "These ancient and powerful mechanised war suit\nencompasses a sarcophagus where an ancient warrior\nlay entombed. When combined, the warrior may take to\nthe field again with a new body. It confers a 2+ Armour\nsave."
+      },
+      "Wargear§Icon of Despair": {
+        "text": "A unit that includes a model with an\nIcon of Despair when charged\nalways count any charges\nperformed against it as Disordered\nCharges."
+      },
+      "Wargear§Icon of Excess": {
+        "text": "A unit that includes a model with an\nIcon of Excess gains the Fleet\nspecial rule."
+      },
+      "Wargear§Icon of Flame": {
+        "text": "A unit that includes a model with an Icon of Flame gain the Arcing (6+) special rule on all melee weapons they are\nequipped with."
+      },
+      "Wargear§Icon of Wrath": {
+        "text": "A unit that includes a model with an\nIcon of Wrath can re-roll Charge\nrolls."
+      },
+      "Wargear§Indomitus Terminator Armor": {
+        "text": "The Standard Terminator Armour used by most Astartes\nforces. It provides a 2+ Armour Save and a 5+\nInvulnerable Save. The wearer gains the Relentless,\nBulky (2) and Deep Strike special rule. Models equipped\nwith this Armour may not perform Sweeping Advances"
+      },
+      "Wargear§Mark of Chaos Undivided": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Marks"
+          ]
+        },
+        "text": "A unit with this special rule gains the Zealot (1) special rule and the Undivided Keyword. If the unit already has the\nZealot (x) special rule, the unit increases the value of (x) by 1"
+      },
+      "Wargear§Mark of Khorne": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Marks"
+          ]
+        },
+        "text": "A unit with this Mark gains the Hatred special rule and\nthe Khorne Keyword"
+      },
+      "Wargear§Mark of Nurgle": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Marks"
+          ]
+        },
+        "text": "A unit with this Mark gains the Feel no Pain (5+) special\nrule and the Nurgle Keyword. Vehicle and Aircraft\nunits with this Mark gain the benefit of Light cover even\nwhen they are in open terrain, instead of the Feel No\nPain (x) special rule."
+      },
+      "Wargear§Mark of Slaanesh": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Marks"
+          ]
+        },
+        "text": "A unit with this Mark gains +1 to their Initiative (I)\ncharacteristic and the Slaanesh keyword. Vehicle and\nAircraft units with this special rule gain +2” to their\nMovement (M) characteristic instead."
+      },
+      "Wargear§Mark of Tzeentch": {
+        "text": "A unit with this Mark gains +1 to their Invulnerable\nsaves to a max of 3+ and the Tzeentch Keyword. If the\nunit does not have an Invulnerable save, it gains a 6+\nInvulnerable save."
+      },
+      "Wargear§Narthecium": {
+        "text": "A model with this Wargear and their attached unit gain Feel No Pain (5+) Special rule."
+      },
+      "Wargear§Space Marine Bike": {
+        "removed": {
+          "stats": {
+            "Points": {}
+          }
+        },
+        "rules": {
+          "addLinkedBoltgun": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Linked Boltgun"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Wargear§Space Marine Bike",
+                    "quantity"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "text": "A unit that is equipped with a Bike\nbecomes a Bike type unit. In\naddition, it gains +1 Toughness (T)\nCharacteristics. A Space marine\nBike is equipped with a Linked\nBoltgun."
+      },
+      "Wargear§Tartaros Terminator Armor": {
+        "text": "A more mobile ancient pattern of Terminator Armour\nrarely used. It provides a 2+ Armour Save and a 5+\nInvulnerable save. The Wearer gains Relentless, Sprint\n(1), Bulky (2), and Deep Strike special rules."
+      },
+      "Wargear§Warp Armor": {
+        "text": "Master work Armour issued to veterans and champions.\nIt provides a 2+ Armour Save."
+      },
+      "Wargear§Wings": {
+        "text": "A unit that is equipped with Wings increases its\nMovement (M) characteristic to 12”. The model gains the\nHammer of Wrath (1) and Deep strike special rules. The\nequipped model gains the Fly keyword."
+      },
+      "Warlord Trait§Flames of Spite": {
+        "text": "Once per game, in the Combat\nPhase, your Warlord and any\nattached unit gain the Arcing (5+)\nspecial rule on all melee weapons\nthey are equipped with until the end\nof the phase."
+      },
+      "Warlord Trait§The Gaze of the Gods": {
+        "text": "The Warlord may roll on the Chaos\nBoon table during deployment, even\nif it was not selected to receive a\nChaos Boon. This Chaos Boon is in\naddition to any other Chaos Boons\nyour army receives."
+      },
+      "Warlord Trait§The Lord of Terror": {
+        "text": "Enemy units within 3” of a model with\nthis Warlord trait halve their\nLeadership (LD) characteristic."
       }
     },
     "gameModes": {},
     "theme": {}
-  },
-  "dependencies": [
-    {
-      "slug": "9GZ8W2",
-      "name": "W40k:TLW Imperium",
-      "game": "Warhammer 40k: The Long War",
-      "source": "https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Imperium.rulebook"
-    }
-  ]
+  }
 }
