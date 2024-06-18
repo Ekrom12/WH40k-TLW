@@ -1413,7 +1413,7 @@
             "format": " {v}",
             "statType": "term",
             "value": null,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "x": {
             "format": " {v}"
