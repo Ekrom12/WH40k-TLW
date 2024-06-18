@@ -4,10 +4,10 @@ These are the files required to create Long War lists in https://rosterizer.com
 
 ### Space Marines:
 
-#### Generic
+#### -Generic
 https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40k-TLW_Space_Marines.rulebook
 
-#### Raven Guard:
+#### -Raven Guard:
 https://raw.githubusercontent.com/Ekrom12/WH40k-TLW/main/Warhammer_40k-_The_Long_War_W40K-_Space_Marines_-_Raven_Guard.rulebook
 
 ### Chaos Space Marines:
