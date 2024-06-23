@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Space Marines",
-  "revision": "1.0.1",
+  "revision": "1.0.2",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -9249,6 +9249,11 @@
         }
       },
       "Model§Intercessor Marine": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Heavy Bolt Pistol"
+          ]
+        },
         "removed": {
           "stats": {}
         },
@@ -9931,14 +9936,14 @@
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
-              "Bolt Pistol": {
+              "Heavy Bolt Pistol": {
                 "order": 0,
                 "tracking": {
                   "Points": 0
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Bolt Pistol"
+                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
                   }
                 ]
               },
@@ -9967,7 +9972,7 @@
             },
             "statOrder": 2,
             "statType": "rank",
-            "value": "Bolt Pistol",
+            "value": "Heavy Bolt Pistol",
             "visibility": "normal"
           },
           "Sv": {
