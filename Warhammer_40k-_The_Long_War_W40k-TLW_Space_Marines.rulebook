@@ -14030,6 +14030,9 @@
               },
               "2 Multi-Melta": {
                 "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
                 "traits": [
                   {
                     "trait": {
@@ -14232,6 +14235,7 @@
                   "A": 1,
                   "BS": 1,
                   "Ld": 1,
+                  "Points": 15,
                   "WS": 1
                 }
               }
