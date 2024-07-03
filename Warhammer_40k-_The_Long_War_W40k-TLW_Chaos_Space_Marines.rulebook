@@ -1614,7 +1614,7 @@
               "Volkite Charger": {
                 "order": 5,
                 "tracking": {
-                  "Points": 10,
+                  "Points": 5,
                   "Special Weapon Selection": 1
                 },
                 "traits": [
@@ -3895,6 +3895,898 @@
           }
         }
       },
+      "Model§Chosen": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Bolt Pistol",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 27
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 6,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 7,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 8,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 9,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "order": 10,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "order": 11,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Culverin"
+                  }
+                ]
+              },
+              "Combi Bolter": {
+                "order": 12,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 13,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 14,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 15,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 16,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 17,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 18,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 19,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 20,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "order": 21,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 22,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 23,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "2 Lightning Claws": {
+                "order": 24,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Lightning Claws",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Chosen Champion": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Bolt Pistol",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Close Combat Weapon": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 7,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 27
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 6,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 7,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Lascannon": {
+                "order": 8,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "order": 9,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "order": 10,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "order": 11,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Culverin"
+                  }
+                ]
+              },
+              "Combi Bolter": {
+                "order": 12,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "order": 13,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "order": 14,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "order": 15,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "order": 16,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "order": 17,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "order": 18,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "order": 19,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 20,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "order": 21,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 22,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "order": 23,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "2 Lightning Claws": {
+                "order": 24,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Melee Weapon§Lightning Claws",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              },
+              "Volkite Caliver": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Calivers"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Daemon Prince": {
         "assets": {
           "traits": [
@@ -4836,7 +5728,7 @@
               "Volkite Charger": {
                 "order": 5,
                 "tracking": {
-                  "Points": 10,
+                  "Points": 5,
                   "Special Weapon Selection": 1
                 },
                 "traits": [
@@ -6486,6 +7378,14 @@
         },
         "text": "During Deployment, you may select 1 Chaos Space marine unit with this special rule. That unit may roll 2D6 on the Chaos Boon table below. That unit gains the listed benefit for the rest of the game."
       },
+      "Special Rule§Chosen of Chaos": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "Each Chosen unit in your army always makes a roll on the Chaos Boon chart at the beginning of the\nbattle. This does not count towards the number of Chaos Boons your army may have."
+      },
       "Special Rule§Conversion": {
         "keywords": {
           "Keywords": [
@@ -6576,6 +7476,147 @@
           ]
         },
         "text": "A unit with the Zealot special rule adds the value of (x) to its Strength (S) Characteristic in the combat phase after it has completed a charge move (see 12.1)"
+      },
+      "Unit§Chosen": {
+        "allowed": {
+          "items": [
+            "Model§Chosen",
+            "Model§Chosen Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Chosen",
+              "quantity": 4
+            },
+            "Model§Chosen Champion"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Role": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Chosen",
+            "Legion",
+            "M31",
+            "Veterans"
+          ]
+        },
+        "rules": {
+          "1 in 5 can have a Heavy Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Chosen": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Chosen Champion": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Heavy Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Icon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Icon of Wrath": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Wrath"
+                  }
+                ]
+              },
+              "Icon of Despair": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Despair"
+                  }
+                ]
+              },
+              "Icon of Excess": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Excess"
+                  }
+                ]
+              },
+              "Icon of Flame": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                }
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "always"
+          }
+        }
       },
       "Unit§Inductii Squad": {
         "allowed": {
