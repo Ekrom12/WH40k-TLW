@@ -77,7 +77,7 @@
                 "iterations": 1,
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "traits"
                   ]
                 ],
@@ -91,7 +91,7 @@
                 "operator": "AND",
                 "paths": [
                   [
-                    "{self}",
+                    "{parent}",
                     "stats",
                     "Night Bird",
                     "value"
@@ -101,27 +101,8 @@
               }
             ],
             "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Night Bird": {
-            "group": "Upgrades",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "Points": 1
-                }
-              }
-            },
-            "statOrder": 99,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
+            "failState": "pass",
+            "order": 100
           }
         }
       },
@@ -147,6 +128,28 @@
             "Ld": {},
             "Sv": {},
             "modelCost": {}
+          }
+        },
+        "stats": {
+          "Night Bird": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 99,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                }
+              }
+            },
+            "statOrder": 99,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
           }
         }
       },
@@ -208,11 +211,6 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
-          }
-        },
-        "stats": {
-          "Night Bird": {
-            "groupOrder": 7
           }
         }
       }
@@ -1225,6 +1223,16 @@
           "WS": {
             "value": 5
           }
+        }
+      },
+      "Model§Space Marine Captain in Terminator Armour": {
+        "allowed": {
+          "items": [
+            "Wargear§Corvia",
+            "Wargear§Shard of Istvaan",
+            "Wargear§Infravisor",
+            "Wargear§Shadow Master's Cloak"
+          ]
         }
       },
       "Ranged Weapon§Blackout": {
@@ -2381,6 +2389,27 @@
         "text": "A model with this wargear may re-roll Cover Save\nrolls."
       },
       "Wargear§Infravisor": {
+        "rules": {
+          "addNightVisionRule": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Night Vision"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Points": {
             "value": 1
