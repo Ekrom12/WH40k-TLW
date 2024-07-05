@@ -727,6 +727,41 @@
           ],
           "Keywords": []
         },
+        "rules": {
+          "addFleetIconOfExcess": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fleet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Icon",
+                    "value"
+                  ]
+                ],
+                "value": "Icon of Excess"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Mark of Chaos": {
             "dynamic": true,
@@ -953,7 +988,6 @@
             "visibility": "hidden"
           },
           "Mark of Chaos": {
-            "dynamic": false,
             "ranks": {
               "-": {
                 "order": 0,
@@ -2061,6 +2095,476 @@
             "value": 1
           },
           "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Castraferrum Dreadnought": {
+        "assets": {
+          "traits": [
+            "Wargear§Smoke Launchers",
+            "Wargear§Dreadnought Plate"
+          ]
+        },
+        "stats": {
+          "2 Hunter Killer Missiles (+10 pts)": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "A": {
+            "tracked": true,
+            "value": 3
+          },
+          "Assault Launchers (+5 pts)": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Assault Launchers"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "tracked": true,
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 8
+          },
+          "Left Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Meltagun": {
+                "format": "{v} +15 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "format": "{v} +0 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Cyclone Missile Launcher": {
+                "format": "{v} +0 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "format": "{v} +5 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +0 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Linked Autocannon": {
+                "format": "{v} +0 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Autocannon"
+                  }
+                ]
+              },
+              "Linked Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Chainfist & Melta Gun": {
+                "format": "{v} +5 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Chainfist & Flamer": {
+                "format": "{v} +0 pts",
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 85
+          },
+          "Right Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Storm Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Meltagun": {
+                "format": "{v} +15 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "format": "{v} +0 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Cyclone Missile Launcher": {
+                "format": "{v} +0 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Cyclone Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "format": "{v} +5 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +0 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Linked Autocannon": {
+                "format": "{v} +0 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Autocannon"
+                  }
+                ]
+              },
+              "Linked Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Chainfist & Melta Gun": {
+                "format": "{v} +5 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Chainfist & Flamer": {
+                "format": "{v} +0 pts",
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "tracked": true,
             "value": 4
           }
         }
@@ -3636,7 +4140,7 @@
                     "value"
                   ]
                 ],
-                "value": "Indomitus Terminator Armour"
+                "value": "Cataphractii Terminator Armour"
               }
             ],
             "evaluate": "AND",
@@ -4049,7 +4553,7 @@
                     "value"
                   ]
                 ],
-                "value": "Indomitus Terminator Armour"
+                "value": "Tartaros Terminator Armour"
               }
             ],
             "evaluate": "AND",
@@ -4604,6 +5108,532 @@
           },
           "WS": {
             "value": 5
+          }
+        }
+      },
+      "Model§Chaos Terminator": {
+        "rules": {
+          "getTerminatorArmorRules": {
+            "evals": []
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Reaper Auto Cannon": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              },
+              "Plasma Blaster": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Blaster"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Combi Bolter",
+            "visibility": "normal"
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Sword": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "format": "{v} +20 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Power Sword",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 32
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Chaos Terminator Champion": {
+        "rules": {
+          "getTerminatorArmorRules": {
+            "evals": []
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Reaper Auto Cannon": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              },
+              "Plasma Blaster": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Blaster"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "format": "{v} +10 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Combi Bolter",
+            "visibility": "normal"
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Power Sword": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "format": "{v} +20 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Power Sword",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 32
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -5743,54 +6773,6 @@
             "tracked": true,
             "value": 8
           },
-          "Mark of Chaos": {
-            "ranks": {
-              "Mark of Khorne": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Khorne"
-                  }
-                ]
-              },
-              "Mark of Nurgle": {
-                "order": 2,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Nurgle"
-                  }
-                ]
-              },
-              "Mark of Slaanesh": {
-                "order": 3,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Slaanesh"
-                  }
-                ]
-              },
-              "Mark of Tzeentch": {
-                "order": 4,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Tzeentch"
-                  }
-                ]
-              }
-            }
-          },
           "Points": {
             "value": 115
           },
@@ -5952,65 +6934,6 @@
           },
           "M": {
             "value": 6
-          },
-          "Mark of Chaos": {
-            "ranks": {
-              "Mark of Khorne": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Khorne"
-                  }
-                ]
-              },
-              "Mark of Nurgle": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Nurgle"
-                  }
-                ]
-              },
-              "Mark of Slaanesh": {
-                "order": 3,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Slaanesh"
-                  }
-                ]
-              },
-              "Mark of Tzeentch": {
-                "order": 4,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Tzeentch"
-                  }
-                ]
-              },
-              "Mark of Chaos Undivided": {
-                "order": 5,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Chaos Undivided"
-                  }
-                ]
-              }
-            }
           },
           "Points": {
             "value": 12
@@ -6195,65 +7118,6 @@
           },
           "M": {
             "value": 6
-          },
-          "Mark of Chaos": {
-            "ranks": {
-              "Mark of Khorne": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Khorne"
-                  }
-                ]
-              },
-              "Mark of Nurgle": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Nurgle"
-                  }
-                ]
-              },
-              "Mark of Slaanesh": {
-                "order": 3,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Slaanesh"
-                  }
-                ]
-              },
-              "Mark of Tzeentch": {
-                "order": 4,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Tzeentch"
-                  }
-                ]
-              },
-              "Mark of Chaos Undivided": {
-                "order": 5,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Mark of Chaos Undivided"
-                  }
-                ]
-              }
-            }
           },
           "Points": {
             "value": 12
@@ -6605,6 +7469,433 @@
           },
           "W": {
             "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Mutilator": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Power Fist",
+            "Melee Weapon§Lightning Claws",
+            "Melee Weapon§Chain Fist",
+            "Melee Weapon§Power Sword",
+            "Melee Weapon§Power Axe",
+            "Melee Weapon§Power Maul"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 55
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Possessed": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Bolt Pistol",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Warp Armor"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "Additional Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Rift Barb": {
+                "format": "{v} +2 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Rift Barb"
+                  }
+                ]
+              },
+              "Hell Flame": {
+                "format": "{v} +1 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hell Flame"
+                  }
+                ]
+              },
+              "Spine Volley": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spine Volley"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 7
+          },
+          "Melee Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Hideous Mutations": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Hideous Mutations"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Hideous Mutations",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 29
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Possessed Champion": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Bolt Pistol",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade",
+            "Wargear§Warp Armor"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "Additional Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Rift Barb": {
+                "format": "{v} +2 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Rift Barb"
+                  }
+                ]
+              },
+              "Hell Flame": {
+                "format": "{v} +1 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hell Flame"
+                  }
+                ]
+              },
+              "Spine Volley": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spine Volley"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "Extra Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Malefic Talon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Malefic Talons"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +20 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Malefic Talon",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 7
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Hideous Mutations": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Hideous Mutations"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Hideous Mutations",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 29
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
           },
           "WS": {
             "value": 4
@@ -8204,6 +9495,525 @@
         },
         "text": "A unit with the Zealot special rule adds the value of (x) to its Strength (S) Characteristic in the combat phase after it has completed a charge move (see 12.1)"
       },
+      "Unit§Castraferrum Dreadnought": {
+        "allowed": {
+          "items": [
+            "Model§Castraferrum Dreadnought"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Castraferrum Dreadnought"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Walker"
+          ],
+          "Keywords": [
+            "Despoiler",
+            "Dreadnought",
+            "Legion",
+            "M31"
+          ]
+        },
+        "stats": {
+          "Castraferrum Dreadnought": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "dynamic": false,
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
+      "Unit§Chaos Terminators": {
+        "allowed": {
+          "items": [
+            "Model§Chaos Terminator",
+            "Model§Chaos Terminator Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Chaos Terminator",
+              "quantity": 4
+            },
+            "Model§Chaos Terminator Champion"
+          ],
+          "traits": [
+            "Special Rule§Chosen of Chaos"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Keywords": [
+            "Chaos Terminator",
+            "Legion",
+            "M31",
+            "Terminators",
+            "Veterans"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "rules": {
+          "1 in 5 can have a Heavy Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "addCataphractiiRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky (2)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Slow & Purposeful"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Cataphractii Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "addIndomitusRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky (2)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "addTartarosRules": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Relentless"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Bulky (2)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deep Strike"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sprint (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Terminator Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Tartaros Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
+        "stats": {
+          "Chaos Terminator": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 9,
+            "min": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Chaos Terminator Champion": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 1,
+            "min": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Heavy Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          },
+          "Terminator Armour": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Tartaros Terminator Armour": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Tartaros Terminator Armor"
+                  }
+                ]
+              },
+              "Cataphractii Terminator Armour": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Cataphractii Terminator Armour"
+                  }
+                ]
+              },
+              "Indomitus Terminator Armour": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Indomitus Terminator Armour"
+                  }
+                ]
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Tartaros Terminator Armour",
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Chosen": {
         "allowed": {
           "items": [
@@ -8231,7 +10041,7 @@
             "Infantry"
           ],
           "Role": [
-            "Infantry"
+            "Elites"
           ],
           "Keywords": [
             "Chosen",
@@ -8344,7 +10154,7 @@
             "statType": "rank",
             "tracked": true,
             "value": "-",
-            "visibility": "always"
+            "visibility": "normal"
           }
         }
       },
@@ -8395,6 +10205,7 @@
                 "order": 0
               },
               "Icon of Wrath": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -8406,6 +10217,7 @@
                 ]
               },
               "Icon of Despair": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -8417,6 +10229,7 @@
                 ]
               },
               "Icon of Excess": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -8428,17 +10241,23 @@
                 ]
               },
               "Icon of Flame": {
+                "format": "{v} +5 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 5
-                }
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Flame"
+                  }
+                ]
               }
             },
             "statOrder": 2,
             "statType": "rank",
             "tracked": true,
             "value": "-",
-            "visibility": "always"
+            "visibility": "normal"
           },
           "Inductii Aspiring Champion": {
             "group": "Composition",
@@ -8487,7 +10306,75 @@
             "statType": "rank",
             "tracked": true,
             "value": "Boltgun",
-            "visibility": "always"
+            "visibility": "normal"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
           }
         }
       },
@@ -8650,7 +10537,7 @@
             "statType": "rank",
             "tracked": true,
             "value": "-",
-            "visibility": "always"
+            "visibility": "normal"
           },
           "Legionnaire": {
             "max": 9,
@@ -8676,11 +10563,16 @@
             "statType": "rank",
             "tracked": true,
             "value": "Boltgun",
-            "visibility": "always"
+            "visibility": "normal"
           },
           "Mark of Chaos": {
             "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
               "Mark of Khorne": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -8692,6 +10584,7 @@
                 ]
               },
               "Mark of Nurgle": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -8703,6 +10596,7 @@
                 ]
               },
               "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -8714,6 +10608,7 @@
                 ]
               },
               "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 5
@@ -8725,6 +10620,7 @@
                 ]
               },
               "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -8735,13 +10631,255 @@
                   }
                 ]
               }
-            }
+            },
+            "tracked": false
           },
           "Special Weapon Selection": {
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Mutilators": {
+        "allowed": {
+          "items": [
+            "Model§Mutilator"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Mutilator",
+              "quantity": 2
+            }
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Legion",
+            "M31",
+            "Mutilators",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          },
+          "Mutilator": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 6,
+            "min": 2,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Possessed": {
+        "allowed": {
+          "items": [
+            "Model§Possessed",
+            "Model§Possessed Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Possessed",
+              "quantity": 4
+            },
+            "Model§Possessed Champion"
+          ],
+          "traits": [
+            "Special Rule§Daemon"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Legion",
+            "M31",
+            "Possessed",
+            "Ravager"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Icon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Icon of Wrath": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Wrath"
+                  }
+                ]
+              },
+              "Icon of Despair": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Despair"
+                  }
+                ]
+              },
+              "Icon of Excess": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Excess"
+                  }
+                ]
+              },
+              "Icon of Flame": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                }
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Possessed": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 9,
+            "min": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Possessed Champion": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 1,
+            "min": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
