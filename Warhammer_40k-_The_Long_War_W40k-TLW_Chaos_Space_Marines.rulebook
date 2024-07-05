@@ -2180,7 +2180,7 @@
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
-              "Dreadnought Close Combat Weapon & Storm Bolter": {
+              "Dreadnought Close Combat Weapon & Combi Bolter": {
                 "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
@@ -2191,7 +2191,7 @@
                     "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
                   },
                   {
-                    "trait": "Ranged Weapon§Storm Bolter"
+                    "trait": "Ranged Weapon§Combi Bolter"
                   }
                 ]
               },
@@ -2357,7 +2357,7 @@
             },
             "statOrder": 1,
             "statType": "rank",
-            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "value": "Dreadnought Close Combat Weapon & Combi Bolter",
             "visibility": "normal"
           },
           "M": {
@@ -2371,7 +2371,7 @@
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
-              "Dreadnought Close Combat Weapon & Storm Bolter": {
+              "Dreadnought Close Combat Weapon & Combi Bolter": {
                 "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
@@ -2382,7 +2382,7 @@
                     "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
                   },
                   {
-                    "trait": "Ranged Weapon§Storm Bolter"
+                    "trait": "Ranged Weapon§Combi Bolter"
                   }
                 ]
               },
@@ -2548,7 +2548,7 @@
             },
             "statOrder": 1,
             "statType": "rank",
-            "value": "Dreadnought Close Combat Weapon & Storm Bolter",
+            "value": "Dreadnought Close Combat Weapon & Combi Bolter",
             "visibility": "normal"
           },
           "S": {
@@ -6529,6 +6529,512 @@
           }
         }
       },
+      "Model§Contemptor Dreadnought": {
+        "assets": {
+          "traits": [
+            "Wargear§Dreadnought Plate",
+            "Wargear§Atomantic Shielding"
+          ]
+        },
+        "stats": {
+          "A": {
+            "tracked": true,
+            "value": 3
+          },
+          "BS": {
+            "tracked": true,
+            "value": 5
+          },
+          "Havoc Launcher (+5 pts)": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Havoc Launcher"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "format": " {v}+",
+            "group": "Stats",
+            "statOrder": 10,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 5,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "tracked": true,
+            "value": 8
+          },
+          "Left Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Plasma Blaster": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Plasma Blaster"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Heavy Flamer": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Melta Gun": {
+                "format": "{v} +15 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Grav Gun": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "format": "{v} +0 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +5 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "format": "{v} +0 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "format": "{v} +5 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +0 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Linked Autocannon": {
+                "format": "{v} +0 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Autocannon"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 13,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "format": "{v} +0 pts",
+                "order": 14,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Combi Bolter",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 100
+          },
+          "Right Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Dreadnought Close Combat Weapon & Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Plasma Blaster": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Plasma Blaster"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Heavy Flamer": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Melta Gun": {
+                "format": "{v} +15 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Grav Gun": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Assault Cannon": {
+                "format": "{v} +0 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Assault Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +5 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "format": "{v} +0 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "format": "{v} +5 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +0 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Linked Autocannon": {
+                "format": "{v} +0 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Autocannon"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 12,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 13,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Chain Fist": {
+                "format": "{v} +0 pts",
+                "order": 14,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chain Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon & Combi Bolter",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "W": {
+            "tracked": true,
+            "value": 4
+          },
+          "WS": {
+            "tracked": true,
+            "value": 5
+          }
+        }
+      },
       "Model§Daemon Prince": {
         "assets": {
           "traits": [
@@ -6899,6 +7405,234 @@
           },
           "WS": {
             "value": 6
+          }
+        }
+      },
+      "Model§Hellbrute": {
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 8
+          },
+          "Melee Weapon": {
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Dreadnought Close Combat Weapon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Heavy Flamer": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Power Scourge": {
+                "format": "{v} +0 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Scourge"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "format": "{v} +0 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 105
+          },
+          "Ranged Weapon": {
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "Dreadnought Close Combat Weapon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Dreadnought Close Combat Weapon & Heavy Flamer": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Dreadnought Close Combat Weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Linked Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              },
+              "Reaper Auto Cannon": {
+                "format": "{v} +0 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +0 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Linked Lascannons": {
+                "format": "{v} +0 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Dreadnought Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 7
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -7896,6 +8630,54 @@
           },
           "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Venom Crawler": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Melee Weapon§Eviscerating Claws",
+            {
+              "item": "Ranged Weapon§Excruciator Cannons",
+              "quantity": 2
+            },
+            "Wargear§Daemon Engine Armor"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 9
+          },
+          "Points": {
+            "value": 75
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 4
           },
           "WS": {
             "value": 4
@@ -10158,6 +10940,268 @@
           }
         }
       },
+      "Unit§Contemptor Dreadnought": {
+        "allowed": {
+          "items": [
+            "Model§Contemptor Dreadnought"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Contemptor Dreadnought"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Feel no Pain",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Unit Type": [
+            "Walker"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Contemptor",
+            "Dreadnought",
+            "Legion",
+            "M31",
+            "Veterans"
+          ]
+        },
+        "stats": {
+          "Contemptor Dreadnought": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
+      "Unit§Hellbrute": {
+        "allowed": {
+          "items": [
+            "Model§Hellbrute"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Hellbrute"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Frenzy",
+            {
+              "item": "Special Rule§Rage",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Regeneration"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Walker"
+          ],
+          "Keywords": [
+            "Despoiler",
+            "Dreadnought",
+            "Hellbrute",
+            "Legion",
+            "M31"
+          ]
+        },
+        "stats": {
+          "Hellbrute": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
       "Unit§Inductii Squad": {
         "allowed": {
           "items": [
@@ -10883,8 +11927,142 @@
           }
         }
       },
+      "Unit§Venom Crawler": {
+        "allowed": {
+          "items": [
+            "Model§Venom Crawler"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Venom Crawler"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Regeneration",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Special Rule§Daemon"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Engine",
+            "Legion",
+            "M31",
+            "Ravager",
+            "Venom Crawler"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          },
+          "Venom Crawler": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Wargear§Artificer Armour": {
         "inheritance": "removed"
+      },
+      "Wargear§Atomantic Shielding": {
+        "text": "This confers a 5+ Invulnerable save. When a model with this wargear is slain and removed from\nplay, the model suffers an Explodes result per the Vehicle damage chart before it is removed from play."
       },
       "Wargear§Aura of Dark Glory": {
         "text": "A model with a Aura of Dark Glory has a 5+ Invulnerable save."
