@@ -12549,6 +12549,75 @@
           }
         },
         "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          },
           "Termite Assault Drill": {
             "max": 1,
             "min": 1,
