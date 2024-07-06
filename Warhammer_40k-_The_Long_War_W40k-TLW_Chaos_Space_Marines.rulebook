@@ -7636,6 +7636,84 @@
           }
         }
       },
+      "Model§Helldrake": {
+        "assets": {
+          "traits": [
+            "Wargear§Daemon Engine Armor",
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Wings"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 13
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "Auto Cannon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Auto Cannon"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Auto Cannon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 100
+          },
+          "S": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Inductii Aspiring Champion": {
         "allowed": {
           "items": [
@@ -11256,6 +11334,240 @@
           }
         }
       },
+      "Unit§Hell Blade": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hell Blade"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hell Blade"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Aircraft"
+          ],
+          "Keywords": [
+            "Fly",
+            "Hell Blade",
+            "Legion",
+            "M36"
+          ]
+        },
+        "stats": {
+          "Hell Blade": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
+      "Unit§Hell Talon": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hell Talon"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hell Talon"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Aircraft"
+          ],
+          "Keywords": [
+            "Fly",
+            "Hell Talon",
+            "Legion",
+            "M36"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
       "Unit§Hellbrute": {
         "allowed": {
           "items": [
@@ -11308,6 +11620,130 @@
         },
         "stats": {
           "Hellbrute": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
+      "Unit§Helldrake": {
+        "allowed": {
+          "items": [
+            "Model§Helldrake"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Helldrake"
+          ],
+          "traits": [
+            "Special Rule§Daemon",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Deep Strike",
+            "Special Rule§Move Through Cover",
+            "Special Rule§Regeneration"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Engine",
+            "Fly",
+            "Helldrake",
+            "M32",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Helldrake": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -12495,6 +12931,125 @@
           }
         }
       },
+      "Unit§Storm Eagle Gunship": {
+        "allowed": {
+          "items": [
+            "Vehicle§Storm Eagle Gunship"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Storm Eagle Gunship"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Hover",
+            {
+              "item": "Special Rule§Transport",
+              "text": "This model can transport 22 Infantry models."
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Aircraft"
+          ],
+          "Keywords": [
+            "Fly",
+            "Legion",
+            "M31",
+            "Storm Eagle Gunship",
+            "Transport"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
       "Unit§Termite Assault Drill": {
         "allowed": {
           "items": [
@@ -12759,6 +13314,127 @@
           }
         }
       },
+      "Unit§Xiphon Interceptor": {
+        "allowed": {
+          "items": [
+            "Vehicle§Xiphon Interceptor"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Xiphon Interceptor"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "5 - Flyers"
+          ],
+          "Role": [
+            "Flyer"
+          ],
+          "Unit Type": [
+            "Aircraft"
+          ],
+          "Keywords": [
+            "Fly",
+            "Legion",
+            "M31",
+            "Xiphon Interceptor"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          },
+          "Xiphon Interceptor": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Vehicle§Dread Claw Drop Pod": {
         "assets": {
           "traits": [
@@ -12817,6 +13493,197 @@
             "statType": "numeric",
             "value": 12,
             "visibility": "normal"
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
+      "Vehicle§Hell Blade": {
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 10
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "20-30"
+          },
+          "Main Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "2 Linked Autocannons": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Autocannon",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2 Linked Lascannons": {
+                "format": "{v} +20 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "2 Linked Autocannons",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 80
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 10
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
+      "Vehicle§Hell Talon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Linked Lascannon",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Infernal Bombs",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "20-30"
+          },
+          "Main Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "Linked Autocannon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Autocannon",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Havoc Launcher": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Havoc Launcher",
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Linked Autocannon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 100
+          },
+          "RA": {
+            "value": 11
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 11
           },
           "WS": {
             "value": 1
@@ -12950,6 +13817,7 @@
             "value": 12
           },
           "Main Weapon Configuration": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 6,
             "ranks": {
@@ -13464,6 +14332,158 @@
           }
         }
       },
+      "Vehicle§Storm Eagle Gunship": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Vengeance Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "Frontal Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Heavy Bolter (P)": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Heavy Bolter"
+                  }
+                ]
+              },
+              "Linked Lascannon (P)": {
+                "format": "{v} +15 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Lascannon"
+                  }
+                ]
+              },
+              "Linked Multimelta (P)": {
+                "format": "{v} +20 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Multi-Melta"
+                  }
+                ]
+              },
+              "Typhoon Missile Launcher (P)": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Typhoon Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Typhoon Missile Launcher (Krak)"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Linked Heavy Bolter (P)",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "20-30"
+          },
+          "Points": {
+            "value": 135
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 12
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 5,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 22,
+            "visibility": "normal"
+          },
+          "Wing Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Hellstrike Launchers (P)": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Hellstrike Launcher"
+                  }
+                ]
+              },
+              "2 Linked Lascannons (P)": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Linked Lascannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Linked Hellstrike Launchers (P)",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
       "Vehicle§Termite Assault Drill": {
         "assets": {
           "traits": [
@@ -13526,6 +14546,7 @@
             "visibility": "normal"
           },
           "Weapons": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 7,
             "ranks": {
@@ -13591,6 +14612,65 @@
           },
           "WS": {
             "value": 4
+          }
+        }
+      },
+      "Vehicle§Xiphon Interceptor": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Linked Lascannon",
+              "quantity": 2,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Rotary Missile Launcher",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 11
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "statType": "term",
+            "value": "20-30"
+          },
+          "Points": {
+            "value": 125
+          },
+          "RA": {
+            "value": 11
+          },
+          "S": {
+            "value": 7
+          },
+          "SA": {
+            "value": 11
+          },
+          "WS": {
+            "value": 1
           }
         }
       },
