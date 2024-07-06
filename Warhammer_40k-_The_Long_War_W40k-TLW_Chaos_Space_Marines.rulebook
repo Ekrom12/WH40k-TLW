@@ -10155,6 +10155,14 @@
           }
         }
       },
+      "Special Rule§Assault Claw Drop Pod Assault": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "Up to half the number of Assault Claw Drop pods in your army can be deployed during the\nfirst turn. When arriving from Deep Strike, Assault Claw Drop Pods never scatter. A unit embarked on Assault Claw Drop\nPod must disembark the turn a Assault Claw Drop Pod arrives. A Assault Claw Drop Pod may not be garrisoned after it has\narrived on the Battlefield."
+      },
       "Special Rule§Bulky (2)": {
         "keywords": {
           "Keywords": [
@@ -10202,6 +10210,14 @@
         },
         "text": "A unit with this rule gains the Daemon Keyword. The Daemon unit has a 5+ Invulnerable save and the\nFear (1) special rule. Daemon units have +1” to their Movement (M) characteristic. (This is included in unit data\nsheets that have the Daemon special rule by default)"
       },
+      "Special Rule§Dread Claw Drop Pod Assault": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "Up to half the number of Dread Claw Drop pods in your army can be deployed during the\nfirst turn. When arriving from Deep Strike, Dread Claw Drop Pods never scatter. A unit embarked on Dread Claw Drop Pod\nmust disembark the turn a Dread Claw Drop Pod arrives. A Dread Claw Drop Pod may not be garrisoned after it has arrived\non the Battlefield."
+      },
       "Special Rule§Feel No Pain (5+)": {
         "keywords": {
           "Keywords": [
@@ -10216,6 +10232,14 @@
           ]
         },
         "text": "If Chaos Space Marine units with this rule are in combat with an enemy unit that has\na lower Leadership (LD) Characteristic, the Chaos space marine units have the Fear (1) special rule."
+      },
+      "Special Rule§Heat Blast": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "This unit gains +4” to its Movement (M) characteristic. When this model arrives from Deep Strike, after its final\nposition is determined, measure 6” from the model's hull, then all units take hits equal to the number of models in range. These\nhits are resolved at Strength 6 AP 5 with Ignores Cover. The hits count as being a Flamer category weapon"
       },
       "Special Rule§Let the Galaxy Burn": {
         "keywords": {
@@ -11096,6 +11120,142 @@
           }
         }
       },
+      "Unit§Dread Claw Drop Pod": {
+        "allowed": {
+          "items": [
+            "Vehicle§Dread Claw Drop Pod"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Dread Claw Drop Pod"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Transport",
+              "text": " This model can transport 12 Infantry models."
+            },
+            "Special Rule§Dread Claw Drop Pod Assault",
+            "Special Rule§Heat Blast"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transport"
+          ],
+          "Role": [
+            "Dedicated Transports"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Despoiler",
+            "Dread Claw Drop Pod",
+            "Fly",
+            "Legion",
+            "M31",
+            "Transport"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Special Rule§Let the Galaxy Burn",
+              "Special Rule§Harbingers of Destruction"
+            ]
+          }
+        },
+        "stats": {
+          "Dread Claw Drop Pod": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
+          }
+        }
+      },
       "Unit§Hellbrute": {
         "allowed": {
           "items": [
@@ -11443,6 +11603,150 @@
                 ]
               }
             }
+          }
+        }
+      },
+      "Unit§Kharybdis Assault Claw": {
+        "allowed": {
+          "items": [
+            "Vehicle§Kharybdis Assault Claw"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Kharybdis Assault Claw"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            "Special Rule§Assault Claw Drop Pod Assault",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Transport",
+              "text": " This model can transport 22 Infantry models."
+            },
+            "Special Rule§Heat Blast",
+            {
+              "item": "Special Rule§Super Heavy",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transport"
+          ],
+          "Role": [
+            "Dedicated Transports"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Despoiler",
+            "Fly",
+            "Kharybdis Assault Claw",
+            "Legion",
+            "M31",
+            "Transport"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Special Rule§Let the Galaxy Burn",
+              "Special Rule§Harbingers of Destruction"
+            ]
+          }
+        },
+        "stats": {
+          "Kharybdis Assault Claw": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "tracked": false
           }
         }
       },
@@ -12191,6 +12495,70 @@
           }
         }
       },
+      "Unit§Termite Assault Drill": {
+        "allowed": {
+          "items": [
+            "Vehicle§Termite Assault Drill"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Termite Assault Drill"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Transport",
+              "text": "This model can transport 12 Infantry models that do not have the Bulky (x) special rule"
+            },
+            "Special Rule§Deep Strike",
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "4 - Dedicated Transport"
+          ],
+          "Role": [
+            "Dedicated Transports"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ],
+          "Keywords": [
+            "Despoiler",
+            "Legion",
+            "M31",
+            "Termite Assault Drill",
+            "Transport"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Special Rule§Let the Galaxy Burn",
+              "Special Rule§Harbingers of Destruction"
+            ]
+          }
+        },
+        "stats": {
+          "Termite Assault Drill": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Venom Crawler": {
         "allowed": {
           "items": [
@@ -12319,6 +12687,144 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          }
+        }
+      },
+      "Vehicle§Dread Claw Drop Pod": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Magma Cutter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Fire Sweep",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 16
+          },
+          "Points": {
+            "value": 95
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 12
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 5,
+            "statType": "numeric",
+            "value": 12,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 1
+          }
+        }
+      },
+      "Vehicle§Kharybdis Assault Claw": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Magma Cutter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Cyclone Missile Launcher (Frag)",
+              "quantity": 5,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Cyclone Missile Launcher (Krak)",
+              "quantity": 5,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 16
+          },
+          "Points": {
+            "value": 205
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 8
+          },
+          "SA": {
+            "value": 12
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 5,
+            "statType": "numeric",
+            "value": 22,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 1
           }
         }
       },
@@ -12882,6 +13388,136 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": 11,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Termite Assault Drill": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Magma Cutter",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Combi Bolter",
+              "quantity": 2,
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            },
+            "Melee Weapon§Marine Crew Weapons"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 60
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 12
+          },
+          "Transport Capacity": {
+            "group": "Transport",
+            "groupOrder": 5,
+            "statType": "numeric",
+            "value": 12,
+            "visibility": "normal"
+          },
+          "Weapons": {
+            "group": "Wargear",
+            "groupOrder": 7,
+            "ranks": {
+              "2 Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Combi Bolter",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2 Vokite Chargers": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Volkite Charger",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "2 Heavy Flamers": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Flamer",
+                      "quantity": 2,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "S"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "2 Combi Bolter",
             "visibility": "normal"
           },
           "WS": {
