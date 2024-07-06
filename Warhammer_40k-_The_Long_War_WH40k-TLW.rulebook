@@ -725,6 +725,146 @@
           "Group Includes": true
         },
         "rules": {
+          "alliedDetachmentChangeRequirements": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "HQ unit count",
+                    "max"
+                  ]
+                ],
+                "value": -1
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Troop unit count",
+                    "min"
+                  ]
+                ],
+                "value": -1
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Troop unit count",
+                    "max"
+                  ]
+                ],
+                "value": -3
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Elite unit count",
+                    "max"
+                  ]
+                ],
+                "value": -2
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Fast Attack unit count",
+                    "max"
+                  ]
+                ],
+                "value": -2
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Heavy Support unit count",
+                    "max"
+                  ]
+                ],
+                "value": -2
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Flyer unit count",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lords of War unit count",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Fortification unit count",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Allied Detachment"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
           "CalculateThousands": {
             "actions": [
               {
@@ -1017,6 +1157,22 @@
           }
         },
         "stats": {
+          "Detachment": {
+            "dynamic": true,
+            "group": "Roster",
+            "ranks": {
+              "Crusade Detachment": {
+                "order": 0
+              },
+              "Allied Detachment": {
+                "order": 1
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "Crusade Detachment",
+            "visibility": "normal"
+          },
           "Elite unit count": {
             "max": 4,
             "statType": "numeric",
@@ -1126,7 +1282,7 @@
           },
           "Rite of War": {
             "dynamic": true,
-            "group": "Rooster",
+            "group": "Roster",
             "ranks": {
               "-": {
                 "order": 0
