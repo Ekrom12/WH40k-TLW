@@ -1098,6 +1098,9 @@
               }
             },
             "tracked": false
+          },
+          "Warlord": {
+            "value": "✓"
           }
         }
       },
@@ -1125,7 +1128,8 @@
                   "value": 1
                 }
               }
-            }
+            },
+            "Special Rule§Lord of Damnation"
           ]
         },
         "keywords": {
@@ -1160,6 +1164,9 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          },
+          "Warlord": {
+            "value": "✓"
           }
         }
       },
@@ -14381,6 +14388,25 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "You may only field 1 unit with the \"Lord of damnation\" special rule. That unit must be your warlord.": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Lord of Damnation"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
