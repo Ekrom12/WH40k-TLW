@@ -772,9 +772,10 @@
                 "order": 0
               },
               "Mark of Khorne": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
-                  "Points": 0
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -783,9 +784,10 @@
                 ]
               },
               "Mark of Nurgle": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
-                  "Points": 0
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -794,9 +796,10 @@
                 ]
               },
               "Mark of Slaanesh": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
-                  "Points": 0
+                  "Points": 105
                 },
                 "traits": [
                   {
@@ -805,9 +808,10 @@
                 ]
               },
               "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
                 "order": 4,
                 "tracking": {
-                  "Points": 0
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -816,9 +820,10 @@
                 ]
               },
               "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
-                  "Points": 0
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -1517,6 +1522,391 @@
           }
         }
       },
+      "Model§Aspiring Bike Champion": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Linked Boltgun",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Close Combat Weapon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "format": "{v} +1 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +15 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +20 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "format": "{v} +5 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "format": "{v} +5 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "format": "{v} +10 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 19
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Combi Bolter": {
+                "format": "{v} +1 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Flamer": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Astartes Shotgun": {
+                "format": "{v} +1 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Shotgun"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "format": "{v} +5 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +5 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "format": "{v} +10 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 12,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Aspiring Champion": {
         "allowed": {
           "items": [
@@ -2090,6 +2480,186 @@
           },
           "T": {
             "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Bike Marine": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Linked Boltgun",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 12
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Close Combat Weapon": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Close Combat Weapons"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "format": "{v} +1 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Close Combat Weapon",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 18
+          },
+          "Ranged Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Astartes Shotgun": {
+                "format": "{v} +1 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 1,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Astartes Shotgun"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "format": "{v} +15 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Grav Gun": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Gun"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "format": "{v} +5 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
           },
           "W": {
             "value": 1
@@ -5108,6 +5678,95 @@
           },
           "WS": {
             "value": 5
+          }
+        }
+      },
+      "Model§Chaos Spawn": {
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "Additional Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Rift Barb": {
+                "format": "{v} +2 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Rift Barb"
+                  }
+                ]
+              },
+              "Hell Flame": {
+                "format": "{v} +1 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hell Flame"
+                  }
+                ]
+              },
+              "Spine Volley": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spine Volley"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 2
+          },
+          "I": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 5
+          },
+          "M": {
+            "value": 10
+          },
+          "Points": {
+            "value": 30
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "format": "{v}",
+            "statType": "term",
+            "value": "-"
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -8714,6 +9373,537 @@
           }
         }
       },
+      "Model§Raptor": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Chansword & Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Chainsword & Plasma Pistol": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "2 Bolt Pistols": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Bolt Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Plasma Pistols": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plasma Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Flamer": {
+                "format": "{v} +0 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 0,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Chansword & Bolt Pistol",
+            "visibility": "normal"
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 18
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Raptor Aspiring Champion": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "rules": {
+          "RemoveMeleeWeaponIfSpecialWargear": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ranged Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "2 Bolt Pistols"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ranged Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "2 Plasma Pistols"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ranged Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Flamer"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Chainsword": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +20 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Chainsword",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 18
+          },
+          "Ranged Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "2 Bolt Pistols": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Bolt Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Plasma Pistols": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plasma Pistol",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Flamer": {
+                "format": "{v} +0 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 0,
+                  "Special Loadout Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "format": "{v} +0 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              },
+              "Volkite Caliver": {
+                "format": "{v} +5 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Talon Champion": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Melee Weapon§Lightning Claws",
+              "quantity": 2
+            },
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "M": {
+            "value": 13
+          },
+          "Points": {
+            "value": 43
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Venom Crawler": {
         "assets": {
           "traits": [
@@ -8756,6 +9946,53 @@
           },
           "W": {
             "value": 4
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Warp Talon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Melee Weapon§Lightning Claws",
+              "quantity": 2
+            },
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 13
+          },
+          "Points": {
+            "value": 43
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
           },
           "WS": {
             "value": 4
@@ -10395,6 +11632,14 @@
         },
         "text": ""
       },
+      "Special Rule§Warp Flame Assault": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "All Hammer of Wrath attacks made by this unit are resolved as if they have the Blind special rule"
+      },
       "Special Rule§Zealot (1)": {
         "keywords": {
           "Keywords": [
@@ -10521,6 +11766,199 @@
               }
             },
             "tracked": false
+          }
+        }
+      },
+      "Unit§Chaos Bike Squad": {
+        "allowed": {
+          "items": [
+            "Model§Bike Marine",
+            "Model§Aspiring Bike Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Bike Marine",
+              "quantity": 2
+            },
+            "Model§Aspiring Bike Champion"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            "Special Rule§Fade & Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Bike"
+          ],
+          "Keywords": [
+            "Chaos Bike Squad",
+            "Legion",
+            "M31",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Aspiring Bike Champion": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 1,
+            "min": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Bike Marine": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 8,
+            "min": 2,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Icon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Icon of Wrath": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Wrath"
+                  }
+                ]
+              },
+              "Icon of Despair": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Despair"
+                  }
+                ]
+              },
+              "Icon of Excess": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Excess"
+                  }
+                ]
+              },
+              "Icon of Flame": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Flame"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Chaos Spawn": {
+        "allowed": {
+          "items": [
+            "Model§Chaos Spawn"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Chaos Spawn"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Sprint",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Fleet"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Keywords": [
+            "Chaos Spawn"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Beast"
+          ]
+        },
+        "stats": {
+          "Chaos Spawn": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 3,
+            "min": 1,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -12809,6 +14247,138 @@
           }
         }
       },
+      "Unit§Raptors": {
+        "allowed": {
+          "items": [
+            "Model§Raptor",
+            "Model§Raptor Aspiring Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Raptor",
+              "quantity": 4
+            },
+            "Model§Raptor Aspiring Champion"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Fly",
+            "Legion",
+            "M31",
+            "Raptors",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Icon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Icon of Wrath": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Wrath"
+                  }
+                ]
+              },
+              "Icon of Despair": {
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Despair"
+                  }
+                ]
+              },
+              "Icon of Excess": {
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Icon of Excess"
+                  }
+                ]
+              },
+              "Icon of Flame": {
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                }
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Raptor": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 9,
+            "min": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Raptor Aspiring Champion": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 1,
+            "min": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Rhino APC": {
         "allowed": {
           "items": [
@@ -13311,6 +14881,78 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Warp Talons": {
+        "allowed": {
+          "items": [
+            "Model§Warp Talon",
+            "Model§Talon Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Warp Talon",
+              "quantity": 4
+            },
+            "Model§Talon Champion"
+          ],
+          "traits": [
+            "Special Rule§Daemon",
+            "Special Rule§Deep Strike",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Warp Flame Assault"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Fly",
+            "Legion",
+            "Ravager",
+            "Warp Talons"
+          ]
+        },
+        "stats": {
+          "Talon Champion": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 1,
+            "min": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Warp Talon": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 9,
+            "min": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -14454,7 +16096,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Linked Hellstrike Launcher"
+                    "trait": "Ranged Weapon§Linked Hell Strike Launcher"
                   }
                 ]
               },
