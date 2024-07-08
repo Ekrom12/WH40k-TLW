@@ -1767,6 +1767,14 @@
         },
         "text": "A weapon with this special rule may re-roll all hit rolls. A Linked weapon with the Spray special rule can score a max 10 hits instead 5"
       },
+      "Special Rule§Macro": {
+        "keywords": {
+          "Keywords": [
+            "Weapon Special Rule"
+          ]
+        },
+        "text": "A weapon with this special rule has +2 to the roll when rolling on the Vehicle damage chart or Titan Damage\nchart. Macro weapons ignore the Super Heavy special rule and any Super Heavy Structure points a target has for\ndetermining of they would be destroyed from an attack."
+      },
       "Special Rule§Master-Crafted": {
         "keywords": {
           "Keywords": [
