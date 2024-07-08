@@ -11882,6 +11882,9 @@
         },
         "text": "Up to half the number of Assault Claw Drop pods in your army can be deployed during the\nfirst turn. When arriving from Deep Strike, Assault Claw Drop Pods never scatter. A unit embarked on Assault Claw Drop\nPod must disembark the turn a Assault Claw Drop Pod arrives. A Assault Claw Drop Pod may not be garrisoned after it has\narrived on the Battlefield."
       },
+      "Special Rule§Aura of Chaos": {
+        "text": "Friendly Chaos models within 12” gain a 6+ Invulnerable save."
+      },
       "Special Rule§Bulky (2)": {
         "keywords": {
           "Keywords": [
@@ -13181,6 +13184,45 @@
               }
             },
             "tracked": false
+          }
+        }
+      },
+      "Unit§Hammerfall Bunker": {
+        "allowed": {
+          "items": [
+            "Vehicle§Hammerfall Bunker"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Hammerfall Bunker"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "9 - Fortifications"
+          ],
+          "Role": [
+            "Fortifications"
+          ],
+          "Unit Type": [
+            "Fortification"
+          ],
+          "Keywords": [
+            "Hammerfall Bunker",
+            "Legion",
+            "M31"
+          ]
+        },
+        "stats": {
+          "Hammerfall Bunker": {
+            "group": "Composition",
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
@@ -14597,6 +14639,45 @@
           }
         }
       },
+      "Unit§Noctilith Crown": {
+        "allowed": {
+          "items": [
+            "Vehicle§Noctilith Crown"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Noctilith Crown"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "9 - Fortifications"
+          ],
+          "Role": [
+            "Fortifications"
+          ],
+          "Unit Type": [
+            "Fortification"
+          ],
+          "Keywords": [
+            "Legion",
+            "M31",
+            "Noctilith Crown"
+          ]
+        },
+        "stats": {
+          "Noctilith Crown": {
+            "group": "Composition",
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Possessed": {
         "allowed": {
           "items": [
@@ -15723,6 +15804,108 @@
           }
         }
       },
+      "Vehicle§Hammerfall Bunker": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ranged Weapon§Typhoon Missile Launcher (Frag)",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            },
+            {
+              "item": "Ranged Weapon§Typhoon Missile Launcher (Krak)",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "P"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 13
+          },
+          "I": {
+            "value": 0
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 0
+          },
+          "Points": {
+            "value": 120
+          },
+          "RA": {
+            "value": 13
+          },
+          "S": {
+            "value": 0
+          },
+          "SA": {
+            "value": 13
+          },
+          "Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "4 Heavy Bolters (P)": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 4,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "4 Heavy Flamers (P)": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Flamer",
+                      "quantity": 4,
+                      "stats": {
+                        "Vehicle Type": {
+                          "value": "P"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "4 Heavy Bolters (P)",
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Vehicle§Hell Blade": {
         "stats": {
           "A": {
@@ -16385,6 +16568,49 @@
           },
           "WS": {
             "value": 4
+          }
+        }
+      },
+      "Vehicle§Noctilith Crown": {
+        "assets": {
+          "traits": [
+            "Special Rule§Aura of Chaos",
+            "Special Rule§Deny the Witch"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 0
+          },
+          "BS": {
+            "value": 0
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 0
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 0
+          },
+          "Points": {
+            "value": 35
+          },
+          "RA": {
+            "value": 12
+          },
+          "S": {
+            "value": 0
+          },
+          "SA": {
+            "value": 12
+          },
+          "WS": {
+            "value": 0
           }
         }
       },
