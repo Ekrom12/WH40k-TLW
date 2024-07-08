@@ -8067,6 +8067,503 @@
           }
         }
       },
+      "Model§Havoc": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "Heavy Weapon Selection": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "Lascannon": {
+                "format": "{v} +15 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "format": "{v} +5 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              },
+              "Reaper Chain Cannon": {
+                "format": "{v} +0 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Chain Cannon"
+                  }
+                ]
+              },
+              "Auto Cannon": {
+                "format": "{v} +5 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Auto Cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 19
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Havoc Aspiring Champion": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bolt Pistol",
+            "Wargear§Power Armour",
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Combi Bolter": {
+                "format": "{v} +1 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Power Sword": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Maul": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Maul"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +15 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "format": "{v} +20 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Thunder Hammer"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 19
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              },
+              "Volkite Caliver": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Calivers"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Hellbrute": {
         "stats": {
           "A": {
@@ -9100,6 +9597,313 @@
           }
         }
       },
+      "Model§Maulerfiend": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons"
+          ]
+        },
+        "rules": {
+          "ForgefiendUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Maulerfiend Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Maulerfiend Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Power Scourge"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Power Scourge"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Forgefiend Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Additional Plasma Cannon +10 pts",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Forgefiend"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 15
+          },
+          "noForgefiendRemoveWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Forgefiend Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "2 Reaper Autocannons"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 2,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Reaper Autocannon"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Additional Plasma Cannon +10 pts",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Configuration",
+                    "value"
+                  ]
+                ],
+                "value": "Maulerfiend"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "Additional Plasma Cannon +10 pts": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "BS": {
+            "value": 4
+          },
+          "Configuration": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "Maulerfiend": {
+                "format": "{v} +0 pts",
+                "order": 0
+              },
+              "Forgefiend": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Maulerfiend",
+            "visibility": "normal"
+          },
+          "Forgefiend Weapon": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "2 Reaper Autocannons": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Reaper Autocannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Plasma Cannons": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plasma Cannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "2 Reaper Autocannons",
+            "visibility": "hidden"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 9
+          },
+          "Maulerfiend Weapon": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "Power Scourge": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Scourge"
+                  }
+                ]
+              },
+              "Magma Cutter": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Magma Cutter"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Power Scourge",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 110
+          },
+          "S": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 7
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Mutilator": {
         "assets": {
           "traits": [
@@ -9109,6 +9913,57 @@
             "Melee Weapon§Power Sword",
             "Melee Weapon§Power Axe",
             "Melee Weapon§Power Maul"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 55
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Obliterator": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Reaper Chain Cannon",
+            "Ranged Weapon§Heavy Bolter",
+            "Ranged Weapon§Auto Cannon",
+            "Ranged Weapon§Missile Launcher (Frag)",
+            "Ranged Weapon§Missile Launcher (Krak)",
+            "Ranged Weapon§Plasma Cannon",
+            "Ranged Weapon§Grav Cannon",
+            "Ranged Weapon§Heavy Flamer",
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Warp Armor"
           ]
         },
         "stats": {
@@ -9755,6 +10610,106 @@
             },
             "statType": "rank",
             "value": "-",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 55
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Rapier Battery": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Boltgun"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "Heavy Bolter Array": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter Array"
+                  }
+                ]
+              },
+              "Quad Launcher": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Quad Launcher"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              },
+              "Lascannon Array": {
+                "format": "{v} +15 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Lascannon Array"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Heavy Bolter Array",
             "visibility": "normal"
           },
           "Points": {
@@ -13187,6 +14142,68 @@
           }
         }
       },
+      "Unit§Fiend Pack": {
+        "allowed": {
+          "items": [
+            "Model§Maulerfiend"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Maulerfiend"
+          ],
+          "traits": [
+            "Special Rule§Daemon",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Move Through Cover",
+            "Special Rule§Regeneration",
+            "Special Rule§Siege Attackers",
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Engine",
+            "Fiend Pack",
+            "M32",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Maulerfiend": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Hammerfall Bunker": {
         "allowed": {
           "items": [
@@ -13196,6 +14213,9 @@
         "assets": {
           "included": [
             "Vehicle§Hammerfall Bunker"
+          ],
+          "traits": [
+            "Special Rule§Deep Strike"
           ]
         },
         "keywords": {
@@ -13223,6 +14243,66 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Havocs": {
+        "allowed": {
+          "items": [
+            "Model§Havoc",
+            "Model§Havoc Aspiring Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Havoc",
+              "quantity": 4
+            },
+            "Model§Havoc Aspiring Champion"
+          ],
+          "traits": [
+            "Special Rule§Chaos Boons"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Desolator",
+            "Havoc",
+            "Legion"
+          ]
+        },
+        "stats": {
+          "Havoc": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 4,
+            "min": 4,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Havoc Aspiring Champion": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 1,
+            "min": 1,
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       },
@@ -14678,6 +15758,64 @@
           }
         }
       },
+      "Unit§Obliterators": {
+        "allowed": {
+          "items": [
+            "Model§Obliterator"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Obliterator"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Desolator",
+            "Legion",
+            "M31",
+            "Obliterators"
+          ]
+        },
+        "stats": {
+          "Obliterator": {
+            "max": 5,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Possessed": {
         "allowed": {
           "items": [
@@ -14847,6 +15985,68 @@
         },
         "stats": {
           "Proteus Land Speeder": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 3,
+            "min": 1,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Unit§Rapier Battery": {
+        "allowed": {
+          "items": [
+            "Model§Rapier Battery"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Rapier Battery"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Desolator",
+            "Legion",
+            "M31",
+            "Rapier Battery"
+          ]
+        },
+        "stats": {
+          "Rapier Battery": {
             "group": "Composition",
             "groupOrder": 10,
             "max": 3,
