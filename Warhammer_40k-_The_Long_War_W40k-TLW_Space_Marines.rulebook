@@ -7665,9 +7665,6 @@
             "dynamic": true,
             "group": "Wargear",
             "ranks": {
-              "7": {
-                "order": 7
-              },
               "Heavy Bolter": {
                 "order": 0,
                 "traits": [
@@ -30490,6 +30487,9 @@
             "Kratos Super Heavy Tank",
             "M31"
           ]
+        },
+        "removed": {
+          "stats": {}
         },
         "stats": {
           "Points": {
