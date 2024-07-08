@@ -867,7 +867,8 @@
             "Chaos Champion",
             "Character",
             "Legion",
-            "M31"
+            "M31",
+            "Sub Commander"
           ],
           "Unit Type": [
             "Infantry"
@@ -14306,6 +14307,82 @@
         }
       },
       "Roster§Roster": {
+        "rules": {
+          "allow2subCommandersPerHQSlot": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": [
+                  "{self}",
+                  "stats",
+                  "sub commander count",
+                  "value"
+                ],
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "HQ unit count",
+                    "value"
+                  ]
+                ],
+                "value": -0.5
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "countSubCommanderUnits": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "sub commander count",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{roster}",
+                  "tally",
+                  "Sub Commander"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWRaptorAssCountRaptors": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "RoWRaptorAssRaptorCount",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{roster}",
+                  "tally",
+                  "Raptors"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Faction": {
             "dynamic": false,
@@ -14315,6 +14392,18 @@
               }
             },
             "value": "Chaos Space Marines"
+          },
+          "RoWRaptorAssRaptorCount": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "sub commander count": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
