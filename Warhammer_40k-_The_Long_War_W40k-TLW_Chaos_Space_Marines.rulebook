@@ -8610,6 +8610,160 @@
           }
         }
       },
+      "Model§Javelin Speeder": {
+        "stats": {
+          "2 Hunter Killer Missiles +5 pts": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "Co-Pilot Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 1,
+                "tracking": {
+                  "points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": true,
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 12
+          },
+          "Points": {
+            "value": 85
+          },
+          "S": {
+            "value": 4
+          },
+          "Side Weapons": {
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "2 Missile Launchers": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Frag)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Missile Launcher (Krak)"
+                  }
+                ]
+              },
+              "2 Heavy Bolters": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Heavy Bolter",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Lascannons": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "2 Missile Launchers",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 6
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Legionnaire": {
         "assets": {
           "traits": [
@@ -9367,6 +9521,256 @@
           },
           "W": {
             "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Proteus Land Speeder": {
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "Frontal Weapon": {
+            "ranks": {
+              "Heavy Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Havoc Launcher": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Havoc Launcher"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +20 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "format": "{v} +0 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Culverin"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "normal"
+          },
+          "Hunter-Killer Missiles +5 pts": {
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Hunter-Killer Missile",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 14
+          },
+          "Pintle Weapon": {
+            "ranks": {
+              "-": {
+                "order": 0,
+                "tracking": {}
+              },
+              "Heavy Bolter": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Havoc Launcher": {
+                "format": "{v} +0 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Havoc Launcher"
+                  }
+                ]
+              },
+              "Multi-Melta": {
+                "format": "{v} +20 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              },
+              "Plasma Cannon": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Cannon"
+                  }
+                ]
+              },
+              "Volkite Culverin": {
+                "format": "{v} +0 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Culverin"
+                  }
+                ]
+              },
+              "Grav Cannon": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 55
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
           },
           "WS": {
             "value": 4
@@ -11533,6 +11937,14 @@
         },
         "text": "Up to half the number of Dread Claw Drop pods in your army can be deployed during the\nfirst turn. When arriving from Deep Strike, Dread Claw Drop Pods never scatter. A unit embarked on Dread Claw Drop Pod\nmust disembark the turn a Dread Claw Drop Pod arrives. A Dread Claw Drop Pod may not be garrisoned after it has arrived\non the Battlefield."
       },
+      "Special Rule§Fast Tank": {
+        "keywords": {
+          "Keywords": [
+            "Chaos Space Marines Special Rule"
+          ]
+        },
+        "text": "This unit has +2” to its Movement (M) Characteristic."
+      },
       "Special Rule§Feel No Pain (5+)": {
         "keywords": {
           "Keywords": [
@@ -13480,6 +13892,60 @@
           }
         }
       },
+      "Unit§Javelin Attack Speeder": {
+        "allowed": {
+          "items": [
+            "Model§Javelin Speeder"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Javelin Speeder"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            "Special Rule§Fade & Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Cavalry"
+          ],
+          "Keywords": [
+            "Fly",
+            "Javelin Attack Speeder",
+            "Legion",
+            "M31",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Javelin Speeder": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
       "Unit§Kharybdis Assault Claw": {
         "allowed": {
           "items": [
@@ -14247,6 +14713,71 @@
           }
         }
       },
+      "Unit§Proteus Land Speeder": {
+        "allowed": {
+          "items": [
+            "Model§Proteus Land Speeder"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Proteus Land Speeder"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            "Special Rule§Fleet",
+            "Special Rule§Fade & Fire"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Jet Bike"
+          ],
+          "Keywords": [
+            "Fly",
+            "Legion",
+            "M31",
+            "Proteus Land Speeder",
+            "Ravager"
+          ]
+        },
+        "stats": {
+          "Proteus Land Speeder": {
+            "group": "Composition",
+            "groupOrder": 10,
+            "max": 3,
+            "min": 1,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
       "Unit§Raptors": {
         "allowed": {
           "items": [
@@ -14492,6 +15023,57 @@
           },
           "Rhino APC": {
             "group": "Composition",
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Sabre Strike Tank": {
+        "allowed": {
+          "items": [
+            "Vehicle§Sabre Strike Tank"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Vehicle§Sabre Strike Tank"
+          ],
+          "traits": [
+            "Special Rule§Relentless",
+            "Special Rule§Outflank",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Fast Tank"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Keywords": [
+            "Fire Support",
+            "M31",
+            "Sabre Strike Tank"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Unit Type": [
+            "Vehicle"
+          ]
+        },
+        "stats": {
+          "Sabre Strike Tank": {
             "max": 1,
             "min": 1,
             "statType": "numeric",
@@ -15967,6 +16549,163 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": 11,
+            "visibility": "normal"
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Vehicle§Sabre Strike Tank": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Marine Crew Weapons",
+            "Wargear§Smoke Launchers",
+            {
+              "item": "Ranged Weapon§Sabre Missiles",
+              "stats": {
+                "Vehicle Type": {
+                  "value": "S"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "FA": {
+            "value": 12
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 14
+          },
+          "Main Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Linked Anvilus Stub Autocannon (P)": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Linked Anvilus Stub Autocannon"
+                  }
+                ]
+              },
+              "Volkite Saker (P)": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Saker"
+                  }
+                ]
+              },
+              "Neutron Blaster (P)": {
+                "format": "{v} +15 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Neutron Blaster"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Linked Anvilus Stub Autocannon (P)",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 95
+          },
+          "RA": {
+            "value": 10
+          },
+          "S": {
+            "value": 6
+          },
+          "SA": {
+            "value": 12
+          },
+          "Turret Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Heavy Bolter (P)": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer (P)": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Flamer"
+                  }
+                ]
+              },
+              "Volkite Culverin (P)": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Culverin"
+                  }
+                ]
+              },
+              "Multi-Melta (P)": {
+                "format": "{v} +15 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Multi-Melta"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Heavy Bolter (P)",
             "visibility": "normal"
           },
           "WS": {
