@@ -406,6 +406,30 @@
           "Visibility": "active"
         },
         "rules": {
+          "addRulesToWeapon": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "append": ", ",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Rules",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "designation"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
           "putXInName": {
             "actions": [
               {
@@ -657,6 +681,11 @@
             "group": "Stats",
             "statOrder": 1,
             "statType": "numeric",
+            "value": null,
+            "visibility": "always"
+          },
+          "Rules": {
+            "statType": "term",
             "value": null,
             "visibility": "always"
           },
