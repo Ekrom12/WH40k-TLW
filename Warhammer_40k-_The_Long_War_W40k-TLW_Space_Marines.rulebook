@@ -4018,6 +4018,12 @@
         }
       },
       "Model§Assault Marine Sergeant": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner"
+          ]
+        },
         "rules": {
           "RemoveMeleeWeaponIfSpecialWargear": {
             "actions": [
