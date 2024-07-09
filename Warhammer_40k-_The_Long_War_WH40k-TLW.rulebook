@@ -1200,7 +1200,7 @@
             "statType": "rank",
             "tracked": true,
             "value": "Crusade Detachment",
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Elite unit count": {
             "max": 4,
@@ -1290,7 +1290,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Points Limit": {
             "dynamic": true,
