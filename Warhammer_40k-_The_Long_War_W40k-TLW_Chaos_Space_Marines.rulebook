@@ -9241,6 +9241,7 @@
             "value": 8
           },
           "Melee Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 3,
             "ranks": {
@@ -9335,6 +9336,7 @@
             "value": 105
           },
           "Ranged Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "groupOrder": 3,
             "ranks": {
