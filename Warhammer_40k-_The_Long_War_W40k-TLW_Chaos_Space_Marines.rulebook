@@ -837,6 +837,78 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "RoWDaemonkinSelfReportInfantry": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Infantry unit count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Infantry"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWDaemonkinSelfReportNOTInfantry": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Non infantry unit count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Infantry"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
           }
         },
         "stats": {
@@ -861,10 +933,10 @@
                 ]
               },
               "Mark of Nurgle": {
-                "format": "{v} +5 pts",
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
-                  "Points": 5
+                  "Points": 10
                 },
                 "traits": [
                   {
@@ -873,10 +945,10 @@
                 ]
               },
               "Mark of Slaanesh": {
-                "format": "{v} +10 pts",
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
-                  "Points": 105
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -1012,10 +1084,10 @@
                 ]
               },
               "Mark of Nurgle": {
-                "format": "{v} +5 pts",
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
-                  "Points": 5
+                  "Points": 10
                 },
                 "traits": [
                   {
@@ -1024,10 +1096,10 @@
                 ]
               },
               "Mark of Slaanesh": {
-                "format": "{v} +10 pts",
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
-                  "Points": 10
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -5366,7 +5438,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Wargear§Tartaros Terminator Armour"
+                    "trait": "Wargear§Tartaros Terminator Armor"
                   }
                 ]
               }
@@ -14501,6 +14573,49 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "Daemonkin Host: You must include more Infantry type units than any other type": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Daemonkin Host"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "stats",
+                  "Infantry unit count",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Non infantry unit count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "Daemonkin Host: Your army must include at least 1 Chaos Lord upgraded to Master of Possessions": {
             "evals": [
               {
@@ -14658,6 +14773,16 @@
             },
             "value": "Chaos Space Marines"
           },
+          "Infantry unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Non infantry unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Rite of War": {
             "ranks": {
               "Raptor Assault": {
@@ -14665,6 +14790,9 @@
               },
               "Daemonkin Host": {
                 "order": 2
+              },
+              "Engine Horde": {
+                "order": 3
               }
             }
           },
@@ -25640,42 +25768,6 @@
         "removed": {
           "stats": {
             "Points": {}
-          }
-        },
-        "rules": {
-          "addLinkedBoltgun": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ranged Weapon§Linked Boltgun"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits",
-                    "item",
-                    "Wargear§Space Marine Bike",
-                    "quantity"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
           }
         },
         "text": "A unit that is equipped with a Bike\nbecomes a Bike type unit. In\naddition, it gains +1 Toughness (T)\nCharacteristics. A Space marine\nBike is equipped with a Linked\nBoltgun."
