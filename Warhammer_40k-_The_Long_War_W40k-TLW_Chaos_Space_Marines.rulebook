@@ -19163,7 +19163,7 @@
                   "rules",
                   "count2in5",
                   "evals",
-                  "0",
+                  "1",
                   "result",
                   "integer"
                 ],
@@ -19180,6 +19180,48 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "count2in5": {
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 5
+                },
+                "not": false,
+                "note": "track 1/5 of the models",
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T*O",
+                  "value": 2
+                },
+                "not": false,
+                "note": "track 2/5 of the models",
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "integer"
+                  ]
+                ]
+              }
+            ],
+            "failState": "error",
+            "order": 100
           },
           "NonRaptorAssaultRemoveTroopsChoice": {
             "actions": [
@@ -19397,7 +19439,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
