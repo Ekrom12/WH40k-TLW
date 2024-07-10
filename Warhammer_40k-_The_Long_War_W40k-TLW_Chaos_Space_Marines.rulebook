@@ -19154,6 +19154,33 @@
           ]
         },
         "rules": {
+          "2 in 5 can have a Special Loadout": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count2in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Special Loadout Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
           "NonRaptorAssaultRemoveTroopsChoice": {
             "actions": [
               {
@@ -19361,6 +19388,12 @@
             "max": 1,
             "min": 1,
             "statOrder": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Special Loadout Selection": {
             "statType": "numeric",
             "tracked": true,
             "value": 0,
