@@ -17,6 +17,7 @@
   ],
   "rulebook": {
     "assetTaxonomy": {
+      "Character": {},
       "Special Rule": {
         "keywords": {
           "Keywords": []
@@ -27,10 +28,40 @@
           "Faction": [
             "Death Guard"
           ]
+        },
+        "rules": {
+          "deathGuardForceMarkOfNurgle": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mark of Chaos",
+                    "value"
+                  ]
+                ],
+                "value": "Mark of Nurgle"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          }
         }
       }
     },
     "assetCatalog": {
+      "Character§Chaos Lord": {
+        "stats": {
+          "Mark of Chaos": {
+            "value": "Mark of Nurgle"
+          }
+        }
+      },
       "Character§Typhus": {
         "keywords": {
           "Tags": [
@@ -465,6 +496,74 @@
                   ]
                 ],
                 "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Krak Grenade"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Mantle of Contagion"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Orb of Dessication"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Lord of Contagion"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Lord of Contagion"
               }
             ],
             "evals": [
@@ -481,6 +580,243 @@
                   ]
                 ],
                 "value": "Lord of Contagion"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "lordOfVirulenceUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Indomitus Terminator Armour"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Bolt Pistol"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Pistol"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Krak Grenade"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Lord of Virulence"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "aspects",
+                    "Label"
+                  ]
+                ],
+                "value": "Lord of Virulence"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plague Spewer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Power Fist"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Mantle of Virulence"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Explosive Outbreak"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Lord of Virulence"
               }
             ],
             "evaluate": "AND",
@@ -668,6 +1004,13 @@
               "Lord of Contagion": {
                 "format": "{v} +10 pts",
                 "order": 6,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Lord of Virulence": {
+                "format": "{v} +10 pts",
+                "order": 7,
                 "tracking": {
                   "Points": 10
                 }
@@ -1089,7 +1432,20 @@
           "Keywords": []
         }
       },
+      "Special Rule§Explosive Outbreak": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Once per game, At the start of the\nCombat Phase, this unit and any attached unit gain the\nArcing (5+) special rule. If they already have the Arcing\n(x) special rule, increase (x) to (4+)"
+      },
       "Special Rule§Host of Plagues": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
         "text": "At the end of the Combat Phase, this unit counts as having inflicted D3 additional wounds for the\npurposes of Combat Resolution and determining who won Combat."
       },
       "Special Rule§Lord of the Harbingers": {
@@ -1099,6 +1455,22 @@
           ]
         },
         "text": "Typhus counts as a Lord of Contagion. When using the Plague Company Rite of War, if Typhus is in your army, you must select the Harbingers and must be your Warlord."
+      },
+      "Special Rule§Mantle of Contagion": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "A model with this upgrade may\nre-roll failed Armour save rolls."
+      },
+      "Special Rule§Mantle of Virulence": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "When a friendly Death Guard unit\nattached to a model with this upgrade makes an attack\nwith a Grenade type weapon, that weapon gains the\nBarrage (1) special rule."
       },
       "Special Rule§Master of the Living Dead": {
         "keywords": {
@@ -1116,7 +1488,20 @@
         },
         "text": "This unit may attach to Mortarion, Daemon Primarch of the Death Guard even if though Mortarion,\nDaemon Primarch of the Death Guard is not an Infantry type unit."
       },
+      "Special Rule§Orb of Dessication": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Once per game, At the start of the\nCombat Phase, all enemy units within 3” take 3D3\nStrength 4 Hits at AP-. Saves are taken as normal."
+      },
       "Special Rule§Primarch of the XIV": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
         "text": "his model ignores Instant Death Wounds. When this model would suffer an Instant Death Wound,\nit instead suffers D3 wounds. Friendly Death Guard units that can draw visibility to this unit may use this units\nLeadership (LD) characteristic. While This unit is alive and, on the Battlefield, all Death Guard units ignore the effects of\nPinning"
       },
       "Special Rule§Rust Touch": {
