@@ -17,6 +17,11 @@
   ],
   "rulebook": {
     "assetTaxonomy": {
+      "Special Rule": {
+        "keywords": {
+          "Keywords": []
+        }
+      },
       "Unit": {
         "keywords": {
           "Faction": [
@@ -26,7 +31,13 @@
       }
     },
     "assetCatalog": {
-      "Character§Typhus": {},
+      "Character§Typhus": {
+        "keywords": {
+          "Tags": [
+            "1 - HQ"
+          ]
+        }
+      },
       "Melee Weapon§Bale Sword": {
         "assets": {
           "traits": [
@@ -311,6 +322,386 @@
           },
           "Strength": {
             "value": "+1"
+          }
+        }
+      },
+      "Model§Chaos Lord": {
+        "rules": {
+          "lordofContagionUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Cataphractii Terminator Armour"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Bolt Pistol"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Pistol"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lord Of Contagion Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Primary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Lord of Contagion"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "removeLordOfContagionWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lord Of Contagion Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Manreaper"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Manreaper"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Lord of Contagion"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
+          "removeUnusedUpgrades": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Slaughter Lord"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Sorcerer Lord"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Demagogue Lord"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Master of Possessions"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Lord Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Lord Discordant"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          }
+        },
+        "stats": {
+          "Chaos Lord Upgrade": {
+            "ranks": {
+              "Slaughter Lord": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "A": 2,
+                  "Points": 10
+                }
+              },
+              "Sorcerer Lord": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Smite"
+                  }
+                ]
+              },
+              "Demagogue Lord": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Master of Possessions": {
+                "format": "{v} +20 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Smite"
+                  }
+                ]
+              },
+              "Lord Discordant": {
+                "format": "{v} +20 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 20,
+                  "S": 1,
+                  "T": 1,
+                  "W": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Daemonic Steed"
+                  }
+                ]
+              },
+              "Lord of Contagion": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            }
+          },
+          "Lord Of Contagion Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Manreaper": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Manreaper"
+                  }
+                ]
+              },
+              "Plaguereaper": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Plaguereaper"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Manreaper",
+            "visibility": "hidden"
           }
         }
       },
@@ -657,7 +1048,42 @@
           }
         }
       },
+      "Relic§Fulgaris Helm": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Relic"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        },
+        "text": "Friendly Death Guard units within 24” of a model\nequipped with this relic may use the bearers Leadership\n(LD) characteristic when making Leadership tests."
+      },
+      "Relic§The Suppurating Plate": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Relic"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 5,
+            "visibility": "active"
+          }
+        },
+        "text": "A model equipped with this relic has a 2+ Armour save. Any\nmelee attacks against a model equipped with this wargear\nin the Combat Phase that target this unit are resolved as if\nthey had the Gets Hot! Special rule."
+      },
       "Roster§Roster": {},
+      "Special Rule§Allegiance: Death Guard": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "### Inexorable:\nAll Death Guard units gain the **Move Through Cover** special rule.\nIn addition, when a Death Guard unit is Pinned, they reduce their\nMovement (M) characteristic by 1” instead of halving their\nMovement (M) characteristic.\n\n### Plague Fathers Chosen:\nAll of your units must have the Mark of Nurgle or Nurgle Keyword.\nYou may only include allied units from Codex Chaos Daemons that have the Nurgle Keyword. (This is included in all Death Guard exclusive units’ profiles)"
+      },
       "Special Rule§Aura of Chaos": {
         "keywords": {
           "Keywords": []
@@ -706,6 +1132,15 @@
       },
       "Wargear§The Barbaran Plate": {
         "text": "This wargear confers a 2+ Armour save and 4+ Invulnerable save. The unit equipped with this\nwargear re-rolls all saves (Armour & Invulnerable only) against weapons with the Poison or Spray special rules."
+      },
+      "Warlord Trait§Arch Contaminator": {
+        "text": "This Warlord and any attached unit\nimprove the value of (x) by 1 for all\nweapons they are equipped with\nthat have the Poison (x) special rule."
+      },
+      "Warlord Trait§Living Plague": {
+        "text": "All enemy units within 3” have -1 to\ntheir Toughness (T) characteristic"
+      },
+      "Warlord Trait§Revoltingly Resilient": {
+        "text": "A Warlord with this trait gains the\nRegeneration special rule. In\naddition, the Warlord may re-roll\nFeel no Pain rolls of 1."
       }
     },
     "gameModes": {},
