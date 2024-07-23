@@ -4713,6 +4713,12 @@
             "Wargear§Teleport Homer"
           ]
         },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
         "rules": {
           "addBikeRules": {
             "actions": [
@@ -4934,7 +4940,7 @@
                 "iterations": 1,
                 "paths": [
                   [
-                    "{self}",
+                    "{parent}",
                     "traits"
                   ]
                 ],
