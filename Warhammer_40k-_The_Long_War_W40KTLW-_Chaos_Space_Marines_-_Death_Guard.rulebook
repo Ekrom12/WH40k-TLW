@@ -1,0 +1,714 @@
+{
+  "name": "W40KTLW: Chaos Space Marines - Death Guard",
+  "revision": "0.0.1",
+  "game": "Warhammer 40k: The Long War",
+  "genre": "sci-fi",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "dependencies": [
+    {
+      "slug": "5S2BAR",
+      "name": "W40k:TLW Chaos Space Marines",
+      "game": "Warhammer 40k: The Long War",
+      "source": ""
+    }
+  ],
+  "rulebook": {
+    "assetTaxonomy": {
+      "Unit": {
+        "keywords": {
+          "Faction": [
+            "Death Guard"
+          ]
+        }
+      }
+    },
+    "assetCatalog": {
+      "Character§Typhus": {},
+      "Melee Weapon§Bale Sword": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Rending",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Bubotic Axe": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Flail of Corruption": {
+        "assets": {
+          "traits": [
+            "Special Rule§Two-Handed",
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Fleshmower": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Great Plague Cleaver": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Two-Handed",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "x2"
+          }
+        }
+      },
+      "Melee Weapon§Mace of Contagion": {
+        "assets": {
+          "traits": [
+            "Special Rule§Concussive",
+            {
+              "item": "Special Rule§Crushing",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+2"
+          }
+        }
+      },
+      "Melee Weapon§Manreaper": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Two-Handed",
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Plague Knife": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Strength": {
+            "value": "User"
+          }
+        }
+      },
+      "Melee Weapon§Plaguereaper": {
+        "assets": {
+          "traits": [
+            "Special Rule§Unwieldy",
+            "Special Rule§Two-Handed",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Melee Weapon§Silence": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            "Special Rule§Two-Handed",
+            {
+              "item": "Special Rule§Sweeping",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Strength": {
+            "value": "+1"
+          }
+        }
+      },
+      "Ranged Weapon§Bile Spurt": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 18
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Blight Grenades": {
+        "assets": {
+          "traits": [
+            "Special Rule§Blast",
+            "Special Rule§Poison"
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "3"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Blight Launcher": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 2"
+          }
+        }
+      },
+      "Ranged Weapon§Heavy Blight Launcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Linked",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Assault 3"
+          }
+        }
+      },
+      "Ranged Weapon§Injector Pistol": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 3
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          }
+        }
+      },
+      "Ranged Weapon§Phosphex Bombs": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 3
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Ammo",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "2"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plague Belcher": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plague Burst Mortar": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "statType": "term",
+            "value": "12-72"
+          },
+          "Strength": {
+            "value": "7"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plague Spewer": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "6"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§Plague Spurt Gauntlets": {
+        "assets": {
+          "traits": [
+            "Special Rule§Spray",
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Range": {
+            "value": 9
+          },
+          "Strength": {
+            "value": "3"
+          },
+          "Type": {
+            "value": "Assault 1"
+          }
+        }
+      },
+      "Ranged Weapon§The Destroyer Hive": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Special Rule§Poison",
+              "stats": {
+                "x": {
+                  "value": 4
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "-"
+          },
+          "Range": {
+            "value": 12
+          },
+          "Strength": {
+            "value": "1"
+          },
+          "Type": {
+            "value": "Pistol 6"
+          }
+        }
+      },
+      "Ranged Weapon§The Lantern": {
+        "assets": {
+          "traits": [
+            "Special Rule§Master-Crafted",
+            {
+              "item": "Special Rule§Arcing",
+              "stats": {
+                "x": {
+                  "value": 5
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "3"
+          },
+          "Range": {
+            "value": 24
+          },
+          "Strength": {
+            "value": "6"
+          },
+          "Type": {
+            "value": "Pistol 3"
+          }
+        }
+      },
+      "Roster§Roster": {},
+      "Special Rule§Aura of Chaos": {
+        "keywords": {
+          "Keywords": []
+        }
+      },
+      "Special Rule§Host of Plagues": {
+        "text": "At the end of the Combat Phase, this unit counts as having inflicted D3 additional wounds for the\npurposes of Combat Resolution and determining who won Combat."
+      },
+      "Special Rule§Lord of the Harbingers": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Typhus counts as a Lord of Contagion. When using the Plague Company Rite of War, if Typhus is in your army, you must select the Harbingers and must be your Warlord."
+      },
+      "Special Rule§Master of the Living Dead": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "You may include 1 Pox Walker unit from Codex – Chaos Cults in your army without taking up\na Force Organization Slot as part of your Primary Detachment. That unit can only join Typhus."
+      },
+      "Special Rule§Mortarion's Own": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "This unit may attach to Mortarion, Daemon Primarch of the Death Guard even if though Mortarion,\nDaemon Primarch of the Death Guard is not an Infantry type unit."
+      },
+      "Special Rule§Primarch of the XIV": {
+        "text": "his model ignores Instant Death Wounds. When this model would suffer an Instant Death Wound,\nit instead suffers D3 wounds. Friendly Death Guard units that can draw visibility to this unit may use this units\nLeadership (LD) characteristic. While This unit is alive and, on the Battlefield, all Death Guard units ignore the effects of\nPinning"
+      },
+      "Special Rule§Rust Touch": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "This unit gains the Rending (6+) special rule on all melee weapons it is equipped with. Weapons that\nalready have the Rending (x) special rule, improve the value of (x) by 1 to a max of (5+)"
+      },
+      "Wargear§Rotor Jets": {
+        "text": "A model equipped with this Wargear increases its Movement (M) characteristic to 12”. The equipped model\ngains the Hammer of Wrath (1) and Deep Strike special rules. The unit gains the Fly keyword."
+      },
+      "Wargear§The Barbaran Plate": {
+        "text": "This wargear confers a 2+ Armour save and 4+ Invulnerable save. The unit equipped with this\nwargear re-rolls all saves (Armour & Invulnerable only) against weapons with the Poison or Spray special rules."
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
