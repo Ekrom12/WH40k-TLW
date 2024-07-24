@@ -3383,6 +3383,12 @@
             "Wargear§Teleport Homer"
           ]
         },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Frag Grenade",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
         "rules": {
           "addCataphractiiRules": {
             "actions": [
