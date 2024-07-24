@@ -4163,7 +4163,7 @@
                 }
               },
               "Dark Apostle": {
-                "format": "{v} +20 pts",
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
