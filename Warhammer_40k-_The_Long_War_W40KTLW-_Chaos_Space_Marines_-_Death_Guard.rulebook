@@ -63,10 +63,146 @@
         }
       },
       "Character§Typhus": {
+        "allowed": {
+          "items": [
+            "Model§Typhus"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Typhus"
+          ],
+          "traits": [
+            "Special Rule§Lord of Damnation",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            },
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Special Rule§Master of the Living Dead",
+            "Special Rule§Lord of the Harbingers"
+          ]
+        },
         "keywords": {
           "Tags": [
             "1 - HQ"
+          ],
+          "Keywords": [
+            "Chaos Lord",
+            "Character",
+            "M31",
+            "Psyker",
+            "Typhus",
+            "Unique"
+          ],
+          "Role": [
+            "HQ"
+          ],
+          "Unit Type": [
+            "Infantry"
           ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "dynamic": false,
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "value": "Mark of Nurgle"
+          },
+          "Typhus": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Warlord": {
+            "value": "✓"
+          }
         }
       },
       "Melee Weapon§Bale Sword": {
@@ -353,6 +489,1156 @@
           },
           "Strength": {
             "value": "+1"
+          }
+        }
+      },
+      "Model§Chaos Champion": {
+        "rules": {
+          "BiologusPutrifierUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Bolt Pistol"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Krak Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Pistol"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Plague Knife"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Injector Pistol"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Blight Grenades"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Blight Racks"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Foul Infusion"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Biologus Putrifier"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "FoulBlightspawnUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Bolt Pistol"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Pistol"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plague Spewer"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Plague Knife"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Blight Grenades"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Putrefying Stink"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Unholy Death's Head"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Foul Blightspawn"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "NoxiousBlightbringerUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Bolt Pistol"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Pistol"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Plague Knife"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Blight Grenades"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plasma Pistol"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Deny the Witch"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Fear (1)"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Sickening Vitality"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Tallyman"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "PlagueSurgeonUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Blight Grenades"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Bale Sword"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Tainted Narthecium"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Foul Blightspawn"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "removeUnusedUpgrades": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Master of Executions"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Warp Smith"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "ranks"
+                  ]
+                ],
+                "value": "Dark Apostle"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0
+          },
+          "TallymanUpgrade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Boltgun"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Bolt Pistol"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Chainsword"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Secondary Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Frag Grenade"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Boltgun"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Bolt Pistol"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Chainsword"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Close Combat Weapons"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Melee Weapon§Plague Knife"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Plasma Pistol"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Hatred"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Priest (1)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Champion Upgrade",
+                    "value"
+                  ]
+                ],
+                "value": "Tallyman"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          }
+        },
+        "stats": {
+          "Chaos Champion Upgrade": {
+            "ranks": {
+              "Sorcerer": {
+                "format": "{v} +20 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 20
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Smite"
+                  }
+                ]
+              },
+              "Master of Executions": {
+                "format": "{v} +15 pts",
+                "order": 2,
+                "tracking": {
+                  "A": 1,
+                  "Points": 15,
+                  "WS": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Headsmen Axe"
+                  }
+                ]
+              },
+              "Warp Smith": {
+                "format": "{v} +20 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Dark Apostle": {
+                "format": "{v} +20 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Biologus Putrifier": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Foul Blightspawn": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Tallyman": {
+                "format": "{v} +20 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 20
+                }
+              },
+              "Noxious Blightbringer": {
+                "format": "{v} +20 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                }
+              },
+              "Plague Surgeon": {
+                "format": "{v} +20 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 10
+                }
+              }
+            }
           }
         }
       },
@@ -1048,6 +2334,92 @@
           }
         }
       },
+      "Model§Plague Marine": {
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 15
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Typhus": {
+        "assets": {
+          "traits": [
+            "Wargear§Cataphractii Terminator Armour",
+            "Melee Weapon§Manreaper",
+            "Wargear§Chaos Sigil",
+            "Ranged Weapon§The Destroyer Hive"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 5
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "Points": {
+            "value": 130
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 6
+          }
+        }
+      },
       "Ranged Weapon§Bile Spurt": {
         "assets": {
           "traits": [
@@ -1432,6 +2804,14 @@
           "Keywords": []
         }
       },
+      "Special Rule§Blight Racks": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Any attached unit gains\nBarrage (3) on any Grenade type\nweapons they are equipped with."
+      },
       "Special Rule§Explosive Outbreak": {
         "keywords": {
           "Keywords": [
@@ -1439,6 +2819,22 @@
           ]
         },
         "text": "Once per game, At the start of the\nCombat Phase, this unit and any attached unit gain the\nArcing (5+) special rule. If they already have the Arcing\n(x) special rule, increase (x) to (4+)"
+      },
+      "Special Rule§Fear (1)": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Enemy units within 3” of a model from a unit with this special rule suffer a negative modifier equal to the value of (x) to their Leadership (LD) Characteristic."
+      },
+      "Special Rule§Foul Infusion": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Blight Grenades\nequipped by this unit, or its attached\nunit gain +1 to their weapon Strength."
       },
       "Special Rule§Host of Plagues": {
         "keywords": {
@@ -1504,6 +2900,14 @@
         },
         "text": "his model ignores Instant Death Wounds. When this model would suffer an Instant Death Wound,\nit instead suffers D3 wounds. Friendly Death Guard units that can draw visibility to this unit may use this units\nLeadership (LD) characteristic. While This unit is alive and, on the Battlefield, all Death Guard units ignore the effects of\nPinning"
       },
+      "Special Rule§Putrefying Stink": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Enemy units\nwithin 3” of this unit in the Combat\nPhase have -1 to their Initiative\n(I) characteristic."
+      },
       "Special Rule§Rust Touch": {
         "keywords": {
           "Keywords": [
@@ -1511,6 +2915,30 @@
           ]
         },
         "text": "This unit gains the Rending (6+) special rule on all melee weapons it is equipped with. Weapons that\nalready have the Rending (x) special rule, improve the value of (x) by 1 to a max of (5+)"
+      },
+      "Special Rule§Sickening Vitality": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "This unit and\nany attached unit gain the Sprint (1)\nspecial rule."
+      },
+      "Special Rule§Tainted Narthecium": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "This unit and\nany attached unit may re-roll Feel\nNo Pain rolls of 1"
+      },
+      "Special Rule§Unholy Death's Head": {
+        "keywords": {
+          "Keywords": [
+            "Death Guard Special Rule"
+          ]
+        },
+        "text": "Once per\ngame, in the Charge phase when\nthis unit or its attached unit is\nselected as a Charge target, the\nunit that declared the charge\ntakes D6 Strength 4, AP5\nautomatic hits. Saves are taken\nas normal."
       },
       "Wargear§Rotor Jets": {
         "text": "A model equipped with this Wargear increases its Movement (M) characteristic to 12”. The equipped model\ngains the Hammer of Wrath (1) and Deep Strike special rules. The unit gains the Fly keyword."
