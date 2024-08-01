@@ -3146,6 +3146,7 @@
             "groupOrder": 2,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -3157,6 +3158,7 @@
                 ]
               },
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -3168,6 +3170,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 1
@@ -3179,6 +3182,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 1
@@ -3190,6 +3194,7 @@
                 ]
               },
               "Heavy Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 1
@@ -3201,6 +3206,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +2 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 2
@@ -3212,6 +3218,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -3226,6 +3233,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 10
@@ -3240,6 +3248,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 15
@@ -3254,6 +3263,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 5
@@ -3265,6 +3275,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +5 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 5
@@ -3276,6 +3287,7 @@
                 ]
               },
               "Power Maul": {
+                "format": "{v} +10 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 10
@@ -3287,6 +3299,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 10
@@ -3298,6 +3311,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 13,
                 "tracking": {
                   "Points": 15
@@ -3309,6 +3323,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 14,
                 "tracking": {
                   "Points": 20
@@ -3320,6 +3335,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +15 pts",
                 "order": 15,
                 "tracking": {
                   "Points": 15
@@ -3345,6 +3361,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -3356,6 +3373,7 @@
                 ]
               },
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -3367,6 +3385,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -3402,6 +3421,7 @@
                 "order": 0
               },
               "Jump Pack": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "M": 6,
@@ -3414,10 +3434,11 @@
                 ]
               },
               "Space Marine Bike": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -3426,10 +3447,11 @@
                 ]
               },
               "Space Marine Outrider Bike": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -3438,6 +3460,7 @@
                 ]
               },
               "Indomitus Terminator Armour": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -3833,6 +3856,7 @@
                 "order": 0
               },
               "Jump Pack": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "M": 6,
@@ -3845,10 +3869,11 @@
                 ]
               },
               "Space Marine Bike": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -3857,10 +3882,11 @@
                 ]
               },
               "Space Marine Outrider Bike": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -3869,6 +3895,7 @@
                 ]
               },
               "Indomitus Terminator Armour": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -9254,7 +9281,8 @@
       "Model§Intercessor Marine": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Heavy Bolt Pistol"
+            "Ranged Weapon§Heavy Bolt Pistol",
+            "Melee Weapon§Close Combat Weapons"
           ]
         },
         "removed": {
@@ -12923,7 +12951,7 @@
               "Tech Marine Battlesmith": {
                 "order": 5,
                 "tracking": {
-                  "Inv": 2,
+                  "Inv": 1,
                   "Points": 15,
                   "Sv": -1
                 },
@@ -12936,7 +12964,7 @@
               "Tech Marine Ordinator": {
                 "order": 6,
                 "tracking": {
-                  "Inv": 2,
+                  "Inv": 1,
                   "Points": 45,
                   "Sv": -1
                 },
@@ -13081,7 +13109,7 @@
                 "order": 3,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -16414,6 +16442,7 @@
             "groupOrder": 2,
             "ranks": {
               "Power Armor": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -16422,6 +16451,7 @@
                 ]
               },
               "Artificer Armour": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5,
@@ -16434,6 +16464,7 @@
                 ]
               },
               "Phobos Armour": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -16445,6 +16476,7 @@
                 ]
               },
               "Scout Armor": {
+                "format": "{v} +1 pts",
                 "order": 3,
                 "tracking": {
                   "Sv": 1
@@ -16473,6 +16505,7 @@
                 "order": 0
               },
               "Master of the Fleet": {
+                "format": "{v} +20 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 20
@@ -16484,6 +16517,7 @@
                 ]
               },
               "Master of the Watch": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "BS": 1,
@@ -16491,6 +16525,7 @@
                 }
               },
               "Master of the Arsenal": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "BS": 1,
@@ -16498,6 +16533,7 @@
                 }
               },
               "Master of the Marches": {
+                "format": "{v} +5 pts",
                 "order": 4,
                 "tracking": {
                   "M": 1,
@@ -16505,12 +16541,14 @@
                 }
               },
               "Master of the Rites": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
                 }
               },
               "Master of Executions": {
+                "format": "{v} +15 pts",
                 "order": 6,
                 "tracking": {
                   "masterOfExecutions": 1,
@@ -16518,6 +16556,7 @@
                 }
               },
               "Master of Relics": {
+                "format": "{v} +5 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 5
@@ -16529,12 +16568,14 @@
                 ]
               },
               "Master of Recruits": {
+                "format": "{v} +10 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 10
                 }
               },
               "Chapter Master": {
+                "format": "{v} +25 pts",
                 "order": 9,
                 "tracking": {
                   "A": 1,
@@ -16569,6 +16610,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -16598,6 +16640,7 @@
             "groupOrder": 2,
             "ranks": {
               "Scout Armor": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Sv": 1
@@ -16609,6 +16652,7 @@
                 ]
               },
               "Phobos Armour": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {},
                 "traits": [
@@ -16629,6 +16673,7 @@
             "groupOrder": 2,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -16640,6 +16685,7 @@
                 ]
               },
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -16651,6 +16697,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 1
@@ -16662,6 +16709,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 1
@@ -16673,6 +16721,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0
@@ -16684,6 +16733,7 @@
                 ]
               },
               "Sniper Rifle": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -16695,6 +16745,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -16709,6 +16760,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 10
@@ -16723,6 +16775,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 15
@@ -16737,6 +16790,7 @@
                 ]
               },
               "Volkite Charger": {
+                "format": "{v} +2 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 2
@@ -16748,6 +16802,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -16759,6 +16814,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 0
@@ -16770,6 +16826,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 5
@@ -16781,6 +16838,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 13,
                 "tracking": {
                   "Points": 10
@@ -16792,6 +16850,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 14,
                 "tracking": {
                   "Points": 10
@@ -16803,6 +16862,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 15,
                 "tracking": {
                   "Points": 15
@@ -16814,6 +16874,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +5 pts",
                 "order": 16,
                 "tracking": {
                   "Points": 5
@@ -16825,6 +16886,7 @@
                 ]
               },
               "Relic Shield": {
+                "format": "{v} +10 pts",
                 "order": 17,
                 "tracking": {
                   "Points": 10
@@ -16836,6 +16898,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 18,
                 "tracking": {
                   "Points": 5
@@ -16847,6 +16910,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 19,
                 "tracking": {
                   "Points": 5
@@ -16858,6 +16922,7 @@
                 ]
               },
               "Lascannon": {
+                "format": "{v} +5 pts",
                 "order": 20,
                 "tracking": {
                   "Points": 5
@@ -16880,6 +16945,7 @@
             "groupOrder": 2,
             "ranks": {
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -16891,6 +16957,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -16902,6 +16969,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -16913,6 +16981,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -16924,6 +16993,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -16935,6 +17005,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -16946,6 +17017,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -16957,6 +17029,7 @@
                 ]
               },
               "Relic Blade": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -16982,6 +17055,7 @@
             "groupOrder": 2,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -16993,6 +17067,7 @@
                 ]
               },
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -17004,6 +17079,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 1
@@ -17015,6 +17091,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 1
@@ -17026,6 +17103,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0
@@ -17037,6 +17115,7 @@
                 ]
               },
               "Sniper Rifle": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -17048,6 +17127,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -17062,6 +17142,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 10
@@ -17076,6 +17157,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 15
@@ -17090,6 +17172,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 10
@@ -17104,6 +17187,7 @@
                 ]
               },
               "Volkite Charger": {
+                "format": "{v} +2 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 2
@@ -17115,6 +17199,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 10
@@ -17126,12 +17211,14 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 0
                 }
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 13,
                 "tracking": {
                   "Points": 5
@@ -17143,6 +17230,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 14,
                 "tracking": {
                   "Points": 10
@@ -17154,6 +17242,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 15,
                 "tracking": {
                   "Points": 10
@@ -17165,6 +17254,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 16,
                 "tracking": {
                   "Points": 15
@@ -17176,6 +17266,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +5 pts",
                 "order": 17,
                 "tracking": {
                   "Points": 5
@@ -17187,6 +17278,7 @@
                 ]
               },
               "Relic Shield": {
+                "format": "{v} +10 pts",
                 "order": 18,
                 "tracking": {
                   "Points": 10
@@ -17212,6 +17304,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -17223,6 +17316,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -17234,6 +17328,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -17245,6 +17340,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -19077,7 +19173,7 @@
               "Power Sword": {
                 "order": 0,
                 "tracking": {
-                  "Points": 5
+                  "Points": 0
                 },
                 "traits": [
                   {
