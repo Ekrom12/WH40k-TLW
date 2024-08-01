@@ -3696,6 +3696,7 @@
             "groupOrder": 2,
             "ranks": {
               "Close Combat Weapon": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -3705,6 +3706,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -3716,6 +3718,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -3727,6 +3730,7 @@
                 ]
               },
               "Power Maul": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -3738,6 +3742,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -3749,6 +3754,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15
@@ -3760,6 +3766,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 20
@@ -3771,6 +3778,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -3799,6 +3807,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -3810,6 +3819,7 @@
                 ]
               },
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -3821,6 +3831,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -3949,6 +3960,7 @@
             "group": "Wargear",
             "ranks": {
               "Chansword & Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -3963,6 +3975,7 @@
                 ]
               },
               "Chainsword & Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5,
@@ -3975,6 +3988,7 @@
                 ]
               },
               "2 Bolt Pistols": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -3989,6 +4003,7 @@
                 ]
               },
               "2 Plasma Pistols": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5,
@@ -4004,6 +4019,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0,
@@ -4161,6 +4177,7 @@
             "group": "Wargear",
             "ranks": {
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -4169,6 +4186,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -4180,6 +4198,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -4191,6 +4210,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -4202,6 +4222,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -4213,6 +4234,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -4224,6 +4246,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -4249,6 +4272,7 @@
             "group": "Wargear",
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -4260,6 +4284,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -4271,6 +4296,7 @@
                 ]
               },
               "2 Bolt Pistols": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -4285,6 +4311,7 @@
                 ]
               },
               "2 Plasma Pistols": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5,
@@ -4300,6 +4327,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0,
@@ -4312,6 +4340,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +1 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 1
@@ -4323,6 +4352,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -4337,6 +4367,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 10
@@ -4351,6 +4382,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 15
@@ -4365,6 +4397,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 10
@@ -4379,6 +4412,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -4450,6 +4484,7 @@
             "groupOrder": 2,
             "ranks": {
               "2 Lightning Claws": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -4461,6 +4496,7 @@
                 ]
               },
               "Thunder Hammer & Storm Shield": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -4477,7 +4513,7 @@
             },
             "statOrder": 3,
             "statType": "rank",
-            "value": null,
+            "value": "2 Lightning Claws",
             "visibility": "normal"
           },
           "Points": {
@@ -4537,6 +4573,7 @@
             "groupOrder": 2,
             "ranks": {
               "2 Lightning Claws": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -4548,6 +4585,7 @@
                 ]
               },
               "Thunder Hammer & Storm Shield": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -4677,6 +4715,7 @@
             "groupOrder": 4,
             "ranks": {
               "Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -4688,6 +4727,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 15
@@ -4821,6 +4861,7 @@
             "groupOrder": 4,
             "ranks": {
               "Close Combat Weapon": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -4832,6 +4873,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +1 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 1
@@ -4857,6 +4899,7 @@
             "groupOrder": 4,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -4868,6 +4911,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5,
@@ -4880,6 +4924,7 @@
                 ]
               },
               "Astartes Shotgun": {
+                "format": "{v} +1 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 1,
@@ -4892,6 +4937,7 @@
                 ]
               },
               "Plasma Gun": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10,
@@ -4904,6 +4950,7 @@
                 ]
               },
               "Melta Gun": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15,
@@ -4916,6 +4963,7 @@
                 ]
               },
               "Grav Gun": {
+                "format": "{v} +10 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 10,
@@ -5185,6 +5233,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -5196,6 +5245,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +1 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 1
@@ -5207,6 +5257,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5,
@@ -5219,6 +5270,7 @@
                 ]
               },
               "Astartes Shotgun": {
+                "format": "{v} +1 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 1
@@ -5230,6 +5282,7 @@
                 ]
               },
               "Plasma Gun": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10,
@@ -5242,6 +5295,7 @@
                 ]
               },
               "Melta Gun": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15,
@@ -5254,6 +5308,7 @@
                 ]
               },
               "Grav Gun": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10,
@@ -5266,6 +5321,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 5
@@ -5280,6 +5336,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +5 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 5
@@ -5294,6 +5351,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 15
@@ -5308,6 +5366,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -5322,6 +5381,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 10
@@ -5438,6 +5498,7 @@
             "groupOrder": 2,
             "ranks": {
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -5449,6 +5510,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -5460,6 +5522,7 @@
                 ]
               },
               "Neo Volkite Pistol": {
+                "format": "{v} +1 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 1
@@ -5768,6 +5831,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +100 pts",
                 "order": 1,
                 "tracking": {
                   "I": -1,
@@ -5837,6 +5901,7 @@
                 "tracking": {}
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "Ld": 1,
@@ -6008,6 +6073,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -6040,6 +6106,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -6073,6 +6140,7 @@
             "groupOrder": 2,
             "ranks": {
               "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -6087,6 +6155,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -6101,6 +6170,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Meltagun": {
+                "format": "{v} +15 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 15
@@ -6115,6 +6185,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 0
@@ -6126,6 +6197,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +5 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 5
@@ -6137,6 +6209,7 @@
                 ]
               },
               "Cyclone Missile Launcher": {
+                "format": "{v} +0 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 0
@@ -6151,6 +6224,7 @@
                 ]
               },
               "Linked Lascannons": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -6162,6 +6236,7 @@
                 ]
               },
               "Linked Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 0
@@ -6173,6 +6248,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 0
@@ -6184,6 +6260,7 @@
                 ]
               },
               "Seismic Hammer": {
+                "format": "{v} +5 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 5
@@ -6195,6 +6272,7 @@
                 ]
               },
               "Chainfist & Melta Gun": {
+                "format": "{v} +5 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 5
@@ -6209,6 +6287,7 @@
                 ]
               },
               "Chainfist & Flamer": {
+                "format": "{v} +0 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 0
@@ -6223,6 +6302,7 @@
                 ]
               },
               "Hurricane Bolter": {
+                "format": "{v} +0 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 0
@@ -6234,7 +6314,7 @@
                 ]
               }
             },
-            "statOrder": 2,
+            "statOrder": 1,
             "statType": "rank",
             "value": "Dreadnought Close Combat Weapon & Storm Bolter",
             "visibility": "normal"
@@ -6251,6 +6331,7 @@
             "groupOrder": 2,
             "ranks": {
               "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -6265,6 +6346,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -6279,6 +6361,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Meltagun": {
+                "format": "{v} +15 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 15
@@ -6293,6 +6376,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 0
@@ -6304,6 +6388,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +5 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 5
@@ -6315,6 +6400,7 @@
                 ]
               },
               "Cyclone Missile Launcher": {
+                "format": "{v} +0 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 0
@@ -6329,6 +6415,7 @@
                 ]
               },
               "Linked Lascannons": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -6340,6 +6427,7 @@
                 ]
               },
               "Linked Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 0
@@ -6351,6 +6439,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 0
@@ -6362,6 +6451,7 @@
                 ]
               },
               "Seismic Hammer": {
+                "format": "{v} +5 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 5
@@ -6373,6 +6463,7 @@
                 ]
               },
               "Chainfist & Melta Gun": {
+                "format": "{v} +5 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 5
@@ -6387,6 +6478,7 @@
                 ]
               },
               "Chainfist & Flamer": {
+                "format": "{v} +0 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 0
@@ -6401,6 +6493,7 @@
                 ]
               },
               "Hurricane Bolter": {
+                "format": "{v} +0 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 0
@@ -6435,11 +6528,13 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "A": 1,
                   "BS": 1,
                   "Ld": 1,
+                  "Points": 15,
                   "WS": 1
                 }
               }
@@ -6488,6 +6583,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Flamers & 2 Siege Drills": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -6505,6 +6601,7 @@
                 ]
               },
               "Grav Cannon": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -6516,6 +6613,7 @@
                 ]
               },
               "2 Heavy Bolters": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -6530,6 +6628,7 @@
                 ]
               },
               "2 Missile Launchers": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -6550,6 +6649,7 @@
                 ]
               },
               "2 Lascannons": {
+                "format": "{v} +20 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 20
@@ -6584,6 +6684,7 @@
             "group": "Wargear",
             "ranks": {
               "Assault Launchers": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -6592,6 +6693,7 @@
                 ]
               },
               "Hurricane Bolter": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -6685,6 +6787,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Flamers & 2 Siege Drills": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -6702,6 +6805,7 @@
                 ]
               },
               "Grav Cannon": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": -5
@@ -6713,6 +6817,7 @@
                 ]
               },
               "2 Heavy Bolters": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": -5
@@ -6727,6 +6832,7 @@
                 ]
               },
               "2 Missile Launchers": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5
@@ -6747,6 +6853,7 @@
                 ]
               },
               "2 Lascannons": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -6780,6 +6887,7 @@
             "group": "Wargear",
             "ranks": {
               "Assault Launchers": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -6788,6 +6896,7 @@
                 ]
               },
               "Hurricane Bolter": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -7021,6 +7130,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -7032,6 +7142,7 @@
                 ]
               },
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -7043,6 +7154,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -7078,6 +7190,7 @@
                 "order": 0
               },
               "Jump Pack": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "M": 6,
@@ -7090,10 +7203,11 @@
                 ]
               },
               "Space Marine Bike": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -7102,10 +7216,11 @@
                 ]
               },
               "Space Marine Outrider Bike": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -7232,6 +7347,7 @@
             "groupOrder": 2,
             "ranks": {
               "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -7246,6 +7362,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -7260,6 +7377,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -7271,6 +7389,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5
@@ -7282,6 +7401,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0
@@ -7296,6 +7416,7 @@
                 ]
               },
               "Linked Lascannons": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -7307,6 +7428,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 0
@@ -7318,6 +7440,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 0
@@ -7329,6 +7452,7 @@
                 ]
               },
               "Plasma Cannon": {
+                "format": "{v} +0 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 0
@@ -7357,6 +7481,7 @@
             "groupOrder": 2,
             "ranks": {
               "Dreadnought Close Combat Weapon & Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -7371,6 +7496,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -7385,6 +7511,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -7396,6 +7523,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5
@@ -7407,6 +7535,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0
@@ -7421,6 +7550,7 @@
                 ]
               },
               "Linked Lascannons": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -7432,6 +7562,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 0
@@ -7443,6 +7574,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 0
@@ -7454,6 +7586,7 @@
                 ]
               },
               "Plasma Cannon": {
+                "format": "{v} +0 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 0
@@ -7488,11 +7621,13 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "A": 1,
                   "BS": 1,
                   "Ld": 1,
+                  "Points": 15,
                   "WS": 1
                 }
               }
@@ -7663,6 +7798,31 @@
             "value": "2x Linked Heavy Bolter",
             "visibility": "normal"
           },
+          "Venerable Dreadnought": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 5,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "format": "{v} +15 pts",
+                "order": 1,
+                "tracking": {
+                  "A": 1,
+                  "BS": 1,
+                  "Ld": 1,
+                  "Points": 15,
+                  "WS": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "normal"
+          },
           "W": {
             "value": 4
           },
@@ -7693,6 +7853,7 @@
             "group": "Wargear",
             "ranks": {
               "Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -7701,6 +7862,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -7715,6 +7877,7 @@
                 ]
               },
               "Lascannon": {
+                "format": "{v} +15 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 15
@@ -7726,6 +7889,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "traits": [
                   {
@@ -7734,6 +7898,7 @@
                 ]
               },
               "Plasma Cannon": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -7745,6 +7910,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15
@@ -7756,6 +7922,7 @@
                 ]
               },
               "Grav Cannon": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -7801,6 +7968,12 @@
         }
       },
       "Model§Devastator Sergeant": {
+        "allowed": {
+          "items": [
+            "Wargear§Auspex Scanner",
+            "Wargear§Melta Bomb"
+          ]
+        },
         "assets": {
           "traits": [
             "Wargear§Power Armour",
@@ -7812,29 +7985,6 @@
         "stats": {
           "A": {
             "value": 2
-          },
-          "Auspex Scanner": {
-            "dynamic": true,
-            "group": "Wargear",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Auspex Scanner"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
           },
           "BS": {
             "value": 4
@@ -7853,6 +8003,7 @@
             "group": "Wargear",
             "ranks": {
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -7861,6 +8012,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -7872,6 +8024,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -7883,6 +8036,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -7894,6 +8048,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -7905,6 +8060,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -7916,6 +8072,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -7931,34 +8088,12 @@
             "value": "Chainsword",
             "visibility": "normal"
           },
-          "Meltabomb": {
-            "dynamic": true,
-            "group": "Wargear",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Melta Bomb"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "Pistol": {
             "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -7967,6 +8102,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -7978,6 +8114,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {},
                 "traits": [
@@ -7987,6 +8124,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -8010,6 +8148,7 @@
             "group": "Wargear",
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -8019,6 +8158,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +1 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 1
@@ -8030,6 +8170,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -8044,6 +8185,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -8058,6 +8200,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -8072,6 +8215,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15
@@ -8086,6 +8230,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -8153,6 +8298,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Sniper Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -8164,6 +8310,7 @@
                 ]
               },
               "Las Fusil": {
+                "format": "{v} +20 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 20
@@ -8232,6 +8379,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Carbine": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -8243,6 +8391,7 @@
                 ]
               },
               "Bolt Sniper Rifle": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -8254,6 +8403,7 @@
                 ]
               },
               "Las Fusil": {
+                "format": "{v} +20 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 20
@@ -8489,6 +8639,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Boltstorm Gauntlets & Fragstorm Grenade Launchers": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -8510,6 +8661,7 @@
                 ]
               },
               "2 Flamestorm Gauntlets": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {},
                 "traits": [
@@ -8542,6 +8694,7 @@
             "group": "Wargear",
             "ranks": {
               "Melta Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -8553,6 +8706,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Multi-Melta choice": 1,
@@ -8747,6 +8901,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Boltstorm Gauntlets & Fragstorm Grenade Launchers": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -8768,6 +8923,7 @@
                 ]
               },
               "2 Flamestorm Gauntlets": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {},
                 "traits": [
@@ -8800,6 +8956,7 @@
             "group": "Wargear",
             "ranks": {
               "Melta Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -8811,6 +8968,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Multi-Melta choice": 1,
@@ -8882,6 +9040,7 @@
             "dynamic": true,
             "ranks": {
               "2 Assault Bolters": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -8893,6 +9052,7 @@
                 ]
               },
               "2 Plasma Exterminators": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -8958,6 +9118,7 @@
             "dynamic": true,
             "ranks": {
               "2 Assault Bolters": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -8969,6 +9130,7 @@
                 ]
               },
               "2 Plasma Exterminators": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -9154,6 +9316,7 @@
                 "order": 0
               },
               "Narthecium": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10,
@@ -9166,6 +9329,7 @@
                 ]
               },
               "Omni-Scrambler": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10,
@@ -9236,6 +9400,7 @@
                 "order": 0
               },
               "Narthecium": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10,
@@ -9248,6 +9413,7 @@
                 ]
               },
               "Omni-Scrambler": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10,
@@ -9424,6 +9590,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -9447,6 +9614,7 @@
             "groupOrder": 2,
             "ranks": {
               "Heavy Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -9455,6 +9623,7 @@
                 ]
               },
               "Executioner Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -9463,6 +9632,7 @@
                 ]
               },
               "Hellstorm Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "traits": [
                   {
@@ -9471,6 +9641,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Heavy Bolter Selection": 1,
@@ -9498,6 +9669,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Grenade Launcher Selection": 1,
@@ -9534,6 +9706,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -9545,6 +9718,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -9556,6 +9730,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -9567,6 +9742,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 0
@@ -9744,6 +9920,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -9767,6 +9944,7 @@
             "groupOrder": 2,
             "ranks": {
               "Heavy Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -9775,6 +9953,7 @@
                 ]
               },
               "Executioner Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -9783,6 +9962,7 @@
                 ]
               },
               "Hellstorm Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "traits": [
                   {
@@ -9791,6 +9971,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Heavy Bolter Selection": 1,
@@ -9818,6 +9999,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Grenade Launcher Selection": 1,
@@ -9851,6 +10033,7 @@
             "groupOrder": 2,
             "ranks": {
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -9862,6 +10045,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -9873,6 +10057,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 15
@@ -9884,6 +10069,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 20
@@ -9909,6 +10095,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -9920,6 +10107,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -9931,6 +10119,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -9942,6 +10131,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 0
@@ -9968,6 +10158,7 @@
             "groupOrder": 2,
             "ranks": {
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -9979,6 +10170,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -9990,6 +10182,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -10050,6 +10243,7 @@
           "Main Weapon": {
             "ranks": {
               "Assault Cannon": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -10058,6 +10252,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -10127,6 +10322,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -10161,6 +10357,7 @@
             "groupOrder": 2,
             "ranks": {
               "Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -10172,6 +10369,7 @@
                 ]
               },
               "Linked a": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -10219,6 +10417,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -10251,6 +10450,7 @@
             "groupOrder": 4,
             "ranks": {
               "Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -10259,6 +10459,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "points": 15
@@ -10296,6 +10497,7 @@
             "groupOrder": 4,
             "ranks": {
               "2 Missile Launchers": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -10310,6 +10512,7 @@
                 ]
               },
               "2 Heavy Bolters": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -10324,6 +10527,7 @@
                 ]
               },
               "2 Lascannons": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -10567,6 +10771,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -10578,6 +10783,7 @@
                 ]
               },
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -10589,6 +10795,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -10710,6 +10917,7 @@
                 }
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -10721,6 +10929,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -10746,6 +10955,7 @@
             "groupOrder": 4,
             "ranks": {
               "Heavy Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -10754,6 +10964,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "points": 15
@@ -10789,6 +11000,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 15
@@ -10892,9 +11104,11 @@
             "group": "Wargear",
             "ranks": {
               "Linked Heavy Flamer": {
+                "format": "{v} +0 pts",
                 "order": 0
               },
               "Linked Volkite Caliver": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -10918,6 +11132,7 @@
             "group": "Wargear",
             "ranks": {
               "Grav Flux Bombard": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -10926,6 +11141,7 @@
                 ]
               },
               "Storm Cannon": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -10934,6 +11150,7 @@
                 ]
               },
               "Cyclonic Melta Lance": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -10945,6 +11162,7 @@
                 ]
               },
               "Leviathan Siege Claw and Meltagun": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -10959,6 +11177,7 @@
                 ]
               },
               "Leviathan Siege Drill and Meltagun": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -10988,6 +11207,7 @@
             "group": "Wargear",
             "ranks": {
               "Grav Flux Bombard": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -10996,6 +11216,7 @@
                 ]
               },
               "Storm Cannon": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -11004,6 +11225,7 @@
                 ]
               },
               "Cyclonic Melta Lance": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -11015,6 +11237,7 @@
                 ]
               },
               "Leviathan Siege Claw and Meltagun": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -11029,6 +11252,7 @@
                 ]
               },
               "Leviathan Siege Drill and Meltagun": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -12827,6 +13051,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -12847,6 +13072,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -12884,6 +13110,7 @@
             "groupOrder": 2,
             "ranks": {
               "Force Sword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -12892,6 +13119,7 @@
                 ]
               },
               "Force Axe": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -12900,6 +13128,7 @@
                 ]
               },
               "Force Stave": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "traits": [
                   {
@@ -12922,18 +13151,21 @@
                 "order": 0
               },
               "Librarian": {
+                "format": "{v} +20 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 20
                 }
               },
               "Chaplain": {
+                "format": "{v} +20 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 20
                 }
               },
               "Reiver Commander": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -12945,6 +13177,7 @@
                 ]
               },
               "Vanguard Commander": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "BS": 1,
@@ -12960,6 +13193,7 @@
                 ]
               },
               "Tech Marine Battlesmith": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Inv": 1,
@@ -12973,6 +13207,7 @@
                 ]
               },
               "Tech Marine Ordinator": {
+                "format": "{v} +45 pts",
                 "order": 6,
                 "tracking": {
                   "Inv": 1,
@@ -13004,6 +13239,7 @@
             "groupOrder": 2,
             "ranks": {
               "Close Combat Weapon": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -13013,6 +13249,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -13024,6 +13261,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -13035,6 +13273,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -13046,6 +13285,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -13057,6 +13297,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -13068,6 +13309,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -13093,6 +13335,7 @@
                 "order": 0
               },
               "Jump Pack": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "M": 6,
@@ -13105,10 +13348,11 @@
                 ]
               },
               "Space Marine Bike": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "M": 6,
-                  "Points": 20
+                  "Points": 5
                 },
                 "traits": [
                   {
@@ -13117,6 +13361,7 @@
                 ]
               },
               "Space Marine Outrider Bike": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "M": 6,
@@ -13144,6 +13389,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +0 pts",
                 "number": 2,
                 "order": 1
               }
@@ -13162,6 +13408,7 @@
             "groupOrder": 2,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -13173,6 +13420,7 @@
                 ]
               },
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -13184,6 +13432,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 1
@@ -13195,6 +13444,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +1 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 1
@@ -13206,6 +13456,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 0
@@ -13217,6 +13468,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -13231,6 +13483,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -13245,6 +13498,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -13259,6 +13513,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 10
@@ -13273,6 +13528,7 @@
                 ]
               },
               "Volkite Charger": {
+                "format": "{v} +2 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 2
@@ -13284,6 +13540,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -13295,12 +13552,14 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 0
                 }
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 5
@@ -13312,6 +13571,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 13,
                 "tracking": {
                   "Points": 10
@@ -13323,6 +13583,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 14,
                 "tracking": {
                   "Points": 10
@@ -13334,6 +13595,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 15,
                 "tracking": {
                   "Points": 15
@@ -13345,6 +13607,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +5 pts",
                 "order": 16,
                 "tracking": {
                   "Points": 5
@@ -13377,19 +13640,9 @@
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
-              "Heavy Bolt Pistol": {
-                "order": 0,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
-                  }
-                ]
-              },
               "Bolt Pistol": {
-                "order": 1,
+                "format": "{v} +0 pts",
+                "order": 0,
                 "tracking": {
                   "Points": 0
                 },
@@ -13399,7 +13652,20 @@
                   }
                 ]
               },
+              "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Bolt Pistol"
+                  }
+                ]
+              },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -13411,6 +13677,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5
@@ -13422,6 +13689,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -13447,6 +13715,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -13493,6 +13762,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +0 pts",
                 "order": 1
               }
             },
@@ -13507,6 +13777,7 @@
             "groupOrder": 2,
             "ranks": {
               "Indomitus Terminator Armour": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -13515,6 +13786,7 @@
                 ]
               },
               "Tartaros Terminator Armour": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -13523,6 +13795,7 @@
                 ]
               },
               "Cataphractii Terminator Armour": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Inv": -1
@@ -14018,6 +14291,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Dreadnought Close Combat Weapons with Linked Bolt Rifles": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -14036,6 +14310,7 @@
                 ]
               },
               "Brutalis Claws": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -14061,6 +14336,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Heavy Bolters": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -14072,6 +14348,7 @@
                 ]
               },
               "2 Multi-Melta": {
+                "format": "{v} +20 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 20
@@ -14104,6 +14381,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14132,6 +14410,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -14164,6 +14443,7 @@
             "group": "Wargear",
             "ranks": {
               "Assault Cannon": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -14172,6 +14452,7 @@
                 ]
               },
               "Macro Plasma Incinerator": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14194,6 +14475,7 @@
             "group": "Wargear",
             "ranks": {
               "Dreadnought Close Combat Weapon & Flamer": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -14205,6 +14487,7 @@
                 ]
               },
               "Dreadnought Close Combat Weapon & Assault Cannon": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14239,6 +14522,7 @@
             "group": "Wargear",
             "ranks": {
               "2 Storm Bolters": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -14250,6 +14534,7 @@
                 ]
               },
               "Assault Launchers": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -14273,6 +14558,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "A": 1,
@@ -14296,6 +14582,7 @@
             "group": "Wargear",
             "ranks": {
               "Redemptor": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -14304,6 +14591,7 @@
                 ]
               },
               "Ballistus": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 15
@@ -14321,6 +14609,7 @@
                 ]
               },
               "Brutalis": {
+                "format": "{v} +15 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 15
@@ -14360,6 +14649,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -14431,6 +14721,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -14510,6 +14801,7 @@
             "groupOrder": 2,
             "ranks": {
               "Power Fist": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -14521,6 +14813,7 @@
                 ]
               },
               "Chain Fist": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14532,6 +14825,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -14557,6 +14851,7 @@
             "groupOrder": 2,
             "ranks": {
               "Combi Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -14568,6 +14863,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14582,6 +14878,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -14596,6 +14893,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -14610,6 +14908,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -14624,6 +14923,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -14636,6 +14936,7 @@
                 ]
               },
               "Reaper Autocannon": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "text": "10 pts",
                 "tracking": {
@@ -14690,6 +14991,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +2 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 2
@@ -14730,6 +15032,7 @@
             "groupOrder": 2,
             "ranks": {
               "Power Sword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -14741,6 +15044,7 @@
                 ]
               },
               "Chain Fist": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14752,6 +15056,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -14777,6 +15082,7 @@
             "groupOrder": 2,
             "ranks": {
               "Combi Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -14788,6 +15094,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -14802,6 +15109,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -14816,6 +15124,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -14830,6 +15139,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -14844,6 +15154,7 @@
                 ]
               },
               "Plasma Blaster": {
+                "format": "{v} +10 pts",
                 "order": 5,
                 "text": "10 pts",
                 "tracking": {
@@ -14856,6 +15167,7 @@
                 ]
               },
               "Volkite Charger": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "text": "10 pts",
                 "tracking": {
@@ -14868,6 +15180,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 7,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -14880,6 +15193,7 @@
                 ]
               },
               "Reaper Autocannon": {
+                "format": "{v} +10 pts",
                 "order": 8,
                 "text": "10 pts",
                 "tracking": {
@@ -15006,6 +15320,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +1 pts",
                 "order": 1,
                 "tracking": {
                   "Grenade Launcher Selection": 1
@@ -15080,6 +15395,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +1 pts",
                 "order": 1,
                 "tracking": {
                   "Grenade Launcher Selection": 1
@@ -15117,6 +15433,7 @@
             "groupOrder": 2,
             "ranks": {
               "Astartes Shotgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -15126,6 +15443,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +1 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 1
@@ -15137,6 +15455,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -15151,6 +15470,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -15165,6 +15485,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -15179,6 +15500,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15
@@ -15193,6 +15515,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -15217,6 +15540,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -15226,6 +15550,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -15237,6 +15562,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -15248,6 +15574,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -15259,6 +15586,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -15270,6 +15598,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -15281,6 +15610,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -15292,6 +15622,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 5
@@ -15303,6 +15634,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 5
@@ -15314,6 +15646,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 10
@@ -15325,7 +15658,7 @@
                 ]
               }
             },
-            "statOrder": 3,
+            "statOrder": 2,
             "statType": "rank",
             "value": "Bolt Pistol",
             "visibility": "normal"
@@ -15405,6 +15738,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -15439,6 +15773,7 @@
             "groupOrder": 3,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -15448,6 +15783,7 @@
                 ]
               },
               "Astartes Shotgun": {
+                "format": "{v} +2 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 2
@@ -15459,6 +15795,7 @@
                 ]
               },
               "Sniper Rifle": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -15470,6 +15807,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5,
@@ -15482,6 +15820,7 @@
                 ]
               },
               "Plasma Gun": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10,
@@ -15494,6 +15833,7 @@
                 ]
               },
               "Melta Gun": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15,
@@ -15506,6 +15846,7 @@
                 ]
               },
               "Grav Gun": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10,
@@ -15518,6 +15859,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 0
@@ -15529,6 +15871,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 8,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -15541,6 +15884,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +15 pts",
                 "order": 9,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -15645,6 +15989,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -15679,6 +16024,7 @@
             "groupOrder": 3,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -15690,6 +16036,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +2 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 2
@@ -15701,6 +16048,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -15715,6 +16063,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -15729,6 +16078,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -15743,6 +16093,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 10
@@ -15771,6 +16122,7 @@
             "groupOrder": 3,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -15782,6 +16134,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -15793,6 +16146,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -15804,6 +16158,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -17555,6 +17910,7 @@
                 "order": 0
               },
               "Master of the Fleet": {
+                "format": "{v} +20 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 20
@@ -17566,6 +17922,7 @@
                 ]
               },
               "Master of the Watch": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "BS": 1,
@@ -17573,6 +17930,7 @@
                 }
               },
               "Master of the Marches": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "M": 1,
@@ -17580,12 +17938,14 @@
                 }
               },
               "Master of the Rites": {
+                "format": "{v} +20 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 20
                 }
               },
               "Master of Executions": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "masterOfExecutions": 1,
@@ -17593,6 +17953,7 @@
                 }
               },
               "Master of Relics": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -17604,6 +17965,7 @@
                 ]
               },
               "Chapter Master": {
+                "format": "{v} +25 pts",
                 "order": 7,
                 "tracking": {
                   "A": 1,
@@ -17642,6 +18004,7 @@
             "groupOrder": 2,
             "ranks": {
               "Power Sword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -17650,6 +18013,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -17658,6 +18022,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -17669,6 +18034,7 @@
                 ]
               },
               "Power Maul": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5
@@ -17680,6 +18046,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -17705,6 +18072,7 @@
             "groupOrder": 2,
             "ranks": {
               "Heavy Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -17713,6 +18081,7 @@
                 ]
               },
               "Bolt Storm Gauntlet": {
+                "format": "{v} +25 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 25
@@ -17741,6 +18110,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -17749,6 +18119,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -17760,6 +18131,7 @@
                 ]
               },
               "Volkite Charger": {
+                "format": "{v} +2 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 2
@@ -18281,9 +18653,10 @@
             "groupOrder": 2,
             "ranks": {
               "Power Sword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
-                  "Points": 5
+                  "Points": 0
                 },
                 "traits": [
                   {
@@ -18292,6 +18665,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -18303,6 +18677,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -18314,6 +18689,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -18325,6 +18701,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -18336,6 +18713,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -18347,6 +18725,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -18358,6 +18737,7 @@
                 ]
               },
               "Relic Blade": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -18383,6 +18763,7 @@
             "groupOrder": 2,
             "ranks": {
               "Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -18394,6 +18775,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -18408,6 +18790,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -18422,6 +18805,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -18436,6 +18820,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -18450,6 +18835,7 @@
                 ]
               },
               "Volkite Charger": {
+                "format": "{v} +2 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 2
@@ -18461,6 +18847,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -18472,12 +18859,14 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 0
                 }
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 5
@@ -18489,6 +18878,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 10
@@ -18500,6 +18890,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -18511,6 +18902,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 15
@@ -18522,6 +18914,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +5 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 5
@@ -18841,6 +19234,7 @@
             "groupOrder": 2,
             "ranks": {
               "Space Marine Bike": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -18849,6 +19243,7 @@
                 ]
               },
               "Space Marine Outrider Bike": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "traits": [
                   {
@@ -18860,222 +19255,6 @@
             "statOrder": 4,
             "statType": "rank",
             "value": "Space Marine Bike",
-            "visibility": "normal"
-          },
-          "Bolt Pistol": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt Pistol": {
-                "order": 0,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Bolt Pistol"
-                  }
-                ]
-              },
-              "Plasma Pistol": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Plasma Pistol"
-                  }
-                ]
-              },
-              "Hand Flamer": {
-                "order": 2,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Hand Flamer"
-                  }
-                ]
-              },
-              "Grav Pistol": {
-                "order": 3,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Grav Pistol"
-                  }
-                ]
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "value": "Bolt Pistol",
-            "visibility": "normal"
-          },
-          "Boltgun": {
-            "dynamic": true,
-            "group": "Wargear",
-            "groupOrder": 2,
-            "ranks": {
-              "Boltgun": {
-                "order": 0,
-                "tracking": {
-                  "Points": 0
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Boltgun"
-                  }
-                ]
-              },
-              "Combi-Flamer": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
-                  }
-                ]
-              },
-              "Combi-Plasma": {
-                "order": 2,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
-                  }
-                ]
-              },
-              "Combi-Melta": {
-                "order": 3,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Melta (Melta)"
-                  }
-                ]
-              },
-              "Combi-Grav": {
-                "order": 4,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Combi Grav (Grav)"
-                  }
-                ]
-              },
-              "Volkite Charger": {
-                "order": 5,
-                "tracking": {
-                  "Points": 2
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Volkite Charger"
-                  }
-                ]
-              },
-              "Lightning Claw": {
-                "order": 6,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Lightning Claws"
-                  }
-                ]
-              },
-              "Chainsword": {
-                "order": 7,
-                "tracking": {
-                  "Points": 0
-                }
-              },
-              "Power Sword": {
-                "order": 8,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Sword"
-                  }
-                ]
-              },
-              "Power Axe": {
-                "order": 9,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Axe"
-                  }
-                ]
-              },
-              "Power Lance": {
-                "order": 10,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Lance"
-                  }
-                ]
-              },
-              "Power Fist": {
-                "order": 11,
-                "tracking": {
-                  "Points": 15
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Power Fist"
-                  }
-                ]
-              },
-              "Storm Shield": {
-                "order": 12,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Storm Shields"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Boltgun",
             "visibility": "normal"
           },
           "BS": {
@@ -19091,6 +19270,7 @@
                 "order": 0
               },
               "Master of the Fleet": {
+                "format": "{v} +20 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 20
@@ -19102,6 +19282,7 @@
                 ]
               },
               "Master of the Watch": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "BS": 1,
@@ -19109,6 +19290,7 @@
                 }
               },
               "Master of the Marches": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "M": 1,
@@ -19116,12 +19298,14 @@
                 }
               },
               "Master of the Rites": {
+                "format": "{v} +20 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 20
                 }
               },
               "Master of Executions": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "masterOfExecutions": 1,
@@ -19129,6 +19313,7 @@
                 }
               },
               "Master of Relics": {
+                "format": "{v} +5 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 5
@@ -19140,6 +19325,7 @@
                 ]
               },
               "Chapter Master": {
+                "format": "{v} +25 pts",
                 "order": 7,
                 "tracking": {
                   "A": 1,
@@ -19174,15 +19360,13 @@
             "tracked": true,
             "value": 12
           },
-          "Points": {
-            "value": 70
-          },
-          "Power Sword": {
+          "Melee Weapon": {
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 2,
             "ranks": {
               "Power Sword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -19194,6 +19378,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -19205,6 +19390,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -19216,6 +19402,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -19227,6 +19414,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -19238,6 +19426,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -19249,6 +19438,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -19260,6 +19450,7 @@
                 ]
               },
               "Relic Blade": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -19276,9 +19467,244 @@
             "value": "Power Sword",
             "visibility": "normal"
           },
+          "Points": {
+            "value": 70
+          },
+          "Primary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Combi-Grav": {
+                "format": "{v} +10 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Grav (Grav)"
+                  }
+                ]
+              },
+              "Volkite Charger": {
+                "format": "{v} +2 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 2
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Volkite Charger"
+                  }
+                ]
+              },
+              "Lightning Claw": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Lightning Claws"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "format": "{v} +0 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 0
+                }
+              },
+              "Power Sword": {
+                "format": "{v} +5 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Sword"
+                  }
+                ]
+              },
+              "Power Axe": {
+                "format": "{v} +10 pts",
+                "order": 9,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Axe"
+                  }
+                ]
+              },
+              "Power Lance": {
+                "format": "{v} +10 pts",
+                "order": 10,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Lance"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +15 pts",
+                "order": 11,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              },
+              "Storm Shield": {
+                "order": 12,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shields"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
           "S": {
             "tracked": true,
             "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Hand Flamer"
+                  }
+                ]
+              },
+              "Grav Pistol": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grav Pistol"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
           },
           "Sv": {
             "tracked": true,
@@ -19333,6 +19759,7 @@
             "groupOrder": 2,
             "ranks": {
               "Dragonfire Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -19344,6 +19771,7 @@
                 ]
               },
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -19355,6 +19783,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -19366,6 +19795,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 0
@@ -19377,6 +19807,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +1 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 1
@@ -19388,6 +19819,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -19402,6 +19834,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -19416,6 +19849,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -19430,6 +19864,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 10
@@ -19444,6 +19879,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +5 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 5
@@ -19455,6 +19891,7 @@
                 ]
               },
               "Plasma Gun": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -19466,6 +19903,7 @@
                 ]
               },
               "Melta Gun": {
+                "format": "{v} +15 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 15
@@ -19477,6 +19915,7 @@
                 ]
               },
               "Grav Gun": {
+                "format": "{v} +10 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 10
@@ -19488,6 +19927,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 13,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19500,6 +19940,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +15 pts",
                 "order": 14,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19515,6 +19956,7 @@
                 ]
               },
               "Lascannon": {
+                "format": "{v} +20 pts",
                 "order": 15,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19527,6 +19969,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +20 pts",
                 "order": 16,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19539,6 +19982,7 @@
                 ]
               },
               "Grav Cannon": {
+                "format": "{v} +15 pts",
                 "order": 17,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19700,6 +20144,7 @@
             "groupOrder": 2,
             "ranks": {
               "Dragonfire Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -19711,6 +20156,7 @@
                 ]
               },
               "Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -19722,6 +20168,7 @@
                 ]
               },
               "Auto Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 0
@@ -19733,6 +20180,7 @@
                 ]
               },
               "Stalker Bolt Rifle": {
+                "format": "{v} +0 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 0
@@ -19744,6 +20192,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +1 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 1
@@ -19755,6 +20204,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 5
@@ -19769,6 +20219,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -19783,6 +20234,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 15
@@ -19797,6 +20249,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 8,
                 "tracking": {
                   "Points": 10
@@ -19811,6 +20264,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +5 pts",
                 "order": 9,
                 "tracking": {
                   "Points": 5
@@ -19822,6 +20276,7 @@
                 ]
               },
               "Plasma Gun": {
+                "format": "{v} +10 pts",
                 "order": 10,
                 "tracking": {
                   "Points": 10
@@ -19833,6 +20288,7 @@
                 ]
               },
               "Melta Gun": {
+                "format": "{v} +15 pts",
                 "order": 11,
                 "tracking": {
                   "Points": 15
@@ -19844,6 +20300,7 @@
                 ]
               },
               "Grav Gun": {
+                "format": "{v} +10 pts",
                 "order": 12,
                 "tracking": {
                   "Points": 10
@@ -19855,6 +20312,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 13,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19867,6 +20325,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +15 pts",
                 "order": 14,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19882,6 +20341,7 @@
                 ]
               },
               "Lascannon": {
+                "format": "{v} +20 pts",
                 "order": 15,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19894,6 +20354,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +20 pts",
                 "order": 16,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -19906,6 +20367,7 @@
                 ]
               },
               "Grav Cannon": {
+                "format": "{v} +15 pts",
                 "order": 17,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -20334,6 +20796,12 @@
         }
       },
       "Model§Support Marine Sergeant": {
+        "allowed": {
+          "items": [
+            "Wargear§Melta Bomb",
+            "Wargear§Auspex Scanner"
+          ]
+        },
         "assets": {
           "traits": [
             "Melee Weapon§Close Combat Weapons",
@@ -20638,29 +21106,6 @@
           "A": {
             "value": 1
           },
-          "Auspex Scanner": {
-            "dynamic": true,
-            "group": "Wargear",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "Points": 10
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Auspex Scanner"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "BS": {
             "value": 4
           },
@@ -20673,34 +21118,12 @@
           "M": {
             "value": 6
           },
-          "Meltabomb": {
-            "dynamic": true,
-            "group": "Wargear",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Melta Bomb"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "Pistol": {
             "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "traits": [
                   {
@@ -20709,6 +21132,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -20873,9 +21297,9 @@
             "dynamic": true,
             "group": "Wargear",
             "groupOrder": 3,
-            "increment": {},
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {},
                 "traits": [
@@ -20885,6 +21309,7 @@
                 ]
               },
               "Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5,
@@ -20897,6 +21322,7 @@
                 ]
               },
               "Plasma Gun": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10,
@@ -20909,6 +21335,7 @@
                 ]
               },
               "Melta Gun": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15,
@@ -20921,6 +21348,7 @@
                 ]
               },
               "Grav Gun": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10,
@@ -20933,6 +21361,7 @@
                 ]
               },
               "Heavy Bolter": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -20945,6 +21374,7 @@
                 ]
               },
               "Missile Launcher": {
+                "format": "{v} +15 pts",
                 "order": 6,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -20960,6 +21390,7 @@
                 ]
               },
               "Lascannon": {
+                "format": "{v} +20 pts",
                 "order": 7,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -20972,6 +21403,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 8,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -20984,6 +21416,7 @@
                 ]
               },
               "Plasma Cannon": {
+                "format": "{v} +15 pts",
                 "order": 9,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -20996,6 +21429,7 @@
                 ]
               },
               "Multi-Melta": {
+                "format": "{v} +20 pts",
                 "order": 10,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -21008,6 +21442,7 @@
                 ]
               },
               "Grav Cannon": {
+                "format": "{v} +10 pts",
                 "order": 11,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -21079,6 +21514,7 @@
             "groupOrder": 2,
             "ranks": {
               "Close Combat Weapon": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21090,6 +21526,7 @@
                 ]
               },
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -21101,6 +21538,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -21112,6 +21550,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -21123,6 +21562,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -21134,6 +21574,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 15
@@ -21145,6 +21586,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 20
@@ -21156,6 +21598,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 7,
                 "tracking": {
                   "Points": 10
@@ -21181,6 +21624,7 @@
             "groupOrder": 2,
             "ranks": {
               "Boltgun": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21192,6 +21636,7 @@
                 ]
               },
               "Storm Bolter": {
+                "format": "{v} +2 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 2
@@ -21203,6 +21648,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -21217,6 +21663,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -21231,6 +21678,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -21245,6 +21693,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 10
@@ -21259,6 +21708,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -21284,6 +21734,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21295,6 +21746,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -21306,6 +21758,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -21317,6 +21770,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -21368,6 +21822,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "Cyclone Missile Launcher Selection": 1,
@@ -21413,6 +21868,7 @@
             "groupOrder": 2,
             "ranks": {
               "Power Fist": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21424,6 +21880,7 @@
                 ]
               },
               "Chain Fist": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -21449,6 +21906,7 @@
             "groupOrder": 2,
             "ranks": {
               "Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21460,6 +21918,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -21474,6 +21933,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -21488,6 +21948,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -21502,6 +21963,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -21516,6 +21978,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -21528,6 +21991,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "text": "10 pts",
                 "tracking": {
@@ -21584,6 +22048,7 @@
                 "order": 0
               },
               "✓": {
+                "format": "{v} +15 pts",
                 "order": 1,
                 "tracking": {
                   "Cyclone Missile Launcher Selection": 1,
@@ -21629,6 +22094,7 @@
             "groupOrder": 2,
             "ranks": {
               "Power Fist": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21640,6 +22106,7 @@
                 ]
               },
               "Chain Fist": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -21665,6 +22132,7 @@
             "groupOrder": 2,
             "ranks": {
               "Storm Bolter": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21676,6 +22144,7 @@
                 ]
               },
               "Combi-Flamer": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -21690,6 +22159,7 @@
                 ]
               },
               "Combi-Plasma": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -21704,6 +22174,7 @@
                 ]
               },
               "Combi-Melta": {
+                "format": "{v} +15 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 15
@@ -21718,6 +22189,7 @@
                 ]
               },
               "Combi-Grav": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -21732,6 +22204,7 @@
                 ]
               },
               "Heavy Flamer": {
+                "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
                   "Heavy Weapon Selection": 1,
@@ -21744,6 +22217,7 @@
                 ]
               },
               "Assault Cannon": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "text": "10 pts",
                 "tracking": {
@@ -21867,6 +22341,7 @@
             "groupOrder": 2,
             "ranks": {
               "Chainsword": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21878,6 +22353,7 @@
                 ]
               },
               "Power Sword": {
+                "format": "{v} +5 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 5
@@ -21889,6 +22365,7 @@
                 ]
               },
               "Power Axe": {
+                "format": "{v} +10 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 10
@@ -21900,6 +22377,7 @@
                 ]
               },
               "Power Lance": {
+                "format": "{v} +10 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 10
@@ -21911,6 +22389,7 @@
                 ]
               },
               "Power Fist": {
+                "format": "{v} +15 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 15
@@ -21922,6 +22401,7 @@
                 ]
               },
               "Thunder Hammer": {
+                "format": "{v} +20 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 20
@@ -21933,6 +22413,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 10
@@ -21961,6 +22442,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -21972,6 +22454,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 10
@@ -21983,6 +22466,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +15 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 15
@@ -22057,6 +22541,7 @@
             "groupOrder": 2,
             "ranks": {
               "Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 0,
                 "tracking": {
                   "Points": 0
@@ -22068,6 +22553,7 @@
                 ]
               },
               "Heavy Bolt Pistol": {
+                "format": "{v} +0 pts",
                 "order": 1,
                 "tracking": {
                   "Points": 0
@@ -22079,6 +22565,7 @@
                 ]
               },
               "Plasma Pistol": {
+                "format": "{v} +5 pts",
                 "order": 2,
                 "tracking": {
                   "Points": 5
@@ -22090,6 +22577,7 @@
                 ]
               },
               "Hand Flamer": {
+                "format": "{v} +5 pts",
                 "order": 3,
                 "tracking": {
                   "Points": 5
@@ -22101,6 +22589,7 @@
                 ]
               },
               "Grav Pistol": {
+                "format": "{v} +10 pts",
                 "order": 4,
                 "tracking": {
                   "Points": 10
@@ -22112,6 +22601,7 @@
                 ]
               },
               "Lightning Claw": {
+                "format": "{v} +10 pts",
                 "order": 5,
                 "tracking": {
                   "Points": 10
@@ -22123,6 +22613,7 @@
                 ]
               },
               "Storm Shield": {
+                "format": "{v} +15 pts",
                 "order": 6,
                 "tracking": {
                   "Points": 15
@@ -32041,9 +32532,11 @@
             "groupOrder": 3,
             "ranks": {
               "Tartaros Terminator Armour": {
+                "format": "{v} +0 pts",
                 "order": 0
               },
               "Cataphractii Terminator Armour": {
+                "format": "{v} +0 pts",
                 "order": 1
               }
             },
