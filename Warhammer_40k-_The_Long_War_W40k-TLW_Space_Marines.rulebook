@@ -1,6 +1,6 @@
 {
   "name": "W40k:TLW Space Marines",
-  "revision": "1.0.5",
+  "revision": "1.0.6",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -397,6 +397,68 @@
       },
       "Model": {
         "rules": {
+          "imperiumSwordWTIncreaseStats": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "A",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "S",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Warlord Trait",
+                    "value"
+                  ]
+                ],
+                "value": "The Imperium's Sword"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Additional Warlord Trait",
+                    "value"
+                  ]
+                ],
+                "value": "The Imperium's Sword"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "pass"
+          },
           "RoWMechanizedAssaultTransportsIncreaseBS": {
             "actions": [
               {
@@ -9780,8 +9842,8 @@
       "Model§Intercessor Marine Sergeant": {
         "allowed": {
           "items": [
-            "Ranged Weapon§Melta Destroyer",
-            "Wargear§Auspex Scanner"
+            "Wargear§Auspex Scanner",
+            "Wargear§Melta Bomb"
           ]
         },
         "rules": {
