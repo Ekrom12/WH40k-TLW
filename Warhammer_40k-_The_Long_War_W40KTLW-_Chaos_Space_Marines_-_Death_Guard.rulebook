@@ -1,6 +1,6 @@
 {
   "name": "W40KTLW: Chaos Space Marines - Death Guard",
-  "revision": "0.0.1",
+  "revision": "0.5.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
@@ -50,6 +50,11 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 0
+          }
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "value": "Mark of Nurgle"
           }
         }
       }
@@ -489,6 +494,265 @@
           },
           "Strength": {
             "value": "+1"
+          }
+        }
+      },
+      "Model§Blightlord Terminator": {
+        "rules": {
+          "flailofCorruptionRemoveWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Combi Bolter"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Combi Bolter"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Flail of Corruption"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 5
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 5
+          },
+          "Main Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Blight Launcher": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Blight Launcher"
+                  }
+                ]
+              },
+              "Plague Spewer": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plague Spewer"
+                  }
+                ]
+              },
+              "Reaper Auto Cannon": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              },
+              "Heavy Blight Launcher": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Blight Launcher"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Combi Bolter",
+            "visibility": "normal"
+          },
+          "Melee Weapon": {
+            "group": "Wargear",
+            "ranks": {
+              "Bale Sword": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bale Sword"
+                  }
+                ]
+              },
+              "Bubotic Axe": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bubotic Axe"
+                  }
+                ]
+              },
+              "Flail of Corruption": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Flail of Corruption"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bale Sword",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "WS": {
+            "value": 4
           }
         }
       },
@@ -2334,7 +2598,341 @@
           }
         }
       },
+      "Model§Plague Champion": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Blight Grenades",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "Bale Sword": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bale Sword"
+                  }
+                ]
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Icon of Despair": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                }
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "Main Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Boltgun": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Blight Launcher": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Blight Launcher"
+                  }
+                ]
+              },
+              "Plague Belcher": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plague Belcher"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "format": "{v} +15 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Flail of Corruption": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Flail of Corruption"
+                  }
+                ]
+              },
+              "Great Plague Cleaver": {
+                "format": "{v} +15 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Great Plague Cleaver"
+                  }
+                ]
+              },
+              "Bubotic Axe": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bubotic Axe"
+                  }
+                ]
+              },
+              "Mace of Contagion": {
+                "format": "{v} +10 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Mace of Contagion"
+                  }
+                ]
+              },
+              "Plague Spewer": {
+                "format": "{v} +5 pts",
+                "order": 9,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plague Spewer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Plague Knife": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Plague Knife"
+                  }
+                ]
+              },
+              "Bubotic Axe": {
+                "format": "{v} +10 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bubotic Axe"
+                  }
+                ]
+              },
+              "Mace of Contagion": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Mace of Contagion"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "format": "{v} +15 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Power Fist"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Plague Knife",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 25
+          },
+          "S": {
+            "value": 4
+          },
+          "Secondary Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Bolt Pistol": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Bolt Pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Pistol"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Plague Marine": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Plague Knife",
+            "Ranged Weapon§Bolt Pistol",
+            "Ranged Weapon§Blight Grenades",
+            "Ranged Weapon§Krak Grenade"
+          ]
+        },
         "stats": {
           "A": {
             "value": 1
@@ -2345,11 +2943,170 @@
           "I": {
             "value": 4
           },
+          "Icon of Despair": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                }
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "normal"
+          },
           "Ld": {
             "value": 7
           },
           "M": {
             "value": 6
+          },
+          "Main Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "Boltgun": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Blight Launcher": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Blight Launcher"
+                  }
+                ]
+              },
+              "Plague Belcher": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plague Belcher"
+                  }
+                ]
+              },
+              "Plasma Gun": {
+                "format": "{v} +10 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plasma Gun"
+                  }
+                ]
+              },
+              "Melta Gun": {
+                "format": "{v} +15 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Melta Gun"
+                  }
+                ]
+              },
+              "Flail of Corruption": {
+                "format": "{v} +10 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 10,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Flail of Corruption"
+                  }
+                ]
+              },
+              "Great Plague Cleaver": {
+                "format": "{v} +15 pts",
+                "order": 6,
+                "tracking": {
+                  "Points": 15,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Great Plague Cleaver"
+                  }
+                ]
+              },
+              "Bubotic Axe": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bubotic Axe"
+                  }
+                ]
+              },
+              "Mace of Contagion": {
+                "format": "{v} +10 pts",
+                "order": 8,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Mace of Contagion"
+                  }
+                ]
+              },
+              "Plague Spewer": {
+                "format": "{v} +5 pts",
+                "order": 9,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plague Spewer"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "normal"
           },
           "Points": {
             "value": 15
@@ -2939,6 +3696,378 @@
           ]
         },
         "text": "Once per\ngame, in the Charge phase when\nthis unit or its attached unit is\nselected as a Charge target, the\nunit that declared the charge\ntakes D6 Strength 4, AP5\nautomatic hits. Saves are taken\nas normal."
+      },
+      "Unit§Blightlord Terminators": {
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Keywords": [
+            "Blightlord Terminators",
+            "M31",
+            "Terminators",
+            "Veterans"
+          ]
+        },
+        "rules": {
+          "count1in4": {
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 4
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          }
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Unit§Chosen": {
+        "inheritance": "removed"
+      },
+      "Unit§Legionnaire Squad": {
+        "inheritance": "removed"
+      },
+      "Unit§Plague Marines": {
+        "allowed": {
+          "items": [
+            "Model§Plague Marine",
+            "Model§Plague Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Plague Marine",
+              "quantity": 4
+            },
+            "Model§Plague Champion"
+          ],
+          "traits": [
+            "Special Rule§Allegiance: Death Guard",
+            "Special Rule§Chaos Boons"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "2 - Troops"
+          ],
+          "Keywords": [
+            "Despoiler",
+            "Plague Marines"
+          ],
+          "Role": [
+            "Troops"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ]
+        },
+        "rules": {
+          "1 in 9 can take a Heavy Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in9",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "2 in 4 can take a Special Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count2in4",
+                  "evals",
+                  "1",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Special Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "count1in9": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "test",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 9
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "count2in4": {
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 4
+                },
+                "not": false,
+                "note": "track 1/4 of the models",
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T*O",
+                  "value": 2
+                },
+                "not": false,
+                "note": "track 2/4 of the models",
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "integer"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          }
+        },
+        "stats": {
+          "Heavy Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v}",
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
+            "value": "Mark of Nurgle"
+          },
+          "Special Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Venom Crawler": {
+        "inheritance": "removed"
       },
       "Wargear§Rotor Jets": {
         "text": "A model equipped with this Wargear increases its Movement (M) characteristic to 12”. The equipped model\ngains the Hammer of Wrath (1) and Deep Strike special rules. The unit gains the Fly keyword."
