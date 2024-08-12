@@ -17,7 +17,108 @@
   ],
   "rulebook": {
     "assetTaxonomy": {
-      "Character": {},
+      "Character": {
+        "stats": {
+          "Additional Warlord Trait": {
+            "ranks": {
+              "The Gaze of the Gods": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Gaze of the Gods"
+                  }
+                ]
+              },
+              "The Lord of Terror": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Lord of Terror"
+                  }
+                ]
+              },
+              "Flames of Spite": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Flames of Spite"
+                  }
+                ]
+              },
+              "Revoltingly Resilient": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Revoltingly Resilient"
+                  }
+                ]
+              },
+              "Living Plague": {
+                "order": 5,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Living Plague"
+                  }
+                ]
+              },
+              "Arch Contaminator": {
+                "order": 6,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Arch Contaminator"
+                  }
+                ]
+              }
+            }
+          },
+          "Warlord Trait": {
+            "ranks": {
+              "Revoltingly Resilient": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Revoltingly Resilient"
+                  }
+                ]
+              },
+              "Living Plague": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Living Plague"
+                  }
+                ]
+              },
+              "Arch Contaminator": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Arch Contaminator"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
       "Special Rule": {
         "keywords": {
           "Keywords": []
@@ -54,6 +155,69 @@
         },
         "stats": {
           "Mark of Chaos": {
+            "dynamic": false,
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            },
             "value": "Mark of Nurgle"
           }
         }
@@ -64,6 +228,297 @@
         "stats": {
           "Mark of Chaos": {
             "value": "Mark of Nurgle"
+          }
+        }
+      },
+      "Character§Mortarion, Daemon Primarch of the Death Guard": {
+        "allowed": {
+          "items": [
+            "Model§Mortarion, Daemon Primarch of the Death Guard"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            "Model§Mortarion, Daemon Primarch of the Death Guard"
+          ],
+          "traits": [
+            "Special Rule§Lord of Damnation",
+            "Special Rule§Regeneration",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Deep Strike",
+            "Special Rule§Daemon",
+            {
+              "item": "Special Rule§Feel no Pain",
+              "stats": {
+                "x": {
+                  "value": 6
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Last Stand",
+            {
+              "item": "Special Rule§Psyker",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Primarch of the XIV",
+            "Special Rule§Host of Plagues"
+          ]
+        },
+        "keywords": {
+          "Unit Type": [
+            "Monster"
+          ],
+          "Tags": [
+            "8 - Lord of War"
+          ],
+          "Role": [
+            "Lord of War"
+          ],
+          "Keywords": [
+            "Character",
+            "Daemon",
+            "Daemon Prince",
+            "Fly",
+            "M31",
+            "Mortarion, Daemon Primarch of the Death Guard",
+            "Psyker",
+            "Unique"
+          ]
+        },
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Relic"
+            ]
+          }
+        },
+        "stats": {
+          "Additional Warlord Trait": {
+            "dynamic": false,
+            "ranks": {
+              "The Gaze of the Gods": {
+                "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Gaze of the Gods"
+                  }
+                ]
+              },
+              "The Lord of Terror": {
+                "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Lord of Terror"
+                  }
+                ]
+              },
+              "Flames of Spite": {
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Flames of Spite"
+                  }
+                ]
+              },
+              "Revoltingly Resilient": {
+                "order": 4,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Revoltingly Resilient"
+                  }
+                ]
+              },
+              "Living Plague": {
+                "order": 5,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Living Plague"
+                  }
+                ]
+              },
+              "Arch Contaminator": {
+                "order": 6,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Arch Contaminator"
+                  }
+                ]
+              }
+            },
+            "value": "Living Plague",
+            "visibility": "normal"
+          },
+          "Additional Warlord Trait 2": {
+            "group": "Warlord",
+            "groupOrder": 4,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "The Gaze of the Gods": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Gaze of the Gods"
+                  }
+                ]
+              },
+              "The Lord of Terror": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§The Lord of Terror"
+                  }
+                ]
+              },
+              "Flames of Spite": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Flames of Spite"
+                  }
+                ]
+              },
+              "Revoltingly Resilient": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Revoltingly Resilient"
+                  }
+                ]
+              },
+              "Living Plague": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Living Plague"
+                  }
+                ]
+              },
+              "Arch Contaminator": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Arch Contaminator"
+                  }
+                ]
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Arch Contaminator",
+            "visibility": "normal"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
+          },
+          "Mortarion, Daemon Primarch of the Death Guard": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Warlord": {
+            "value": "✓"
+          },
+          "Warlord Trait": {
+            "dynamic": false,
+            "value": "Revoltingly Resilient",
+            "visibility": "normal"
           }
         }
       },
@@ -561,7 +1016,7 @@
         },
         "stats": {
           "A": {
-            "value": 5
+            "value": 2
           },
           "BS": {
             "value": 4
@@ -580,6 +1035,7 @@
             "value": 5
           },
           "Main Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Combi Bolter": {
@@ -655,6 +1111,7 @@
                 "format": "{v} +5 pts",
                 "order": 5,
                 "tracking": {
+                  "Heavy Weapon Selection": 1,
                   "Points": 5
                 },
                 "traits": [
@@ -667,6 +1124,7 @@
                 "format": "{v} +10 pts",
                 "order": 6,
                 "tracking": {
+                  "Heavy Weapon Selection": 1,
                   "Points": 10
                 },
                 "traits": [
@@ -694,6 +1152,7 @@
             "visibility": "normal"
           },
           "Melee Weapon": {
+            "dynamic": true,
             "group": "Wargear",
             "ranks": {
               "Bale Sword": {
@@ -739,6 +1198,9 @@
             "value": "Bale Sword",
             "visibility": "normal"
           },
+          "Points": {
+            "value": 42
+          },
           "S": {
             "value": 4
           },
@@ -749,7 +1211,273 @@
             "value": 4
           },
           "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Blightlord Terminator Champion": {
+        "rules": {
+          "flailofCorruptionRemoveWeapons": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Combi Bolter"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Main Weapon",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Combi Bolter"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Melee Weapon",
+                    "value"
+                  ]
+                ],
+                "value": "Flail of Corruption"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
             "value": 5
+          },
+          "Main Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Combi Bolter": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Bolter"
+                  }
+                ]
+              },
+              "Combi-Flamer": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Flamer (Flamer)"
+                  }
+                ]
+              },
+              "Combi-Plasma": {
+                "format": "{v} +10 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Plasma (Plasma)"
+                  }
+                ]
+              },
+              "Combi-Melta": {
+                "format": "{v} +15 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Boltgun)"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Combi Melta (Melta)"
+                  }
+                ]
+              },
+              "Blight Launcher": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Blight Launcher"
+                  }
+                ]
+              },
+              "Plague Spewer": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Plague Spewer"
+                  }
+                ]
+              },
+              "Reaper Auto Cannon": {
+                "format": "{v} +10 pts",
+                "order": 6,
+                "tracking": {
+                  "Heavy Weapon Selection": 1,
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Reaper Autocannon"
+                  }
+                ]
+              },
+              "Heavy Blight Launcher": {
+                "format": "{v} +10 pts",
+                "order": 7,
+                "tracking": {
+                  "Points": 10
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Blight Launcher"
+                  }
+                ]
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "Combi Bolter",
+            "visibility": "normal"
+          },
+          "Melee Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Bale Sword": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bale Sword"
+                  }
+                ]
+              },
+              "Bubotic Axe": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Bubotic Axe"
+                  }
+                ]
+              },
+              "Flail of Corruption": {
+                "format": "{v} +5 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 5,
+                  "Special Weapon Selection": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Flail of Corruption"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "value": "Bale Sword",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 57
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
           },
           "WS": {
             "value": 4
@@ -2598,6 +3326,467 @@
           }
         }
       },
+      "Model§Deathshroud Terminator": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Manreaper",
+            "Ranged Weapon§Plague Spurt Gauntlets"
+          ]
+        },
+        "rules": {
+          "changeCataphractiiInvuln": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              },
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Terminator Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Tartaros Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 5
+          },
+          "Points": {
+            "value": 49
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Deathshroud Terminator Champion": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Manreaper",
+            {
+              "item": "Ranged Weapon§Plague Spurt Gauntlets",
+              "quantity": 2
+            }
+          ]
+        },
+        "rules": {
+          "changeCataphractiiInvuln": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Inv",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Terminator Armour",
+                    "value"
+                  ]
+                ],
+                "value": "Tartaros Terminator Armour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 8
+          },
+          "M": {
+            "value": 5
+          },
+          "Points": {
+            "value": 57
+          },
+          "S": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 2
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Model§Foetid Bloat Drone": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Wargear§Rotor Jets"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 13
+          },
+          "Main Weapon": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 4,
+            "ranks": {
+              "2 Plague Spewer": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plague Spewer",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "Fleshmower": {
+                "format": "{v} +0 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fleshmower"
+                  }
+                ]
+              },
+              "Heavy Blight Launcher": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Heavy Blight Launcher"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Plague Spewer",
+            "visibility": "normal"
+          },
+          "Points": {
+            "value": 110
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 6
+          },
+          "W": {
+            "value": 4
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Mortarion, Daemon Primarch of the Death Guard": {
+        "assets": {
+          "traits": [
+            "Wargear§The Barbaran Plate",
+            "Melee Weapon§Silence",
+            "Ranged Weapon§The Lantern",
+            "Ranged Weapon§Phosphex Bombs",
+            "Wargear§Wings"
+          ]
+        },
+        "removed": {
+          "rules": {
+            "addDaemonInv": {}
+          }
+        },
+        "stats": {
+          "A": {
+            "value": 6
+          },
+          "BS": {
+            "value": 6
+          },
+          "I": {
+            "value": 5
+          },
+          "Inv": {
+            "value": 4,
+            "visibility": "always"
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 13
+          },
+          "Points": {
+            "value": 280
+          },
+          "S": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 8
+          },
+          "W": {
+            "value": 6
+          },
+          "WS": {
+            "value": 7
+          }
+        }
+      },
+      "Model§Myphitic Blight Hauler": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Bile Spurt",
+            "Ranged Weapon§Missile Launcher (Frag)",
+            "Ranged Weapon§Missile Launcher (Krak)",
+            "Ranged Weapon§Multi-Melta"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 95
+          },
+          "S": {
+            "value": 5
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Model§Plague Burst Crawler": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Close Combat Weapons",
+            "Ranged Weapon§Heavy Stubber",
+            "Ranged Weapon§Plague Burst Mortar"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 4
+          },
+          "I": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "M": {
+            "value": 9
+          },
+          "Points": {
+            "value": 120
+          },
+          "S": {
+            "value": 6
+          },
+          "Side Weapons": {
+            "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 6,
+            "ranks": {
+              "2 Plague Spewers": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "tracking": {
+                  "Points": 0
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Plague Spewer",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              },
+              "2 Lascannons": {
+                "format": "{v} +30 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 30
+                },
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Ranged Weapon§Lascannon",
+                      "quantity": 2
+                    }
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Plague Spewers",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 7
+          },
+          "W": {
+            "value": 5
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Model§Plague Champion": {
         "assets": {
           "traits": [
@@ -3285,6 +4474,22 @@
           }
         }
       },
+      "Ranged Weapon§Heavy Stubber": {
+        "stats": {
+          "Armor Penetration (AP)": {
+            "value": "5"
+          },
+          "Range": {
+            "value": 36
+          },
+          "Strength": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Heavy 4"
+          }
+        }
+      },
       "Ranged Weapon§Injector Pistol": {
         "assets": {
           "traits": [
@@ -3698,6 +4903,42 @@
         "text": "Once per\ngame, in the Charge phase when\nthis unit or its attached unit is\nselected as a Charge target, the\nunit that declared the charge\ntakes D6 Strength 4, AP5\nautomatic hits. Saves are taken\nas normal."
       },
       "Unit§Blightlord Terminators": {
+        "allowed": {
+          "items": [
+            "Model§Blightlord Terminator",
+            "Model§Blightlord Terminator Champion"
+          ]
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Blightlord Terminator",
+              "quantity": 4
+            },
+            "Model§Blightlord Terminator Champion"
+          ],
+          "traits": [
+            {
+              "item": "Special Rule§Rust Touch",
+              "stats": {
+                "x": {
+                  "value": "6"
+                }
+              }
+            },
+            "Special Rule§Relentless",
+            "Special Rule§Deep Strike",
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
         "keywords": {
           "Tags": [
             "3 - Elites"
@@ -3716,6 +4957,33 @@
           ]
         },
         "rules": {
+          "1 in 4 can have a Heavy Weapon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in4",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Heavy Weapon Selection"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
           "count1in4": {
             "evals": [
               {
@@ -3741,6 +5009,12 @@
           }
         },
         "stats": {
+          "Heavy Weapon Selection": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Mark of Chaos": {
             "ranks": {
               "Mark of Khorne": {
@@ -3807,8 +5081,531 @@
       "Unit§Chosen": {
         "inheritance": "removed"
       },
+      "Unit§Deathshroud Terminators": {
+        "allowed": {
+          "items": [
+            "Model§Deathshroud Terminator",
+            "Model§Deathshroud Terminator Champion"
+          ]
+        },
+        "aspects": {
+          "Unique": true
+        },
+        "assets": {
+          "included": [
+            {
+              "item": "Model§Deathshroud Terminator",
+              "quantity": 2
+            },
+            "Model§Deathshroud Terminator Champion"
+          ],
+          "traits": [
+            "Special Rule§Mortarion's Own",
+            "Special Rule§Relentless",
+            "Special Rule§Deep Strike",
+            "Special Rule§Slow & Purposeful",
+            {
+              "item": "Special Rule§Bulky",
+              "stats": {
+                "x": {
+                  "value": 2
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Unit Type": [
+            "Infantry"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Keywords": [
+            "Deathshroud Terminators",
+            "M31",
+            "Terminators",
+            "Veterans"
+          ]
+        },
+        "stats": {
+          "Deathshroud Terminator": {
+            "max": 4,
+            "min": 2,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Deathshroud Terminator Champion": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v}",
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
+          },
+          "Terminator Armour": {
+            "dynamic": true,
+            "group": "Wargear",
+            "ranks": {
+              "Cataphractii Terminator Armour": {
+                "format": "{v} +0 pts",
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Special Rule§Sprint (1)"
+                  }
+                ]
+              },
+              "Tartaros Terminator Armour": {
+                "format": "{v} +0 pts",
+                "order": 1
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "value": "Cataphractii Terminator Armour",
+            "visibility": "always"
+          }
+        }
+      },
+      "Unit§Fiend Pack": {
+        "inheritance": "removed"
+      },
+      "Unit§Foetid Bloat Drone": {
+        "allowed": {
+          "items": [
+            "Model§Foetid Bloat Drone"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Foetid Bloat Drone"
+          ],
+          "traits": [
+            "Special Rule§Daemon",
+            "Special Rule§Regeneration",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            "Special Rule§Move Through Cover"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "6 - Fast Attack"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Role": [
+            "Fast Attack"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Engine",
+            "Fly",
+            "Foetid Bloat Drone",
+            "M36"
+          ]
+        },
+        "stats": {
+          "Foetid Bloat Drone": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v}",
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Unit§Havocs": {
+        "inheritance": "removed"
+      },
+      "Unit§Javelin Attack Speeder": {
+        "inheritance": "removed"
+      },
       "Unit§Legionnaire Squad": {
         "inheritance": "removed"
+      },
+      "Unit§Myphitic Blight Hauler": {
+        "allowed": {
+          "items": [
+            "Model§Myphitic Blight Hauler"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Myphitic Blight Hauler"
+          ],
+          "traits": [
+            "Special Rule§Daemon",
+            "Special Rule§Regeneration",
+            "Special Rule§Relentless",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "3 - Elites"
+          ],
+          "Role": [
+            "Elites"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Engine",
+            "M36",
+            "Myphitic Blight Hauler"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v}",
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
+          },
+          "Myphitic Blight Hauler": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Unit§Plague Burst Crawler": {
+        "allowed": {
+          "items": [
+            "Model§Plague Burst Crawler"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Model§Plague Burst Crawler"
+          ],
+          "traits": [
+            "Special Rule§Daemon",
+            "Special Rule§Regeneration",
+            "Special Rule§Relentless",
+            "Special Rule§Move Through Cover",
+            {
+              "item": "Special Rule§Hammer of Wrath",
+              "stats": {
+                "x": {
+                  "value": 1
+                }
+              }
+            },
+            {
+              "item": "Special Rule§Firing Protocols",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "7 - Heavy Support"
+          ],
+          "Role": [
+            "Heavy Support"
+          ],
+          "Unit Type": [
+            "Monster"
+          ],
+          "Keywords": [
+            "Daemon",
+            "Daemon Engine",
+            "M36",
+            "Plague Burst Crawler"
+          ]
+        },
+        "stats": {
+          "Mark of Chaos": {
+            "ranks": {
+              "Mark of Khorne": {
+                "format": "{v} +5 pts",
+                "order": 1,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Khorne"
+                  }
+                ]
+              },
+              "Mark of Nurgle": {
+                "format": "{v} +0 pts",
+                "order": 2,
+                "tracking": {},
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Nurgle"
+                  }
+                ]
+              },
+              "Mark of Slaanesh": {
+                "format": "{v} +5 pts",
+                "order": 3,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Slaanesh"
+                  }
+                ]
+              },
+              "Mark of Tzeentch": {
+                "format": "{v} +5 pts",
+                "order": 4,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Tzeentch"
+                  }
+                ]
+              },
+              "Mark of Chaos Undivided": {
+                "format": "{v} +5 pts",
+                "order": 5,
+                "tracking": {
+                  "Points": 5
+                },
+                "traits": [
+                  {
+                    "trait": "Wargear§Mark of Chaos Undivided"
+                  }
+                ]
+              }
+            }
+          },
+          "Plague Burst Crawler": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
       },
       "Unit§Plague Marines": {
         "allowed": {
@@ -4058,6 +5855,22 @@
             },
             "value": "Mark of Nurgle"
           },
+          "Plague Champion": {
+            "max": 1,
+            "min": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Plague Marine": {
+            "max": 14,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
           "Special Weapon Selection": {
             "statType": "numeric",
             "tracked": true,
@@ -4065,6 +5878,12 @@
             "visibility": "hidden"
           }
         }
+      },
+      "Unit§Proteus Land Speeder": {
+        "inheritance": "removed"
+      },
+      "Unit§Sabre Strike Tank": {
+        "inheritance": "removed"
       },
       "Unit§Venom Crawler": {
         "inheritance": "removed"
