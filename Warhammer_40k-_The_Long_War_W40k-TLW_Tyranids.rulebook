@@ -9285,39 +9285,6 @@
             "evaluate": "OR",
             "failState": "error"
           },
-          "Chitinous Armored Spearhead: Need to have at least 1 Mawloc unit": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rite of War",
-                    "value"
-                  ]
-                ],
-                "value": "Chitinous Armoured Spearhead"
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Mawloc"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          },
           "Chitinous Armored Spearhead: Need to have at least 2 Monster type units with the \"Assault\" keyword units for every 1000 points": {
             "evals": [
               {
@@ -9887,6 +9854,39 @@
             "evaluate": "OR",
             "failState": "error",
             "order": 101
+          },
+          "Subterranean Attack Wave: Need to have at least 1 Mawloc unit": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Subterranean Attack Wave"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Mawloc"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           },
           "Subterranean Attack Wave: Need to have at least 1 Trygon with the Trygon Prime upgrade": {
             "evals": [
