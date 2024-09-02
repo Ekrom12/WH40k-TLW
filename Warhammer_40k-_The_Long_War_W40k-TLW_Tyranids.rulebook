@@ -220,6 +220,9 @@
               },
               "Alien Cunning": {
                 "order": 1,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Alien Cunning"
@@ -228,6 +231,9 @@
               },
               "Synaptic Linchpin": {
                 "order": 2,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Synaptic Linchpin"
@@ -236,6 +242,9 @@
               },
               "Heightened Senses": {
                 "order": 3,
+                "tracking": {
+                  "Points": 15
+                },
                 "traits": [
                   {
                     "trait": "Warlord Trait§Heightened Senses"
@@ -294,6 +303,13 @@
         }
       },
       "Hive Fleet": {},
+      "Model": {
+        "aspects": {
+          "Collapse": true,
+          "Group Includes": true,
+          "Type": "game piece"
+        }
+      },
       "Relic": {
         "aspects": {
           "Unique": true
@@ -2773,6 +2789,11 @@
         }
       },
       "Model§Carnifex": {
+        "aspects": {
+          "Collapse": false,
+          "Describe": true,
+          "Group Includes": false
+        },
         "assets": {
           "traits": [
             "Wargear§Bonded Exoskeleton",
@@ -4458,6 +4479,12 @@
         }
       },
       "Model§Maleceptor": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Monstrous Scything Talons",
+            "Ranged Weapon§Smite"
+          ]
+        },
         "stats": {
           "A": {
             "value": 3
@@ -5842,7 +5869,8 @@
             "Ranged Weapon§Choking Spores",
             "Melee Weapon§Toxic Lashes (melee)",
             "Melee Weapon§Powerful limbs",
-            "Wargear§Bonded Exoskeleton"
+            "Wargear§Bonded Exoskeleton",
+            "Ranged Weapon§Toxic Lashes (shooting)"
           ]
         },
         "stats": {
