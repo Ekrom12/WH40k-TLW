@@ -625,7 +625,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -721,7 +721,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Warlord Trait": {
             "value": "Alien Cunning"
@@ -840,16 +840,13 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Hive Tyrant With Wings": {
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
-          },
-          "M": {
-            "tracked": true
           },
           "Wings": {
             "dynamic": true,
@@ -4221,7 +4218,9 @@
             "visibility": "active"
           },
           "M": {
-            "value": 8
+            "groupOrder": 1,
+            "value": 8,
+            "visibility": "normal"
           },
           "Points": {
             "value": 125
@@ -10797,7 +10796,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -10844,7 +10843,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 2
@@ -11028,7 +11027,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -11103,7 +11102,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -11145,7 +11144,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -11304,6 +11303,7 @@
           },
           "Bio Morph": {
             "dynamic": true,
+            "group": "Bio-Morph",
             "ranks": {
               "-": {
                 "order": 0
@@ -11352,7 +11352,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -11443,7 +11443,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 30
@@ -11624,7 +11624,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 36
@@ -11706,14 +11706,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
-          },
-          "Transport Capacity": {
-            "group": "Stats",
-            "statOrder": 10,
-            "statType": "numeric",
-            "value": 10,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -11872,7 +11865,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -11929,7 +11922,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12007,7 +12000,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12178,7 +12171,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 16
@@ -12332,7 +12325,7 @@
             },
             "statType": "rank",
             "value": "-",
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Hive Guard": {
             "max": 9,
@@ -12340,7 +12333,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": -2
@@ -12395,7 +12388,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 0
@@ -12463,11 +12456,11 @@
         "stats": {
           "Lictor": {
             "max": 1,
-            "min": 0,
+            "min": 1,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12628,7 +12621,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12688,7 +12681,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12737,7 +12730,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Points": {
             "value": 4
@@ -12805,7 +12798,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12855,7 +12848,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12935,7 +12928,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Red Terror": {
             "max": 1,
@@ -12943,7 +12936,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -12983,10 +12976,12 @@
           ]
         },
         "stats": {
-          "Loadout": {
+          "Additional Weapon": {
             "dynamic": true,
+            "group": "Wargear",
+            "groupOrder": 3,
             "ranks": {
-              "n/a": {
+              "-": {
                 "order": 0,
                 "tracking": {}
               },
@@ -13002,8 +12997,9 @@
                 ]
               }
             },
+            "statOrder": 1,
             "statType": "rank",
-            "value": "n/a",
+            "value": "-",
             "visibility": "normal"
           },
           "Ripper Swarm": {
@@ -13012,7 +13008,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13070,7 +13066,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13122,7 +13118,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13179,7 +13175,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13230,7 +13226,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13391,7 +13387,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13567,7 +13563,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13704,7 +13700,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Tyranid Warriors with Wings": {
             "statType": "numeric",
@@ -13791,18 +13787,13 @@
           ]
         },
         "stats": {
-          "Transport Capacity": {
-            "group": "Transport",
-            "groupOrder": 3,
-            "statType": "term",
-            "value": "10/1",
-            "visibility": "normal"
-          },
           "Tyrannocyte": {
+            "max": 1,
+            "min": 1,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13860,7 +13851,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13920,7 +13911,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -13983,7 +13974,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -14141,7 +14132,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -14224,7 +14215,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
