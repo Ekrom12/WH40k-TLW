@@ -909,6 +909,114 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 100
+          },
+          "RoWEngineHordeSelfReportMonster": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Monster Unit Count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Monster"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWEngineHordeSelfReportNonMonster": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Non Monster Unit Count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Monster"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWSelfReportDaemonEngine": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "RoWEngineHordeDaemonEngineCount",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Engine"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
           }
         },
         "stats": {
@@ -4096,6 +4204,18 @@
                   ]
                 ],
                 "value": "Tech-Priest"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Warpsmith"
               }
             ],
             "evals": [
@@ -14663,6 +14783,116 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "Endine Horde: Your army must include at least 1 Chaos Champion, upgraded to a Warp Smith": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Warpsmith"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Engine Horde: Need at least 2 Daemon Engine units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "RoWEngineHordeDaemonEngineCount",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Engine Horde: Your army must include more units with the Monster type than any other type": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              },
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "max": [
+                  "{self}",
+                  "stats",
+                  "Monster Unit Count",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Non Monster Unit Count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "Raptor Assault: Need at least 2 Raptor units": {
             "evals": [
               {
@@ -14792,10 +15022,18 @@
             "value": 0,
             "visibility": "hidden"
           },
+          "Monster Unit Count": {
+            "statType": "numeric",
+            "value": 0
+          },
           "Non infantry unit count": {
             "statType": "numeric",
             "value": 0,
             "visibility": "hidden"
+          },
+          "Non Monster Unit Count": {
+            "statType": "numeric",
+            "value": 0
           },
           "Rite of War": {
             "ranks": {
@@ -14809,6 +15047,11 @@
                 "order": 3
               }
             }
+          },
+          "RoWEngineHordeDaemonEngineCount": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
           },
           "RoWRaptorAssRaptorCount": {
             "statType": "numeric",
@@ -16544,7 +16787,143 @@
             "Ravager"
           ]
         },
+        "rules": {
+          "NonEngineHordeRemoveRoleChoice": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Elites",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWEngineHordeAddAsElites": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Heavy Support"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Elites",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWEngineHordeSetRoleChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Elites",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Elites": {
+            "dynamic": true,
+            "group": "Roster",
+            "groupOrder": 7,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Maulerfiend": {
             "max": 1,
             "min": 1,
@@ -20169,7 +20548,143 @@
             "Venom Crawler"
           ]
         },
+        "rules": {
+          "NonEngineHordeRemoveRoleOption": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "RoWEngineHordeAddAsTroops": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Elites"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "RoWEngineHordeSetRoleChoiceVisibility": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Add as Troops",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Engine Horde"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
+          "Add as Troops": {
+            "dynamic": true,
+            "group": "Roster",
+            "groupOrder": 7,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden"
+          },
           "Mark of Chaos": {
             "ranks": {
               "-": {
