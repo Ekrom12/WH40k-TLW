@@ -1,12 +1,12 @@
 {
   "name": "W40k:TLW Chaos Space Marines",
-  "revision": "0.8.5",
+  "revision": "1.0.0",
   "game": "Warhammer 40k: The Long War",
   "genre": "sci-fi",
   "publisher": "",
   "url": "",
   "notes": "",
-  "wip": true,
+  "wip": false,
   "dependencies": [
     {
       "slug": "9GZ8W2",
@@ -838,6 +838,153 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Chosen Host: All Troop units must have the Veteran or Terminator keywords": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Chosen Host"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Role"
+                  ]
+                ],
+                "value": "Troops"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Veterans"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "RoWChosenHostAddVeteranKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Veterans"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWChosenHostShowVeteranOptionIfInfantry": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Chosen Host"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Infantry"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Veterans"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
           "RoWDaemonkinSelfReportInfantry": {
             "actions": [
               {
@@ -976,6 +1123,78 @@
                   ]
                 ],
                 "value": "Monster"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWPrideRemoveVeteranKeyword": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Chosen Host"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
+          },
+          "RoWSelfReportChosen": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "chosen unit count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Chosen"
               }
             ],
             "evaluate": "AND",
@@ -1180,6 +1399,26 @@
             "tracked": true,
             "value": "-",
             "visibility": "normal"
+          },
+          "Veteran": {
+            "dynamic": true,
+            "group": "Upgrades",
+            "groupOrder": 6,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Veteran Upgrade": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
           }
         }
       }
@@ -14735,6 +14974,40 @@
             "evaluate": "AND",
             "failState": "pass"
           },
+          "Chosen Host: Your army must include at least 2 Chosen units": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Chosen Host"
+              },
+              {
+                "actionable": true,
+                "min": 2,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "chosen unit count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "countSubCommanderUnits": {
             "actions": [
               {
@@ -15152,10 +15425,15 @@
           }
         },
         "stats": {
+          "chosen unit count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden"
+          },
           "despoiler infantry count": {
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Faction": {
             "dynamic": false,
@@ -15199,6 +15477,9 @@
               },
               "Heavy Mechanized Assault": {
                 "order": 4
+              },
+              "Chosen Host": {
+                "order": 5
               }
             }
           },
@@ -15221,7 +15502,8 @@
           },
           "transport unit count": {
             "statType": "numeric",
-            "value": 0
+            "value": 0,
+            "visibility": "hidden"
           }
         }
       },
