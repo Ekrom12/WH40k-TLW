@@ -1017,6 +1017,92 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 100
+          },
+          "RoWSelfReportInfantryDespoiler": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "despoiler infantry count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Unit Type"
+                  ]
+                ],
+                "value": "Infantry"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Despoiler"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
+          },
+          "RoWSelfReportTransport": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "transport unit count",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Transport"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 100
           }
         },
         "stats": {
@@ -14893,6 +14979,64 @@
             "evaluate": "OR",
             "failState": "error"
           },
+          "Heavy Mechanized Assault: For every Infantry type unit in your army with the Despoiler keyword, you must include 1 Vehicle type unit with the Transport keywords.": {
+            "evals": [
+              {
+                "actionable": true,
+                "min": [
+                  "{self}",
+                  "stats",
+                  "despoiler infantry count",
+                  "value"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "transport unit count",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Heavy Mechanized Assault: Your army must include at least 1 Land Raider": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Heavy Mechanized Assault"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Land Raider"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
           "Raptor Assault: Need at least 2 Raptor units": {
             "evals": [
               {
@@ -15008,6 +15152,11 @@
           }
         },
         "stats": {
+          "despoiler infantry count": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
           "Faction": {
             "dynamic": false,
             "ranks": {
@@ -15024,7 +15173,8 @@
           },
           "Monster Unit Count": {
             "statType": "numeric",
-            "value": 0
+            "value": 0,
+            "visibility": "hidden"
           },
           "Non infantry unit count": {
             "statType": "numeric",
@@ -15033,7 +15183,8 @@
           },
           "Non Monster Unit Count": {
             "statType": "numeric",
-            "value": 0
+            "value": 0,
+            "visibility": "hidden"
           },
           "Rite of War": {
             "ranks": {
@@ -15045,6 +15196,9 @@
               },
               "Engine Horde": {
                 "order": 3
+              },
+              "Heavy Mechanized Assault": {
+                "order": 4
               }
             }
           },
@@ -15064,6 +15218,10 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          },
+          "transport unit count": {
+            "statType": "numeric",
+            "value": 0
           }
         }
       },
@@ -18370,6 +18528,52 @@
             "Transport"
           ]
         },
+        "rules": {
+          "RoWHMAAddRulesLandRaider": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Move Through Cover"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Outflank"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Heavy Mechanized Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
         "stats": {
           "Land Raider": {
             "max": 1,
@@ -19874,6 +20078,41 @@
             "Tank",
             "Transport"
           ]
+        },
+        "rules": {
+          "RoWHMAAddRulesRhino": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Special Rule§Outflank"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Rite of War",
+                    "value"
+                  ]
+                ],
+                "value": "Heavy Mechanized Assault"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
         },
         "stats": {
           "Mark of Chaos": {
