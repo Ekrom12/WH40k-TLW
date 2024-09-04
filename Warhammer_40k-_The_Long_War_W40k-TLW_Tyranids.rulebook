@@ -712,6 +712,11 @@
         "removed": {
           "stats": {
             "Additional Warlord Trait": {}
+          },
+          "allowed": {
+            "classifications": [
+              "Relic"
+            ]
           }
         },
         "stats": {
@@ -724,6 +729,7 @@
             "visibility": "hidden"
           },
           "Warlord Trait": {
+            "dynamic": false,
             "value": "Alien Cunning"
           }
         }
@@ -1192,7 +1198,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Neurotyrant": {
             "max": 1,
@@ -1200,7 +1206,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -1411,6 +1417,13 @@
             "1 - HQ"
           ]
         },
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Relic"
+            ]
+          }
+        },
         "stats": {
           "Old One Eye": {
             "max": 1,
@@ -1418,6 +1431,9 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
+            "visibility": "normal"
+          },
+          "Warlord Trait": {
             "visibility": "normal"
           }
         }
@@ -1488,6 +1504,11 @@
         "removed": {
           "stats": {
             "Additional Warlord Trait": {}
+          },
+          "allowed": {
+            "classifications": [
+              "Relic"
+            ]
           }
         },
         "stats": {
@@ -1497,24 +1518,29 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Warlord Trait": {
+            "dynamic": false,
             "ranks": {
-              "-": {
-                "order": 0
-              },
               "Heightened Senses": {
-                "order": 1,
+                "order": 2,
                 "tracking": {},
                 "traits": [
                   {
                     "trait": "Warlord Trait§Heightened Senses"
                   }
                 ]
+              },
+              "Synaptic Linchpin": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Synaptic Linchpin"
+                  }
+                ]
               }
             },
-            "statType": "rank",
             "value": "Heightened Senses"
           }
         }
@@ -1595,9 +1621,10 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Warlord Trait": {
+            "dynamic": false,
             "value": "Alien Cunning"
           }
         }
@@ -1668,7 +1695,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           }
         }
       },
@@ -1742,7 +1769,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Warlord Trait": {
             "value": "Synaptic Linchpin"
@@ -1828,7 +1855,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Warlord Trait": {
             "value": "Alien Cunning"
@@ -1896,7 +1923,7 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "normal"
+            "visibility": "hidden"
           },
           "Wings": {
             "ranks": {
@@ -4385,6 +4412,7 @@
             "value": 6
           },
           "Neurolictor": {
+            "dynamic": true,
             "group": "Upgrades",
             "groupOrder": 4,
             "ranks": {
@@ -4402,10 +4430,10 @@
                     "trait": "Special Rule§Synapse"
                   },
                   {
-                    "trait": "Special Rule§Psychic"
+                    "trait": "Ranged Weapon§Smite"
                   },
                   {
-                    "trait": "Ranged Weapon§Smite"
+                    "trait": "Special Rule§Psyker"
                   }
                 ]
               }
@@ -4481,7 +4509,8 @@
         "assets": {
           "traits": [
             "Melee Weapon§Monstrous Scything Talons",
-            "Ranged Weapon§Smite"
+            "Ranged Weapon§Smite",
+            "Melee Weapon§Powerful limbs"
           ]
         },
         "stats": {
